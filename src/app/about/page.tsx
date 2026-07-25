@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     'Meet Dr. Jan Duffy, your trusted Las Vegas relocation specialist. Learn about our team, credentials, and commitment to making your move to Las Vegas seamless and successful.',
   keywords:
     'Dr. Jan Duffy, Las Vegas relocation expert, relocation specialist, about us, team credentials',
+  alternates: {
+    canonical: '/about',
+  },
   openGraph: {
     title: 'About Dr. Jan Duffy | Las Vegas Relocation Services Expert',
     description:

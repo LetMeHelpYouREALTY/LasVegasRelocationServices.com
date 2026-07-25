@@ -1,5 +1,15 @@
 import { Building, Home, MapPin, Plane, Shield, Target, Truck, Users } from 'lucide-react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Las Vegas Relocation Services | Residential, Corporate & International',
+  description:
+    'Full-service Las Vegas relocation: residential moving, corporate relocation, international moves, investment properties, and settling-in support from Dr. Jan Duffy.',
+  alternates: {
+    canonical: '/services',
+  },
+};
 
 const services = [
   {

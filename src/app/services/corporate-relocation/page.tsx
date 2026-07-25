@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     'Professional corporate relocation services in Las Vegas. Expert business moving, employee relocation, and corporate transition support. Get your free consultation today.',
   keywords:
     'corporate relocation, business moving, employee relocation, Las Vegas corporate services, business transition',
+  alternates: {
+    canonical: '/services/corporate-relocation',
+  },
   openGraph: {
     title: 'Corporate Relocation Services | Las Vegas Business Moving Experts',
     description:

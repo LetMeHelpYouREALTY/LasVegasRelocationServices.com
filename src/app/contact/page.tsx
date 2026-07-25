@@ -1,4 +1,14 @@
+import type { Metadata } from 'next';
 import Contact from '@/components/Contact';
+
+export const metadata: Metadata = {
+  title: 'Contact Dr. Jan Duffy | Las Vegas Relocation Services',
+  description:
+    'Contact Dr. Jan Duffy and the Berkshire Hathaway relocation team. Call (702) 707-7273 or request a free Las Vegas relocation consultation online.',
+  alternates: {
+    canonical: '/contact',
+  },
+};
 
 export default function ContactPage() {
   return (

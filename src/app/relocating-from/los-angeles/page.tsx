@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     'Professional relocation services from Los Angeles to Las Vegas. Expert assistance with housing, schools, and settling into your new Las Vegas home.',
   keywords:
     'Los Angeles to Las Vegas relocation, LA to Vegas move, California to Nevada relocation, Dr. Jan Duffy, Berkshire Hathaway',
+  alternates: {
+    canonical: '/relocating-from/los-angeles',
+  },
   openGraph: {
     title: 'Los Angeles to Las Vegas Relocation Services',
     description:

@@ -14,6 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.lasvegasrelocationservices.com'),
   title: {
     default: 'Las Vegas Relocation Services | Dr. Jan Duffy | Berkshire Hathaway',
     template: '%s | Las Vegas Relocation Services',
@@ -51,8 +52,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  // Self-referencing canonical for the homepage only. Every other route
+  // overrides this in its own page/layout metadata — a site-wide canonical
+  // here makes Google treat all pages as duplicates of the homepage
+  // ("Alternate page with proper canonical tag" in Search Console).
   alternates: {
-    canonical: 'https://www.lasvegasrelocationservices.com',
+    canonical: '/',
   },
   openGraph: {
     type: 'website',

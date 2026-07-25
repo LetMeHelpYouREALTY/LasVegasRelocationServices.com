@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     'Expert relocation services from major US cities to Las Vegas. Professional assistance for Los Angeles, San Diego, New York, Chicago, Miami, and Seattle relocations.',
   keywords:
     'Las Vegas relocation, moving to Las Vegas, relocation services, Dr. Jan Duffy, Berkshire Hathaway',
+  alternates: {
+    canonical: '/relocating-from',
+  },
   openGraph: {
     title: 'Relocating to Las Vegas from Major US Cities | Dr. Jan Duffy',
     description:
