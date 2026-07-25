@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
 import Navigation from '@/components/Navigation';
-import PerformanceMonitor from '@/components/PerformanceMonitor';
+import RealScoutScript from '@/components/RealScoutScript';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -97,13 +97,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        {/* DNS prefetch for performance */}
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        {/* RealScout origins — script itself loads lazyOnload via RealScoutScript */}
+        <link rel="preconnect" href="https://em.realscout.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.realscout.com" />
 
         {/* Structured Data for Organization */}
         <script
@@ -259,27 +255,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
-        <script
-          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-          type="module"
-        ></script>
-        <style>
-          {`
-            realscout-office-listings {
-              --rs-listing-divider-color: rgb(101, 141, 172);
-              width: 100%;
-            }
-          `}
-        </style>
       </head>
       <body className={`${inter.className} font-sans antialiased`}>
-        <PerformanceMonitor />
         <Navigation />
         {children}
         <Footer />
-        <GoogleAnalytics
-          GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX'}
-        />
+        <RealScoutScript />
+        <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         <MicrosoftClarity
           projectId={process.env.NEXT_PUBLIC_CLARITY_ID || ''}
           enabled={!!process.env.NEXT_PUBLIC_CLARITY_ID}

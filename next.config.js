@@ -38,10 +38,12 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Enhanced headers for Cloudflare
+  // HTML gets short CDN cache; hashed static assets get long immutable cache.
+  // Previously every route was `max-age=31536000, immutable`, which poisoned
+  // field CWV after deploys and fought with public/_headers (max-age=3600).
   headers: async () => [
     {
-      source: '/(.*)',
+      source: '/:path*',
       headers: [
         {
           key: 'X-Content-Type-Options',
@@ -55,74 +57,31 @@ const nextConfig = {
           key: 'X-XSS-Protection',
           value: '1; mode=block',
         },
-        // Cloudflare-specific headers
+        {
+          key: 'Referrer-Policy',
+          value: 'strict-origin-when-cross-origin',
+        },
         {
           key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
-        },
-        {
-          key: 'CDN-Cache-Control',
-          value: 'public, max-age=31536000',
-        },
-        {
-          key: 'Cloudflare-CDN-Cache-Control',
-          value: 'public, max-age=31536000',
+          value: 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400',
         },
       ],
     },
-    // Static assets caching
     {
-      source: '/_next/static/(.*)',
+      source: '/_next/static/:path*',
       headers: [
         {
           key: 'Cache-Control',
           value: 'public, max-age=31536000, immutable',
         },
-        {
-          key: 'CDN-Cache-Control',
-          value: 'public, max-age=31536000',
-        },
       ],
     },
-    // Images caching
     {
-      source: '/_next/image(.*)',
+      source: '/_next/image',
       headers: [
         {
           key: 'Cache-Control',
           value: 'public, max-age=31536000, immutable',
-        },
-        {
-          key: 'CDN-Cache-Control',
-          value: 'public, max-age=31536000',
-        },
-      ],
-    },
-    // Fonts caching - fixed pattern without capturing groups
-    {
-      source: '/:path*.(woff|woff2|ttf|eot)',
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
-        },
-        {
-          key: 'CDN-Cache-Control',
-          value: 'public, max-age=31536000',
-        },
-      ],
-    },
-    // CSS and JS caching - fixed pattern without capturing groups
-    {
-      source: '/:path*.(css|js)',
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
-        },
-        {
-          key: 'CDN-Cache-Control',
-          value: 'public, max-age=31536000',
         },
       ],
     },

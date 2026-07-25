@@ -9,7 +9,6 @@ import {
   Target,
   TrendingUp,
 } from 'lucide-react';
-import { motion } from '@/components/motion';
 import { useId } from 'react';
 import { 
   SchemaMarkup, 
@@ -228,29 +227,17 @@ export default function HomePage() {
       {/* Property Search Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Find Your Las Vegas Home
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover properties that offer better value than your current city
             </p>
-          </motion.div>
+          </div>
 
-          {/* RealScout Widget */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="mb-12"
-          >
+          {/* RealScout Widget — no opacity:0; reserved min-height via RealScoutScript CSS */}
+          <div className="mb-12 min-h-[480px]">
             <realscout-office-listings
               agent-encoded-id="QWdlbnQtMjI1MDUw"
               sort-order="PRICE_HIGH"
@@ -259,7 +246,7 @@ export default function HomePage() {
               price-min="400000"
               price-max="800000"
             ></realscout-office-listings>
-          </motion.div>
+          </div>
         </div>
       </section>
 

@@ -3,19 +3,27 @@
 import Script from 'next/script';
 
 interface GoogleAnalyticsProps {
-  GA_MEASUREMENT_ID: string;
+  GA_MEASUREMENT_ID?: string;
 }
 
+const isValidGaId = (id?: string) =>
+  Boolean(id && /^G-[A-Z0-9]+$/i.test(id) && !id.includes('XXXX'));
+
 export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: GoogleAnalyticsProps) {
+  // Skip placeholder / missing IDs — live HTML was preloading gtag for G-XXXXXXXXXX
+  if (!isValidGaId(GA_MEASUREMENT_ID)) {
+    return null;
+  }
+
   return (
     <>
       <Script
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
       />
       <Script
         id="google-analytics"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
