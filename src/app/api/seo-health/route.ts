@@ -62,7 +62,7 @@ export async function GET() {
       title: 'Verify ownership',
       status: verification ? 'done' : 'needs_you',
       detail: verification
-        ? 'NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION is set; meta tag will render.'
+        ? 'Verification token present (Cloudflare DNS TXT + HTML meta backup). Domain property should already verify in GSC.'
         : 'Preferred: DNS TXT on the Domain property. Or HTML tag → paste content= into Vercel as NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION and redeploy. Or drop google*.html into /public.',
     },
     {
@@ -143,7 +143,7 @@ export async function GET() {
       googleSiteVerificationMeta: Boolean(verification),
       googleSiteVerificationHint: verification
         ? 'Meta tag will render as <meta name="google-site-verification" content="…">'
-        : 'Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION in Vercel (GSC HTML-tag content value), or drop google*.html into /public',
+        : 'DNS token fallback missing — set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION or restore GOOGLE_SITE_VERIFICATION_DNS',
       cronSecretConfigured: cronConfigured,
       followUpBossKeyConfigured: fubConfigured,
       apexRedirect: apex,

@@ -1,6 +1,7 @@
 "use client";
 
 import PageHero from "@/components/sections/PageHero";
+import AgentPortrait from "@/components/shared/AgentPortrait";
 import {
   Award,
   Building,
@@ -167,7 +168,7 @@ export default function AnimatedAboutContent() {
               </motion.a>
             </motion.div>
 
-            {/* Right Column - Stats & Values */}
+            {/* Right Column - Portrait, Stats & Values */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -175,6 +176,12 @@ export default function AnimatedAboutContent() {
               viewport={{ once: true }}
               className="space-y-8"
             >
+              <AgentPortrait
+                priority
+                className="h-48 w-48 md:h-56 md:w-56"
+                size={448}
+              />
+
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {teamStats.map((stat, index) => (

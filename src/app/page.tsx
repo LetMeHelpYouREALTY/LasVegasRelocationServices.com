@@ -1,6 +1,7 @@
 "use client";
 
 import CalendlyBooking from "@/components/shared/CalendlyBooking";
+import AgentPortrait from "@/components/shared/AgentPortrait";
 import PageHero from "@/components/sections/PageHero";
 import {
   Building,
@@ -8,7 +9,6 @@ import {
   Home,
   Phone,
   Shield,
-  Target,
   TrendingUp,
 } from "lucide-react";
 import {
@@ -144,34 +144,45 @@ export default function HomePage() {
       {/* Hero Section */}
       <PageHero image="home">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-white/15 ring-1 ring-white/40 rounded-full text-sm font-medium mb-6 text-white">
-              <Target className="w-4 h-4 mr-2" aria-hidden="true" />
-              Professional Relocation Services
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_auto] lg:gap-16">
+            <div className="text-center lg:text-left">
+              <p className="mb-4 text-sm font-semibold tracking-wide text-white/90 md:text-base">
+                {AGENT_NAME} · {BROKERAGE}
+              </p>
+              <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+                Moving to Las Vegas?
+              </h1>
+              <p className="mx-auto mb-8 max-w-2xl text-xl text-white md:text-2xl lg:mx-0">
+                Call {PHONE_DISPLAY} — expert relocation guidance for households
+                and businesses moving to Las Vegas and Henderson.
+              </p>
+              <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+                <a
+                  href={`tel:${PHONE_TEL}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 text-lg font-semibold text-blue-800 transition-colors hover:bg-gray-100"
+                >
+                  <Phone className="h-5 w-5" aria-hidden="true" />
+                  Call {PHONE_DISPLAY}
+                </a>
+                <a
+                  href={CALENDLY_SHOWING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-blue-800"
+                >
+                  Book a Showing
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Moving to Las Vegas?
-            </h1>
-            <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
-              Let Dr. Jan Duffy and the Berkshire Hathaway team make your
-              transition seamless. Expert guidance for households and businesses
-              relocating to Las Vegas.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={CALENDLY_SHOWING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
-                Book a Showing
-              </a>
-              <a
-                href="/services"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors"
-              >
-                View Our Services
-              </a>
+            <div className="flex flex-col items-center gap-3">
+              <AgentPortrait
+                priority
+                className="h-44 w-44 md:h-56 md:w-56 lg:h-64 lg:w-64"
+                size={512}
+              />
+              <p className="text-sm font-medium text-white/95">
+                Your Las Vegas relocation specialist
+              </p>
             </div>
           </div>
         </div>

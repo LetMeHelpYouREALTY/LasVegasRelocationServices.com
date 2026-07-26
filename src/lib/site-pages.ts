@@ -17,7 +17,7 @@ export type SitePage = {
  * Paths are relative; all resolve under SITE_URL (www).
  */
 export const SITE_PAGES: SitePage[] = [
-  { path: '/', lastModified: '2026-07-26T04:40:00.000Z', changeFrequency: 'weekly', priority: 1 },
+  { path: '/', lastModified: '2026-07-26T04:50:00.000Z', changeFrequency: 'weekly', priority: 1 },
   { path: '/services', lastModified: '2026-07-26T04:40:00.000Z', changeFrequency: 'monthly', priority: 0.8 },
   {
     path: '/services/residential-moving',
@@ -104,7 +104,7 @@ export const SITE_PAGES: SitePage[] = [
     changeFrequency: 'monthly',
     priority: 0.9,
   },
-  { path: '/about', lastModified: '2026-07-26T04:40:00.000Z', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/about', lastModified: '2026-07-26T04:50:00.000Z', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/contact', lastModified: '2026-07-26T04:40:00.000Z', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/resources', lastModified: '2026-07-26T04:40:00.000Z', changeFrequency: 'monthly', priority: 0.6 },
 ];
