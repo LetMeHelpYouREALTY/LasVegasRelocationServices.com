@@ -4,12 +4,13 @@
  */
 export const HERO_IMAGES = {
   home: {
+    // Brightest relocation hero: sunlit residential valley + Strip
     src: "/heroes/home-las-vegas.webp",
-    alt: "Las Vegas Strip and valley skyline at golden hour",
+    alt: "Sunlit aerial view of Las Vegas neighborhoods with the Strip skyline beyond",
   },
   services: {
     src: "/heroes/services-overview.webp",
-    alt: "Aerial view of Las Vegas neighborhoods with the city skyline beyond",
+    alt: "Las Vegas valley and Strip skyline at golden hour",
   },
   residentialMoving: {
     src: "/heroes/residential-moving.webp",
