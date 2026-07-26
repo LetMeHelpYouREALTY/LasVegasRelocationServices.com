@@ -42,3 +42,6 @@ next-env.d.ts
 
 # documentation repository
 /documentation
+
+# Local MCP/CLI deploy artifacts (never commit)
+vercel_deploy_payload*.json
