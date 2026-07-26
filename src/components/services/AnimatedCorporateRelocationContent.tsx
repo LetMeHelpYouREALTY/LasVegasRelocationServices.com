@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import PageHero from "@/components/sections/PageHero";
 import {
   Building,
   Calendar,
@@ -10,103 +11,119 @@ import {
   Shield,
   TrendingUp,
   Users,
-} from 'lucide-react';
-import { motion } from '@/components/motion';
+} from "lucide-react";
+import { motion } from "@/components/motion";
 
 const serviceFeatures = [
   {
     icon: Building,
-    title: 'Business Relocation Planning',
-    description: 'Comprehensive strategy development for your entire business move',
-    benefits: ['Minimize downtime', 'Reduce costs', 'Maintain productivity'],
+    title: "Business Relocation Planning",
+    description:
+      "Comprehensive strategy development for your entire business move",
+    benefits: ["Minimize downtime", "Reduce costs", "Maintain productivity"],
   },
   {
     icon: Users,
-    title: 'Employee Relocation Support',
-    description: 'Full-service support for relocating employees and their families',
-    benefits: ['Housing assistance', 'School district guidance', 'Community integration'],
+    title: "Employee Relocation Support",
+    description:
+      "Full-service support for relocating employees and their families",
+    benefits: [
+      "Housing assistance",
+      "School district guidance",
+      "Community integration",
+    ],
   },
   {
     icon: Globe,
-    title: 'Vendor & Service Coordination',
-    description: 'Coordinate all moving services and local vendor relationships',
-    benefits: ['Single point of contact', 'Quality assurance', 'Cost optimization'],
+    title: "Vendor & Service Coordination",
+    description:
+      "Coordinate all moving services and local vendor relationships",
+    benefits: [
+      "Single point of contact",
+      "Quality assurance",
+      "Cost optimization",
+    ],
   },
   {
     icon: Shield,
-    title: 'Risk Management',
-    description: 'Comprehensive insurance and liability protection for your move',
-    benefits: ['Full coverage', 'Compliance assurance', 'Peace of mind'],
+    title: "Risk Management",
+    description:
+      "Comprehensive insurance and liability protection for your move",
+    benefits: ["Full coverage", "Compliance assurance", "Peace of mind"],
   },
 ];
 
 const corporatePackages = [
   {
-    name: 'Essential Corporate',
-    price: 'Starting at $2,500',
-    description: 'Basic corporate relocation support for small businesses',
+    name: "Essential Corporate",
+    price: "Starting at $2,500",
+    description: "Basic corporate relocation support for small businesses",
     features: [
-      'Relocation planning consultation',
-      'Vendor recommendations',
-      'Basic employee support',
-      'Move coordination',
-      'Post-move follow-up',
+      "Relocation planning consultation",
+      "Vendor recommendations",
+      "Basic employee support",
+      "Move coordination",
+      "Post-move follow-up",
     ],
-    bestFor: 'Small businesses (1-10 employees)',
-    cta: 'Get Quote',
+    bestFor: "Small businesses (1-10 employees)",
+    cta: "Get Quote",
   },
   {
-    name: 'Professional Corporate',
-    price: 'Starting at $5,000',
-    description: 'Comprehensive relocation services for growing companies',
+    name: "Professional Corporate",
+    price: "Starting at $5,000",
+    description: "Comprehensive relocation services for growing companies",
     features: [
-      'Full relocation management',
-      'Employee relocation packages',
-      'Housing assistance',
-      'School district analysis',
-      'Community integration support',
-      'Ongoing support',
+      "Full relocation management",
+      "Employee relocation packages",
+      "Housing assistance",
+      "School district analysis",
+      "Community integration support",
+      "Ongoing support",
     ],
-    bestFor: 'Medium businesses (10-50 employees)',
-    cta: 'Get Quote',
+    bestFor: "Medium businesses (10-50 employees)",
+    cta: "Get Quote",
   },
   {
-    name: 'Enterprise Corporate',
-    price: 'Custom Pricing',
-    description: 'Full-service enterprise relocation with dedicated support',
+    name: "Enterprise Corporate",
+    price: "Custom Pricing",
+    description: "Full-service enterprise relocation with dedicated support",
     features: [
-      'Dedicated relocation manager',
-      'Custom employee packages',
-      'Luxury housing options',
-      'Executive relocation services',
-      'Cultural integration programs',
-      '24/7 support hotline',
+      "Dedicated relocation manager",
+      "Custom employee packages",
+      "Luxury housing options",
+      "Executive relocation services",
+      "Cultural integration programs",
+      "24/7 support hotline",
     ],
-    bestFor: 'Large corporations (50+ employees)',
-    cta: 'Contact Sales',
+    bestFor: "Large corporations (50+ employees)",
+    cta: "Contact Sales",
   },
 ];
 
 const benefits = [
   {
     icon: TrendingUp,
-    title: 'Increased Productivity',
-    description: 'Minimize downtime and maintain business operations during relocation',
+    title: "Increased Productivity",
+    description:
+      "Minimize downtime and maintain business operations during relocation",
   },
   {
     icon: DollarSign,
-    title: 'Cost Optimization',
-    description: 'Reduce relocation costs through expert planning and vendor management',
+    title: "Cost Optimization",
+    description:
+      "Reduce relocation costs through expert planning and vendor management",
   },
   {
     icon: Users,
-    title: 'Employee Retention',
-    description: 'Improve employee satisfaction and retention through smooth transitions',
+    title: "Employee Retention",
+    description:
+      "Improve employee satisfaction and retention through smooth transitions",
   },
   {
     icon: Shield,
-    title: 'Risk Mitigation',
-    description: 'Comprehensive insurance and compliance management for your move',
+    title: "Risk Mitigation",
+    description:
+      "Comprehensive insurance and compliance management for your move",
   },
 ];
 
@@ -114,7 +131,7 @@ export default function AnimatedCorporateRelocationContent() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
+      <PageHero image="corporateRelocation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -129,9 +146,9 @@ export default function AnimatedCorporateRelocationContent() {
                 </span>
               </h1>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Professional corporate relocation services designed for businesses. We help you
-                minimize downtime, reduce costs, and ensure a smooth transition for your entire
-                organization.
+                Professional corporate relocation services designed for
+                businesses. We help you minimize downtime, reduce costs, and
+                ensure a smooth transition for your entire organization.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -170,7 +187,7 @@ export default function AnimatedCorporateRelocationContent() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </PageHero>
 
       {/* Services Overview */}
       <section className="py-20 bg-white">
@@ -186,8 +203,9 @@ export default function AnimatedCorporateRelocationContent() {
               Complete Corporate Relocation Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From initial planning to post-move support, we provide comprehensive corporate
-              relocation services that minimize disruption to your business.
+              From initial planning to post-move support, we provide
+              comprehensive corporate relocation services that minimize
+              disruption to your business.
             </p>
           </motion.div>
 
@@ -204,11 +222,16 @@ export default function AnimatedCorporateRelocationContent() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-center gap-2 text-sm text-gray-600">
+                    <li
+                      key={benefit}
+                      className="flex items-center gap-2 text-sm text-gray-600"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span>{benefit}</span>
                     </li>
@@ -234,8 +257,9 @@ export default function AnimatedCorporateRelocationContent() {
               Corporate Relocation Packages
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the package that best fits your business size and relocation needs. All
-              packages include our expert guidance and support.
+              Choose the package that best fits your business size and
+              relocation needs. All packages include our expert guidance and
+              support.
             </p>
           </motion.div>
 
@@ -249,8 +273,12 @@ export default function AnimatedCorporateRelocationContent() {
                 viewport={{ once: true }}
                 className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
               >
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">{pkg.price}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {pkg.name}
+                </h3>
+                <div className="text-3xl font-bold text-blue-600 mb-4">
+                  {pkg.price}
+                </div>
                 <p className="text-gray-600 mb-6">{pkg.description}</p>
 
                 <ul className="space-y-3 mb-8">
@@ -292,8 +320,9 @@ export default function AnimatedCorporateRelocationContent() {
               Why Choose Our Corporate Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the benefits of professional corporate relocation expertise that keeps your
-              business running smoothly during transitions.
+              Experience the benefits of professional corporate relocation
+              expertise that keeps your business running smoothly during
+              transitions.
             </p>
           </motion.div>
 
@@ -310,7 +339,9 @@ export default function AnimatedCorporateRelocationContent() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
@@ -332,7 +363,8 @@ export default function AnimatedCorporateRelocationContent() {
               Corporate Property Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find executive homes and investment properties for your corporate relocation needs
+              Find executive homes and investment properties for your corporate
+              relocation needs
             </p>
           </motion.div>
 
@@ -364,7 +396,9 @@ export default function AnimatedCorporateRelocationContent() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Executive Homes</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Executive Homes
+              </h3>
               <realscout-office-listings
                 agent-encoded-id="QWdlbnQtMjI1MDUw"
                 sort-order="PRICE_HIGH"
@@ -383,7 +417,9 @@ export default function AnimatedCorporateRelocationContent() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Investment Properties</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Investment Properties
+              </h3>
               <realscout-office-listings
                 agent-encoded-id="QWdlbnQtMjI1MDUw"
                 sort-order="PRICE_LOW"
@@ -410,8 +446,8 @@ export default function AnimatedCorporateRelocationContent() {
               Ready to Plan Your Corporate Relocation?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Let's discuss your business relocation needs and create a customized plan that
-              minimizes disruption and maximizes success.
+              Let's discuss your business relocation needs and create a
+              customized plan that minimizes disruption and maximizes success.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

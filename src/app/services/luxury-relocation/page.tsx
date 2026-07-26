@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import PageHero from "@/components/sections/PageHero";
 import {
   Award,
   Calendar,
@@ -10,113 +11,126 @@ import {
   Plane,
   Shield,
   Star,
-} from 'lucide-react';
-import { motion } from '@/components/motion';
+} from "lucide-react";
+import { motion } from "@/components/motion";
 
 const luxuryServices = [
   {
     icon: Crown,
-    title: 'Concierge Relocation',
-    description: 'White-glove service with personal relocation managers',
+    title: "Concierge Relocation",
+    description: "White-glove service with personal relocation managers",
     benefits: [
-      'Dedicated relocation specialist',
-      'Priority scheduling',
-      'VIP treatment',
-      '24/7 support',
+      "Dedicated relocation specialist",
+      "Priority scheduling",
+      "VIP treatment",
+      "24/7 support",
     ],
   },
   {
     icon: Home,
-    title: 'Luxury Property Search',
-    description: 'Exclusive access to premium Las Vegas properties',
+    title: "Luxury Property Search",
+    description: "Exclusive access to premium Las Vegas properties",
     benefits: [
-      'Off-market listings',
-      'Custom property tours',
-      'Luxury neighborhood access',
-      'Investment analysis',
+      "Off-market listings",
+      "Custom property tours",
+      "Luxury neighborhood access",
+      "Investment analysis",
     ],
   },
   {
     icon: Plane,
-    title: 'Private Travel Coordination',
-    description: 'First-class travel arrangements and logistics',
-    benefits: ['Private jet options', 'Luxury car service', 'Hotel concierge', 'Travel insurance'],
+    title: "Private Travel Coordination",
+    description: "First-class travel arrangements and logistics",
+    benefits: [
+      "Private jet options",
+      "Luxury car service",
+      "Hotel concierge",
+      "Travel insurance",
+    ],
   },
   {
     icon: Shield,
-    title: 'Security & Privacy',
-    description: 'Complete confidentiality and security measures',
-    benefits: ['NDA agreements', 'Secure communications', 'Private viewings', 'Discrete handling'],
+    title: "Security & Privacy",
+    description: "Complete confidentiality and security measures",
+    benefits: [
+      "NDA agreements",
+      "Secure communications",
+      "Private viewings",
+      "Discrete handling",
+    ],
   },
 ];
 
 const luxuryPackages = [
   {
-    name: 'Elite Package',
-    price: 'Starting at $25,000',
-    description: 'Premium relocation service for discerning clients',
+    name: "Elite Package",
+    price: "Starting at $25,000",
+    description: "Premium relocation service for discerning clients",
     features: [
-      'Personal relocation manager',
-      'Luxury property search',
-      'Private travel coordination',
-      'Settling-in services',
-      'Ongoing support',
+      "Personal relocation manager",
+      "Luxury property search",
+      "Private travel coordination",
+      "Settling-in services",
+      "Ongoing support",
     ],
-    bestFor: 'High-net-worth individuals',
-    cta: 'Contact Sales',
+    bestFor: "High-net-worth individuals",
+    cta: "Contact Sales",
   },
   {
-    name: 'Royal Package',
-    price: 'Starting at $50,000',
-    description: 'Ultimate luxury relocation experience',
+    name: "Royal Package",
+    price: "Starting at $50,000",
+    description: "Ultimate luxury relocation experience",
     features: [
-      'All Elite features',
-      'Private jet coordination',
-      'Luxury car collection',
-      'Fine art handling',
-      'Celebrity-level privacy',
-      '24/7 concierge',
+      "All Elite features",
+      "Private jet coordination",
+      "Luxury car collection",
+      "Fine art handling",
+      "Celebrity-level privacy",
+      "24/7 concierge",
     ],
-    bestFor: 'Celebrities and executives',
-    cta: 'Contact Sales',
+    bestFor: "Celebrities and executives",
+    cta: "Contact Sales",
   },
   {
-    name: 'Corporate Elite',
-    price: 'Starting at $100,000',
-    description: 'Executive relocation for C-suite professionals',
+    name: "Corporate Elite",
+    price: "Starting at $100,000",
+    description: "Executive relocation for C-suite professionals",
     features: [
-      'All Royal features',
-      'Corporate housing',
-      'Team relocation',
-      'Business setup',
-      'Networking events',
-      'Ongoing support',
+      "All Royal features",
+      "Corporate housing",
+      "Team relocation",
+      "Business setup",
+      "Networking events",
+      "Ongoing support",
     ],
-    bestFor: 'Corporate executives',
-    cta: 'Contact Sales',
+    bestFor: "Corporate executives",
+    cta: "Contact Sales",
   },
 ];
 
 const luxuryBenefits = [
   {
     icon: Crown,
-    title: 'Exclusive Access',
-    description: 'Access to properties and services not available to the general public',
+    title: "Exclusive Access",
+    description:
+      "Access to properties and services not available to the general public",
   },
   {
     icon: Star,
-    title: 'Celebrity Treatment',
-    description: 'VIP service level with priority scheduling and personal attention',
+    title: "Celebrity Treatment",
+    description:
+      "VIP service level with priority scheduling and personal attention",
   },
   {
     icon: Shield,
-    title: 'Complete Privacy',
-    description: 'Absolute confidentiality and discretion throughout the process',
+    title: "Complete Privacy",
+    description:
+      "Absolute confidentiality and discretion throughout the process",
   },
   {
     icon: Award,
-    title: 'Premium Quality',
-    description: 'Highest standards of service and attention to detail',
+    title: "Premium Quality",
+    description: "Highest standards of service and attention to detail",
   },
 ];
 
@@ -124,7 +138,7 @@ export default function LuxuryRelocationPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white">
+      <PageHero image="luxuryRelocation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -143,9 +157,10 @@ export default function LuxuryRelocationPage() {
                 </span>
               </h1>
               <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-                Experience the epitome of luxury relocation with our exclusive services designed for
-                discerning clients. From private jet coordination to VIP property access, we deliver
-                excellence at every step.
+                Experience the epitome of luxury relocation with our exclusive
+                services designed for discerning clients. From private jet
+                coordination to VIP property access, we deliver excellence at
+                every step.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -178,7 +193,7 @@ export default function LuxuryRelocationPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </PageHero>
 
       {/* Services Overview */}
       <section className="py-20 bg-white">
@@ -194,7 +209,8 @@ export default function LuxuryRelocationPage() {
               Luxury Relocation Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the highest level of service with our exclusive luxury relocation packages
+              Experience the highest level of service with our exclusive luxury
+              relocation packages
             </p>
           </motion.div>
 
@@ -211,11 +227,16 @@ export default function LuxuryRelocationPage() {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-center gap-2 text-sm text-gray-700">
+                    <li
+                      key={benefit}
+                      className="flex items-center gap-2 text-sm text-gray-700"
+                    >
                       <CheckCircle className="w-4 h-4 text-purple-500" />
                       {benefit}
                     </li>
@@ -255,8 +276,12 @@ export default function LuxuryRelocationPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl p-8 shadow-lg border-2 border-purple-100 hover:border-purple-300 transition-colors"
               >
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                <div className="text-3xl font-bold text-purple-600 mb-4">{pkg.price}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {pkg.name}
+                </h3>
+                <div className="text-3xl font-bold text-purple-600 mb-4">
+                  {pkg.price}
+                </div>
                 <p className="text-gray-600 mb-6">{pkg.description}</p>
 
                 <ul className="space-y-3 mb-8">
@@ -315,7 +340,9 @@ export default function LuxuryRelocationPage() {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
@@ -337,7 +364,8 @@ export default function LuxuryRelocationPage() {
               Luxury Property Portfolio
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover exclusive luxury properties in Las Vegas's most prestigious neighborhoods
+              Discover exclusive luxury properties in Las Vegas's most
+              prestigious neighborhoods
             </p>
           </motion.div>
 
@@ -369,7 +397,9 @@ export default function LuxuryRelocationPage() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Ultra-Luxury Homes</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Ultra-Luxury Homes
+              </h3>
               <realscout-office-listings
                 agent-encoded-id="QWdlbnQtMjI1MDUw"
                 sort-order="PRICE_HIGH"
@@ -388,7 +418,9 @@ export default function LuxuryRelocationPage() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Premium Estates</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Premium Estates
+              </h3>
               <realscout-office-listings
                 agent-encoded-id="QWdlbnQtMjI1MDUw"
                 sort-order="PRICE_HIGH"
@@ -411,9 +443,12 @@ export default function LuxuryRelocationPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready for Luxury Relocation?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready for Luxury Relocation?
+            </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Experience the ultimate in relocation services with our exclusive luxury packages
+              Experience the ultimate in relocation services with our exclusive
+              luxury packages
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

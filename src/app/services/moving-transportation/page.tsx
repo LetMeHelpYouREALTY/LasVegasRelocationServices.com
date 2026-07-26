@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import PageHero from "@/components/sections/PageHero";
 import {
   Calendar,
   Car,
@@ -12,127 +13,127 @@ import {
   Shield,
   Truck,
   Users,
-} from 'lucide-react';
-import { motion } from '@/components/motion';
+} from "lucide-react";
+import { motion } from "@/components/motion";
 
 const movingServices = [
   {
     icon: Truck,
-    title: 'Professional Moving',
-    description: 'Full-service moving with experienced professionals',
+    title: "Professional Moving",
+    description: "Full-service moving with experienced professionals",
     benefits: [
-      'Packing services',
-      'Loading & unloading',
-      'Furniture protection',
-      'Specialty item handling',
+      "Packing services",
+      "Loading & unloading",
+      "Furniture protection",
+      "Specialty item handling",
     ],
   },
   {
     icon: Package,
-    title: 'Packing & Crating',
-    description: 'Expert packing for fragile and valuable items',
+    title: "Packing & Crating",
+    description: "Expert packing for fragile and valuable items",
     benefits: [
-      'Custom crating',
-      'Fragile item protection',
-      'Inventory management',
-      'Labeling system',
+      "Custom crating",
+      "Fragile item protection",
+      "Inventory management",
+      "Labeling system",
     ],
   },
   {
     icon: Car,
-    title: 'Vehicle Transportation',
-    description: 'Safe and reliable vehicle shipping services',
+    title: "Vehicle Transportation",
+    description: "Safe and reliable vehicle shipping services",
     benefits: [
-      'Enclosed transport',
-      'Insurance coverage',
-      'Door-to-door service',
-      'Tracking updates',
+      "Enclosed transport",
+      "Insurance coverage",
+      "Door-to-door service",
+      "Tracking updates",
     ],
   },
   {
     icon: Plane,
-    title: 'Air Freight Services',
-    description: 'Fast air transportation for urgent moves',
+    title: "Air Freight Services",
+    description: "Fast air transportation for urgent moves",
     benefits: [
-      'Express shipping',
-      'International routes',
-      'Customs clearance',
-      'Priority handling',
+      "Express shipping",
+      "International routes",
+      "Customs clearance",
+      "Priority handling",
     ],
   },
 ];
 
 const transportationPackages = [
   {
-    name: 'Basic Moving',
-    price: 'Starting at $2,500',
-    description: 'Essential moving services for local and regional relocations',
+    name: "Basic Moving",
+    price: "Starting at $2,500",
+    description: "Essential moving services for local and regional relocations",
     features: [
-      'Professional movers',
-      'Basic packing materials',
-      'Loading and unloading',
-      'Furniture protection',
-      'Local delivery',
-      'Basic insurance',
+      "Professional movers",
+      "Basic packing materials",
+      "Loading and unloading",
+      "Furniture protection",
+      "Local delivery",
+      "Basic insurance",
     ],
-    bestFor: 'Local moves and small households',
-    cta: 'Get Quote',
+    bestFor: "Local moves and small households",
+    cta: "Get Quote",
   },
   {
-    name: 'Complete Moving',
-    price: 'Starting at $5,000',
-    description: 'Comprehensive moving services with full support',
+    name: "Complete Moving",
+    price: "Starting at $5,000",
+    description: "Comprehensive moving services with full support",
     features: [
-      'Full packing service',
-      'Professional movers',
-      'Specialty item handling',
-      'Furniture disassembly',
-      'Long-distance transport',
-      'Full insurance coverage',
-      'Storage options',
+      "Full packing service",
+      "Professional movers",
+      "Specialty item handling",
+      "Furniture disassembly",
+      "Long-distance transport",
+      "Full insurance coverage",
+      "Storage options",
     ],
-    bestFor: 'Long-distance moves and families',
-    cta: 'Get Quote',
+    bestFor: "Long-distance moves and families",
+    cta: "Get Quote",
   },
   {
-    name: 'Premium Moving',
-    price: 'Starting at $8,000',
-    description: 'Luxury moving with white-glove service',
+    name: "Premium Moving",
+    price: "Starting at $8,000",
+    description: "Luxury moving with white-glove service",
     features: [
-      'Dedicated move coordinator',
-      'Premium packing materials',
-      'White-glove service',
-      'Climate-controlled transport',
-      'Full unpacking service',
-      'Premium insurance',
-      'Storage solutions',
-      '24/7 support',
+      "Dedicated move coordinator",
+      "Premium packing materials",
+      "White-glove service",
+      "Climate-controlled transport",
+      "Full unpacking service",
+      "Premium insurance",
+      "Storage solutions",
+      "24/7 support",
     ],
-    bestFor: 'High-value homes and luxury clients',
-    cta: 'Contact Sales',
+    bestFor: "High-value homes and luxury clients",
+    cta: "Contact Sales",
   },
 ];
 
 const transportationBenefits = [
   {
     icon: Shield,
-    title: 'Fully Insured',
-    description: 'Complete coverage for your belongings during transport',
+    title: "Fully Insured",
+    description: "Complete coverage for your belongings during transport",
   },
   {
     icon: Clock,
-    title: 'On-Time Delivery',
-    description: 'Reliable scheduling with real-time tracking updates',
+    title: "On-Time Delivery",
+    description: "Reliable scheduling with real-time tracking updates",
   },
   {
     icon: Users,
-    title: 'Expert Team',
-    description: 'Experienced professionals handle your move with care',
+    title: "Expert Team",
+    description: "Experienced professionals handle your move with care",
   },
   {
     icon: MapPin,
-    title: 'Nationwide Coverage',
-    description: 'Services available across the United States',
+    title: "Nationwide Coverage",
+    description: "Services available across the United States",
   },
 ];
 
@@ -140,7 +141,7 @@ export default function MovingTransportationPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">
+      <PageHero image="movingTransportation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -155,8 +156,9 @@ export default function MovingTransportationPage() {
                 </span>
               </h1>
               <p className="text-xl text-orange-100 mb-8 leading-relaxed">
-                Professional moving and transportation services for your relocation to Las Vegas.
-                From local moves to cross-country relocations, we handle every detail.
+                Professional moving and transportation services for your
+                relocation to Las Vegas. From local moves to cross-country
+                relocations, we handle every detail.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -189,7 +191,7 @@ export default function MovingTransportationPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </PageHero>
 
       {/* Services Overview */}
       <section className="py-20 bg-white">
@@ -205,8 +207,8 @@ export default function MovingTransportationPage() {
               Complete Moving & Transportation Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From packing to delivery, we provide comprehensive moving services with professional
-              care and attention to detail.
+              From packing to delivery, we provide comprehensive moving services
+              with professional care and attention to detail.
             </p>
           </motion.div>
 
@@ -223,11 +225,16 @@ export default function MovingTransportationPage() {
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-center gap-2 text-sm text-gray-700">
+                    <li
+                      key={benefit}
+                      className="flex items-center gap-2 text-sm text-gray-700"
+                    >
                       <CheckCircle className="w-4 h-4 text-orange-500" />
                       {benefit}
                     </li>
@@ -253,8 +260,8 @@ export default function MovingTransportationPage() {
               Choose Your Moving Package
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Flexible moving packages designed to meet your needs and ensure a smooth relocation
-              experience.
+              Flexible moving packages designed to meet your needs and ensure a
+              smooth relocation experience.
             </p>
           </motion.div>
 
@@ -268,8 +275,12 @@ export default function MovingTransportationPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100"
               >
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                <div className="text-3xl font-bold text-orange-600 mb-4">{pkg.price}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {pkg.name}
+                </h3>
+                <div className="text-3xl font-bold text-orange-600 mb-4">
+                  {pkg.price}
+                </div>
                 <p className="text-gray-600 mb-6">{pkg.description}</p>
 
                 <ul className="space-y-3 mb-8">
@@ -311,8 +322,8 @@ export default function MovingTransportationPage() {
               Why Choose Our Moving Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the difference that professional moving expertise makes for your relocation
-              to Las Vegas.
+              Experience the difference that professional moving expertise makes
+              for your relocation to Las Vegas.
             </p>
           </motion.div>
 
@@ -329,7 +340,9 @@ export default function MovingTransportationPage() {
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
@@ -351,7 +364,8 @@ export default function MovingTransportationPage() {
               Find Your New Home
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Browse available properties while we handle your moving and transportation needs
+              Browse available properties while we handle your moving and
+              transportation needs
             </p>
           </motion.div>
 
@@ -383,7 +397,9 @@ export default function MovingTransportationPage() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Affordable Homes</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Affordable Homes
+              </h3>
               <realscout-office-listings
                 agent-encoded-id="QWdlbnQtMjI1MDUw"
                 sort-order="PRICE_LOW"
@@ -402,7 +418,9 @@ export default function MovingTransportationPage() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Mid-Range Properties</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Mid-Range Properties
+              </h3>
               <realscout-office-listings
                 agent-encoded-id="QWdlbnQtMjI1MDUw"
                 sort-order="PRICE_HIGH"
@@ -429,8 +447,8 @@ export default function MovingTransportationPage() {
               Ready to Start Your Move to Las Vegas?
             </h2>
             <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
-              Let's get your relocation started. Schedule your free consultation and discover how we
-              can make your move smooth and stress-free.
+              Let's get your relocation started. Schedule your free consultation
+              and discover how we can make your move smooth and stress-free.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

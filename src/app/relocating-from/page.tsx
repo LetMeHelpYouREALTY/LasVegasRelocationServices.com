@@ -1,73 +1,90 @@
-import { Building, Home, MapPin, Plane, Shield, Users } from 'lucide-react';
-import type { Metadata } from 'next';
-import Link from 'next/link';
+import PageHero from "@/components/sections/PageHero";
+import { Building, Home, MapPin, Plane, Shield, Users } from "lucide-react";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: 'Relocating to Las Vegas from Major US Cities | Dr. Jan Duffy',
+  title: "Relocating to Las Vegas from Major US Cities | Dr. Jan Duffy",
   description:
-    'Expert relocation services from major US cities to Las Vegas. Professional assistance for Los Angeles, San Diego, New York, Chicago, Miami, and Seattle relocations.',
+    "Expert relocation services from major US cities to Las Vegas. Professional assistance for Los Angeles, San Diego, New York, Chicago, Miami, and Seattle relocations.",
   keywords:
-    'Las Vegas relocation, moving to Las Vegas, relocation services, Dr. Jan Duffy, Berkshire Hathaway',
+    "Las Vegas relocation, moving to Las Vegas, relocation services, Dr. Jan Duffy, Berkshire Hathaway",
   alternates: {
-    canonical: '/relocating-from',
+    canonical: "/relocating-from",
   },
   openGraph: {
-    title: 'Relocating to Las Vegas from Major US Cities | Dr. Jan Duffy',
+    title: "Relocating to Las Vegas from Major US Cities | Dr. Jan Duffy",
     description:
-      'Expert relocation services from major US cities to Las Vegas. Professional assistance for Los Angeles, San Diego, New York, Chicago, Miami, and Seattle relocations.',
-    type: 'website',
-    url: 'https://www.lasvegasrelocationservices.com/relocating-from',
+      "Expert relocation services from major US cities to Las Vegas. Professional assistance for Los Angeles, San Diego, New York, Chicago, Miami, and Seattle relocations.",
+    type: "website",
+    url: "https://www.lasvegasrelocationservices.com/relocating-from",
   },
 };
 
 const cities = [
   {
-    name: 'Los Angeles',
-    state: 'California',
-    href: '/relocating-from/los-angeles',
+    name: "Los Angeles",
+    state: "California",
+    href: "/relocating-from/los-angeles",
     icon: Home,
-    description: 'LA to Las Vegas relocation with expert guidance',
-    features: ['Weather transition', 'Cost of living adjustment', 'Lifestyle change'],
+    description: "LA to Las Vegas relocation with expert guidance",
+    features: [
+      "Weather transition",
+      "Cost of living adjustment",
+      "Lifestyle change",
+    ],
   },
   {
-    name: 'San Diego',
-    state: 'California',
-    href: '/relocating-from/san-diego',
+    name: "San Diego",
+    state: "California",
+    href: "/relocating-from/san-diego",
     icon: MapPin,
-    description: 'San Diego to Las Vegas relocation services',
-    features: ['Climate adaptation', 'Housing market transition', 'Community integration'],
+    description: "San Diego to Las Vegas relocation services",
+    features: [
+      "Climate adaptation",
+      "Housing market transition",
+      "Community integration",
+    ],
   },
   {
-    name: 'New York',
-    state: 'New York',
-    href: '/relocating-from/new-york',
+    name: "New York",
+    state: "New York",
+    href: "/relocating-from/new-york",
     icon: Building,
-    description: 'NYC to Las Vegas corporate and residential relocation',
-    features: ['Urban to suburban transition', 'Tax benefits', 'Quality of life improvement'],
+    description: "NYC to Las Vegas corporate and residential relocation",
+    features: [
+      "Urban to suburban transition",
+      "Tax benefits",
+      "Quality of life improvement",
+    ],
   },
   {
-    name: 'Chicago',
-    state: 'Illinois',
-    href: '/relocating-from/chicago',
+    name: "Chicago",
+    state: "Illinois",
+    href: "/relocating-from/chicago",
     icon: Users,
-    description: 'Chicago to Las Vegas relocation assistance',
-    features: ['Weather improvement', 'Cost savings', 'Lifestyle enhancement'],
+    description: "Chicago to Las Vegas relocation assistance",
+    features: ["Weather improvement", "Cost savings", "Lifestyle enhancement"],
   },
   {
-    name: 'Miami',
-    state: 'Florida',
-    href: '/relocating-from/miami',
+    name: "Miami",
+    state: "Florida",
+    href: "/relocating-from/miami",
     icon: Plane,
-    description: 'Miami to Las Vegas relocation support',
-    features: ['Climate adjustment', 'Business opportunities', 'Family-friendly environment'],
+    description: "Miami to Las Vegas relocation support",
+    features: [
+      "Climate adjustment",
+      "Business opportunities",
+      "Family-friendly environment",
+    ],
   },
   {
-    name: 'Seattle',
-    state: 'Washington',
-    href: '/relocating-from/seattle',
+    name: "Seattle",
+    state: "Washington",
+    href: "/relocating-from/seattle",
     icon: Shield,
-    description: 'Seattle to Las Vegas relocation services',
-    features: ['Weather benefits', 'Tax advantages', 'Economic opportunities'],
+    description: "Seattle to Las Vegas relocation services",
+    features: ["Weather benefits", "Tax advantages", "Economic opportunities"],
   },
 ];
 
@@ -75,17 +92,20 @@ export default function RelocatingFromPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-20">
+      <PageHero image="relocatingFrom">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Relocating to Las Vegas</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Relocating to Las Vegas
+            </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Expert relocation services from major US cities to Las Vegas. Dr. Jan Duffy provides
-              personalized assistance for your successful move.
+              Expert relocation services from major US cities to Las Vegas. Dr.
+              Jan Duffy provides personalized assistance for your successful
+              move.
             </p>
           </div>
         </div>
-      </section>
+      </PageHero>
 
       {/* Cities Grid */}
       <section className="py-20 bg-white">
@@ -95,8 +115,8 @@ export default function RelocatingFromPage() {
               Choose Your Starting City
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select your current city to get specialized relocation guidance and services tailored
-              to your needs.
+              Select your current city to get specialized relocation guidance
+              and services tailored to your needs.
             </p>
           </div>
 
@@ -113,10 +133,15 @@ export default function RelocatingFromPage() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {city.name}, {city.state}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{city.description}</p>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {city.description}
+                </p>
                 <ul className="space-y-2 mb-6">
                   {city.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-500">
+                    <li
+                      key={index}
+                      className="flex items-center text-sm text-gray-500"
+                    >
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                       {feature}
                     </li>
@@ -138,8 +163,8 @@ export default function RelocatingFromPage() {
             Ready to Start Your Relocation?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Contact Dr. Jan Duffy for a free consultation and discover how we can make your
-            relocation seamless and successful.
+            Contact Dr. Jan Duffy for a free consultation and discover how we
+            can make your relocation seamless and successful.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

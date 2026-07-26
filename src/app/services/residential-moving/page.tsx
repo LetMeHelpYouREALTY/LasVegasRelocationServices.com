@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import PageHero from "@/components/sections/PageHero";
 import {
   Calendar,
   CheckCircle,
@@ -11,102 +12,115 @@ import {
   Shield,
   Truck,
   Users,
-} from 'lucide-react';
-import { motion } from '@/components/motion';
+} from "lucide-react";
+import { motion } from "@/components/motion";
 
 const serviceFeatures = [
   {
     icon: Home,
-    title: 'Home Finding Services',
-    description: 'Expert assistance finding your perfect Las Vegas home',
-    benefits: ['Neighborhood matching', 'School district analysis', 'Market insights'],
+    title: "Home Finding Services",
+    description: "Expert assistance finding your perfect Las Vegas home",
+    benefits: [
+      "Neighborhood matching",
+      "School district analysis",
+      "Market insights",
+    ],
   },
   {
     icon: School,
-    title: 'School District Guidance',
-    description: 'Comprehensive school information and enrollment support',
-    benefits: ['District ratings', 'Enrollment assistance', 'School tours'],
+    title: "School District Guidance",
+    description: "Comprehensive school information and enrollment support",
+    benefits: ["District ratings", "Enrollment assistance", "School tours"],
   },
   {
     icon: Heart,
-    title: 'Community Integration',
-    description: 'Help your family feel at home in Las Vegas',
-    benefits: ['Local connections', 'Activity recommendations', 'Cultural integration'],
+    title: "Community Integration",
+    description: "Help your family feel at home in Las Vegas",
+    benefits: [
+      "Local connections",
+      "Activity recommendations",
+      "Cultural integration",
+    ],
   },
   {
     icon: Truck,
-    title: 'Moving Coordination',
-    description: 'Full-service moving day coordination and support',
-    benefits: ['Professional movers', 'Packing services', 'Unpacking assistance'],
+    title: "Moving Coordination",
+    description: "Full-service moving day coordination and support",
+    benefits: [
+      "Professional movers",
+      "Packing services",
+      "Unpacking assistance",
+    ],
   },
 ];
 
 const residentialPackages = [
   {
-    name: 'Essential Family',
-    price: 'Starting at $1,500',
-    description: 'Basic residential relocation support for families',
+    name: "Essential Family",
+    price: "Starting at $1,500",
+    description: "Basic residential relocation support for families",
     features: [
-      'Home finding consultation',
-      'School district information',
-      'Moving day coordination',
-      'Basic settling-in support',
+      "Home finding consultation",
+      "School district information",
+      "Moving day coordination",
+      "Basic settling-in support",
     ],
-    bestFor: 'Small families (1-2 children)',
-    cta: 'Get Quote',
+    bestFor: "Small families (1-2 children)",
+    cta: "Get Quote",
   },
   {
-    name: 'Complete Family',
-    price: 'Starting at $3,000',
-    description: 'Comprehensive family relocation services',
+    name: "Complete Family",
+    price: "Starting at $3,000",
+    description: "Comprehensive family relocation services",
     features: [
-      'Full home finding service',
-      'School enrollment assistance',
-      'Community integration support',
-      'Moving coordination',
-      'Settling-in assistance',
-      'Ongoing support',
+      "Full home finding service",
+      "School enrollment assistance",
+      "Community integration support",
+      "Moving coordination",
+      "Settling-in assistance",
+      "Ongoing support",
     ],
-    bestFor: 'Growing families (2+ children)',
-    cta: 'Get Quote',
+    bestFor: "Growing families (2+ children)",
+    cta: "Get Quote",
   },
   {
-    name: 'Premium Family',
-    price: 'Starting at $5,000',
-    description: 'Luxury family relocation with concierge service',
+    name: "Premium Family",
+    price: "Starting at $5,000",
+    description: "Luxury family relocation with concierge service",
     features: [
-      'Dedicated relocation manager',
-      'Luxury home options',
-      'Private school assistance',
-      'Concierge services',
-      'Cultural integration programs',
-      '24/7 family support',
+      "Dedicated relocation manager",
+      "Luxury home options",
+      "Private school assistance",
+      "Concierge services",
+      "Cultural integration programs",
+      "24/7 family support",
     ],
-    bestFor: 'Families seeking premium service',
-    cta: 'Contact Sales',
+    bestFor: "Families seeking premium service",
+    cta: "Contact Sales",
   },
 ];
 
 const familyBenefits = [
   {
     icon: Users,
-    title: 'Family-Focused Approach',
+    title: "Family-Focused Approach",
     description: "Every decision made with your family's needs in mind",
   },
   {
     icon: School,
-    title: 'Education Excellence',
-    description: 'Access to top-rated school districts and educational opportunities',
+    title: "Education Excellence",
+    description:
+      "Access to top-rated school districts and educational opportunities",
   },
   {
     icon: MapPin,
-    title: 'Perfect Neighborhoods',
-    description: 'Find communities that match your lifestyle and preferences',
+    title: "Perfect Neighborhoods",
+    description: "Find communities that match your lifestyle and preferences",
   },
   {
     icon: Shield,
-    title: 'Stress-Free Moving',
-    description: 'Let us handle the details while you focus on your family',
+    title: "Stress-Free Moving",
+    description: "Let us handle the details while you focus on your family",
   },
 ];
 
@@ -114,7 +128,7 @@ export default function ResidentialMovingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white">
+      <PageHero image="residentialMoving">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -129,9 +143,9 @@ export default function ResidentialMovingPage() {
                 </span>
               </h1>
               <p className="text-xl text-green-100 mb-8 leading-relaxed">
-                Professional residential moving services designed for families. We help you find the
-                perfect home, navigate school districts, and integrate into your new Las Vegas
-                community.
+                Professional residential moving services designed for families.
+                We help you find the perfect home, navigate school districts,
+                and integrate into your new Las Vegas community.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -164,7 +178,7 @@ export default function ResidentialMovingPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </PageHero>
 
       {/* Services Overview */}
       <section className="py-20 bg-white">
@@ -180,8 +194,9 @@ export default function ResidentialMovingPage() {
               Complete Family Relocation Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From finding your dream home to settling into your new community, we provide
-              comprehensive support for every step of your family's relocation journey.
+              From finding your dream home to settling into your new community,
+              we provide comprehensive support for every step of your family's
+              relocation journey.
             </p>
           </motion.div>
 
@@ -198,11 +213,16 @@ export default function ResidentialMovingPage() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-center gap-2 text-sm text-gray-700">
+                    <li
+                      key={benefit}
+                      className="flex items-center gap-2 text-sm text-gray-700"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       {benefit}
                     </li>
@@ -228,7 +248,8 @@ export default function ResidentialMovingPage() {
               Choose Your Family Package
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Flexible residential moving packages designed to meet your family's needs and budget.
+              Flexible residential moving packages designed to meet your
+              family's needs and budget.
             </p>
           </motion.div>
 
@@ -242,8 +263,12 @@ export default function ResidentialMovingPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100"
               >
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                <div className="text-3xl font-bold text-green-600 mb-4">{pkg.price}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {pkg.name}
+                </h3>
+                <div className="text-3xl font-bold text-green-600 mb-4">
+                  {pkg.price}
+                </div>
                 <p className="text-gray-600 mb-6">{pkg.description}</p>
 
                 <ul className="space-y-3 mb-8">
@@ -285,8 +310,8 @@ export default function ResidentialMovingPage() {
               Why Families Choose Our Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the difference that family-focused relocation expertise makes for your move
-              to Las Vegas.
+              Experience the difference that family-focused relocation expertise
+              makes for your move to Las Vegas.
             </p>
           </motion.div>
 
@@ -303,7 +328,9 @@ export default function ResidentialMovingPage() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
@@ -325,7 +352,8 @@ export default function ResidentialMovingPage() {
               Find Your New Home
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Browse available properties in Las Vegas to find the perfect home for your family
+              Browse available properties in Las Vegas to find the perfect home
+              for your family
             </p>
           </motion.div>
 
@@ -357,7 +385,9 @@ export default function ResidentialMovingPage() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Family Homes</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Family Homes
+              </h3>
               <realscout-office-listings
                 agent-encoded-id="QWdlbnQtMjI1MDUw"
                 sort-order="PRICE_HIGH"
@@ -376,7 +406,9 @@ export default function ResidentialMovingPage() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Condos & Townhomes</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Condos & Townhomes
+              </h3>
               <realscout-office-listings
                 agent-encoded-id="QWdlbnQtMjI1MDUw"
                 sort-order="PRICE_LOW"
@@ -403,8 +435,9 @@ export default function ResidentialMovingPage() {
               Ready to Find Your Las Vegas Home?
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Let's start your family's journey to Las Vegas. Schedule your free consultation and
-              discover how we can make your move stress-free and successful.
+              Let's start your family's journey to Las Vegas. Schedule your free
+              consultation and discover how we can make your move stress-free
+              and successful.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

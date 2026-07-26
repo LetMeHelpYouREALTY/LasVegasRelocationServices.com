@@ -1,5 +1,6 @@
-'use client';
+"use client";
 
+import PageHero from "@/components/sections/PageHero";
 import {
   Award,
   Building,
@@ -12,85 +13,88 @@ import {
   Shield,
   Star,
   Users,
-} from 'lucide-react';
-import { motion } from '@/components/motion';
+} from "lucide-react";
+import { motion } from "@/components/motion";
 
 const credentials = [
   {
     icon: Award,
-    title: 'Berkshire Hathaway Services',
-    description: 'Relocation Services Team Member',
-    details: 'Prestigious team with proven track record',
+    title: "Berkshire Hathaway Services",
+    description: "Relocation Services Team Member",
+    details: "Prestigious team with proven track record",
   },
   {
     icon: Shield,
-    title: 'Nevada-Licensed REALTOR®',
-    description: 'Nevada Real Estate License S.0197614',
-    details: 'Berkshire Hathaway HomeServices Nevada Properties',
+    title: "Nevada-Licensed REALTOR®",
+    description: "Nevada Real Estate License S.0197614",
+    details: "Berkshire Hathaway HomeServices Nevada Properties",
   },
   {
     icon: Building,
-    title: 'Las Vegas Market Expert',
-    description: '15+ years local experience',
-    details: 'Deep knowledge of neighborhoods and markets',
+    title: "Las Vegas Market Expert",
+    description: "15+ years local experience",
+    details: "Deep knowledge of neighborhoods and markets",
   },
   {
     icon: Globe,
-    title: 'International Relocation',
-    description: 'Worldwide broker network',
-    details: 'Global relocation expertise',
+    title: "International Relocation",
+    description: "Worldwide broker network",
+    details: "Global relocation expertise",
   },
 ];
 
 const teamStats = [
-  { number: '500+', label: 'Families Relocated', icon: Users },
-  { number: '98%', label: 'Client Satisfaction', icon: Star },
-  { number: '15+', label: 'Years Experience', icon: Clock },
-  { number: '50+', label: 'Neighborhoods Served', icon: MapPin },
+  { number: "500+", label: "Families Relocated", icon: Users },
+  { number: "98%", label: "Client Satisfaction", icon: Star },
+  { number: "15+", label: "Years Experience", icon: Clock },
+  { number: "50+", label: "Neighborhoods Served", icon: MapPin },
 ];
 
 const values = [
   {
     icon: Heart,
-    title: 'Personalized Care',
+    title: "Personalized Care",
     description:
       "Every relocation is unique. We treat your move as if it were our own family's move.",
   },
   {
     icon: Shield,
-    title: 'Trust & Reliability',
-    description: 'Built on 15+ years of trust, transparency, and consistent delivery of promises.',
+    title: "Trust & Reliability",
+    description:
+      "Built on 15+ years of trust, transparency, and consistent delivery of promises.",
   },
   {
     icon: Building,
-    title: 'Local Expertise',
-    description: 'Deep knowledge of Las Vegas neighborhoods, schools, and real estate markets.',
+    title: "Local Expertise",
+    description:
+      "Deep knowledge of Las Vegas neighborhoods, schools, and real estate markets.",
   },
   {
     icon: Star,
-    title: 'Excellence',
-    description: 'Committed to exceeding expectations in every aspect of your relocation.',
+    title: "Excellence",
+    description:
+      "Committed to exceeding expectations in every aspect of your relocation.",
   },
 ];
 
 const achievements = [
   {
-    title: 'Primary Service Provider',
+    title: "Primary Service Provider",
     description:
-      'Primary service provider for Las Vegas metro with BGRS (2nd largest relocation provider worldwide)',
-    highlight: 'Trusted by Fortune 100 Companies',
+      "Primary service provider for Las Vegas metro with BGRS (2nd largest relocation provider worldwide)",
+    highlight: "Trusted by Fortune 100 Companies",
   },
   {
-    title: 'Preferred Broker Status',
+    title: "Preferred Broker Status",
     description:
       'Earned "primary" or "preferred" broker status with most third-party relocation companies',
-    highlight: 'Industry Recognition',
+    highlight: "Industry Recognition",
   },
   {
-    title: 'Nationally Recognized Team',
+    title: "Nationally Recognized Team",
     description:
-      'Multiple awards for service and performance, representing the majority of Las Vegas relocations',
-    highlight: 'Award-Winning Excellence',
+      "Multiple awards for service and performance, representing the majority of Las Vegas relocations",
+    highlight: "Award-Winning Excellence",
   },
 ];
 
@@ -98,7 +102,7 @@ export default function AnimatedAboutContent() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
+      <PageHero image="about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Column - Story & Highlights */}
@@ -109,33 +113,34 @@ export default function AnimatedAboutContent() {
               viewport={{ once: true }}
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Meet{' '}
+                Meet{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
                   Dr. Jan Duffy
                 </span>
               </h1>
 
               <p className="text-lg text-blue-100 mb-6 leading-relaxed">
-                Dr. Jan Duffy leads our Las Vegas relocation services with unmatched expertise and
-                dedication. As a member of the prestigious Berkshire Hathaway Services Relocation
-                Team, she brings 15+ years of experience helping families and businesses
+                Dr. Jan Duffy leads our Las Vegas relocation services with
+                unmatched expertise and dedication. As a member of the
+                prestigious Berkshire Hathaway Services Relocation Team, she
+                brings 15+ years of experience helping families and businesses
                 successfully transition to Las Vegas.
               </p>
 
               <p className="text-lg text-blue-100 mb-8 leading-relaxed">
-                Our commitment to excellence ensures that your move to Las Vegas is not just
-                successful, but truly exceptional.
+                Our commitment to excellence ensures that your move to Las Vegas
+                is not just successful, but truly exceptional.
               </p>
 
               {/* Highlights */}
               <div className="space-y-3 mb-8">
                 {[
-                  '15+ years of Las Vegas real estate expertise',
-                  'Berkshire Hathaway Services Relocation Team member',
-                  'Certified relocation specialist with proven track record',
-                  'Personalized approach for every client family',
-                  'Local market knowledge and community connections',
-                  'Ongoing support throughout your relocation journey',
+                  "15+ years of Las Vegas real estate expertise",
+                  "Berkshire Hathaway Services Relocation Team member",
+                  "Certified relocation specialist with proven track record",
+                  "Personalized approach for every client family",
+                  "Local market knowledge and community connections",
+                  "Ongoing support throughout your relocation journey",
                 ].map((highlight, index) => (
                   <motion.div
                     key={`highlight-${highlight}-${index}`}
@@ -187,15 +192,21 @@ export default function AnimatedAboutContent() {
                         <stat.icon className="w-6 h-6 text-blue-200" />
                       </div>
                     </div>
-                    <div className="text-3xl font-bold text-blue-200 mb-2">{stat.number}</div>
-                    <div className="text-sm text-blue-100 font-medium">{stat.label}</div>
+                    <div className="text-3xl font-bold text-blue-200 mb-2">
+                      {stat.number}
+                    </div>
+                    <div className="text-sm text-blue-100 font-medium">
+                      {stat.label}
+                    </div>
                   </motion.div>
                 ))}
               </div>
 
               {/* Company Values */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <h4 className="text-xl font-bold text-white mb-6 text-center">Our Core Values</h4>
+                <h4 className="text-xl font-bold text-white mb-6 text-center">
+                  Our Core Values
+                </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {values.map((value, index) => (
                     <motion.div
@@ -210,8 +221,12 @@ export default function AnimatedAboutContent() {
                         <value.icon className="w-5 h-5 text-blue-200" />
                       </div>
                       <div>
-                        <h5 className="font-semibold text-white mb-1">{value.title}</h5>
-                        <p className="text-sm text-blue-100">{value.description}</p>
+                        <h5 className="font-semibold text-white mb-1">
+                          {value.title}
+                        </h5>
+                        <p className="text-sm text-blue-100">
+                          {value.description}
+                        </p>
                       </div>
                     </motion.div>
                   ))}
@@ -229,8 +244,12 @@ export default function AnimatedAboutContent() {
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold mb-2">Berkshire Hathaway Services</h4>
-                <p className="text-blue-100 text-sm">Relocation Services Team Member</p>
+                <h4 className="text-lg font-semibold mb-2">
+                  Berkshire Hathaway Services
+                </h4>
+                <p className="text-blue-100 text-sm">
+                  Relocation Services Team Member
+                </p>
                 <p className="text-xs text-blue-200 font-medium mt-2">
                   Quality • Reliability • Excellence
                 </p>
@@ -238,7 +257,7 @@ export default function AnimatedAboutContent() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </PageHero>
 
       {/* Credentials Section */}
       <section className="py-20 bg-white">
@@ -251,14 +270,14 @@ export default function AnimatedAboutContent() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Professional{' '}
+              Professional{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                 Credentials
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Dr. Jan Duffy's extensive qualifications and industry recognition make her the trusted
-              choice for your Las Vegas relocation.
+              Dr. Jan Duffy's extensive qualifications and industry recognition
+              make her the trusted choice for your Las Vegas relocation.
             </p>
           </motion.div>
 
@@ -275,9 +294,13 @@ export default function AnimatedAboutContent() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <credential.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{credential.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {credential.title}
+                </h3>
                 <p className="text-gray-600 mb-2">{credential.description}</p>
-                <p className="text-sm text-blue-600 font-medium">{credential.details}</p>
+                <p className="text-sm text-blue-600 font-medium">
+                  {credential.details}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -295,14 +318,14 @@ export default function AnimatedAboutContent() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Industry{' '}
+              Industry{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                 Achievements
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our team's accomplishments and industry recognition demonstrate our commitment to
-              excellence in relocation services.
+              Our team's accomplishments and industry recognition demonstrate
+              our commitment to excellence in relocation services.
             </p>
           </motion.div>
 
@@ -320,8 +343,12 @@ export default function AnimatedAboutContent() {
                   <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
                     {achievement.highlight}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{achievement.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{achievement.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    {achievement.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {achievement.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -343,7 +370,8 @@ export default function AnimatedAboutContent() {
               Explore Las Vegas Properties
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Browse available properties while learning about our team and services
+              Browse available properties while learning about our team and
+              services
             </p>
           </motion.div>
 
@@ -375,7 +403,9 @@ export default function AnimatedAboutContent() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Featured Listings</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Featured Listings
+              </h3>
               <realscout-office-listings
                 agent-encoded-id="QWdlbnQtMjI1MDUw"
                 sort-order="PRICE_HIGH"
@@ -394,7 +424,9 @@ export default function AnimatedAboutContent() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">New Arrivals</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                New Arrivals
+              </h3>
               <realscout-office-listings
                 agent-encoded-id="QWdlbnQtMjI1MDUw"
                 sort-order="PRICE_LOW"
@@ -421,8 +453,8 @@ export default function AnimatedAboutContent() {
               Ready to Work with Dr. Jan Duffy?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Experience the difference that professional expertise and personalized care make for
-              your Las Vegas relocation.
+              Experience the difference that professional expertise and
+              personalized care make for your Las Vegas relocation.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
