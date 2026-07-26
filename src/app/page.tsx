@@ -288,31 +288,6 @@ export default function HomePage() {
         className="py-16"
       />
 
-      {/* Property Search Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Find Your Las Vegas Home
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover properties that offer better value than your current city
-            </p>
-          </div>
-
-          {/* RealScout Widget — no opacity:0; reserved min-height via RealScoutScript CSS */}
-          <div className="mb-12 min-h-[480px]">
-            <realscout-office-listings
-              agent-encoded-id="QWdlbnQtMjI1MDUw"
-              sort-order="PRICE_HIGH"
-              listing-status="For Sale"
-              property-types="SFR,MF"
-              price-min="400000"
-              price-max="800000"
-            ></realscout-office-listings>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <FAQSection
