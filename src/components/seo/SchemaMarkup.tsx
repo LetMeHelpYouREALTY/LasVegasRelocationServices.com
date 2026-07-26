@@ -1,6 +1,16 @@
 'use client';
 
 import Script from 'next/script';
+import {
+  ADDRESS,
+  BROKERAGE,
+  BUSINESS_NAME,
+  EMAIL,
+  GEO_COORDINATES,
+  LICENSE_LABEL,
+  PHONE_TEL,
+  SITE_URL,
+} from '@/lib/business';
 
 interface SchemaMarkupProps {
   type: 'localBusiness' | 'realEstateAgent' | 'service' | 'place' | 'howTo' | 'article' | 'faqPage' | 'realEstate' | 'financialProduct';
@@ -14,35 +24,20 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
         return {
           '@context': 'https://schema.org',
           '@type': 'LocalBusiness',
-          name: 'Dr. Jan Duffy - Las Vegas Relocation Services',
+          name: `Dr. Jan Duffy - ${BUSINESS_NAME}`,
           description: 'Professional relocation services from major US cities to Las Vegas. Expert real estate guidance with Berkshire Hathaway.',
-          url: 'https://www.lasvegasrelocationservices.com',
-          telephone: '+1-702-XXX-XXXX',
-          email: 'dr.jan.duffy@berkshirehathaway.com',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '100 North Green Valley Parkway, Suite 330',
-            addressLocality: 'Henderson',
-            addressRegion: 'NV',
-            postalCode: '89074',
-            addressCountry: 'US'
-          },
-          geo: {
-            '@type': 'GeoCoordinates',
-            latitude: 36.0395,
-            longitude: -115.0272
-          },
+          url: SITE_URL,
+          telephone: PHONE_TEL,
+          email: EMAIL,
+          address: ADDRESS,
+          geo: GEO_COORDINATES,
           areaServed: {
             '@type': 'City',
             name: 'Las Vegas'
           },
           serviceArea: {
             '@type': 'GeoCircle',
-            geoMidpoint: {
-              '@type': 'GeoCoordinates',
-              latitude: 36.0395,
-              longitude: -115.0272
-            },
+            geoMidpoint: GEO_COORDINATES,
             geoRadius: '50000'
           },
           hasOfferCatalog: {
@@ -76,12 +71,12 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
           '@type': 'RealEstateAgent',
           name: 'Dr. Jan Duffy',
           description: 'Licensed real estate agent specializing in Las Vegas relocation services',
-          url: 'https://www.lasvegasrelocationservices.com',
-          telephone: '+1-702-XXX-XXXX',
-          email: 'dr.jan.duffy@berkshirehathaway.com',
+          url: SITE_URL,
+          telephone: PHONE_TEL,
+          email: EMAIL,
           worksFor: {
             '@type': 'Organization',
-            name: 'Berkshire Hathaway HomeServices',
+            name: BROKERAGE,
             url: 'https://www.berkshirehathawayhomeservices.com'
           },
           areaServed: {
@@ -89,7 +84,7 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
             name: 'Las Vegas'
           },
           hasCredential: [
-            'Licensed Real Estate Agent',
+            LICENSE_LABEL,
             '15+ Years Experience',
             'Relocation Specialist'
           ],

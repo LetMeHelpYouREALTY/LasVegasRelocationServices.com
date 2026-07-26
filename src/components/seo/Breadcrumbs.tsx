@@ -2,7 +2,7 @@
 
 import { ChevronRight, Home } from 'lucide-react';
 import Link from 'next/link';
-import SchemaMarkup from './SchemaMarkup';
+import { breadcrumbListSchema } from '@/lib/business';
 
 interface BreadcrumbItem {
   label: string;
@@ -15,33 +15,6 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items, className = '' }: BreadcrumbsProps) {
-  // Prepare breadcrumb data for schema markup
-  const breadcrumbSchemaData = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Relocation Services',
-    description: 'Professional relocation services to Las Vegas',
-    provider: {
-      '@type': 'Organization',
-      name: 'Dr. Jan Duffy - Las Vegas Relocation Services',
-      url: 'https://www.lasvegasrelocationservices.com',
-    },
-    breadcrumb: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://www.lasvegasrelocationservices.com',
-      },
-      ...items.map((item, index) => ({
-        '@type': 'ListItem',
-        position: index + 2,
-        name: item.label,
-        item: `https://www.lasvegasrelocationservices.com${item.href}`,
-      })),
-    ],
-  };
-
   return (
     <nav
       className={`py-4 bg-gray-50 border-b border-gray-200 ${className}`}
@@ -79,8 +52,11 @@ export default function Breadcrumbs({ items, className = '' }: BreadcrumbsProps)
         </ol>
       </div>
 
-      {/* Schema markup for breadcrumbs */}
-      <SchemaMarkup type="service" data={breadcrumbSchemaData} />
+      {/* BreadcrumbList structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbListSchema(items)) }}
+      />
     </nav>
   );
 }
