@@ -1,7 +1,6 @@
 "use client";
 
 import PageHero from "@/components/sections/PageHero";
-import AgentPortrait from "@/components/shared/AgentPortrait";
 import {
   Award,
   Building,
@@ -102,168 +101,149 @@ const achievements = [
 export default function AnimatedAboutContent() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <PageHero image="about" showPortrait={false}>
+      {/* Hero: headline + short copy + CTA; portrait from PageHero (no cards on photo) */}
+      <PageHero image="about" className="min-h-[68vh]">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="max-w-2xl"
+        >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            Meet Dr. Jan Duffy
+          </h1>
+          <p className="mt-5 text-lg md:text-xl text-blue-50 leading-relaxed max-w-xl">
+            Nevada-licensed REALTOR® with Berkshire Hathaway HomeServices
+            Nevada Properties — 15+ years helping households and businesses
+            relocate to Las Vegas and Henderson.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <a
+              href="https://calendly.com/drjanduffy/showing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-white px-7 py-3.5 text-base font-semibold text-[#0A2540] hover:bg-blue-50 transition-colors"
+            >
+              Book a Showing
+            </a>
+            <a
+              href="tel:+17027077273"
+              className="inline-flex items-center justify-center rounded-lg border border-white/70 bg-white/10 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm hover:bg-white/20 transition-colors"
+            >
+              Call (702) 707-7273
+            </a>
+          </div>
+        </motion.div>
+      </PageHero>
+
+      {/* Story + highlights (below the photo — not printed over it) */}
+      <section className="py-16 bg-[#F7F9FC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Column - Story & Highlights */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Meet{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
-                  Dr. Jan Duffy
-                </span>
-              </h1>
-
-              <p className="text-lg text-blue-100 mb-6 leading-relaxed">
-                Dr. Jan Duffy leads our Las Vegas relocation services with
-                unmatched expertise and dedication. As a member of the
-                prestigious Berkshire Hathaway Services Relocation Team, she
-                brings 15+ years of experience helping families and businesses
-                successfully transition to Las Vegas.
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-5">
+                Your Las Vegas relocation specialist
+              </h2>
+              <p className="text-lg text-slate-700 mb-4 leading-relaxed">
+                Dr. Jan Duffy leads Las Vegas Relocation Services with focused
+                local expertise. As a member of the Berkshire Hathaway Services
+                Relocation Team, she coordinates home search, move logistics,
+                and settling-in support for people moving to Southern Nevada.
               </p>
-
-              <p className="text-lg text-blue-100 mb-8 leading-relaxed">
-                Our commitment to excellence ensures that your move to Las Vegas
-                is not just successful, but truly exceptional.
+              <p className="text-lg text-slate-700 leading-relaxed">
+                One call covers area research, property tours, and the details
+                that make a move stick — utilities, orientation, and follow-through
+                after closing.
               </p>
-
-              {/* Highlights */}
-              <div className="space-y-3 mb-8">
-                {[
-                  "15+ years of Las Vegas real estate expertise",
-                  "Berkshire Hathaway Services Relocation Team member",
-                  "Certified relocation specialist with proven track record",
-                  "Personalized approach for every client family",
-                  "Local market knowledge and community connections",
-                  "Ongoing support throughout your relocation journey",
-                ].map((highlight, index) => (
-                  <motion.div
-                    key={`highlight-${highlight}-${index}`}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-center gap-3"
-                  >
-                    <div className="w-2 h-2 bg-blue-300 rounded-full flex-shrink-0"></div>
-                    <span className="text-blue-100">{highlight}</span>
-                  </motion.div>
-                ))}
-              </div>
-
-              <motion.a href="tel:+17027077273"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-              >
-                Book a Showing
-              </motion.a>
             </motion.div>
 
-            {/* Right Column - Portrait, Stats & Values */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+            <motion.ul
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="space-y-8"
+              className="space-y-3"
             >
-              <AgentPortrait
-                priority
-                className="h-48 w-48 md:h-56 md:w-56"
-                size={448}
-              />
-
-              {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-6">
-                {teamStats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300"
-                  >
-                    <div className="flex justify-center mb-3">
-                      <div className="p-3 bg-blue-200/20 rounded-xl">
-                        <stat.icon className="w-6 h-6 text-blue-200" />
-                      </div>
-                    </div>
-                    <div className="text-3xl font-bold text-blue-200 mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-sm text-blue-100 font-medium">
-                      {stat.label}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Company Values */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <h4 className="text-xl font-bold text-white mb-6 text-center">
-                  Our Core Values
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {values.map((value, index) => (
-                    <motion.div
-                      key={value.title}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-start gap-3 p-4 bg-white/5 rounded-xl"
-                    >
-                      <div className="p-2 bg-blue-200/20 rounded-lg">
-                        <value.icon className="w-5 h-5 text-blue-200" />
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-white mb-1">
-                          {value.title}
-                        </h5>
-                        <p className="text-sm text-blue-100">
-                          {value.description}
-                        </p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Berkshire Hathaway Badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl p-6 text-white text-center"
-              >
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="text-lg font-semibold mb-2">
-                  Berkshire Hathaway Services
-                </h4>
-                <p className="text-blue-100 text-sm">
-                  Relocation Services Team Member
-                </p>
-                <p className="text-xs text-blue-200 font-medium mt-2">
-                  Quality • Reliability • Excellence
-                </p>
-              </motion.div>
-            </motion.div>
+              {[
+                "15+ years of Las Vegas real estate expertise",
+                "Berkshire Hathaway Services Relocation Team member",
+                "Nevada Real Estate License S.0197614",
+                "Personalized approach for every relocation",
+                "Local market knowledge and community connections",
+                "Ongoing support throughout your move",
+              ].map((highlight) => (
+                <li
+                  key={highlight}
+                  className="flex items-start gap-3 text-slate-800"
+                >
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#3A8DDE]" />
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </motion.ul>
           </div>
         </div>
-      </PageHero>
+      </section>
+
+      {/* Stats */}
+      <section className="py-16 bg-white border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamStats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <stat.icon className="w-7 h-7 text-[#3A8DDE] mx-auto mb-3" />
+                <div className="text-3xl font-bold text-[#0A2540]">
+                  {stat.number}
+                </div>
+                <div className="text-sm text-slate-600 font-medium mt-1">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Core values */}
+      <section className="py-20 bg-[#F7F9FC]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] text-center mb-12">
+            Our core values
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="text-center sm:text-left"
+              >
+                <value.icon className="w-8 h-8 text-[#3A8DDE] mx-auto sm:mx-0 mb-3" />
+                <h3 className="text-lg font-semibold text-[#0A2540] mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {value.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Credentials Section */}
       <section className="py-20 bg-white">

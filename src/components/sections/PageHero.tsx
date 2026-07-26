@@ -36,7 +36,7 @@ export default function PageHero({
     <>
       {showSchema ? <PageSchema heroKey={image} /> : null}
       <section
-        className={`relative overflow-hidden text-white py-20 ${className}`.trim()}
+        className={`relative flex flex-col overflow-hidden text-white py-20 ${className}`.trim()}
         itemScope
         itemType="https://schema.org/WebPage"
       >
@@ -51,17 +51,18 @@ export default function PageHero({
           itemProp="image"
         />
         <meta itemProp="name" content={hero.alt} />
+        {/* Stronger scrim so hero copy stays readable over bright photos */}
         <div
-          className="absolute inset-0 bg-gradient-to-b from-[#0A2540]/35 via-[#0A2540]/25 to-[#0A2540]/55"
+          className="absolute inset-0 bg-gradient-to-b from-[#0A2540]/70 via-[#0A2540]/55 to-[#0A2540]/75"
           aria-hidden="true"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-[#0A2540]/30 via-transparent to-[#0A2540]/20"
+          className="absolute inset-0 bg-gradient-to-r from-[#0A2540]/55 via-[#0A2540]/20 to-[#0A2540]/35"
           aria-hidden="true"
         />
-        <div className="relative z-10 [text-shadow:0_1px_2px_rgba(0,0,0,0.45),0_2px_12px_rgba(0,0,0,0.35)]">
+        <div className="relative z-10 flex flex-1 flex-col justify-center [text-shadow:0_1px_2px_rgba(0,0,0,0.45),0_2px_12px_rgba(0,0,0,0.35)]">
           {showPortrait ? (
-            <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-14 lg:px-8">
+            <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-14 lg:px-8">
               <div className="min-w-0">{children}</div>
               <div className="flex flex-col items-center gap-3 lg:pl-2">
                 <AgentPortrait
