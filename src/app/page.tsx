@@ -138,30 +138,30 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-500 rounded-full text-sm font-medium mb-6">
-              <Target className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 bg-white/15 ring-1 ring-white/40 rounded-full text-sm font-medium mb-6 text-white">
+              <Target className="w-4 h-4 mr-2" aria-hidden="true" />
               Professional Relocation Services
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Moving to Las Vegas?
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
               Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. 
               Expert guidance for households and businesses relocating to Las Vegas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                type="button"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              <a
+                href="#consultation"
+                className="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
               >
                 Get Free Consultation
-              </button>
-              <button
-                type="button"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              </a>
+              <a
+                href="/services"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors"
               >
                 View Our Services
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -295,13 +295,13 @@ export default function HomePage() {
       />
 
       {/* Contact Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section id="consultation" className="py-20 bg-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Start Your Las Vegas Journey?
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Contact Dr. Jan Duffy today for a personalized consultation about your relocation
             </p>
           </div>
@@ -311,20 +311,20 @@ export default function HomePage() {
               <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-blue-200" />
+                  <Phone className="w-5 h-5 mr-3 text-white" aria-hidden="true" />
                   <a href={`tel:${PHONE_TEL}`} className="hover:underline">
                     {PHONE_DISPLAY}
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-3 text-blue-200" />
+                  <Calendar className="w-5 h-5 mr-3 text-white" aria-hidden="true" />
                   <span>Available 7 days a week</span>
                 </div>
               </div>
 
               <div className="mt-8">
                 <h4 className="text-lg font-semibold mb-4">Why Choose Dr. Jan Duffy?</h4>
-                <ul className="space-y-2 text-blue-100">
+                <ul className="space-y-2 text-white">
                   <li>• 15+ years of Las Vegas real estate experience</li>
                   <li>• Berkshire Hathaway expertise and resources</li>
                   <li>• Personal attention to every client</li>

@@ -232,10 +232,14 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center">
             <button
+              type="button"
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600 p-2"
+              aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -244,6 +248,7 @@ export default function Navigation() {
       {/* Mobile Navigation */}
       {isOpen && (
         <motion.div
+          id="mobile-navigation"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
