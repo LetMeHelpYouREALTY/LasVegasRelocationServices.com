@@ -45,3 +45,6 @@ next-env.d.ts
 
 # Local MCP/CLI deploy artifacts (never commit)
 vercel_deploy_payload*.json
+
+# Local env (not dotfile naming)
+env.local
