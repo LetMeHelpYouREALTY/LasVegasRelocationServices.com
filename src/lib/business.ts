@@ -87,6 +87,7 @@ export function personSchema() {
     description:
       "Dr. Jan Duffy is a Nevada-licensed REALTOR® with Berkshire Hathaway HomeServices Nevada Properties who specializes in helping households and businesses relocate to Las Vegas, Henderson, and Southern Nevada.",
     url: `${SITE_URL}/about`,
+    image: `${SITE_URL}/dr-jan-duffy.webp`,
     telephone: PHONE_TEL,
     email: EMAIL,
     address: ADDRESS,
