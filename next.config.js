@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Match GSC canonicals: no trailing slashes (except root)
+  trailingSlash: false,
   experimental: {
     optimizePackageImports: ['lucide-react', '@heroicons/react'],
     // Cloudflare optimizations
@@ -64,6 +66,20 @@ const nextConfig = {
         {
           key: 'Cache-Control',
           value: 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400',
+        },
+      ],
+    },
+    {
+      // Keep API helpers out of Google's index even if linked
+      source: '/api/:path*',
+      headers: [
+        {
+          key: 'X-Robots-Tag',
+          value: 'noindex, nofollow',
+        },
+        {
+          key: 'Cache-Control',
+          value: 'no-store',
         },
       ],
     },

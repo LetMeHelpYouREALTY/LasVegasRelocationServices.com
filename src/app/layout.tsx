@@ -6,7 +6,8 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
 import Navigation from '@/components/Navigation';
 import RealScoutScript from '@/components/RealScoutScript';
-import { businessSchema, personSchema, webSiteSchema } from '@/lib/business';
+import { businessSchema, personSchema, webSiteSchema, SITE_URL } from '@/lib/business';
+import { getGoogleSiteVerification } from '@/lib/google-verification';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,8 +15,10 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+const googleVerification = getGoogleSiteVerification();
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.lasvegasrelocationservices.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Las Vegas Relocation Services | Dr. Jan Duffy | Berkshire Hathaway',
     template: '%s | Las Vegas Relocation Services',
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
     'relocation consultant',
     'Las Vegas moving company',
     'corporate moving services',
-    'family relocation Las Vegas',
+    'Henderson NV relocation',
   ],
   authors: [{ name: 'Dr. Jan Duffy' }],
   creator: 'Berkshire Hathaway Services Relocation Services Team',
@@ -63,13 +66,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.lasvegasrelocationservices.com',
+    // Do NOT hardcode og:url to the homepage — Next derives per-route URLs
+    // from metadataBase. A fixed homepage og:url on every page confuses GSC.
     siteName: 'Las Vegas Relocation Services',
     title: 'Dr. Jan Duffy - Las Vegas Relocation Services | Berkshire Hathaway',
-    description: 'Expert relocation services to Las Vegas from major US cities. Dr. Jan Duffy provides personalized assistance for seamless relocations.',
+    description:
+      'Expert relocation services to Las Vegas from major US cities. Dr. Jan Duffy provides personalized assistance for seamless relocations.',
     images: [
       {
-        url: 'https://www.lasvegasrelocationservices.com/og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Dr. Jan Duffy - Las Vegas Relocation Services',
@@ -79,11 +84,14 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Dr. Jan Duffy - Las Vegas Relocation Services | Berkshire Hathaway',
-    description: 'Expert relocation services to Las Vegas from major US cities. Dr. Jan Duffy provides personalized assistance for seamless relocations.',
-    images: ['https://www.lasvegasrelocationservices.com/og-image.jpg'],
+    description:
+      'Expert relocation services to Las Vegas from major US cities. Dr. Jan Duffy provides personalized assistance for seamless relocations.',
+    images: ['/og-image.jpg'],
   },
-  // Google verification is handled via Search Console DNS/HTML-file ownership.
-  // Do not ship a placeholder verification token — it looks like soft spam.
+  // Only emit when NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION is a real token.
+  ...(googleVerification
+    ? { verification: { google: googleVerification } }
+    : {}),
   category: 'Business Services',
   classification: 'Relocation Services',
   other: {
