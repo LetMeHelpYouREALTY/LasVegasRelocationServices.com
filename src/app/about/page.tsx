@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import AnimatedAboutContent from '@/components/about/AnimatedAboutContent';
+import { personSchema, SITE_URL } from '@/lib/business';
 
 export const dynamic = 'force-dynamic';
 
@@ -22,5 +23,22 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  return <AnimatedAboutContent />;
+  return (
+    <>
+      {/* ProfilePage marks /about as the canonical page for the Dr. Jan Duffy entity */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ProfilePage',
+            '@id': `${SITE_URL}/about#profile`,
+            url: `${SITE_URL}/about`,
+            mainEntity: personSchema(),
+          }),
+        }}
+      />
+      <AnimatedAboutContent />
+    </>
+  );
 }

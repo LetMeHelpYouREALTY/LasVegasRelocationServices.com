@@ -24,9 +24,9 @@ const credentials = [
   },
   {
     icon: Shield,
-    title: 'Certified Relocation Specialist',
-    description: 'Professional certification and training',
-    details: 'Industry-recognized expertise',
+    title: 'Nevada-Licensed REALTOR®',
+    description: 'Nevada Real Estate License S.0197614',
+    details: 'Berkshire Hathaway HomeServices Nevada Properties',
   },
   {
     icon: Building,
