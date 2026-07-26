@@ -188,12 +188,7 @@ export default function Services() {
               >
                 Get Free Quote
               </button>
-              <button
-                type="button"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 transition-colors"
-              >
-                Schedule Consultation
-              </button>
+              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 transition-colors">Book a Showing</a>
             </div>
           </div>
         </motion.div>

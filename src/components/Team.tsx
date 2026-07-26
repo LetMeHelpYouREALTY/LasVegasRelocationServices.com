@@ -211,12 +211,7 @@ export default function Team() {
                 </div>
 
                 {/* CTA */}
-                <button
-                  type="button"
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-                >
-                  Schedule Consultation with Dr. Jan
-                </button>
+                <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">Book a Showing</a>
               </div>
             </div>
           </div>

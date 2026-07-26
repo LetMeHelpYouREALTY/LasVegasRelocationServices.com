@@ -156,16 +156,15 @@ export default function AnimatedAboutContent() {
                 ))}
               </div>
 
-              <motion.button
+              <motion.a href="tel:+17027077273"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
-                type="button"
                 className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
               >
-                Schedule Consultation
-              </motion.button>
+                Book a Showing
+              </motion.a>
             </motion.div>
 
             {/* Right Column - Stats & Values */}
@@ -458,28 +457,27 @@ export default function AnimatedAboutContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                type="button"
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2 justify-center"
               >
                 <Phone className="w-5 h-5" />
                 Call (702) 707-7273
-              </motion.button>
-              <motion.button
+              </motion.a>
+              <motion.a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                type="button"
+                
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg transition-colors flex items-center gap-2 justify-center"
               >
                 <Calendar className="w-5 h-5" />
-                Schedule Consultation
-              </motion.button>
+                Book a Showing
+              </motion.a>
             </div>
           </motion.div>
         </div>

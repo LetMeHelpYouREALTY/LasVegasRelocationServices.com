@@ -1,5 +1,6 @@
 "use client";
 
+import CalendlyBooking from '@/components/shared/CalendlyBooking';
 import PageHero from "@/components/sections/PageHero";
 import {
   Building,
@@ -71,12 +72,7 @@ export default function ChicagoToLasVegasPage() {
               help you find your perfect Las Vegas home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                type="button"
-                className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
-                Get Free Consultation
-              </button>
+              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer" className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">Book a Showing</a>
               <button
                 type="button"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-red-600 transition-colors"
@@ -505,95 +501,7 @@ export default function ChicagoToLasVegasPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 text-gray-900">
-              <h3 className="text-2xl font-semibold mb-6">
-                Free Consultation Request
-              </h3>
-              <form className="space-y-4">
-                <div>
-                  <label
-                    htmlFor="chicago-fullName"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    id="chicago-fullName"
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="chicago-email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="chicago-email"
-                    type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="chicago-phone"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    id="chicago-phone"
-                    type="tel"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="(555) 123-4567"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="chicago-neighborhood"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Current Chicago Neighborhood
-                  </label>
-                  <input
-                    id="chicago-neighborhood"
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="e.g., Lincoln Park, Wicker Park, Lakeview, etc."
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="chicago-moveDate"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Target Move Date
-                  </label>
-                  <input
-                    id="chicago-moveDate"
-                    type="date"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    aria-label="Target move date"
-                    title="Select your target move date"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-                >
-                  Request Free Consultation
-                </button>
-              </form>
-            </div>
+            <CalendlyBooking title="Book a Showing" description="Schedule a free consultation or showing with Dr. Jan Duffy." />
           </div>
         </div>
       </section>

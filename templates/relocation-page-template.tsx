@@ -1,5 +1,6 @@
 'use client'
 
+import CalendlyBooking from '@/components/shared/CalendlyBooking';
 import { motion } from '@/components/motion'
 import { 
   Building, 
@@ -32,12 +33,7 @@ export default function CityNameToLasVegasPage() {
               understand the [City Name] lifestyle and will help you find your perfect Las Vegas home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                type="button"
-                className="bg-white text-[PRIMARY_COLOR]-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
-                Get Free Consultation
-              </button>
+              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer" className="bg-white text-[PRIMARY_COLOR]-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">Book a Showing</a>
               <button
                 type="button"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[PRIMARY_COLOR]-600 transition-colors"
@@ -337,93 +333,7 @@ export default function CityNameToLasVegasPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 text-gray-900">
-              <h3 className="text-2xl font-semibold mb-6">Free Consultation Request</h3>
-              <form className="space-y-4">
-                <div>
-                  <label
-                    htmlFor="city-fullName"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    id="city-fullName"
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[PRIMARY_COLOR]-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="city-email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="city-email"
-                    type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[PRIMARY_COLOR]-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="city-phone"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    id="city-phone"
-                    type="tel"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[PRIMARY_COLOR]-500 focus:border-transparent"
-                    placeholder="(555) 123-4567"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="city-neighborhood"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Current [City Name] Neighborhood
-                  </label>
-                  <input
-                    id="city-neighborhood"
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[PRIMARY_COLOR]-500 focus:border-transparent"
-                    placeholder="e.g., [City-specific neighborhoods]"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="city-moveDate"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Target Move Date
-                  </label>
-                  <input
-                    id="city-moveDate"
-                    type="date"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[PRIMARY_COLOR]-500 focus:border-transparent"
-                    aria-label="Target move date"
-                    title="Select your target move date"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[PRIMARY_COLOR]-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-[PRIMARY_COLOR]-700 transition-colors"
-                >
-                  Request Free Consultation
-                </button>
-              </form>
-            </div>
+            <CalendlyBooking title="Book a Showing" description="Schedule a free consultation or showing with Dr. Jan Duffy." />
           </div>
         </div>
       </section>

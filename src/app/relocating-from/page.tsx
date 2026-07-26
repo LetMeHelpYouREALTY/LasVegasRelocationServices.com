@@ -168,11 +168,9 @@ export default function RelocatingFromPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://calendly.com/drjanduffy/showing"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
-            >
-              Get Free Consultation
-            </Link>
+            >Book a Showing</Link>
             <Link
               href="/about"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"

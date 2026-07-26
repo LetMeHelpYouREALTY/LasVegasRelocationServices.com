@@ -146,12 +146,7 @@ export default function Process() {
               stress-free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                type="button"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
-                Schedule Free Consultation
-              </button>
+              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">Book a Showing</a>
               <button
                 type="button"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 transition-colors"

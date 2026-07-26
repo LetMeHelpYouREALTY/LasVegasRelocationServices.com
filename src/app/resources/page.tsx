@@ -149,13 +149,11 @@ export default function ResourcesPage() {
                 <Phone className="w-5 h-5" />
                 Call (702) 707-7273
               </button>
-              <button
-                type="button"
+              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-900 transition-colors flex items-center gap-2"
               >
-                <Calendar className="w-5 h-5" />
-                Free Consultation
-              </button>
+                Book a Showing
+              </a>
             </div>
           </div>
         </div>
@@ -421,13 +419,11 @@ export default function ResourcesPage() {
                 <Phone className="w-5 h-5" />
                 Call (702) 707-7273
               </button>
-              <button
-                type="button"
+              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center gap-2"
               >
-                <Calendar className="w-5 h-5" />
-                Schedule Free Consultation
-              </button>
+                Book a Showing
+              </a>
             </div>
           </motion.div>
         </div>

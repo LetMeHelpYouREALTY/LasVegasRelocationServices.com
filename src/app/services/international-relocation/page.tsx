@@ -19,6 +19,7 @@ import { FAQSection } from "@/components/seo";
 import {
   AGENT_NAME,
   BROKERAGE,
+  CALENDLY_SHOWING_URL,
   LICENSE_LABEL,
   PHONE_DISPLAY,
   PHONE_TEL,
@@ -205,11 +206,11 @@ export default function InternationalRelocationPage() {
                   Call {PHONE_DISPLAY}
                 </a>
                 <a
-                  href="#consultation"
+                  href={CALENDLY_SHOWING_URL}
                   className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors flex items-center gap-2"
                 >
                   <Calendar className="w-5 h-5" aria-hidden="true" />
-                  Free Consultation
+                  Book a Showing
                 </a>
               </div>
             </motion.div>
@@ -539,11 +540,13 @@ export default function InternationalRelocationPage() {
                 Call {PHONE_DISPLAY}
               </a>
               <a
-                href={`tel:${PHONE_TEL}`}
+                href={CALENDLY_SHOWING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors flex items-center gap-2 justify-center"
               >
                 <Calendar className="w-5 h-5" aria-hidden="true" />
-                Schedule Free Consultation
+                Book a Showing
               </a>
             </div>
           </motion.div>

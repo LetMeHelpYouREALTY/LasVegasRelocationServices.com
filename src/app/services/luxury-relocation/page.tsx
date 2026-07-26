@@ -164,20 +164,21 @@ export default function LuxuryRelocationPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  type="button"
+                <a href="tel:+17027077273"
                   className="bg-white text-purple-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
                   Call (702) 707-7273
-                </button>
-                <button
-                  type="button"
+                </a>
+                <a
+                  href="https://calendly.com/drjanduffy/showing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors flex items-center gap-2"
                 >
                   <Calendar className="w-5 h-5" />
-                  VIP Consultation
-                </button>
+                  Book a Showing
+                </a>
               </div>
             </motion.div>
 
@@ -452,20 +453,22 @@ export default function LuxuryRelocationPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                type="button"
+              <a
+                href="tel:+17027077273"
                 className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2"
               >
                 <Phone className="w-5 h-5" />
                 Call (702) 707-7273
-              </button>
-              <button
-                type="button"
+              </a>
+              <a
+                href="https://calendly.com/drjanduffy/showing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors flex items-center gap-2"
               >
                 <Calendar className="w-5 h-5" />
-                Schedule VIP Consultation
-              </button>
+                Book a Showing
+              </a>
             </div>
           </motion.div>
         </div>

@@ -111,9 +111,9 @@ const navigationItems = [
         description: 'Latest Las Vegas market information',
       },
       {
-        name: 'Contact Us',
-        href: 'http://drjanduffy.realscout.com/onboarding',
-        description: 'Get in touch with our team',
+        name: 'Book a Showing',
+        href: 'https://calendly.com/drjanduffy/showing',
+        description: 'Schedule on Calendly with Dr. Jan Duffy',
       },
     ],
   },
@@ -125,7 +125,7 @@ const navigationItems = [
   },
   {
     name: 'Contact',
-    href: 'http://drjanduffy.realscout.com/onboarding',
+    href: '/contact',
     icon: Phone,
     isMain: true,
   },

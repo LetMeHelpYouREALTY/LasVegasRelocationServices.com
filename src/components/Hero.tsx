@@ -95,11 +95,9 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
         >
           <a
-            href="http://drjanduffy.realscout.com/onboarding"
+            href="https://calendly.com/drjanduffy/showing"
             className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-5 rounded-full font-semibold text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-3"
-          >
-            Get Free Consultation
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+          >Book a Showing<ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </a>
 
           <a

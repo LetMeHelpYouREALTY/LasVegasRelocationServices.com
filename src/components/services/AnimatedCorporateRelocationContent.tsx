@@ -152,26 +152,25 @@ export default function AnimatedCorporateRelocationContent() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.button
+                <motion.a href="tel:+17027077273"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  type="button"
                   className="bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
                   Call (702) 707-7273
-                </motion.button>
-                <motion.button
+                </motion.a>
+                <motion.a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  type="button"
+                  
                   className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-900 transition-colors flex items-center gap-2"
                 >
                   <Calendar className="w-5 h-5" />
-                  Free Consultation
-                </motion.button>
+                  Book a Showing
+                </motion.a>
               </div>
             </motion.div>
 
@@ -451,28 +450,27 @@ export default function AnimatedCorporateRelocationContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.a href="tel:+17027077273"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                type="button"
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2 justify-center"
               >
                 <Phone className="w-5 h-5" />
                 Call (702) 707-7273
-              </motion.button>
-              <motion.button
+              </motion.a>
+              <motion.a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                type="button"
+                
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg transition-colors flex items-center gap-2 justify-center"
               >
                 <Calendar className="w-5 h-5" />
-                Schedule Consultation
-              </motion.button>
+                Book a Showing
+              </motion.a>
             </div>
           </motion.div>
         </div>
