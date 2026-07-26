@@ -1,8 +1,10 @@
 'use client';
 
+import Image from 'next/image';
 import { BookOpen, Building, ChevronDown, Home, MapPin, Menu, Phone, Users, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from '@/components/motion';
+import { BUSINESS_NAME } from '@/lib/business';
 
 const navigationItems = [
   {
@@ -151,10 +153,16 @@ export default function Navigation() {
           {/* Logo/Brand */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a href="/" className="flex items-center space-x-2" aria-label="Las Vegas Relocation Services home">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg" aria-hidden="true">LV</span>
-                </div>
+              <a href="/" className="flex items-center space-x-2" aria-label={`${BUSINESS_NAME} home`}>
+                <Image
+                  src="/logo.png"
+                  alt={`${BUSINESS_NAME} logo`}
+                  title={BUSINESS_NAME}
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 rounded-lg object-cover shadow-sm"
+                  priority
+                />
                 <div className="hidden sm:block">
                   {/* Brand mark must not be an H1 — every page needs a single topical H1 for indexing */}
                   <p className="text-lg font-bold text-gray-900 leading-tight">Las Vegas</p>

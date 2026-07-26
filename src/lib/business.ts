@@ -134,7 +134,11 @@ export function businessSchema() {
       "Professional relocation services in Las Vegas led by Dr. Jan Duffy with the Berkshire Hathaway HomeServices Nevada Properties relocation team.",
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    image: `${SITE_URL}/og-image.jpg`,
+    image: [
+      `${SITE_URL}/logo.png`,
+      `${SITE_URL}/dr-jan-duffy.webp`,
+      `${SITE_URL}/og-image.jpg`,
+    ],
     telephone: PHONE_DISPLAY,
     email: EMAIL,
     address: ADDRESS,

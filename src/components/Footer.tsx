@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   ArrowRight,
   Building,
@@ -20,6 +21,7 @@ import { motion } from "@/components/motion";
 import CalendlyBooking from "@/components/shared/CalendlyBooking";
 import GbpActionBar from "@/components/shared/GbpActionBar";
 import {
+  BUSINESS_NAME,
   EMAIL,
   GOOGLE_DIRECTIONS_URL,
   GOOGLE_WRITE_REVIEW_URL,
@@ -142,12 +144,17 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">LV</span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt={`${BUSINESS_NAME} logo`}
+                title={BUSINESS_NAME}
+                width={48}
+                height={48}
+                className="h-12 w-12 rounded-lg object-cover shadow-md"
+              />
               <div>
                 <h3 className="text-xl font-bold">
-                  Las Vegas Relocation Services
+                  {BUSINESS_NAME}
                 </h3>
                 <p className="text-gray-400 text-sm">
                   Your trusted partner for seamless relocation
