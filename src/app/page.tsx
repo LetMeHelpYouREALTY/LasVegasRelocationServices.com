@@ -1,7 +1,6 @@
 "use client";
 
 import CalendlyBooking from "@/components/shared/CalendlyBooking";
-import AgentPortrait from "@/components/shared/AgentPortrait";
 import PageHero from "@/components/sections/PageHero";
 import {
   Building,
@@ -141,49 +140,35 @@ export default function HomePage() {
       {/* Breadcrumbs */}
       <Breadcrumbs items={[]} />
 
-      {/* Hero Section */}
+      {/* Hero Section — agent portrait from PageHero on every page */}
       <PageHero image="home">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_auto] lg:gap-16">
-            <div className="text-center lg:text-left">
-              <p className="mb-4 text-sm font-semibold tracking-wide text-white/90 md:text-base">
-                {AGENT_NAME} · {BROKERAGE}
-              </p>
-              <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-                Moving to Las Vegas?
-              </h1>
-              <p className="mx-auto mb-8 max-w-2xl text-xl text-white md:text-2xl lg:mx-0">
-                Call {PHONE_DISPLAY} — expert relocation guidance for households
-                and businesses moving to Las Vegas and Henderson.
-              </p>
-              <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-                <a
-                  href={`tel:${PHONE_TEL}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 text-lg font-semibold text-blue-800 transition-colors hover:bg-gray-100"
-                >
-                  <Phone className="h-5 w-5" aria-hidden="true" />
-                  Call {PHONE_DISPLAY}
-                </a>
-                <a
-                  href={CALENDLY_SHOWING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-blue-800"
-                >
-                  Book a Showing
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-col items-center gap-3">
-              <AgentPortrait
-                priority
-                className="h-44 w-44 md:h-56 md:w-56 lg:h-64 lg:w-64"
-                size={512}
-              />
-              <p className="text-sm font-medium text-white/95">
-                Your Las Vegas relocation specialist
-              </p>
-            </div>
+        <div className="text-center lg:text-left">
+          <p className="mb-4 text-sm font-semibold tracking-wide text-white/90 md:text-base">
+            {AGENT_NAME} · {BROKERAGE}
+          </p>
+          <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+            Moving to Las Vegas?
+          </h1>
+          <p className="mx-auto mb-8 max-w-2xl text-xl text-white md:text-2xl lg:mx-0">
+            Call {PHONE_DISPLAY} — expert relocation guidance for households and
+            businesses moving to Las Vegas and Henderson.
+          </p>
+          <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 text-lg font-semibold text-blue-800 transition-colors hover:bg-gray-100"
+            >
+              <Phone className="h-5 w-5" aria-hidden="true" />
+              Call {PHONE_DISPLAY}
+            </a>
+            <a
+              href={CALENDLY_SHOWING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-blue-800"
+            >
+              Book a Showing
+            </a>
           </div>
         </div>
       </PageHero>

@@ -143,7 +143,7 @@ export default function MovingTransportationPage() {
       {/* Hero Section */}
       <PageHero image="movingTransportation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -179,16 +179,6 @@ export default function MovingTransportationPage() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="w-64 h-64 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <Truck className="w-32 h-32 text-white/80" />
-              </div>
-            </motion.div>
           </div>
         </div>
       </PageHero>
