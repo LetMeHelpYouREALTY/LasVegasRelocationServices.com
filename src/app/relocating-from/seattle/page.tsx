@@ -14,6 +14,31 @@ import {
   Users,
 } from 'lucide-react';
 import { motion } from '@/components/motion';
+import { FAQSection } from '@/components/seo';
+import { AGENT_NAME, BROKERAGE, LICENSE_LABEL, PHONE_DISPLAY } from '@/lib/business';
+
+const seattleFAQs = [
+  {
+    question: 'Who should I call when moving from Seattle to Las Vegas?',
+    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} who manages the entire Seattle-to-Las-Vegas move: neighborhood research, home search, purchase, and settling-in support after you arrive.`,
+  },
+  {
+    question: 'How do housing costs compare between Seattle and Las Vegas?',
+    answer: 'Median home prices in the Las Vegas Valley are in the mid-$400Ks, roughly half of Seattle-area medians that run well above $800K. Buyers relocating from Seattle typically move up in square footage and lot size while cutting their mortgage payment substantially.',
+  },
+  {
+    question: 'Washington has no income tax either — what changes financially in Nevada?',
+    answer: 'The main savings come from housing: a comparable home costs roughly half as much in Las Vegas, and Clark County property tax rates are approximately 0.84%. Washington residents also leave behind the state capital gains tax on large investment sales and some of the highest gas prices in the country.',
+  },
+  {
+    question: 'How does the weather compare between Seattle and Las Vegas?',
+    answer: 'Las Vegas gets 300+ days of sunshine and about 4 inches of rain per year, versus roughly 150 rainy days and long overcast winters in Seattle. Summers are hot and dry (July highs around 104°F); winters are mild with January highs around 58°F.',
+  },
+  {
+    question: 'How long does it take to get from Seattle to Las Vegas?',
+    answer: 'Nonstop flights from Sea-Tac to Harry Reid International Airport take about 2.5 hours. Driving the roughly 1,100 miles down I-5 and I-15 takes 17-19 hours over 2 days, so the drive is practical for households bringing a second car.',
+  },
+];
 
 export default function SeattleToLasVegasPage() {
   return (
@@ -375,6 +400,13 @@ export default function SeattleToLasVegasPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section with FAQPage schema */}
+      <FAQSection
+        title="Seattle to Las Vegas Relocation FAQs"
+        faqs={seattleFAQs}
+        className="py-16"
+      />
 
       {/* Contact Section */}
       <section className="py-20 bg-sky-600 text-white">

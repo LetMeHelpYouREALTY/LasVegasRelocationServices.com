@@ -14,6 +14,31 @@ import {
   Users,
 } from 'lucide-react';
 import { motion } from '@/components/motion';
+import { FAQSection } from '@/components/seo';
+import { AGENT_NAME, BROKERAGE, LICENSE_LABEL, PHONE_DISPLAY } from '@/lib/business';
+
+const miamiFAQs = [
+  {
+    question: 'Who should I call when moving from Miami to Las Vegas?',
+    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} who manages the entire Miami-to-Las-Vegas move: neighborhood research, home search, purchase, and settling-in support after you arrive.`,
+  },
+  {
+    question: 'Florida has no income tax either — why do Miami residents move to Las Vegas?',
+    answer: 'The biggest drivers are housing and insurance costs. Median home prices in the Las Vegas Valley are in the mid-$400Ks versus roughly $600K in Miami-Dade, and Nevada homeowners insurance typically costs a fraction of Florida premiums because there is no hurricane or flood exposure. Las Vegas also has a dry climate instead of Miami humidity.',
+  },
+  {
+    question: 'How does the weather compare between Miami and Las Vegas?',
+    answer: 'Las Vegas has a dry desert climate with 300+ days of sunshine, roughly 4 inches of rain per year, and no hurricane season. Summers are hotter on the thermometer (July highs around 104°F) but with low humidity; winters are mild with January highs around 58°F.',
+  },
+  {
+    question: 'How long does it take to get from Miami to Las Vegas?',
+    answer: 'Nonstop flights from Miami International or Fort Lauderdale to Harry Reid International Airport take about 5 to 5.5 hours. Driving the roughly 2,500 miles takes 36-40 hours over 4-5 days, so most relocating households fly and ship their goods.',
+  },
+  {
+    question: 'Which Las Vegas areas do people moving from Miami ask about most?',
+    answer: 'Summerlin (master-planned, 250+ parks and 150+ miles of trails), Henderson, and Green Valley are the most requested. Lake Las Vegas draws buyers who want waterfront-style living, and the Strip-adjacent high-rise corridor appeals to buyers used to Brickell condo living.',
+  },
+];
 
 export default function MiamiToLasVegasPage() {
   return (
@@ -373,6 +398,13 @@ export default function MiamiToLasVegasPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section with FAQPage schema */}
+      <FAQSection
+        title="Miami to Las Vegas Relocation FAQs"
+        faqs={miamiFAQs}
+        className="py-16"
+      />
 
       {/* Contact Section */}
       <section className="py-20 bg-teal-600 text-white">

@@ -14,6 +14,31 @@ import {
   Users,
 } from 'lucide-react';
 import { motion } from '@/components/motion';
+import { FAQSection } from '@/components/seo';
+import { AGENT_NAME, BROKERAGE, LICENSE_LABEL, PHONE_DISPLAY } from '@/lib/business';
+
+const newYorkFAQs = [
+  {
+    question: 'Who should I call when moving from New York to Las Vegas?',
+    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} who manages the entire New-York-to-Las-Vegas move: neighborhood research, home search, purchase, and settling-in support after you arrive.`,
+  },
+  {
+    question: 'How much can I save on taxes by moving from New York to Las Vegas?',
+    answer: 'Nevada has no state income tax, while New York State and New York City combined income tax rates can exceed 10% at higher brackets. Nevada also has no inheritance tax, and Clark County property tax rates are approximately 0.84%. For many six-figure households, the move saves tens of thousands of dollars per year.',
+  },
+  {
+    question: 'How do housing costs compare between New York and Las Vegas?',
+    answer: 'Median home prices in the Las Vegas Valley are in the mid-$400Ks, versus median prices well above $700K across much of the New York metro and far higher in Manhattan and Brooklyn. Buyers relocating from New York typically get substantially more square footage, a garage, and private outdoor space at the same budget.',
+  },
+  {
+    question: 'How long does it take to get from New York to Las Vegas?',
+    answer: 'Nonstop flights from JFK, LaGuardia, or Newark to Harry Reid International Airport take about 5 to 5.5 hours. Driving the roughly 2,500 miles takes 36-40 hours over 4-5 days, so most relocating households fly and ship their goods.',
+  },
+  {
+    question: 'What should New Yorkers know about daily life in Las Vegas?',
+    answer: 'Las Vegas is a car-oriented city: most residents drive rather than use transit, and typical commutes run 20-30 minutes. The region gets 300+ days of sunshine with hot, dry summers and mild winters. Popular relocation areas include Summerlin, Henderson, and Green Valley.',
+  },
+];
 
 export default function NewYorkToLasVegasPage() {
   return (
@@ -373,6 +398,13 @@ export default function NewYorkToLasVegasPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section with FAQPage schema */}
+      <FAQSection
+        title="New York to Las Vegas Relocation FAQs"
+        faqs={newYorkFAQs}
+        className="py-16"
+      />
 
       {/* Contact Section */}
       <section className="py-20 bg-blue-600 text-white">

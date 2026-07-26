@@ -14,6 +14,31 @@ import {
   Wind,
 } from 'lucide-react';
 import { motion } from '@/components/motion';
+import { FAQSection } from '@/components/seo';
+import { AGENT_NAME, BROKERAGE, LICENSE_LABEL, PHONE_DISPLAY } from '@/lib/business';
+
+const chicagoFAQs = [
+  {
+    question: 'Who should I call when moving from Chicago to Las Vegas?',
+    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} who manages the entire Chicago-to-Las-Vegas move: neighborhood research, home search, purchase, and settling-in support after you arrive.`,
+  },
+  {
+    question: 'How much can I save on taxes by moving from Chicago to Las Vegas?',
+    answer: "Nevada has no state income tax, while Illinois charges a 4.95% flat income tax. Property tax rates are also lower: Clark County's effective rate is approximately 0.84%, compared to roughly 2% in Cook County. On a $150,000 household income and a comparable home, the combined savings typically run well over $10,000 per year.",
+  },
+  {
+    question: 'How do housing costs compare between Chicago and Las Vegas?',
+    answer: 'Median home prices in the Las Vegas Valley are in the mid-$400Ks, comparable to or below many Chicago neighborhoods, but with newer construction, larger lots, and no snow-related maintenance. Popular relocation areas include Summerlin, Henderson, Green Valley, and Inspirada.',
+  },
+  {
+    question: 'How long does it take to get from Chicago to Las Vegas?',
+    answer: "Direct flights from O'Hare or Midway to Harry Reid International Airport take about 4 hours. Driving the roughly 1,750 miles takes 25-27 hours over 2-3 days. Most relocating households fly and have their goods shipped by a moving company.",
+  },
+  {
+    question: 'What is the weather difference between Chicago and Las Vegas?',
+    answer: 'Las Vegas gets 300+ days of sunshine per year with almost no snow, versus Chicago winters that average around 35-40 inches of snow. Summers in Las Vegas are hot (July highs around 104°F) but dry, and there is no lake-effect wind chill.',
+  },
+];
 
 export default function ChicagoToLasVegasPage() {
   return (
@@ -375,6 +400,13 @@ export default function ChicagoToLasVegasPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section with FAQPage schema */}
+      <FAQSection
+        title="Chicago to Las Vegas Relocation FAQs"
+        faqs={chicagoFAQs}
+        className="py-16"
+      />
 
       {/* Contact Section */}
       <section className="py-20 bg-red-600 text-white">
