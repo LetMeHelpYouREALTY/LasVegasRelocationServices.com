@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { AGENT_NAME } from '@/lib/business';
+import { AGENT_NAME, BUSINESS_NAME } from '@/lib/business';
 
 type AgentPortraitProps = {
   /** Tailwind size classes for the circular frame */
@@ -7,6 +7,8 @@ type AgentPortraitProps = {
   priority?: boolean;
   size?: number;
 };
+
+const PORTRAIT_ALT = `${AGENT_NAME}, REALTOR® — ${BUSINESS_NAME}, holding a phone`;
 
 /**
  * Official Dr. Jan Duffy headshot (real photo — not AI-generated).
@@ -21,15 +23,26 @@ export default function AgentPortrait({
   return (
     <div
       className={`relative mx-auto shrink-0 overflow-hidden rounded-full ring-4 ring-white/80 shadow-2xl ${className}`.trim()}
+      itemScope
+      itemType="https://schema.org/ImageObject"
     >
+      <meta itemProp="name" content={`${AGENT_NAME} headshot`} />
+      <meta itemProp="caption" content={PORTRAIT_ALT} />
+      <meta itemProp="creditText" content={`${AGENT_NAME} / ${BUSINESS_NAME}`} />
+      <meta
+        itemProp="license"
+        content="https://www.lasvegasrelocationservices.com/image-license"
+      />
       <Image
         src="/dr-jan-duffy.webp"
-        alt={`${AGENT_NAME}, REALTOR® — Las Vegas Relocation Services, holding a phone`}
+        alt={PORTRAIT_ALT}
+        title={`${AGENT_NAME} — Las Vegas Relocation Specialist`}
         width={size}
         height={size}
         priority={priority}
         className="h-full w-full object-cover"
         sizes="(max-width: 768px) 160px, 224px"
+        itemProp="contentUrl"
       />
     </div>
   );

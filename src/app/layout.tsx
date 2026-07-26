@@ -8,13 +8,9 @@ import MicrosoftClarity from "@/components/MicrosoftClarity";
 import Navigation from "@/components/Navigation";
 import RealScoutScript from "@/components/RealScoutScript";
 import CalendlySitewide from "@/components/sections/CalendlySitewide";
-import {
-  businessSchema,
-  personSchema,
-  webSiteSchema,
-  SITE_URL,
-} from "@/lib/business";
+import { SITE_URL } from "@/lib/business";
 import { getGoogleSiteVerification } from "@/lib/google-verification";
+import { sitewideSchemaGraph } from "@/lib/schema";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -80,7 +76,20 @@ export const metadata: Metadata = {
     title: "Dr. Jan Duffy - Las Vegas Relocation Services | Berkshire Hathaway",
     description:
       "Expert relocation services to Las Vegas from major US cities. Dr. Jan Duffy provides personalized assistance for seamless relocations.",
+    // Preferred image sources for Search/Discover (Mar 2026): og:image + ImageObject
     images: [
+      {
+        url: "/heroes/home-las-vegas.webp",
+        width: 1920,
+        height: 1080,
+        alt: "Sunlit aerial view of Las Vegas neighborhoods with the Strip skyline beyond",
+      },
+      {
+        url: "/dr-jan-duffy.webp",
+        width: 180,
+        height: 180,
+        alt: "Dr. Jan Duffy, REALTOR® — Las Vegas Relocation Services",
+      },
       {
         url: "/og-image.jpg",
         width: 1200,
@@ -94,7 +103,7 @@ export const metadata: Metadata = {
     title: "Dr. Jan Duffy - Las Vegas Relocation Services | Berkshire Hathaway",
     description:
       "Expert relocation services to Las Vegas from major US cities. Dr. Jan Duffy provides personalized assistance for seamless relocations.",
-    images: ["/og-image.jpg"],
+    images: ["/heroes/home-las-vegas.webp"],
   },
   // Only emit when NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION is a real token.
   ...(googleVerification
@@ -138,57 +147,14 @@ export default function RootLayout({
         />
 
         {/*
-          Site-wide entity graph: RealEstateAgent (business), Person (Dr. Jan
-          Duffy), and WebSite, cross-linked via stable @id anchors. Replaces
-          the previous duplicated RealEstateAgent + LocalBusiness blocks
-          (RealEstateAgent is already a LocalBusiness subtype).
+          Site-wide entity graph (Google Search Central 2026): RealEstateAgent /
+          LocalBusiness, Organization, Person, WebSite, and ImageObject license
+          metadata — cross-linked via stable @id anchors.
         */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  ...businessSchema(),
-                  hasOfferCatalog: {
-                    "@type": "OfferCatalog",
-                    name: "Relocation Services",
-                    itemListElement: [
-                      {
-                        "@type": "Offer",
-                        itemOffered: {
-                          "@type": "Service",
-                          name: "Residential Relocation",
-                          description:
-                            "Complete home relocation services including packing, moving, and settling into your new Las Vegas home.",
-                        },
-                      },
-                      {
-                        "@type": "Offer",
-                        itemOffered: {
-                          "@type": "Service",
-                          name: "Corporate Relocation",
-                          description:
-                            "Comprehensive corporate relocation solutions for businesses and their employees moving to Las Vegas.",
-                        },
-                      },
-                      {
-                        "@type": "Offer",
-                        itemOffered: {
-                          "@type": "Service",
-                          name: "International Relocation",
-                          description:
-                            "Expert international relocation services for clients moving to Las Vegas from abroad.",
-                        },
-                      },
-                    ],
-                  },
-                },
-                personSchema(),
-                webSiteSchema(),
-              ],
-            }),
+            __html: JSON.stringify(sitewideSchemaGraph()),
           }}
         />
       </head>

@@ -11,7 +11,6 @@ import {
   TrendingUp,
 } from "lucide-react";
 import {
-  SchemaMarkup,
   FAQSection,
   QuickFacts,
   Breadcrumbs,
@@ -23,11 +22,9 @@ import {
   BROKERAGE,
   BUSINESS_NAME,
   CALENDLY_SHOWING_URL,
-  EMAIL,
   LICENSE_LABEL,
   PHONE_DISPLAY,
   PHONE_TEL,
-  SITE_URL,
 } from "@/lib/business";
 
 export default function HomePage() {
@@ -351,17 +348,6 @@ export default function HomePage() {
       </section>
 
       {/* Schema Markup for Homepage */}
-      <SchemaMarkup
-        type="localBusiness"
-        data={{
-          name: `${AGENT_NAME} - ${BUSINESS_NAME}`,
-          description:
-            "Professional relocation services from major US cities to Las Vegas. Expert real estate guidance with Berkshire Hathaway.",
-          url: SITE_URL,
-          telephone: PHONE_TEL,
-          email: EMAIL,
-        }}
-      />
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import PageHero from "@/components/sections/PageHero";
 import { Building, Home, MapPin, Plane, Shield, Users } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageImageSeo } from '@/lib/schema';
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageImageSeo('relocatingFrom', {
   title: "Relocating to Las Vegas from Major US Cities | Dr. Jan Duffy",
   description:
     "Expert relocation services from major US cities to Las Vegas. Professional assistance for Los Angeles, San Diego, New York, Chicago, Miami, and Seattle relocations.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.lasvegasrelocationservices.com/relocating-from",
   },
-};
+});
 
 const cities = [
   {

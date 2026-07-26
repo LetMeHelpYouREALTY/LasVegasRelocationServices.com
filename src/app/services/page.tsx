@@ -10,9 +10,10 @@ import {
   Users,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageImageSeo } from '@/lib/schema';
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageImageSeo('services', {
   title:
     "Las Vegas Relocation Services | Residential, Corporate & International",
   description:
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/services",
   },
-};
+});
 
 const services = [
   {

@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import PageSchema from '@/components/seo/PageSchema';
 import AgentPortrait from '@/components/shared/AgentPortrait';
 import { RealScoutBelowHero } from '@/components/shared/RealScoutOfficeListings';
-import { AGENT_NAME } from '@/lib/business';
+import { AGENT_NAME, BUSINESS_NAME } from '@/lib/business';
 import { HERO_IMAGES, type HeroImageKey } from '@/lib/hero-images';
 
 type PageHeroProps = {
@@ -12,11 +13,14 @@ type PageHeroProps = {
   showListings?: boolean;
   /** Set false only if a page supplies its own portrait placement */
   showPortrait?: boolean;
+  /** Set false only if the page emits its own JSON-LD page graph */
+  showSchema?: boolean;
 };
 
 /**
  * Full-bleed photographic hero.
- * By default: agent portrait on the right + RealScout listings directly below.
+ * By default: agent portrait on the right + RealScout listings directly below
+ * + per-page JSON-LD (WebPage/Service/ProfilePage + ImageObject metadata).
  */
 export default function PageHero({
   image,
@@ -24,22 +28,29 @@ export default function PageHero({
   className = '',
   showListings = true,
   showPortrait = true,
+  showSchema = true,
 }: PageHeroProps) {
   const hero = HERO_IMAGES[image];
 
   return (
     <>
+      {showSchema ? <PageSchema heroKey={image} /> : null}
       <section
         className={`relative overflow-hidden text-white py-20 ${className}`.trim()}
+        itemScope
+        itemType="https://schema.org/WebPage"
       >
         <Image
           src={hero.src}
           alt={hero.alt}
+          title={`${hero.alt} | ${BUSINESS_NAME}`}
           fill
           priority
           sizes="100vw"
           className="object-cover object-center scale-105 brightness-110 contrast-105"
+          itemProp="image"
         />
+        <meta itemProp="name" content={hero.alt} />
         <div
           className="absolute inset-0 bg-gradient-to-b from-[#0A2540]/35 via-[#0A2540]/25 to-[#0A2540]/55"
           aria-hidden="true"

@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import SchemaMarkup from './SchemaMarkup';
 
 interface FAQItem {
   question: string;
@@ -15,27 +14,23 @@ interface FAQSectionProps {
   className?: string;
 }
 
-export default function FAQSection({ title = "Frequently Asked Questions", faqs, className = "" }: FAQSectionProps) {
+/**
+ * Visible FAQ accordion for users and AI crawlers.
+ * Does NOT emit FAQPage JSON-LD — Google removed FAQ rich results
+ * (deprecated May 2026; docs removed June 15, 2026).
+ * @see https://developers.google.com/search/updates#faq-deprecation
+ */
+export default function FAQSection({
+  title = 'Frequently Asked Questions',
+  faqs,
+  className = '',
+}: FAQSectionProps) {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
+    setOpenItems((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
     );
-  };
-
-  // Prepare FAQ data for schema markup
-  const faqSchemaData = {
-    faqs: faqs.map((faq, index) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer
-      }
-    }))
   };
 
   return (
@@ -46,7 +41,8 @@ export default function FAQSection({ title = "Frequently Asked Questions", faqs,
             {title}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get answers to the most common questions about relocating to Las Vegas
+            Get answers to the most common questions about relocating to Las
+            Vegas
           </p>
         </div>
 
@@ -73,16 +69,14 @@ export default function FAQSection({ title = "Frequently Asked Questions", faqs,
                     <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
                   )}
                 </button>
-                
+
                 {openItems.includes(index) && (
                   <div
                     id={`faq-answer-${index}`}
                     className="px-6 pb-4"
                     aria-hidden="false"
                   >
-                    <p className="text-gray-700 leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -90,9 +84,6 @@ export default function FAQSection({ title = "Frequently Asked Questions", faqs,
           </div>
         </div>
       </div>
-
-      {/* Schema markup for FAQ page */}
-      <SchemaMarkup type="faqPage" data={faqSchemaData} />
     </section>
   );
 }

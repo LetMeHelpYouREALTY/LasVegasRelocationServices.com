@@ -366,7 +366,7 @@ export default function ChicagoToLasVegasPage() {
         </div>
       </section>
 
-      {/* FAQ Section with FAQPage schema */}
+      {/* FAQ content (no FAQPage JSON-LD — Google removed FAQ rich results May 2026) */}
       <FAQSection
         title="Chicago to Las Vegas Relocation FAQs"
         faqs={chicagoFAQs}

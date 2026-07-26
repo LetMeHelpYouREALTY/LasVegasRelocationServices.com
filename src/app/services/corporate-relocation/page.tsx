@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withPageImageSeo } from '@/lib/schema';
 import AnimatedCorporateRelocationContent from "@/components/services/AnimatedCorporateRelocationContent";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageImageSeo('corporateRelocation', {
   title: "Corporate Relocation Services | Las Vegas Business Moving Experts",
   description:
     "Professional corporate relocation services in Las Vegas. Expert business moving, employee relocation, and corporate transition support. Get your free consultation today.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
-};
+});
 
 export default function CorporateRelocationPage() {
   return <AnimatedCorporateRelocationContent />;

@@ -12,9 +12,10 @@ import {
   Users,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withPageImageSeo } from '@/lib/schema';
 import LosAngelesPageClient from "./LosAngelesPageClient";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageImageSeo('fromLosAngeles', {
   title: "Los Angeles to Las Vegas Relocation Services | Dr. Jan Duffy",
   description:
     "Professional relocation services from Los Angeles to Las Vegas. Expert assistance with housing, schools, and settling into your new Las Vegas home.",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     description:
       "Professional relocation services from Los Angeles to Las Vegas with Dr. Jan Duffy and Berkshire Hathaway.",
   },
-};
+});
 
 export default function LosAngelesToLasVegasPage() {
   return <LosAngelesPageClient />;

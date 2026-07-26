@@ -410,7 +410,7 @@ export default function InternationalRelocationPage() {
       </section>
 
 
-      {/* FAQ with FAQPage schema */}
+      {/* FAQ content (visible Q&A; FAQPage rich results removed by Google May 2026) */}
       <FAQSection
         title="International Relocation to Las Vegas FAQs"
         faqs={internationalFAQs}
