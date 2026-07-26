@@ -542,11 +542,13 @@ export default function LosAngelesPageClient() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-blue-200" />
-                  <span>+1 (702) XXX-XXXX</span>
+                  <a href="tel:+17027077273" className="hover:underline">
+                    (702) 707-7273
+                  </a>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 mr-3 text-blue-200" />
-                  <span>dr.jan.duffy@berkshirehathaway.com</span>
+                  <span>DrJan@LasVegasRelocationServices.com</span>
                 </div>
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-3 text-blue-200" />

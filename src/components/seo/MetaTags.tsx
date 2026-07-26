@@ -76,8 +76,8 @@ export default function MetaTags({
       <meta name="business:contact_data:region" content="NV" />
       <meta name="business:contact_data:postal_code" content="89074" />
       <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="+1-702-XXX-XXXX" />
-      <meta name="business:contact_data:email" content="dr.jan.duffy@berkshirehathaway.com" />
+      <meta name="business:contact_data:phone_number" content="+17027077273" />
+      <meta name="business:contact_data:email" content="DrJan@LasVegasRelocationServices.com" />
       
       {/* Structured Data */}
       {structuredData && (
