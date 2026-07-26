@@ -3,6 +3,8 @@
 import { ArrowRight, Calendar, Clock, Mail, MapPin, MessageSquare, Phone } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from '@/components/motion';
+import GbpActionBar from '@/components/shared/GbpActionBar';
+import { ADDRESS, AGENT_NAME, BUSINESS_NAME, PHONE_DISPLAY } from '@/lib/business';
 
 const contactMethods = [
   {
@@ -321,17 +323,22 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Location */}
+            {/* Location + GBP actions */}
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
               <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-blue-600" />
-                Serving Las Vegas & Beyond
+                {BUSINESS_NAME}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Dr. Jan Duffy and our team serve the entire Las Vegas metropolitan area, including
-                Henderson, North Las Vegas, and surrounding communities. We also provide relocation
-                services to and from Las Vegas nationwide.
+              <p className="text-gray-700 leading-relaxed mb-2">
+                {ADDRESS.streetAddress}
+                <br />
+                {ADDRESS.addressLocality}, {ADDRESS.addressRegion} {ADDRESS.postalCode}
               </p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {AGENT_NAME} serves Las Vegas, Henderson, North Las Vegas, and surrounding Southern
+                Nevada communities. Call {PHONE_DISPLAY} or leave a Google review after your move.
+              </p>
+              <GbpActionBar />
             </div>
           </motion.div>
         </div>

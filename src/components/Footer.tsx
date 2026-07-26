@@ -17,6 +17,14 @@ import {
   Users,
 } from 'lucide-react';
 import { motion } from '@/components/motion';
+import GbpActionBar from '@/components/shared/GbpActionBar';
+import {
+  EMAIL,
+  GOOGLE_DIRECTIONS_URL,
+  GOOGLE_WRITE_REVIEW_URL,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+} from '@/lib/business';
 
 const footerSections = [
   {
@@ -51,9 +59,8 @@ const footerSections = [
     links: [
       { name: 'About Us', href: '/about' },
       { name: 'Resources', href: '/resources' },
-      { name: 'Contact', href: 'http://drjanduffy.realscout.com/onboarding' },
-      { name: 'Privacy Policy', href: 'http://drjanduffy.realscout.com/onboarding' },
-      { name: 'Terms of Service', href: 'http://drjanduffy.realscout.com/onboarding' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Write a Google Review', href: GOOGLE_WRITE_REVIEW_URL },
       { name: 'Sitemap', href: '/sitemap.xml' },
     ],
   },
@@ -62,23 +69,23 @@ const footerSections = [
 const contactInfo = [
   {
     icon: Phone,
-    text: '(702) 707-7273',
-    href: 'tel:7027077273',
+    text: PHONE_DISPLAY,
+    href: `tel:${PHONE_TEL}`,
   },
   {
     icon: Mail,
-    text: 'DrJan@LasVegasRelocationServices.com',
-    href: 'mailto:DrJan@LasVegasRelocationServices.com',
+    text: EMAIL,
+    href: `mailto:${EMAIL}`,
   },
   {
     icon: MapPin,
-    text: 'Henderson, Nevada',
-    href: 'http://drjanduffy.realscout.com/onboarding',
+    text: '100 N Green Valley Pkwy #330, Henderson, NV 89074',
+    href: GOOGLE_DIRECTIONS_URL,
   },
   {
     icon: Clock,
-    text: 'Available 7 days a week',
-    href: 'http://drjanduffy.realscout.com/onboarding',
+    text: 'Mon–Fri 8am–6pm, Sat 9am–3pm',
+    href: '/contact',
   },
 ];
 
@@ -229,12 +236,16 @@ export default function Footer() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className="flex items-center text-gray-300 hover:text-white transition-colors group"
+                    {...(contact.href.startsWith('http')
+                      ? { target: '_blank', rel: 'noopener noreferrer' }
+                      : {})}
                   >
                     <contact.icon className="w-5 h-5 text-blue-400 mr-3 group-hover:scale-110 transition-transform" />
                     <span>{contact.text}</span>
                   </motion.a>
                 ))}
               </div>
+              <GbpActionBar variant="dark" className="mt-6" />
             </div>
 
             {/* Newsletter Signup */}
@@ -278,7 +289,7 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span>© 2024 Las Vegas Relocation Services</span>
+              <span>© 2026 Las Vegas Relocation Services</span>
               <span>•</span>
               <span>All rights reserved</span>
               <span>•</span>

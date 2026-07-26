@@ -17,6 +17,7 @@ import {
   Breadcrumbs,
   ComparisonTable 
 } from '@/components/seo';
+import GbpActionBar from '@/components/shared/GbpActionBar';
 import {
   AGENT_NAME,
   BROKERAGE,
@@ -324,13 +325,14 @@ export default function HomePage() {
 
               <div className="mt-8">
                 <h4 className="text-lg font-semibold mb-4">Why Choose Dr. Jan Duffy?</h4>
-                <ul className="space-y-2 text-white">
+                <ul className="space-y-2 text-white mb-6">
                   <li>• 15+ years of Las Vegas real estate experience</li>
                   <li>• Berkshire Hathaway expertise and resources</li>
                   <li>• Personal attention to every client</li>
                   <li>• Deep knowledge of relocation challenges</li>
                   <li>• Ongoing support after your move</li>
                 </ul>
+                <GbpActionBar variant="dark" />
               </div>
             </div>
 
