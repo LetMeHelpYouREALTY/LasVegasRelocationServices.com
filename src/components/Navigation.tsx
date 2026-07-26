@@ -111,9 +111,9 @@ const navigationItems = [
         description: 'Latest Las Vegas market information',
       },
       {
-        name: 'Book a Showing',
+        name: 'Schedule time with me',
         href: 'https://calendly.com/drjanduffy/showing',
-        description: 'Schedule on Calendly with Dr. Jan Duffy',
+        description: 'Calendly popup — book a showing with Dr. Jan Duffy',
       },
     ],
   },

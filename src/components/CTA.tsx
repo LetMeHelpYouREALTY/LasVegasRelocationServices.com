@@ -32,7 +32,7 @@ export default function CTA() {
                 rel="noopener noreferrer"
                 className="group bg-white text-blue-600 hover:bg-gray-100 px-10 py-5 rounded-full font-semibold text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-3"
               >
-                Book a Showing
+                Schedule time with me
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </a>
 
@@ -86,7 +86,7 @@ export default function CTA() {
               rel="noopener noreferrer"
               className="inline-block mt-2 bg-white text-green-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
             >
-              Book on Calendly
+              Schedule time with me
             </a>
           </div>
         </div>

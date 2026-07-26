@@ -70,7 +70,7 @@ export default function Contact() {
             className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             <Calendar className="w-5 h-5" aria-hidden="true" />
-            Book a Showing
+            Schedule time with me
           </a>
         </div>
       </PageHero>
