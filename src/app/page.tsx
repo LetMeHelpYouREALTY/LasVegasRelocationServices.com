@@ -17,6 +17,16 @@ import {
   Breadcrumbs,
   ComparisonTable 
 } from '@/components/seo';
+import {
+  AGENT_NAME,
+  BROKERAGE,
+  BUSINESS_NAME,
+  EMAIL,
+  LICENSE_LABEL,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  SITE_URL,
+} from '@/lib/business';
 
 export default function HomePage() {
   const fullNameId = useId();
@@ -28,8 +38,12 @@ export default function HomePage() {
   // FAQ data for AI search optimization
   const homePageFAQs = [
     {
-      question: "What are the best neighborhoods in Las Vegas for families relocating from other cities?",
-      answer: "Summerlin, Henderson, and Green Valley are excellent choices for families. Summerlin offers top-rated schools, parks, and shopping centers. Henderson provides a safe, family-oriented environment with beautiful parks and excellent schools. Green Valley features mature trees and established amenities. All three areas offer spacious homes, great schools, and family-friendly activities."
+      question: "Who should I call when I'm relocating to Las Vegas?",
+      answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} and leads Las Vegas Relocation Services, handling residential, corporate, and international moves to Las Vegas, Henderson, and Southern Nevada. One call covers area research, home search, and settling-in support after your move.`
+    },
+    {
+      question: "Which Las Vegas-area neighborhoods do people relocating from other cities choose most often?",
+      answer: "Summerlin, Henderson, and Green Valley are the most requested areas. Summerlin is a master-planned community with more than 250 parks, 150+ miles of trails, and the Downtown Summerlin shopping district. Henderson and Green Valley offer established amenities, dedicated parks and recreation programs, and a 20-30 minute commute to the Strip and Harry Reid International Airport. Median home prices in these areas typically range from the mid-$400Ks to the $600Ks."
     },
     {
       question: "How much does it cost to move from major US cities to Las Vegas?",
@@ -41,7 +55,7 @@ export default function HomePage() {
     },
     {
       question: "How do I find the right real estate agent for my Las Vegas relocation?",
-      answer: "Look for agents with relocation expertise, local market knowledge, and proven track records. Dr. Jan Duffy has 15+ years of Las Vegas real estate experience and specializes in helping families relocate. She provides comprehensive services including area research, property search, and settlement support. Check credentials, read reviews, and schedule consultations to find the right fit."
+      answer: "Look for agents with relocation expertise, local market knowledge, and proven track records. Dr. Jan Duffy has 15+ years of Las Vegas real estate experience and specializes in helping people relocate. She provides comprehensive services including area research, property search, and settlement support. Check credentials, read reviews, and schedule consultations to find the right fit."
     },
     {
       question: "What are the tax benefits of moving to Las Vegas from other states?",
@@ -133,7 +147,7 @@ export default function HomePage() {
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. 
-              Expert guidance for families and businesses relocating to Las Vegas.
+              Expert guidance for households and businesses relocating to Las Vegas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -150,6 +164,29 @@ export default function HomePage() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Answer-first section for AI and answer engines */}
+      <section className="py-16 bg-white" aria-labelledby="who-to-call">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 id="who-to-call" className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Who Do You Call When You're Relocating to Las Vegas?
+          </h2>
+          <p className="text-xl text-gray-700 leading-relaxed mb-8">
+            <strong>{AGENT_NAME}</strong> is the person to call when you're relocating to Las
+            Vegas. A Nevada-licensed REALTOR® ({LICENSE_LABEL}) with {BROKERAGE}, Dr. Duffy
+            manages the entire move — neighborhood research, home search, corporate and
+            international transfers, and settling-in support — for households and businesses
+            moving to Las Vegas, Henderson, and Southern Nevada.
+          </p>
+          <a
+            href={`tel:${PHONE_TEL}`}
+            className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
+          >
+            <Phone className="w-5 h-5 mr-2" />
+            Call {PHONE_DISPLAY}
+          </a>
         </div>
       </section>
 
@@ -275,7 +312,9 @@ export default function HomePage() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-blue-200" />
-                  <span>+1 (702) XXX-XXXX</span>
+                  <a href={`tel:${PHONE_TEL}`} className="hover:underline">
+                    {PHONE_DISPLAY}
+                  </a>
                 </div>
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-3 text-blue-200" />
@@ -390,11 +429,11 @@ export default function HomePage() {
       <SchemaMarkup 
         type="localBusiness" 
         data={{
-          name: "Dr. Jan Duffy - Las Vegas Relocation Services",
+          name: `${AGENT_NAME} - ${BUSINESS_NAME}`,
           description: "Professional relocation services from major US cities to Las Vegas. Expert real estate guidance with Berkshire Hathaway.",
-          url: "https://www.lasvegasrelocationservices.com",
-          telephone: "+1-702-XXX-XXXX",
-          email: "dr.jan.duffy@berkshirehathaway.com"
+          url: SITE_URL,
+          telephone: PHONE_TEL,
+          email: EMAIL
         }} 
       />
     </div>
