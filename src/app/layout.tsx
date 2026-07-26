@@ -82,9 +82,8 @@ export const metadata: Metadata = {
     description: 'Expert relocation services to Las Vegas from major US cities. Dr. Jan Duffy provides personalized assistance for seamless relocations.',
     images: ['https://www.lasvegasrelocationservices.com/og-image.jpg'],
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
+  // Google verification is handled via Search Console DNS/HTML-file ownership.
+  // Do not ship a placeholder verification token — it looks like soft spam.
   category: 'Business Services',
   classification: 'Relocation Services',
   other: {

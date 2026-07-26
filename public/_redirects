@@ -1,31 +1,9 @@
-# Cloudflare Redirects Configuration
-# This file provides optimal routing and redirects for Cloudflare CDN
+# Cloudflare / static host redirects. Prefer www as the canonical host (matches
+# Vercel domain settings and sitemap). Permanent 301 so Google consolidates
+# indexing signals onto https://www.lasvegasrelocationservices.com/
 
-# Redirect www to non-www (if desired)
-# www.lasvegasrelocationservices.com/* https://lasvegasrelocationservices.com/:splat 301
+https://lasvegasrelocationservices.com/* https://www.lasvegasrelocationservices.com/:splat 301
+http://lasvegasrelocationservices.com/* https://www.lasvegasrelocationservices.com/:splat 301
 
-# Redirect old service URLs to new ones (if any)
-# /old-service/* /services/:splat 301
-
-# Redirect old relocation city URLs (if any)
-# /relocating-from/old-city/* /relocating-from/:splat 301
-
-# Handle trailing slashes
+# Trailing-slash normalization
 /*/ /:splat 301
-
-# Redirect old blog posts (if any)
-# /blog/old-post/* /blog/:splat 301
-
-# API redirects for better caching
-/api/* /api/:splat 200
-
-# Static asset redirects
-/_next/static/* /_next/static/:splat 200
-/_next/image/* /_next/image/:splat 200
-
-# Sitemap and robots
-/sitemap.xml /sitemap.xml 200
-/robots.txt /robots.txt 200
-
-# Fallback for SPA routing
-/* /index.html 200

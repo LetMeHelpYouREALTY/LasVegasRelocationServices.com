@@ -14,13 +14,48 @@ import {
   Users,
 } from 'lucide-react';
 import { motion } from '@/components/motion';
+import { FAQSection } from '@/components/seo';
+import {
+  AGENT_NAME,
+  BROKERAGE,
+  LICENSE_LABEL,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+} from '@/lib/business';
+
+const internationalFAQs = [
+  {
+    question: 'Who should I call for international relocation to Las Vegas?',
+    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} and coordinates housing search, temporary lodging, school enrollment by district and school name, utility setup, and settling-in support for households and businesses moving to Las Vegas from abroad.`,
+  },
+  {
+    question: 'Does Dr. Jan Duffy handle visas and immigration paperwork?',
+    answer:
+      'Dr. Duffy does not practice immigration law. She provides relocation coordination and can refer you to licensed immigration attorneys and document preparers when visa or status questions arise. Housing, logistics, and local orientation stay under her relocation practice.',
+  },
+  {
+    question: 'How far in advance should I start an international move to Las Vegas?',
+    answer:
+      'Most international moves need 90–180 days of lead time: temporary housing first, then a purchase or long-term lease after arrival. Corporate transfers with a fixed start date often lock temporary lodging 60–90 days out and schedule property tours for the first week on the ground.',
+  },
+  {
+    question: 'Which Las Vegas areas do international relocators request most often?',
+    answer:
+      'Summerlin, Henderson, and Green Valley are the most requested for longer stays because they offer newer construction, dedicated parks and recreation programs, and roughly 20–30 minute drives to Harry Reid International Airport. Strip-adjacent high-rises are more common for executives on shorter assignments.',
+  },
+  {
+    question: 'What settling-in tasks do you cover after arrival?',
+    answer:
+      'Typical settling-in work includes temporary-to-permanent housing transition, utility setup, Nevada DMV orientation, banking introductions, and school enrollment coordination using district and school names. Ongoing local orientation is available for the first 30–90 days after move-in.',
+  },
+];
 
 const internationalServices = [
   {
     icon: FileText,
-    title: 'Visa & Immigration Support',
-    description: 'Assistance with visa applications and immigration requirements',
-    benefits: ['Visa consultation', 'Document preparation', 'Legal referrals', 'Timeline planning'],
+    title: 'Visa & Immigration Coordination',
+    description: 'Timeline planning and referrals to licensed immigration attorneys',
+    benefits: ['Attorney referrals', 'Document checklist support', 'Timeline planning', 'Status-aware housing search'],
   },
   {
     icon: Building,
@@ -42,12 +77,12 @@ const internationalServices = [
   {
     icon: Users,
     title: 'Cultural Integration',
-    description: 'Help your family adapt to American culture and Las Vegas lifestyle',
+    description: 'Orientation to local customs, services, and day-to-day life in Las Vegas',
     benefits: [
       'Cultural orientation',
-      'Language support',
+      'Language support referrals',
       'Community connections',
-      'Local customs',
+      'Local customs overview',
     ],
   },
 ];
@@ -56,15 +91,15 @@ const internationalPackages = [
   {
     name: 'Essential International',
     price: 'Starting at $3,500',
-    description: 'Basic international relocation support for individuals and families',
+    description: 'Basic international relocation support for individuals and small households',
     features: [
-      'Visa consultation and support',
+      'Visa consultation referrals',
       'Housing assistance',
       'Basic cultural orientation',
       'Airport pickup and welcome',
       'Essential services setup',
     ],
-    bestFor: 'Individual professionals and small families',
+    bestFor: 'Individual professionals and small households',
     cta: 'Get Quote',
   },
   {
@@ -136,31 +171,29 @@ export default function InternationalRelocationPage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                International
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-indigo-200">
-                  Relocation Services
-                </span>
+                International Relocation Services to Las Vegas
               </h1>
-              <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-                Expert international relocation services to Las Vegas. We help clients from around
-                the world make a smooth transition to their new home in the United States.
+              <p className="text-xl text-white mb-8 leading-relaxed">
+                {AGENT_NAME} coordinates housing, logistics, and settling-in support for people and
+                businesses moving to Las Vegas from abroad — with referrals to licensed immigration
+                counsel when visa questions arise.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  type="button"
+                <a
+                  href={`tel:${PHONE_TEL}`}
                   className="bg-white text-purple-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2"
                 >
-                  <Phone className="w-5 h-5" />
-                  Call (702) 707-7273
-                </button>
-                <button
-                  type="button"
+                  <Phone className="w-5 h-5" aria-hidden="true" />
+                  Call {PHONE_DISPLAY}
+                </a>
+                <a
+                  href="#consultation"
                   className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors flex items-center gap-2"
                 >
-                  <Calendar className="w-5 h-5" />
+                  <Calendar className="w-5 h-5" aria-hidden="true" />
                   Free Consultation
-                </button>
+                </a>
               </div>
             </motion.div>
 
@@ -178,6 +211,30 @@ export default function InternationalRelocationPage() {
         </div>
       </section>
 
+      {/* Answer-first block for indexing / AEO */}
+      <section className="py-16 bg-white" aria-labelledby="intl-who-to-call">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="intl-who-to-call" className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Who Handles International Relocation to Las Vegas?
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            <strong>{AGENT_NAME}</strong> at Las Vegas Relocation Services ({BROKERAGE},{' '}
+            {LICENSE_LABEL}) is the person to call when you are relocating to Las Vegas from
+            another country. One contact covers temporary and long-term housing search, move
+            logistics coordination, school enrollment by district and school name, utility setup,
+            and the first 30–90 days of settling-in support after arrival.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Immigration filings stay with licensed immigration counsel — Dr. Duffy refers those
+            specialists and keeps the housing and local transition on track. Call{' '}
+            <a href={`tel:${PHONE_TEL}`} className="text-purple-800 font-semibold underline">
+              {PHONE_DISPLAY}
+            </a>{' '}
+            to start the timeline.
+          </p>
+        </div>
+      </section>
+
       {/* Services Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,7 +249,7 @@ export default function InternationalRelocationPage() {
               Comprehensive International Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From visa applications to cultural integration, we provide complete support for your
+              From housing search and logistics to cultural orientation, we provide complete support for your
               international relocation to Las Vegas.
             </p>
           </motion.div>
@@ -404,8 +461,15 @@ export default function InternationalRelocationPage() {
         </div>
       </section>
 
+      {/* FAQ with FAQPage schema */}
+      <FAQSection
+        title="International Relocation to Las Vegas FAQs"
+        faqs={internationalFAQs}
+        className="py-16"
+      />
+
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
+      <section id="consultation" className="py-20 bg-gradient-to-r from-purple-800 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -416,26 +480,26 @@ export default function InternationalRelocationPage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Start Your International Journey to Las Vegas?
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Let's begin your international relocation process. Schedule your free consultation and
-              discover how we can make your move to Las Vegas successful and stress-free.
+            <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
+              Call {AGENT_NAME} at {PHONE_DISPLAY} for a free consultation on housing, logistics,
+              and settling-in support for your move to Las Vegas from abroad.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                type="button"
-                className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2"
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="bg-white text-purple-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2 justify-center"
               >
-                <Phone className="w-5 h-5" />
-                Call (702) 707-7273
-              </button>
-              <button
-                type="button"
-                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors flex items-center gap-2"
+                <Phone className="w-5 h-5" aria-hidden="true" />
+                Call {PHONE_DISPLAY}
+              </a>
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors flex items-center gap-2 justify-center"
               >
-                <Calendar className="w-5 h-5" />
+                <Calendar className="w-5 h-5" aria-hidden="true" />
                 Schedule Free Consultation
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>

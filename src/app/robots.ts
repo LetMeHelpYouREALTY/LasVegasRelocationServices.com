@@ -1,19 +1,19 @@
 import type { MetadataRoute } from 'next';
-import { headers } from 'next/headers';
+import { SITE_URL } from '@/lib/business';
 
-export default async function robots(): Promise<MetadataRoute.Robots> {
-  const headersList = await headers();
-  const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost';
-  const baseUrl = `https://${host.split(':')[0]}`;
-
+/**
+ * Always advertise the www host. Using the request Host header previously let
+ * apex crawls publish a non-www sitemap URL in robots.txt, which fights the
+ * canonical www preference and can leave apex URLs in "Crawled - currently
+ * not indexed" longer than necessary.
+ */
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // Default: allow all crawlers
       {
         userAgent: '*',
         allow: '/',
       },
-      // ── AI Retrieval Bots (power AI search results) ──
       {
         userAgent: 'GPTBot',
         allow: '/',
@@ -46,7 +46,6 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
         userAgent: 'Bytespider',
         allow: '/',
       },
-      // ── AI Training Bots (maximizes visibility in AI models) ──
       {
         userAgent: 'Google-Extended',
         allow: '/',
@@ -64,6 +63,7 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
         allow: '/',
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL.replace(/^https?:\/\//, ''),
   };
 }

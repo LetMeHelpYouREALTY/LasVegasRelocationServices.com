@@ -151,12 +151,13 @@ export default function Navigation() {
           {/* Logo/Brand */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a href="/" className="flex items-center space-x-2">
+              <a href="/" className="flex items-center space-x-2" aria-label="Las Vegas Relocation Services home">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">LV</span>
+                  <span className="text-white font-bold text-lg" aria-hidden="true">LV</span>
                 </div>
                 <div className="hidden sm:block">
-                  <h1 className="text-lg font-bold text-gray-900">Las Vegas</h1>
+                  {/* Brand mark must not be an H1 — every page needs a single topical H1 for indexing */}
+                  <p className="text-lg font-bold text-gray-900 leading-tight">Las Vegas</p>
                   <p className="text-sm text-gray-600">Relocation Services</p>
                 </div>
               </a>
