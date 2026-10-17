@@ -2,10 +2,12 @@ import { NextResponse } from 'next/server';
 import { SITE_URL } from '@/lib/business';
 import { getGoogleSiteVerification } from '@/lib/google-verification';
 import {
+  formatRedirectHops,
   probeApexRedirect,
   probePriorityPages,
   probeRobots,
   probeSitemap,
+  VERCEL_APEX_DOMAIN_SETTINGS_URL,
 } from '@/lib/gsc-checks';
 import { SITE_PAGES } from '@/lib/site-pages';
 
@@ -33,7 +35,7 @@ export async function GET() {
   const cronConfigured = Boolean(process.env.CRON_SECRET?.trim());
   const fubConfigured = Boolean(
     process.env.FOLLOW_UP_BOSS_API_KEY?.trim() &&
-      !/^your-|changeme|placeholder/i.test(process.env.FOLLOW_UP_BOSS_API_KEY),
+      !/^your-|changeme|placeholder/i.test(process.env.FOLLOW_UP_BOSS_API_KEY)
   );
 
   const [apex, sitemap, robots, priorityPages] = await Promise.all([
@@ -89,8 +91,14 @@ export async function GET() {
       title: 'Apex → www permanent redirect (301/308)',
       status: apex.ok ? 'done' : 'needs_you',
       detail: apex.ok
-        ? `Live apex redirect is ${apex.status} → ${apex.location}`
-        : `Live apex is ${apex.status ?? 'unreachable'} → ${apex.location ?? 'n/a'}. vercel.json + middleware use 301, but Vercel Domains still answers first. Project → Settings → Domains → lasvegasrelocationservices.com → redirect to www with status 301.`,
+        ? `Live hops are permanent: ${formatRedirectHops(apex.hops)}`
+        : [
+            'GSC Coverage “Page with redirect” (export 2026-10-17) lists the http and https apex homepages, affected since 2026-09-21, last crawled 2026-09-27.',
+            `Live: ${formatRedirectHops(apex.hops)}.`,
+            'Google treats 307 as temporary and does not use it as a canonical signal.',
+            'vercel.json and middleware already send 301, but the Vercel domain redirect (redirectStatusCode null) answers first.',
+            `Set redirect status 301: ${VERCEL_APEX_DOMAIN_SETTINGS_URL}`,
+          ].join(' '),
     },
     {
       id: 'gsc-pages',
@@ -99,10 +107,12 @@ export async function GET() {
       status: pagesOk ? 'ready' : 'warn',
       detail: pagesOk
         ? 'Homepage, international relocation, about, and contact all return 200 with self-canonicals suitable for URL Inspection.'
-        : `Failed or non-200: ${priorityPages
-            .filter((p) => !p.ok || p.status !== 200)
-            .map((p) => `${p.url} (${p.status})`)
-            .join(', ') || 'unknown'}`,
+        : `Failed or non-200: ${
+            priorityPages
+              .filter((p) => !p.ok || p.status !== 200)
+              .map((p) => `${p.url} (${p.status})`)
+              .join(', ') || 'unknown'
+          }`,
     },
     {
       id: 'fub-rotate',
@@ -155,8 +165,7 @@ export async function GET() {
         ok: p.ok,
         canonical: p.canonical ?? null,
         selfCanonical:
-          p.canonical === p.url ||
-          (p.url === SITE_URL && p.canonical === `${SITE_URL}/`),
+          p.canonical === p.url || (p.url === SITE_URL && p.canonical === `${SITE_URL}/`),
       })),
       gscSubmit: {
         propertyType: 'Domain property recommended',
@@ -178,6 +187,6 @@ export async function GET() {
         'Cache-Control': 'no-store',
         'X-Robots-Tag': 'noindex, nofollow',
       },
-    },
+    }
   );
 }
