@@ -1,14 +1,16 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
+import type { Metadata } from 'next';
+import Link from 'next/link';
 import {
   AGENT_NAME,
   BUSINESS_NAME,
   EMAIL,
+  IMAGE_COPYRIGHT_NOTICE,
+  IMAGE_LICENSE_URL,
   PHONE_DISPLAY,
   PHONE_TEL,
   SITE_URL,
-} from '@/lib/business'
-import { IMAGE_LICENSE_URL, agentPortraitImageSchema } from '@/lib/schema'
+} from '@/lib/business';
+import { agentPortraitImageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Image License',
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-}
+};
 
 export default function ImageLicensePage() {
   const pageSchema = {
@@ -47,7 +49,7 @@ export default function ImageLicensePage() {
       },
       agentPortraitImageSchema(),
     ],
-  }
+  };
 
   return (
     <>
@@ -74,9 +76,8 @@ export default function ImageLicensePage() {
           <div>
             <h2 className="text-2xl font-bold text-[#0A2540]">Copyright</h2>
             <p className="mt-3 text-slate-700 leading-relaxed">
-              Unless otherwise noted, photographs on this website — including the
-              agent portrait of {AGENT_NAME} and destination hero imagery — are ©{' '}
-              {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.
+              Unless otherwise noted, photographs on this website — including the agent portrait of{' '}
+              {AGENT_NAME} and destination hero imagery — are {IMAGE_COPYRIGHT_NOTICE}
             </p>
           </div>
 
@@ -92,22 +93,14 @@ export default function ImageLicensePage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-[#0A2540]">
-              Request a license
-            </h2>
+            <h2 className="text-2xl font-bold text-[#0A2540]">Request a license</h2>
             <p className="mt-3 text-slate-700 leading-relaxed">
               To acquire a license for editorial, press, or partner use, contact{' '}
-              <a
-                href={`mailto:${EMAIL}`}
-                className="font-semibold text-[#3A8DDE] hover:underline"
-              >
+              <a href={`mailto:${EMAIL}`} className="font-semibold text-[#3A8DDE] hover:underline">
                 {EMAIL}
               </a>{' '}
               or call{' '}
-              <a
-                href={`tel:${PHONE_TEL}`}
-                className="font-semibold text-[#3A8DDE] hover:underline"
-              >
+              <a href={`tel:${PHONE_TEL}`} className="font-semibold text-[#3A8DDE] hover:underline">
                 {PHONE_DISPLAY}
               </a>
               . Include the image URL and intended use.
@@ -117,10 +110,9 @@ export default function ImageLicensePage() {
           <div>
             <h2 className="text-2xl font-bold text-[#0A2540]">On-site use</h2>
             <p className="mt-3 text-slate-700 leading-relaxed">
-              Images on this site are licensed for display in connection with{' '}
-              {BUSINESS_NAME} marketing and SEO (including Google Image metadata /
-              ImageObject structured data). Unauthorized scraping, training, or
-              redistribution is not permitted.
+              Images on this site are licensed for display in connection with {BUSINESS_NAME}{' '}
+              marketing and SEO (including Google Image metadata / ImageObject structured data).
+              Unauthorized scraping, training, or redistribution is not permitted.
             </p>
           </div>
 
@@ -132,5 +124,5 @@ export default function ImageLicensePage() {
         </section>
       </main>
     </>
-  )
+  );
 }

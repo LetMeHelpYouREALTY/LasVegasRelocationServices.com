@@ -1,5 +1,11 @@
 import Image from 'next/image';
-import { AGENT_NAME, BUSINESS_NAME } from '@/lib/business';
+import {
+  AGENT_NAME,
+  BUSINESS_NAME,
+  IMAGE_COPYRIGHT_NOTICE,
+  IMAGE_LICENSE_URL,
+  SITE_URL,
+} from '@/lib/business';
 
 type AgentPortraitProps = {
   /** Tailwind size classes for the circular frame */
@@ -29,10 +35,13 @@ export default function AgentPortrait({
       <meta itemProp="name" content={`${AGENT_NAME} headshot`} />
       <meta itemProp="caption" content={PORTRAIT_ALT} />
       <meta itemProp="creditText" content={`${AGENT_NAME} / ${BUSINESS_NAME}`} />
-      <meta
-        itemProp="license"
-        content="https://www.lasvegasrelocationservices.com/image-license"
-      />
+      <meta itemProp="copyrightNotice" content={IMAGE_COPYRIGHT_NOTICE} />
+      <link itemProp="contentUrl" href={`${SITE_URL}/dr-jan-duffy.webp`} />
+      <link itemProp="license" href={IMAGE_LICENSE_URL} />
+      <link itemProp="acquireLicensePage" href={IMAGE_LICENSE_URL} />
+      <span className="hidden" itemProp="creator" itemScope itemType="https://schema.org/Person">
+        <meta itemProp="name" content={AGENT_NAME} />
+      </span>
       <Image
         src="/dr-jan-duffy.webp"
         alt={PORTRAIT_ALT}
@@ -42,7 +51,6 @@ export default function AgentPortrait({
         priority={priority}
         className="h-full w-full object-cover"
         sizes="(max-width: 768px) 160px, 224px"
-        itemProp="contentUrl"
       />
     </div>
   );

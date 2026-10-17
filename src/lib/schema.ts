@@ -25,31 +25,33 @@ import {
   AGENT_NAME,
   AREA_SERVED,
   BROKERAGE,
+  type BreadcrumbInput,
   BUSINESS_ID,
   BUSINESS_NAME,
+  breadcrumbListSchema,
+  businessSchema,
   EMAIL,
   GOOGLE_DIRECTIONS_URL,
   GOOGLE_PLACE_ID,
   GOOGLE_REVIEWS_URL,
   GOOGLE_WRITE_REVIEW_URL,
+  IMAGE_COPYRIGHT_NOTICE,
+  IMAGE_LICENSE_URL,
   LICENSE_LABEL,
   LICENSE_NUMBER,
   PERSON_ID,
   PHONE_DISPLAY,
   PHONE_TEL,
+  personSchema,
   SITE_URL,
   WEBSITE_ID,
-  type BreadcrumbInput,
-  breadcrumbListSchema,
-  businessSchema,
-  personSchema,
   webSiteSchema,
 } from '@/lib/business';
 import { HERO_IMAGES, type HeroImageKey } from '@/lib/hero-images';
 import { absoluteUrl } from '@/lib/site-pages';
 
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
-export const IMAGE_LICENSE_URL = `${SITE_URL}/image-license`;
+export { IMAGE_LICENSE_URL };
 /** Matches AgentPortrait / public/dr-jan-duffy.webp */
 export const AGENT_IMAGE_URL = `${SITE_URL}/dr-jan-duffy.webp`;
 export const OG_IMAGE_URL = `${SITE_URL}/og-image.jpg`;
@@ -165,8 +167,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   investmentProperties: {
     path: '/services/investment-properties',
     name: 'Las Vegas Investment Properties',
-    description:
-      'Investment property guidance in Las Vegas and Henderson with Dr. Jan Duffy.',
+    description: 'Investment property guidance in Las Vegas and Henderson with Dr. Jan Duffy.',
     kind: 'Service',
     serviceName: 'Investment Property Advising',
     breadcrumbs: [
@@ -180,8 +181,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   movingTransportation: {
     path: '/services/moving-transportation',
     name: 'Moving & Transportation to Las Vegas',
-    description:
-      'Moving and transportation coordination for Las Vegas relocations.',
+    description: 'Moving and transportation coordination for Las Vegas relocations.',
     kind: 'Service',
     serviceName: 'Moving & Transportation Coordination',
     breadcrumbs: [
@@ -207,8 +207,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   relocationPlanning: {
     path: '/services/relocation-planning',
     name: 'Las Vegas Relocation Planning',
-    description:
-      'Relocation planning timelines and checklists for moves to Las Vegas.',
+    description: 'Relocation planning timelines and checklists for moves to Las Vegas.',
     kind: 'Service',
     serviceName: 'Relocation Planning',
     breadcrumbs: [
@@ -219,8 +218,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   luxuryRelocation: {
     path: '/services/luxury-relocation',
     name: 'Luxury Relocation to Las Vegas',
-    description:
-      'Luxury home relocation services in Las Vegas, Summerlin, and Henderson.',
+    description: 'Luxury home relocation services in Las Vegas, Summerlin, and Henderson.',
     kind: 'Service',
     serviceName: 'Luxury Relocation',
     breadcrumbs: [
@@ -231,8 +229,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   relocatingFrom: {
     path: '/relocating-from',
     name: 'Relocating to Las Vegas from Major Cities',
-    description:
-      'City-to-city relocation guides for moving to Las Vegas from across the U.S.',
+    description: 'City-to-city relocation guides for moving to Las Vegas from across the U.S.',
     kind: 'CollectionPage',
     breadcrumbs: [{ label: 'Relocating From', href: '/relocating-from' }],
   },
@@ -250,8 +247,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   fromSanDiego: {
     path: '/relocating-from/san-diego',
     name: 'Moving from San Diego to Las Vegas',
-    description:
-      'Relocation guide for households moving from San Diego to Las Vegas.',
+    description: 'Relocation guide for households moving from San Diego to Las Vegas.',
     kind: 'WebPage',
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
@@ -261,8 +257,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   fromChicago: {
     path: '/relocating-from/chicago',
     name: 'Moving from Chicago to Las Vegas',
-    description:
-      'Relocation guide for households moving from Chicago to Las Vegas.',
+    description: 'Relocation guide for households moving from Chicago to Las Vegas.',
     kind: 'WebPage',
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
@@ -272,8 +267,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   fromNewYork: {
     path: '/relocating-from/new-york',
     name: 'Moving from New York to Las Vegas',
-    description:
-      'Relocation guide for households moving from New York to Las Vegas.',
+    description: 'Relocation guide for households moving from New York to Las Vegas.',
     kind: 'WebPage',
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
@@ -283,8 +277,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   fromMiami: {
     path: '/relocating-from/miami',
     name: 'Moving from Miami to Las Vegas',
-    description:
-      'Relocation guide for households moving from Miami to Las Vegas.',
+    description: 'Relocation guide for households moving from Miami to Las Vegas.',
     kind: 'WebPage',
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
@@ -294,8 +287,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   fromSeattle: {
     path: '/relocating-from/seattle',
     name: 'Moving from Seattle to Las Vegas',
-    description:
-      'Relocation guide for households moving from Seattle to Las Vegas.',
+    description: 'Relocation guide for households moving from Seattle to Las Vegas.',
     kind: 'WebPage',
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
@@ -320,8 +312,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   resources: {
     path: '/resources',
     name: 'Las Vegas Relocation Resources',
-    description:
-      'Guides, tools, and neighborhood resources for relocating to Las Vegas.',
+    description: 'Guides, tools, and neighborhood resources for relocating to Las Vegas.',
     kind: 'CollectionPage',
     breadcrumbs: [{ label: 'Resources', href: '/resources' }],
   },
@@ -342,6 +333,12 @@ export const OPENING_HOURS_SPECIFICATION = [
   },
 ] as const;
 
+type ImageCreator = {
+  '@type': 'Person' | 'Organization';
+  '@id': string;
+  name: string;
+};
+
 /** Google Image metadata (ImageObject) — contentUrl + creator/credit/copyright/license. */
 export function imageObjectSchema(options: {
   contentUrl: string;
@@ -350,7 +347,16 @@ export function imageObjectSchema(options: {
   width?: number;
   height?: number;
   id?: string;
+  creator?: ImageCreator;
+  creditText?: string;
+  representativeOfPage?: boolean;
 }) {
+  const creator: ImageCreator = options.creator ?? {
+    '@type': 'Person',
+    '@id': PERSON_ID,
+    name: AGENT_NAME,
+  };
+
   return {
     '@type': 'ImageObject',
     ...(options.id ? { '@id': options.id } : {}),
@@ -365,16 +371,12 @@ export function imageObjectSchema(options: {
       : options.contentUrl.endsWith('.png')
         ? 'image/png'
         : 'image/jpeg',
-    creator: {
-      '@type': 'Person',
-      '@id': PERSON_ID,
-      name: AGENT_NAME,
-    },
-    creditText: `${AGENT_NAME} / ${BUSINESS_NAME}`,
-    copyrightNotice: `© ${new Date().getFullYear()} ${BUSINESS_NAME}. All rights reserved.`,
+    creator,
+    creditText: options.creditText ?? `${AGENT_NAME} / ${BUSINESS_NAME}`,
+    copyrightNotice: IMAGE_COPYRIGHT_NOTICE,
     license: IMAGE_LICENSE_URL,
     acquireLicensePage: IMAGE_LICENSE_URL,
-    representativeOfPage: true,
+    representativeOfPage: options.representativeOfPage ?? true,
   };
 }
 
@@ -414,13 +416,21 @@ export function organizationSchema() {
     name: BUSINESS_NAME,
     legalName: BUSINESS_NAME,
     url: SITE_URL,
-    logo: {
-      '@type': 'ImageObject',
-      url: `${SITE_URL}/logo.png`,
+    logo: imageObjectSchema({
+      id: `${SITE_URL}/logo.png#image`,
       contentUrl: `${SITE_URL}/logo.png`,
+      name: `${BUSINESS_NAME} logo`,
+      description: `Logo for ${BUSINESS_NAME}, Las Vegas relocation services.`,
       width: 512,
       height: 512,
-    },
+      creator: {
+        '@type': 'Organization',
+        '@id': ORGANIZATION_ID,
+        name: BUSINESS_NAME,
+      },
+      creditText: BUSINESS_NAME,
+      representativeOfPage: false,
+    }),
     image: [`${SITE_URL}/logo.png`, AGENT_IMAGE_URL, OG_IMAGE_URL],
     telephone: PHONE_DISPLAY,
     email: EMAIL,
@@ -459,11 +469,7 @@ export function enhancedBusinessSchema() {
   return {
     ...businessSchema(),
     '@type': ['RealEstateAgent', 'LocalBusiness'],
-    image: [
-      agentPortraitImageSchema(),
-      `${SITE_URL}/logo.png`,
-      OG_IMAGE_URL,
-    ],
+    image: [agentPortraitImageSchema(), `${SITE_URL}/logo.png`, OG_IMAGE_URL],
     logo: `${SITE_URL}/logo.png`,
     openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
     hasMap: GOOGLE_DIRECTIONS_URL,
@@ -637,10 +643,7 @@ export function pageSchemaGraph(heroKey: HeroImageKey) {
  * Merge Next.js Metadata with per-page hero + agent image SEO
  * (Open Graph / Twitter images with descriptive alt text).
  */
-export function withPageImageSeo(
-  heroKey: HeroImageKey,
-  metadata: Metadata = {},
-): Metadata {
+export function withPageImageSeo(heroKey: HeroImageKey, metadata: Metadata = {}): Metadata {
   const hero = HERO_IMAGES[heroKey];
   const seo = HERO_PAGE_SEO[heroKey];
   const pageUrl = absoluteUrl(seo.path);
@@ -660,13 +663,9 @@ export function withPageImageSeo(
   ];
 
   const existingOg =
-    metadata.openGraph && typeof metadata.openGraph === 'object'
-      ? metadata.openGraph
-      : {};
+    metadata.openGraph && typeof metadata.openGraph === 'object' ? metadata.openGraph : {};
   const existingTwitter =
-    metadata.twitter && typeof metadata.twitter === 'object'
-      ? metadata.twitter
-      : {};
+    metadata.twitter && typeof metadata.twitter === 'object' ? metadata.twitter : {};
 
   return {
     ...metadata,
@@ -679,27 +678,18 @@ export function withPageImageSeo(
       locale: 'en_US',
       url: pageUrl,
       siteName: BUSINESS_NAME,
-      title:
-        (typeof metadata.title === 'string' ? metadata.title : undefined) ||
-        seo.name,
+      title: (typeof metadata.title === 'string' ? metadata.title : undefined) || seo.name,
       description: metadata.description || seo.description,
       ...existingOg,
-      images:
-        'images' in existingOg && existingOg.images
-          ? existingOg.images
-          : images,
+      images: 'images' in existingOg && existingOg.images ? existingOg.images : images,
     },
     twitter: {
       card: 'summary_large_image',
-      title:
-        (typeof metadata.title === 'string' ? metadata.title : undefined) ||
-        seo.name,
+      title: (typeof metadata.title === 'string' ? metadata.title : undefined) || seo.name,
       description: metadata.description || seo.description,
       ...existingTwitter,
       images:
-        'images' in existingTwitter && existingTwitter.images
-          ? existingTwitter.images
-          : [hero.src],
+        'images' in existingTwitter && existingTwitter.images ? existingTwitter.images : [hero.src],
     },
   };
 }
