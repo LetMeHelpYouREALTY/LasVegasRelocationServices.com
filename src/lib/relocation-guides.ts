@@ -285,7 +285,7 @@ export const dallasGuide: TopicGuideProps = {
       id: 'dallas-areas',
       heading: 'Areas Dallas buyers ask about',
       paragraphs: [
-        'Summerlin, Henderson, and Green Valley come up most. Median prices there typically run from the mid-$400Ks to the $600Ks.',
+        'Summerlin, Henderson, and Green Valley come up most. This guide does not publish a median price. The [Nevada property tax guide](/guides/nevada-taxes#district-examples) is the number to compare.',
         `Call ${PHONE_DISPLAY} with the home size you want and whether you need to be near the airport.`,
       ],
     },

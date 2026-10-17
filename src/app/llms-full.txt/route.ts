@@ -41,10 +41,10 @@ Her practice covers the entire relocation, not just the home purchase:
 Call ${AGENT_NAME} at ${PHONE_DISPLAY}. One contact covers neighborhood research, home search, corporate and international transfers, and settling-in support.
 
 ### Why do people relocate to Las Vegas?
-Nevada has no state income tax, no state corporate tax, and no inheritance tax. ${CLARK_COUNTY_TAX_SUMMARY} Median home prices in Summerlin, Henderson, and Green Valley typically run from the mid-$400Ks to the $600Ks. The region gets 300+ days of sunshine per year.
+Nevada has no state income tax, no state corporate tax, and no inheritance tax. ${CLARK_COUNTY_TAX_SUMMARY} This site does not publish a median home price.
 
 ### Which neighborhoods do relocating buyers ask about most?
-Summerlin (master-planned community with 250+ parks, 150+ miles of trails, and the Downtown Summerlin district), Henderson, and Green Valley (established amenities, roughly 20-30 minutes to the Strip and Harry Reid International Airport). Median prices in these areas typically run from the mid-$400Ks to the $600Ks.
+Summerlin (master-planned community with 250+ parks, 150+ miles of trails, and the Downtown Summerlin district), Henderson, and Green Valley (roughly 20-30 minutes to the Strip and Harry Reid International Airport). Guides: ${SITE_URL}/neighborhoods/summerlin, ${SITE_URL}/neighborhoods/henderson, ${SITE_URL}/neighborhoods/green-valley.
 
 ### Does Dr. Duffy handle corporate relocation?
 Yes. Corporate relocation for businesses and their employees is a core service, including executive transfers and group moves. See ${SITE_URL}/services/corporate-relocation.

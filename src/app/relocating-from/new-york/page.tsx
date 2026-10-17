@@ -26,12 +26,12 @@ const newYorkFAQs = [
   {
     question: 'How much can I save on taxes by moving from New York to Las Vegas?',
     answer:
-      'Nevada has no state income tax, while New York State and New York City combined income tax rates can exceed 10% at higher brackets. Nevada also has no inheritance tax, and Clark County property tax rates are approximately 0.84%. For many six-figure households, the move saves tens of thousands of dollars per year.',
+      'Nevada does not levy a state personal income tax or an inheritance tax. New York does tax wages. Clark County property tax is a district bill. The [Nevada property tax guide](/guides/nevada-taxes#no-wage-tax) has the examples. This site does not estimate a dollar savings.',
   },
   {
     question: 'How do housing costs compare between New York and Las Vegas?',
     answer:
-      'Median home prices in the Las Vegas Valley are in the mid-$400Ks, versus median prices well above $700K across much of the New York metro and far higher in Manhattan and Brooklyn. Buyers relocating from New York typically get substantially more square footage, a garage, and private outdoor space at the same budget.',
+      'This site does not publish a median price. The search is the [Summerlin](/neighborhoods/summerlin#what-summerlin-is), [Henderson](/neighborhoods/henderson#henderson-drive), or [Green Valley](/neighborhoods/green-valley#green-valley-place) guide. Call with the home you want to see.',
   },
   {
     question: 'How long does it take to get from New York to Las Vegas?',

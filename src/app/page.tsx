@@ -38,7 +38,7 @@ export default function HomePage() {
     {
       question: "What's the job market like in Las Vegas compared to other major cities?",
       answer:
-        'Las Vegas has a diverse job market with strong opportunities in hospitality, gaming, technology, healthcare, and construction. The city is experiencing growth in tech startups and remote work opportunities. While salaries may be slightly lower than cities like San Francisco or New York, the cost of living is significantly lower, resulting in better overall financial outcomes.',
+        'Dr. Jan Duffy does not quote salaries or a cost-of-living index. She is the realtor for the home. Nevada does not levy a state personal income tax. The [property tax guide](/guides/nevada-taxes#no-wage-tax) covers the parcel bill.',
     },
     {
       question: 'How do I find the right real estate agent for my Las Vegas relocation?',
@@ -55,67 +55,60 @@ export default function HomePage() {
   // Quick facts for AI search optimization
   const lasVegasFacts = [
     {
-      label: 'State Income Tax',
-      value: '0%',
-      description: 'No state income tax in Nevada',
+      label: 'State tax on wages',
+      value: 'None',
+      description: 'Nevada does not levy a state personal income tax',
     },
     {
-      label: 'Average Home Price',
-      value: '$450K',
-      description: 'Significantly lower than coastal cities',
+      label: 'Property tax',
+      value: 'By district',
+      description: 'Clark County bills the parcel. The Nevada property tax guide has the examples.',
     },
     {
-      label: 'Days of Sunshine',
-      value: '300+',
-      description: 'Year-round outdoor activities',
+      label: 'Assessment',
+      value: '35%',
+      description: 'NRS 361.225 assesses real property at 35% of taxable value',
     },
     {
-      label: 'Population Growth',
-      value: '2.1%',
-      description: 'Fastest growing metro area',
+      label: 'Summerlin parks',
+      value: '250+',
+      description: 'Master-planned community on the west side of the valley',
     },
     {
-      label: 'Job Growth',
-      value: '3.2%',
-      description: 'Strong economic expansion',
+      label: 'Who to call',
+      value: PHONE_DISPLAY,
+      description: 'Dr. Jan Duffy, Nevada-licensed REALTOR',
     },
     {
-      label: 'Cost of Living',
-      value: '8% below',
-      description: 'Below national average',
+      label: 'Office',
+      value: 'Henderson',
+      description: '100 North Green Valley Parkway, Suite 330',
     },
   ];
 
   // City comparison data
   const cityComparison = [
     {
-      category: 'Median Home Price',
-      originCity: '$850,000',
-      lasVegas: '$450,000',
+      category: 'State tax on wages',
+      originCity: 'California taxes wages',
+      lasVegas: 'None',
       difference: 'better' as const,
-      description: '40%+ savings on housing',
+      description: 'Nevada does not levy a state personal income tax.',
     },
     {
-      category: 'State Income Tax',
-      originCity: '13.3%',
-      lasVegas: '0%',
-      difference: 'better' as const,
-      description: 'No state income tax',
-    },
-    {
-      category: 'Property Tax',
-      originCity: 'Varies',
+      category: 'Property tax',
+      originCity: 'The California bill',
       lasVegas: 'By district',
       difference: 'similar' as const,
       description:
-        'FY 2026–27: Summerlin Town district 421 is $2.9328 per $100 assessed. See /guides/nevada-taxes.',
+        'Summerlin Town district 421 and Henderson district 505 are examples on the Nevada property tax guide. The parcel bill controls.',
     },
     {
-      category: 'Sales Tax',
-      originCity: '8.25%',
-      lasVegas: '8.38%',
+      category: 'Home search',
+      originCity: 'Los Angeles',
+      lasVegas: 'Las Vegas and Henderson',
       difference: 'similar' as const,
-      description: 'Comparable sales tax',
+      description: 'Summerlin, Henderson, and Green Valley each have a guide. This site does not publish a median price.',
     },
   ];
 

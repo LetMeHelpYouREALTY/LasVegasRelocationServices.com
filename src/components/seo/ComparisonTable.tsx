@@ -107,7 +107,7 @@ export default function ComparisonTable({ title, originCity, rows, className = "
 
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-600">
-            * Data based on current market conditions and may vary. Contact us for the most up-to-date information.
+            Property tax figures are district rates. The parcel bill controls. This site does not publish a median price.
           </p>
         </div>
       </div>

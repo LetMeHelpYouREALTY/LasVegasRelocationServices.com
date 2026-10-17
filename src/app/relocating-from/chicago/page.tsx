@@ -26,12 +26,12 @@ const chicagoFAQs = [
   {
     question: 'How much can I save on taxes by moving from Chicago to Las Vegas?',
     answer:
-      "Nevada has no state income tax, while Illinois charges a 4.95% flat income tax. Property tax rates are also lower: Clark County's effective rate is approximately 0.84%, compared to roughly 2% in Cook County. On a $150,000 household income and a comparable home, the combined savings typically run well over $10,000 per year.",
+      'Nevada does not levy a state personal income tax. Illinois does tax wages. Clark County property tax is a district bill, not one valley rate. The [Nevada property tax guide](/guides/nevada-taxes#how-property-tax-works) shows the fiscal year 2026–27 examples. This site does not estimate a dollar savings.',
   },
   {
     question: 'How do housing costs compare between Chicago and Las Vegas?',
     answer:
-      'Median home prices in the Las Vegas Valley are in the mid-$400Ks, comparable to or below many Chicago neighborhoods, but with newer construction, larger lots, and no snow-related maintenance. Popular relocation areas include Summerlin, Henderson, Green Valley, and Inspirada.',
+      'This site does not publish a median price. Start with the [Summerlin guide](/neighborhoods/summerlin#what-summerlin-is), the [Henderson guide](/neighborhoods/henderson#henderson-drive), [Green Valley](/neighborhoods/green-valley#green-valley-place), and [Inspirada](/neighborhoods/inspirada#inspirada-place).',
   },
   {
     question: 'How long does it take to get from Chicago to Las Vegas?',

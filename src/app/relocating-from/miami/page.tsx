@@ -26,7 +26,7 @@ const miamiFAQs = [
   {
     question: 'Florida has no income tax either — why do Miami residents move to Las Vegas?',
     answer:
-      'The biggest drivers are housing and insurance costs. Median home prices in the Las Vegas Valley are in the mid-$400Ks versus roughly $600K in Miami-Dade, and Nevada homeowners insurance typically costs a fraction of Florida premiums because there is no hurricane or flood exposure. Las Vegas also has a dry climate instead of Miami humidity.',
+      'Florida and Nevada both skip a state tax on wages. This site does not publish a median price or an insurance quote. The home search starts with the [Summerlin](/neighborhoods/summerlin#what-summerlin-is), [Henderson](/neighborhoods/henderson#henderson-drive), and [Paradise](/neighborhoods/paradise#what-paradise-is) guides.',
   },
   {
     question: 'How does the weather compare between Miami and Las Vegas?',

@@ -26,12 +26,12 @@ const seattleFAQs = [
   {
     question: 'How do housing costs compare between Seattle and Las Vegas?',
     answer:
-      'Median home prices in the Las Vegas Valley are in the mid-$400Ks, roughly half of Seattle-area medians that run well above $800K. Buyers relocating from Seattle typically move up in square footage and lot size while cutting their mortgage payment substantially.',
+      'This site does not publish a median price or a mortgage comparison. Start with the [Summerlin guide](/neighborhoods/summerlin#what-summerlin-is), the [Henderson guide](/neighborhoods/henderson#henderson-drive), and [Green Valley](/neighborhoods/green-valley#green-valley-place).',
   },
   {
     question: 'Washington has no income tax either — what changes financially in Nevada?',
     answer:
-      'The main savings come from housing: a comparable home costs roughly half as much in Las Vegas, and Clark County property tax rates are approximately 0.84%. Washington residents also leave behind the state capital gains tax on large investment sales and some of the highest gas prices in the country.',
+      'Washington and Nevada both skip a state tax on wages. Clark County property tax is still a district bill. The [Nevada property tax guide](/guides/nevada-taxes#how-property-tax-works) shows the fiscal year 2026–27 examples. This site does not say a home costs half as much.',
   },
   {
     question: 'How does the weather compare between Seattle and Las Vegas?',

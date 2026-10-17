@@ -30,12 +30,12 @@ export default function SanDiegoPageClient() {
     {
       question: 'Which Las Vegas neighborhoods do people moving from San Diego ask about?',
       answer:
-        'Summerlin, Henderson, and Green Valley are the areas San Diego buyers ask about most. Summerlin has 250+ parks, 150+ miles of trails, and Downtown Summerlin. Henderson and Green Valley are often a 20-30 minute drive to the Strip and Harry Reid International Airport. Median prices in these areas typically run from the mid-$400Ks to the $600Ks. School assignment is by street address through the Clark County School District.',
+        'Start with the [Summerlin guide](/neighborhoods/summerlin#what-summerlin-is), the [Henderson guide](/neighborhoods/henderson#henderson-drive), and [Green Valley](/neighborhoods/green-valley#green-valley-place). Summerlin has 250+ parks and 150+ miles of trails. Henderson and Green Valley are often a 20-30 minute drive to the Strip and Harry Reid International Airport. [Clark County School District](https://www.ccsd.net/) assigns a school by the street address. This site does not publish a median price.',
     },
     {
       question: 'How much does it cost to move from San Diego to Las Vegas?',
       answer:
-        'Moving costs from San Diego to Las Vegas typically range from $2,500 to $6,000 depending on household size and moving services. This includes professional movers, packing services, and transportation. The 330-mile journey takes about 5-6 hours by car. Las Vegas offers significant long-term savings with no state income tax and housing costs that are 40-50% lower than San Diego, making the move financially beneficial.',
+        'Dr. Jan Duffy does not quote a moving-company rate. A licensed mover prices the truck. The drive is about 330 miles, often 5-6 hours. Her work is the [Las Vegas or Henderson home](/services/residential-moving). Nevada does not levy a state personal income tax.',
     },
     {
       question: "What's the job market like in Las Vegas compared to San Diego?",
@@ -46,12 +46,12 @@ export default function SanDiegoPageClient() {
       question:
         'How do I find the right real estate agent for my San Diego to Las Vegas relocation?',
       answer:
-        'Look for agents with relocation expertise, local market knowledge, and proven track records. Dr. Jan Duffy has 15+ years of Las Vegas real estate experience and specializes in helping families relocate from California. She provides comprehensive services including area research, property search, and settlement support. Her deep understanding of both San Diego and Las Vegas markets makes her ideal for this transition.',
+        'Call Dr. Jan Duffy. The [relocation specialist](/relocation-specialist#who-to-call) page is the short version: she is the Nevada realtor for the home search. A licensed mover handles the truck.',
     },
     {
       question: 'What are the tax benefits of moving from San Diego to Las Vegas?',
       answer:
-        'Nevada offers significant tax advantages over California: no state income tax (vs. 13.3% in CA), no state corporate tax, and no inheritance tax. Property taxes are also lower (0.84% vs. 1.25% in CA). This can result in thousands of dollars in annual savings. Combined with lower housing costs, the financial benefits of Las Vegas relocation are substantial for San Diego residents.',
+        'Nevada does not levy a state personal income tax, a state corporate income tax, or an inheritance tax. California taxes wages. Clark County property tax is a district bill. The [Nevada property tax guide](/guides/nevada-taxes#no-wage-tax) has the fiscal year 2026–27 examples. This site does not estimate a dollar savings.',
     },
     {
       question: "What's the weather like in Las Vegas compared to San Diego?",
@@ -68,24 +68,24 @@ export default function SanDiegoPageClient() {
       description: '5-6 hour drive from SD',
     },
     {
-      label: 'Housing Savings',
-      value: '40-50%',
-      description: 'Lower than SD prices',
+      label: 'State tax on wages',
+      value: 'None',
+      description: 'Nevada does not tax wages',
     },
     {
-      label: 'State Income Tax',
-      value: '0% vs 13.3%',
-      description: 'Massive tax savings',
+      label: 'Property tax',
+      value: 'By district',
+      description: 'The parcel bill controls',
     },
     {
-      label: 'Property Tax',
-      value: '0.84% vs 1.25%',
-      description: 'Lower property taxes',
+      label: 'Home search',
+      value: 'Las Vegas',
+      description: 'Summerlin, Henderson, and Green Valley guides',
     },
     {
-      label: 'Cost of Living',
-      value: '25% lower',
-      description: 'Significantly more affordable',
+      label: 'Mover rate',
+      value: 'Not quoted',
+      description: 'A licensed mover prices the truck',
     },
     {
       label: 'Traffic',
@@ -97,32 +97,25 @@ export default function SanDiegoPageClient() {
   // San Diego vs Las Vegas comparison data
   const sdVegasComparison = [
     {
-      category: 'Median Home Price',
-      originCity: '$900,000',
-      lasVegas: '$450,000',
-      difference: 'better' as const,
-      description: '50%+ savings on housing',
+      category: 'Home search',
+      originCity: 'San Diego',
+      lasVegas: 'Las Vegas and Henderson',
+      difference: 'similar' as const,
+      description: 'This site does not publish a median price.',
     },
     {
-      category: 'State Income Tax',
-      originCity: '13.3%',
-      lasVegas: '0%',
+      category: 'State tax on wages',
+      originCity: 'California taxes wages',
+      lasVegas: 'None',
       difference: 'better' as const,
-      description: 'No state income tax',
+      description: 'Nevada does not levy a state personal income tax.',
     },
     {
-      category: 'Property Tax Rate',
-      originCity: '1.25%',
-      lasVegas: '0.84%',
-      difference: 'better' as const,
-      description: 'Lower property taxes',
-    },
-    {
-      category: 'Sales Tax',
-      originCity: '7.75%',
-      lasVegas: '8.38%',
-      difference: 'worse' as const,
-      description: 'Slightly higher sales tax',
+      category: 'Property tax',
+      originCity: 'The California bill',
+      lasVegas: 'By district',
+      difference: 'similar' as const,
+      description: 'See the Nevada property tax guide. The parcel bill controls.',
     },
     {
       category: 'Traffic Congestion',
