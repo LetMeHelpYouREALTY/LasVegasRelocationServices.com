@@ -2,9 +2,7 @@ import type { TopicGuideProps } from '@/components/sections/TopicGuide';
 import { LICENSE_LABEL, PHONE_DISPLAY } from '@/lib/business';
 import {
   CLARK_COUNTY_TAX_SUMMARY,
-  CLARK_COUNTY_TREASURER_URL,
   HENDERSON_ARTESIAN_RATE,
-  NRS_361_URL,
   SUMMERLIN_TOWN_RATE,
   TAX_CHECKED,
 } from '@/lib/tax-facts';
@@ -28,7 +26,7 @@ export const summerlinGuide: TopicGuideProps = {
       paragraphs: [
         'Summerlin is a master-planned community on the west side of the Las Vegas valley, against Red Rock.',
         'Downtown Summerlin is the main shopping district. Trails connect parks across the community.',
-        'Median prices in Summerlin, Henderson, and Green Valley typically run from the mid-$400Ks to the $600Ks.',
+        'Henderson and Green Valley have their own guides. Property tax for a Summerlin address is in the next section, and the [Nevada property tax guide](/guides/nevada-taxes#how-property-tax-works) shows the assessment rule.',
       ],
       image: {
         src: '/heroes/summerlin.webp',
@@ -40,9 +38,9 @@ export const summerlinGuide: TopicGuideProps = {
       heading: 'Summerlin property tax example',
       paragraphs: [
         `For fiscal year 2026–27, Clark County Treasurer district 421 (Summerlin Town) totals ${SUMMERLIN_TOWN_RATE} per $100 of assessed value. Checked ${TAX_CHECKED}.`,
-        'Nevada assesses real property at 35% of taxable value under NRS 361.225. Abatements can change the bill.',
+        'Nevada assesses real property at 35% of taxable value under [NRS 361.225](https://www.leg.state.nv.us/nrs/NRS-361.html#NRS361Sec225). Abatements can change the bill.',
         'Some Summerlin street addresses sit inside the City of Las Vegas and use a different district. The parcel bill controls.',
-        `Confirm the district on the Clark County Treasurer site before you write an offer: ${CLARK_COUNTY_TREASURER_URL}`,
+        'Confirm the district on the [Clark County Treasurer](https://www.clarkcountynv.gov/government/elected_officials/county_treasurer/) site before you write an offer.',
       ],
     },
     {
@@ -83,7 +81,7 @@ export const hendersonGuide: TopicGuideProps = {
       id: 'henderson-drive',
       heading: 'Drive time and what is here',
       paragraphs: [
-        'Henderson sits southeast of Las Vegas. Green Valley is one of its communities.',
+        'Henderson sits southeast of Las Vegas. [Green Valley](/neighborhoods/green-valley#green-valley-place) is one of its communities.',
         'Buyers relocating here often cite a 20–30 minute drive to the Strip and Harry Reid International Airport.',
         'The office for Las Vegas Relocation Services is at 100 North Green Valley Parkway, Suite 330, Henderson, NV 89074.',
       ],
@@ -105,7 +103,7 @@ export const hendersonGuide: TopicGuideProps = {
       id: 'seven-hills',
       heading: 'Seven Hills',
       paragraphs: [
-        'Seven Hills is a Henderson community in the southeast valley, near Anthem.',
+        '[Seven Hills](/neighborhoods/seven-hills#seven-hills-place) is a Henderson community in the southeast valley, near [Anthem](/neighborhoods/anthem#anthem-place).',
         'Buyers ask for a relocation realtor there by name. The search is the same Henderson practice.',
         'The tax district is not the community name. Pull the parcel before you compare two houses.',
       ],
@@ -114,7 +112,7 @@ export const hendersonGuide: TopicGuideProps = {
       id: 'henderson-schools',
       heading: 'Schools follow the address',
       paragraphs: [
-        'Clark County School District assigns a school by the street address, not by a neighborhood label.',
+        '[Clark County School District](https://www.ccsd.net/) assigns a school by the street address, not by a neighborhood label.',
         'Look up the assigned school names for a specific house before you compare it with another house.',
         'This guide does not rank school quality.',
       ],
@@ -124,7 +122,7 @@ export const hendersonGuide: TopicGuideProps = {
     {
       question: 'Is Green Valley part of Henderson?',
       answer:
-        'Yes. Green Valley is a Henderson community along Green Valley Parkway. It has its own guide on this site.',
+        'Yes. [Green Valley](/neighborhoods/green-valley) is a Henderson community along Green Valley Parkway.',
     },
     {
       question: 'What property tax rate applies in Henderson?',
@@ -219,7 +217,7 @@ export const phoenixGuide: TopicGuideProps = {
       paragraphs: [
         'Arizona taxes wage income at the state level. Nevada does not levy a state personal income tax.',
         'Do not assume the property-tax bill drops just because the state income tax does. Clark County bills by district.',
-        `Read the Nevada property tax guide, then look up the parcel. ${CLARK_COUNTY_TREASURER_URL}`,
+        'Read the [Nevada property tax guide](/guides/nevada-taxes#how-property-tax-works), then look up the parcel on the [Clark County Treasurer](https://www.clarkcountynv.gov/government/elected_officials/county_treasurer/) site.',
       ],
     },
     {
@@ -339,7 +337,7 @@ export const nevadaTaxGuide: TopicGuideProps = {
       id: 'how-property-tax-works',
       heading: 'How Clark County property tax works',
       paragraphs: [
-        `The county assesses real property at 35% of taxable value. That rule is NRS 361.225: ${NRS_361_URL}`,
+        'The county assesses real property at 35% of taxable value. That rule is [NRS 361.225](https://www.leg.state.nv.us/nrs/NRS-361.html#NRS361Sec225).',
         `A rate quoted “per $100 of assessed value” applies to that 35% slice, not to the full taxable value.`,
         `${SUMMERLIN_TOWN_RATE} per $100 of assessed value is about $1.03 per $100 of taxable value before abatements (2.9328 × 0.35). Abatements can lower the bill. This is arithmetic on the published rate, not a second official rate.`,
       ],
@@ -350,7 +348,7 @@ export const nevadaTaxGuide: TopicGuideProps = {
       paragraphs: [
         CLARK_COUNTY_TAX_SUMMARY,
         'Summerlin Town is district 421. Henderson Artesian Basin is district 505. A Summerlin mailing address can still sit in a City of Las Vegas district.',
-        `Look up the parcel on the Clark County Treasurer site: ${CLARK_COUNTY_TREASURER_URL}`,
+        'Look up the parcel on the [Clark County Treasurer](https://www.clarkcountynv.gov/government/elected_officials/county_treasurer/) site. The [Summerlin tax section](/neighborhoods/summerlin#summerlin-tax) and the [Henderson tax section](/neighborhoods/henderson#henderson-tax) show the two district examples.',
       ],
     },
   ],
@@ -386,7 +384,7 @@ export const relocationSpecialistGuide: TopicGuideProps = {
       id: 'who-to-call',
       heading: 'One realtor for the relocation',
       paragraphs: [
-        'She is a Nevada-licensed REALTOR® with Berkshire Hathaway HomeServices Nevada Properties.',
+        'She is a Nevada-licensed REALTOR® with [Berkshire Hathaway HomeServices Nevada Properties](https://www.berkshirehathawayhomeservices.com).',
         'The work is the home: the search, the showings, the purchase or the lease, and the sale if you already own in Nevada.',
         'She is not a moving company. A licensed mover hauls the furniture. She introduces one if you need a name.',
       ],
@@ -440,7 +438,7 @@ export const employeeRelocationGuide: TopicGuideProps = {
       paragraphs: [
         'She searches, shows, and writes the offer or the lease for the transferring employee.',
         'The company can send one contact. She can also work with the employee directly.',
-        'Henderson and the Las Vegas valley are both in the search. The office is in Henderson.',
+        '[Henderson](/neighborhoods/henderson#henderson-drive) and the Las Vegas valley are both in the search. The office is in Henderson. Company moves also use the [corporate relocation](/services/corporate-relocation) page.',
       ],
       image: {
         src: '/heroes/employee-relocation.webp',
@@ -453,7 +451,7 @@ export const employeeRelocationGuide: TopicGuideProps = {
       paragraphs: [
         'Furniture, fixtures, equipment, warehouse goods, and office IT ship with a licensed mover.',
         'She coordinates the real estate so the housing date lines up with the transfer.',
-        'Office leases and purchases sit on the corporate relocation page.',
+        'Office leases and purchases sit on the [corporate relocation](/services/corporate-relocation) page.',
       ],
     },
   ],
@@ -554,7 +552,7 @@ export const paradiseGuide: TopicGuideProps = {
       id: 'zip-89109',
       heading: 'Investment property and zip 89109',
       paragraphs: [
-        'Buyers ask about investment property in 89109. That zip appears on the Clark County zip-code map in the central valley, near 89119.',
+        'Buyers ask about investment property in 89109. That zip appears on the Clark County zip-code map in the central valley, near 89119. The [investment property page](/services/investment-properties) uses the same boundary.',
         'A zip is not a tax bill and it is not a promise of rent. Confirm the parcel, the district, and the building rules before you write an offer.',
         'Dr. Jan Duffy searches investment and residence property here. She does not quote a return.',
       ],
@@ -593,7 +591,7 @@ export const southernHighlandsGuide: TopicGuideProps = {
       id: 'where',
       heading: 'Where Southern Highlands sits',
       paragraphs: [
-        'Clark County’s planning library describes Southern Highlands as about 2,299 acres in the southern Las Vegas Valley, generally bounded by Interstate 15 on the east, Cactus on the north, Jones on the west, and Larson on the south.',
+        'The [Clark County planning library](https://www.clarkcountynv.gov/government/departments/comprehensive_planning_department/library/southern-highlands) describes Southern Highlands as about 2,299 acres in the southern Las Vegas Valley, generally bounded by Interstate 15 on the east, Cactus on the north, Jones on the west, and Larson on the south.',
         'The Clark County Commission approved the development agreement and zone change on November 18, 1998, and amended it on December 8, 1999. That agreement limits the project to one private golf course, a maximum of 8,500 residential units, and 493 acres of non-residential private uses.',
         'It is unincorporated Clark County. A county park in the community, Inzalaco Park, is addressed 5801 Shinnecock Hills Avenue, Las Vegas, NV 89141. Confirm the zip on the parcel you are buying. The mailing city can say Las Vegas.',
       ],
@@ -626,7 +624,7 @@ export const southernHighlandsGuide: TopicGuideProps = {
     {
       question: 'Do you rank schools in Southern Highlands?',
       answer:
-        'No. Clark County School District assigns a school by the street address. This site does not rank school quality.',
+        'No. [Clark County School District](https://www.ccsd.net/) assigns a school by the street address. This site does not rank school quality.',
     },
   ],
   related: [
@@ -700,7 +698,7 @@ export const inspiradaGuide: TopicGuideProps = {
       id: 'inspirada-place',
       heading: 'Inspirada and zip 89044',
       paragraphs: [
-        'Inspirada’s own community site lists addresses in Henderson, NV 89044, including the information center.',
+        'Inspirada’s [community map](https://inspirada.com/community-map/) lists addresses in Henderson, NV 89044, including the information center.',
         'It is southwest Henderson, near Anthem. The MLS city field on a listing can still say Las Vegas. The parcel and the city of Henderson are what matter.',
         'This guide does not publish a median price, an HOA dues figure, or a builder inventory. Ask for the current listing.',
       ],
@@ -753,7 +751,7 @@ export const sevenHillsGuide: TopicGuideProps = {
       id: 'seven-hills-place',
       heading: 'Seven Hills and zip 89052',
       paragraphs: [
-        'Seven Hills is a Henderson community in the southeast valley, near Anthem. Published references, including the Wikipedia entry for the neighborhood, list ZIP 89052.',
+        'Seven Hills is a Henderson community in the southeast valley, near [Anthem](/neighborhoods/anthem#anthem-place). The [Wikipedia entry for the neighborhood](https://en.wikipedia.org/wiki/Seven_Hills,_Henderson,_Nevada) lists ZIP 89052.',
         'Clark County Assessor plats titled Seven Hills list the city as Henderson. Sampled lots in those plats are tax district 505 for fiscal year 2026–27. The lot you buy can differ. Pull that parcel.',
         `District 505 (Henderson Artesian Basin) is ${HENDERSON_ARTESIAN_RATE} per $100 of assessed value. Checked ${TAX_CHECKED}. ${CLARK_COUNTY_TAX_SUMMARY}`,
       ],
@@ -767,7 +765,7 @@ export const sevenHillsGuide: TopicGuideProps = {
       heading: 'A Henderson home search',
       paragraphs: [
         'Dr. Jan Duffy shows Seven Hills for buyers relocating to Henderson. The search is a purchase or a lease.',
-        'She does not rank schools. Clark County School District assigns the school by the street address.',
+        'She does not rank schools. [Clark County School District](https://www.ccsd.net/) assigns the school by the street address.',
         `Anthem and the broader Henderson guide are linked below. Call ${PHONE_DISPLAY}.`,
       ],
     },

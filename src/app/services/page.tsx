@@ -2,6 +2,7 @@ import { Building, Home, MapPin, Plane, Shield, Target, Truck, Users } from 'luc
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHero from '@/components/sections/PageHero';
+import SectionGuideLinks from '@/components/sections/SectionGuideLinks';
 import { withPageImageSeo } from '@/lib/schema';
 
 export const metadata: Metadata = withPageImageSeo('services', {
@@ -145,6 +146,7 @@ export default function ServicesPage() {
               </Link>
             ))}
           </div>
+          <SectionGuideLinks />
         </div>
       </section>
 

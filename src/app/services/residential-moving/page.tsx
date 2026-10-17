@@ -4,6 +4,8 @@ import { CheckCircle, Home, MapPin, Phone, Shield } from 'lucide-react';
 import { motion } from '@/components/motion';
 import PageHero from '@/components/sections/PageHero';
 
+const retirementSectionId = 'retirement-and-downsizing';
+
 const serviceFeatures = [
   {
     icon: Home,
@@ -97,7 +99,7 @@ export default function ResidentialMovingPage() {
       </PageHero>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
+      <section id={retirementSectionId} className="py-20 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

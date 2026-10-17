@@ -4,6 +4,7 @@ import { Calendar, Phone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import PageHero from '@/components/sections/PageHero';
+import SectionGuideLinks from '@/components/sections/SectionGuideLinks';
 import { Breadcrumbs, ComparisonTable, FAQSection, QuickFacts } from '@/components/seo';
 import CalendlyBooking from '@/components/shared/CalendlyBooking';
 import GbpActionBar from '@/components/shared/GbpActionBar';
@@ -27,12 +28,12 @@ export default function HomePage() {
       question:
         'Which Las Vegas-area neighborhoods do people relocating from other cities choose most often?',
       answer:
-        'Summerlin, Henderson, and Green Valley are the most requested areas. Summerlin is a master-planned community with more than 250 parks, 150+ miles of trails, and the Downtown Summerlin shopping district. Henderson and Green Valley have parks and recreation programs and a 20-30 minute commute to the Strip and Harry Reid International Airport. Median home prices in these areas typically range from the mid-$400Ks to the $600Ks. Full guides are at /neighborhoods.',
+        'Start with the [Summerlin guide](/neighborhoods/summerlin#what-summerlin-is), the [Henderson guide](/neighborhoods/henderson#henderson-drive), and [Green Valley](/neighborhoods/green-valley#green-valley-place). Southern Highlands, Anthem, Inspirada, and Seven Hills each have a section linked from this page. This site does not publish a median price.',
     },
     {
       question: 'How much does it cost to move from major US cities to Las Vegas?',
       answer:
-        'Dr. Jan Duffy does not quote a moving-company rate. A licensed mover prices the truck. Her work is the Las Vegas or Henderson home. Nevada does not levy a state personal income tax. The parcel tax bill is separate.',
+        'Dr. Jan Duffy does not quote a moving-company rate. A licensed mover prices the truck. Her work is the [Las Vegas home](/services/residential-moving). Nevada does not levy a state personal income tax. The [property tax guide](/guides/nevada-taxes#no-wage-tax) explains the parcel bill.',
     },
     {
       question: "What's the job market like in Las Vegas compared to other major cities?",
@@ -42,12 +43,12 @@ export default function HomePage() {
     {
       question: 'How do I find the right real estate agent for my Las Vegas relocation?',
       answer:
-        'Look for agents with relocation expertise, local market knowledge, and proven track records. Dr. Jan Duffy has 15+ years of Las Vegas real estate experience and specializes in helping people relocate. She provides comprehensive services including area research, property search, and settlement support. Check credentials, read reviews, and schedule consultations to find the right fit.',
+        'Call Dr. Jan Duffy. The [relocation specialist](/relocation-specialist#who-to-call) page is the short version: she is the Nevada realtor for the home search. A licensed mover handles the truck.',
     },
     {
       question: 'What are the tax benefits of moving to Las Vegas from other states?',
       answer:
-        'Nevada does not levy a state personal income tax, a state corporate income tax, or an inheritance tax. Clark County property tax is billed by district, not as one valley-wide rate. The Nevada property tax guide lists fiscal year 2026–27 examples for Summerlin Town and Henderson Artesian Basin. The parcel bill controls.',
+        'Nevada does not levy a state personal income tax, a state corporate income tax, or an inheritance tax. Clark County property tax is billed by district. The [Nevada property tax guide](/guides/nevada-taxes#district-examples) lists fiscal year 2026–27 examples, and the [Clark County Treasurer](https://www.clarkcountynv.gov/government/elected_officials/county_treasurer/) has the parcel bill.',
     },
   ];
 
@@ -156,6 +157,36 @@ export default function HomePage() {
         </div>
       </PageHero>
 
+      <nav aria-label="On this page" className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-3">
+            On this page
+          </h2>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            <li>
+              <a href="#who-to-call" className="font-semibold text-blue-800 underline">
+                Who to call
+              </a>
+            </li>
+            <li>
+              <a href="#services" className="font-semibold text-blue-800 underline">
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#questions" className="font-semibold text-blue-800 underline">
+                Questions
+              </a>
+            </li>
+            <li>
+              <a href="#consultation" className="font-semibold text-blue-800 underline">
+                Book a showing
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
       {/* Answer-first section for AI and answer engines */}
       <section className="py-16 bg-white" aria-labelledby="who-to-call">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -183,7 +214,7 @@ export default function HomePage() {
       <QuickFacts title="Why Choose Las Vegas?" facts={lasVegasFacts} className="py-16" />
 
       {/* Services Overview Section */}
-      <section className="py-20 bg-white">
+      <section id="services" className="py-20 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -263,6 +294,7 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
+          <SectionGuideLinks />
         </div>
       </section>
 

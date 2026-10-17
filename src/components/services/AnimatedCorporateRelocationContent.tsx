@@ -13,6 +13,8 @@ import {
 import { motion } from '@/components/motion';
 import PageHero from '@/components/sections/PageHero';
 
+const officeSectionId = 'office-ffe';
+
 const serviceFeatures = [
   {
     icon: Building,
@@ -161,7 +163,7 @@ export default function AnimatedCorporateRelocationContent() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section id={officeSectionId} className="py-20 bg-white scroll-mt-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Office, FF&amp;E, IT, and warehouse moves

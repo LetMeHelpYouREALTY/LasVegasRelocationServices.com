@@ -4,6 +4,8 @@ import { Award, Calendar, CheckCircle, Crown, Home, Phone, Shield } from 'lucide
 import { motion } from '@/components/motion';
 import PageHero from '@/components/sections/PageHero';
 
+const highNetWorthSectionId = 'high-net-worth';
+
 const luxuryServices = [
   {
     icon: Home,
@@ -102,7 +104,7 @@ export default function LuxuryRelocationPage() {
       </PageHero>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
+      <section id={highNetWorthSectionId} className="py-20 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

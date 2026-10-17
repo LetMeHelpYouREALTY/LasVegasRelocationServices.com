@@ -1,3 +1,5 @@
+import { RichText } from '@/components/sections/RichText';
+
 type OriginCity = 'san-diego' | 'los-angeles';
 
 const NOTES: Record<OriginCity, { heading: string; places: { name: string; text: string }[] }> = {
@@ -14,7 +16,7 @@ const NOTES: Record<OriginCity, { heading: string; places: { name: string; text:
       },
       {
         name: 'Scripps Ranch',
-        text: 'Scripps Ranch clients usually want a house with a yard in Summerlin, Henderson, or Green Valley. Say which of those you want to see.',
+        text: 'Scripps Ranch clients usually want a house in [Summerlin](/neighborhoods/summerlin#what-summerlin-is), [Henderson](/neighborhoods/henderson#henderson-drive), or [Green Valley](/neighborhoods/green-valley#green-valley-place). Say which of those you want to see.',
       },
     ],
   },
@@ -23,7 +25,7 @@ const NOTES: Record<OriginCity, { heading: string; places: { name: string; text:
     places: [
       {
         name: 'Playa Vista',
-        text: 'Playa Vista is on the Westside. Buyers from there often compare a Las Vegas high-rise in Paradise with a house in Summerlin.',
+        text: 'Playa Vista is on the Westside. Buyers from there often compare a high-rise in [Paradise](/neighborhoods/paradise#what-paradise-is) with a house in [Summerlin](/neighborhoods/summerlin#what-summerlin-is).',
       },
       {
         name: 'Oak View',
@@ -43,7 +45,7 @@ export default function OriginNeighborhoodNotes({ city }: { city: OriginCity }) 
           {note.places.map((place) => (
             <div key={place.name}>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">{place.name}</h3>
-              <p className="text-gray-700 leading-relaxed">{place.text}</p>
+              <RichText text={place.text} className="text-gray-700 leading-relaxed" />
             </div>
           ))}
         </div>

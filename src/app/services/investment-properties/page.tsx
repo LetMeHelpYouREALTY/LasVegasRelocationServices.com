@@ -14,6 +14,8 @@ import Link from 'next/link';
 import { motion } from '@/components/motion';
 import PageHero from '@/components/sections/PageHero';
 
+const paradiseSectionId = 'paradise-89109';
+
 const investmentServices = [
   {
     icon: MapPin,
@@ -120,7 +122,7 @@ export default function InvestmentPropertiesPage() {
       </PageHero>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
+      <section id={paradiseSectionId} className="py-20 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

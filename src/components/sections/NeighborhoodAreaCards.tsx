@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import SectionGuideLinks from '@/components/sections/SectionGuideLinks';
 
 type AreaCard = {
   id: string;
@@ -138,6 +139,7 @@ export default function NeighborhoodAreaCards() {
             </Link>
           ))}
         </div>
+        <SectionGuideLinks />
       </div>
     </section>
   );
