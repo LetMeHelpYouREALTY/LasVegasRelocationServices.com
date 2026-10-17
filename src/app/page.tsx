@@ -1,31 +1,20 @@
-"use client";
+'use client';
 
-import CalendlyBooking from "@/components/shared/CalendlyBooking";
-import PageHero from "@/components/sections/PageHero";
-import {
-  Building,
-  Calendar,
-  Home,
-  Phone,
-  Shield,
-  TrendingUp,
-} from "lucide-react";
-import {
-  FAQSection,
-  QuickFacts,
-  Breadcrumbs,
-  ComparisonTable,
-} from "@/components/seo";
-import GbpActionBar from "@/components/shared/GbpActionBar";
+import { Calendar, Phone } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import PageHero from '@/components/sections/PageHero';
+import { Breadcrumbs, ComparisonTable, FAQSection, QuickFacts } from '@/components/seo';
+import CalendlyBooking from '@/components/shared/CalendlyBooking';
+import GbpActionBar from '@/components/shared/GbpActionBar';
 import {
   AGENT_NAME,
   BROKERAGE,
-  BUSINESS_NAME,
   CALENDLY_SHOWING_URL,
   LICENSE_LABEL,
   PHONE_DISPLAY,
   PHONE_TEL,
-} from "@/lib/business";
+} from '@/lib/business';
 
 export default function HomePage() {
   // FAQ data for AI search optimization
@@ -36,99 +25,96 @@ export default function HomePage() {
     },
     {
       question:
-        "Which Las Vegas-area neighborhoods do people relocating from other cities choose most often?",
+        'Which Las Vegas-area neighborhoods do people relocating from other cities choose most often?',
       answer:
-        "Summerlin, Henderson, and Green Valley are the most requested areas. Summerlin is a master-planned community with more than 250 parks, 150+ miles of trails, and the Downtown Summerlin shopping district. Henderson and Green Valley offer established amenities, dedicated parks and recreation programs, and a 20-30 minute commute to the Strip and Harry Reid International Airport. Median home prices in these areas typically range from the mid-$400Ks to the $600Ks.",
+        'Summerlin, Henderson, and Green Valley are the most requested areas. Summerlin is a master-planned community with more than 250 parks, 150+ miles of trails, and the Downtown Summerlin shopping district. Henderson and Green Valley have parks and recreation programs and a 20-30 minute commute to the Strip and Harry Reid International Airport. Median home prices in these areas typically range from the mid-$400Ks to the $600Ks. Full guides are at /neighborhoods.',
     },
     {
-      question:
-        "How much does it cost to move from major US cities to Las Vegas?",
+      question: 'How much does it cost to move from major US cities to Las Vegas?',
       answer:
-        "Moving costs vary by distance and household size. From Los Angeles: $2,000-$5,000. From Chicago: $3,000-$7,000. From New York: $4,000-$8,000. From Miami: $3,500-$7,500. These estimates include professional movers, packing services, and transportation. Las Vegas offers significant long-term savings with no state income tax and lower housing costs.",
+        'Moving costs vary by distance and household size. From Los Angeles: $2,000-$5,000. From Chicago: $3,000-$7,000. From New York: $4,000-$8,000. From Miami: $3,500-$7,500. These estimates include professional movers, packing services, and transportation. Las Vegas offers significant long-term savings with no state income tax and lower housing costs.',
     },
     {
-      question:
-        "What's the job market like in Las Vegas compared to other major cities?",
+      question: "What's the job market like in Las Vegas compared to other major cities?",
       answer:
-        "Las Vegas has a diverse job market with strong opportunities in hospitality, gaming, technology, healthcare, and construction. The city is experiencing growth in tech startups and remote work opportunities. While salaries may be slightly lower than cities like San Francisco or New York, the cost of living is significantly lower, resulting in better overall financial outcomes.",
+        'Las Vegas has a diverse job market with strong opportunities in hospitality, gaming, technology, healthcare, and construction. The city is experiencing growth in tech startups and remote work opportunities. While salaries may be slightly lower than cities like San Francisco or New York, the cost of living is significantly lower, resulting in better overall financial outcomes.',
     },
     {
-      question:
-        "How do I find the right real estate agent for my Las Vegas relocation?",
+      question: 'How do I find the right real estate agent for my Las Vegas relocation?',
       answer:
-        "Look for agents with relocation expertise, local market knowledge, and proven track records. Dr. Jan Duffy has 15+ years of Las Vegas real estate experience and specializes in helping people relocate. She provides comprehensive services including area research, property search, and settlement support. Check credentials, read reviews, and schedule consultations to find the right fit.",
+        'Look for agents with relocation expertise, local market knowledge, and proven track records. Dr. Jan Duffy has 15+ years of Las Vegas real estate experience and specializes in helping people relocate. She provides comprehensive services including area research, property search, and settlement support. Check credentials, read reviews, and schedule consultations to find the right fit.',
     },
     {
-      question:
-        "What are the tax benefits of moving to Las Vegas from other states?",
+      question: 'What are the tax benefits of moving to Las Vegas from other states?',
       answer:
-        "Nevada offers significant tax advantages: no state income tax, no state corporate tax, and no inheritance tax. Property taxes are also relatively low. This can result in thousands of dollars in annual savings compared to high-tax states like California, New York, or Illinois. Combined with lower housing costs, the financial benefits of Las Vegas relocation are substantial.",
+        'Nevada does not levy a state personal income tax, a state corporate income tax, or an inheritance tax. Clark County property tax is billed by district, not as one valley-wide rate. The Nevada property tax guide lists fiscal year 2026–27 examples for Summerlin Town and Henderson Artesian Basin. The parcel bill controls.',
     },
   ];
 
   // Quick facts for AI search optimization
   const lasVegasFacts = [
     {
-      label: "State Income Tax",
-      value: "0%",
-      description: "No state income tax in Nevada",
+      label: 'State Income Tax',
+      value: '0%',
+      description: 'No state income tax in Nevada',
     },
     {
-      label: "Average Home Price",
-      value: "$450K",
-      description: "Significantly lower than coastal cities",
+      label: 'Average Home Price',
+      value: '$450K',
+      description: 'Significantly lower than coastal cities',
     },
     {
-      label: "Days of Sunshine",
-      value: "300+",
-      description: "Year-round outdoor activities",
+      label: 'Days of Sunshine',
+      value: '300+',
+      description: 'Year-round outdoor activities',
     },
     {
-      label: "Population Growth",
-      value: "2.1%",
-      description: "Fastest growing metro area",
+      label: 'Population Growth',
+      value: '2.1%',
+      description: 'Fastest growing metro area',
     },
     {
-      label: "Job Growth",
-      value: "3.2%",
-      description: "Strong economic expansion",
+      label: 'Job Growth',
+      value: '3.2%',
+      description: 'Strong economic expansion',
     },
     {
-      label: "Cost of Living",
-      value: "8% below",
-      description: "Below national average",
+      label: 'Cost of Living',
+      value: '8% below',
+      description: 'Below national average',
     },
   ];
 
   // City comparison data
   const cityComparison = [
     {
-      category: "Median Home Price",
-      originCity: "$850,000",
-      lasVegas: "$450,000",
-      difference: "better" as const,
-      description: "40%+ savings on housing",
+      category: 'Median Home Price',
+      originCity: '$850,000',
+      lasVegas: '$450,000',
+      difference: 'better' as const,
+      description: '40%+ savings on housing',
     },
     {
-      category: "State Income Tax",
-      originCity: "13.3%",
-      lasVegas: "0%",
-      difference: "better" as const,
-      description: "No state income tax",
+      category: 'State Income Tax',
+      originCity: '13.3%',
+      lasVegas: '0%',
+      difference: 'better' as const,
+      description: 'No state income tax',
     },
     {
-      category: "Property Tax Rate",
-      originCity: "1.25%",
-      lasVegas: "0.84%",
-      difference: "better" as const,
-      description: "Lower property taxes",
+      category: 'Property Tax',
+      originCity: 'Varies',
+      lasVegas: 'By district',
+      difference: 'similar' as const,
+      description:
+        'FY 2026–27: Summerlin Town district 421 is $2.9328 per $100 assessed. See /guides/nevada-taxes.',
     },
     {
-      category: "Sales Tax",
-      originCity: "8.25%",
-      lasVegas: "8.38%",
-      difference: "similar" as const,
-      description: "Comparable sales tax",
+      category: 'Sales Tax',
+      originCity: '8.25%',
+      lasVegas: '8.38%',
+      difference: 'similar' as const,
+      description: 'Comparable sales tax',
     },
   ];
 
@@ -143,12 +129,10 @@ export default function HomePage() {
           <p className="mb-4 text-sm font-semibold tracking-wide text-white/90 md:text-base">
             {AGENT_NAME} · {BROKERAGE}
           </p>
-          <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-            Moving to Las Vegas?
-          </h1>
+          <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">Moving to Las Vegas?</h1>
           <p className="mx-auto mb-8 max-w-2xl text-xl text-white md:text-2xl lg:mx-0">
-            Call {PHONE_DISPLAY} — expert relocation guidance for households and
-            businesses moving to Las Vegas and Henderson.
+            Call {PHONE_DISPLAY} — expert relocation guidance for households and businesses moving
+            to Las Vegas and Henderson.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
             <a
@@ -173,19 +157,15 @@ export default function HomePage() {
       {/* Answer-first section for AI and answer engines */}
       <section className="py-16 bg-white" aria-labelledby="who-to-call">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
-            id="who-to-call"
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
-          >
+          <h2 id="who-to-call" className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Who Do You Call When You're Relocating to Las Vegas?
           </h2>
           <p className="text-xl text-gray-700 leading-relaxed mb-8">
-            <strong>{AGENT_NAME}</strong> is the person to call when you're
-            relocating to Las Vegas. A Nevada-licensed REALTOR® (
-            {LICENSE_LABEL}) with {BROKERAGE}, Dr. Duffy manages the entire move
-            — neighborhood research, home search, corporate and international
-            transfers, and settling-in support — for households and businesses
-            moving to Las Vegas, Henderson, and Southern Nevada.
+            <strong>{AGENT_NAME}</strong> is the person to call when you're relocating to Las Vegas.
+            A Nevada-licensed REALTOR® ({LICENSE_LABEL}) with {BROKERAGE}, Dr. Duffy manages the
+            entire move — neighborhood research, home search, corporate and international transfers,
+            and settling-in support — for households and businesses moving to Las Vegas, Henderson,
+            and Southern Nevada.
           </p>
           <a
             href={`tel:${PHONE_TEL}`}
@@ -198,11 +178,7 @@ export default function HomePage() {
       </section>
 
       {/* Quick Facts Section */}
-      <QuickFacts
-        title="Why Choose Las Vegas?"
-        facts={lasVegasFacts}
-        className="py-16"
-      />
+      <QuickFacts title="Why Choose Las Vegas?" facts={lasVegasFacts} className="py-16" />
 
       {/* Services Overview Section */}
       <section className="py-20 bg-white">
@@ -212,63 +188,61 @@ export default function HomePage() {
               Comprehensive Relocation Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From initial consultation to settlement support, we handle every
-              detail of your move
+              From initial consultation to settlement support, we handle every detail of your move
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gray-50 p-8 rounded-xl text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <Home className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Residential Moving
-              </h3>
-              <p className="text-gray-600">
-                Complete residential relocation services with personalized
-                attention to every detail.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-xl text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <Building className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Corporate Relocation
-              </h3>
-              <p className="text-gray-600">
-                Business relocation services for companies and executives moving
-                to Las Vegas.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-xl text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <TrendingUp className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Investment Properties
-              </h3>
-              <p className="text-gray-600">
-                Expert guidance for real estate investment opportunities in Las
-                Vegas.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-xl text-center">
-              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <Shield className="w-8 h-8 text-yellow-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Settling In
-              </h3>
-              <p className="text-gray-600">
-                Ongoing support to help you settle into your new Las Vegas
-                community.
-              </p>
-            </div>
+            {[
+              {
+                href: '/services/residential-moving',
+                src: '/sections/residential-moving.webp',
+                alt: 'Household goods beside a Las Vegas home during a residential move',
+                title: 'Residential Moving',
+                text: 'Home search, the purchase or lease, and move-in for a household coming to Las Vegas.',
+              },
+              {
+                href: '/services/corporate-relocation',
+                src: '/sections/corporate-relocation.webp',
+                alt: 'Glass office towers in Las Vegas with desert mountains behind them',
+                title: 'Corporate Relocation',
+                text: 'Employee and executive transfers for companies moving people to Las Vegas.',
+              },
+              {
+                href: '/services/investment-properties',
+                src: '/sections/investment-properties.webp',
+                alt: 'Las Vegas valley homes and desert lots for investment property research',
+                title: 'Investment Properties',
+                text: 'Property search for buyers adding a Las Vegas investment home.',
+              },
+              {
+                href: '/services/settling-in',
+                src: '/sections/settling-in.webp',
+                alt: 'A Las Vegas neighborhood street with desert landscaping after move-in',
+                title: 'Settling In',
+                text: 'Utilities, DMV, and local orientation after the truck leaves.',
+              },
+            ].map((card) => (
+              <Link
+                key={card.href}
+                href={card.href}
+                className="bg-gray-50 rounded-xl overflow-hidden text-left hover:shadow-lg transition-shadow"
+              >
+                <div className="relative h-44">
+                  <Image
+                    src={card.src}
+                    alt={card.alt}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{card.title}</h3>
+                  <p className="text-gray-600">{card.text}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -280,7 +254,6 @@ export default function HomePage() {
         rows={cityComparison}
         className="py-16"
       />
-
 
       {/* FAQ Section */}
       <FAQSection
@@ -297,8 +270,7 @@ export default function HomePage() {
               Ready to Start Your Las Vegas Journey?
             </h2>
             <p className="text-xl text-white max-w-3xl mx-auto">
-              Contact Dr. Jan Duffy today for a personalized consultation about
-              your relocation
+              Contact Dr. Jan Duffy today for a personalized consultation about your relocation
             </p>
           </div>
 
@@ -307,27 +279,19 @@ export default function HomePage() {
               <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Phone
-                    className="w-5 h-5 mr-3 text-white"
-                    aria-hidden="true"
-                  />
+                  <Phone className="w-5 h-5 mr-3 text-white" aria-hidden="true" />
                   <a href={`tel:${PHONE_TEL}`} className="hover:underline">
                     {PHONE_DISPLAY}
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <Calendar
-                    className="w-5 h-5 mr-3 text-white"
-                    aria-hidden="true"
-                  />
+                  <Calendar className="w-5 h-5 mr-3 text-white" aria-hidden="true" />
                   <span>Available 7 days a week</span>
                 </div>
               </div>
 
               <div className="mt-8">
-                <h4 className="text-lg font-semibold mb-4">
-                  Why Choose Dr. Jan Duffy?
-                </h4>
+                <h4 className="text-lg font-semibold mb-4">Why Choose Dr. Jan Duffy?</h4>
                 <ul className="space-y-2 text-white mb-6">
                   <li>• 15+ years of Las Vegas real estate experience</li>
                   <li>• Berkshire Hathaway expertise and resources</li>

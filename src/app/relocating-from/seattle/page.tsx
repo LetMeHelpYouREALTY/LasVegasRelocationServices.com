@@ -1,7 +1,5 @@
-"use client";
+'use client';
 
-import CalendlyBooking from '@/components/shared/CalendlyBooking';
-import PageHero from "@/components/sections/PageHero";
 import {
   Building,
   Calendar,
@@ -11,44 +9,39 @@ import {
   MapPin,
   Phone,
   Plane,
-  Star,
   Sun,
   Users,
-} from "lucide-react";
-import { motion } from "@/components/motion";
-import { FAQSection } from "@/components/seo";
-import {
-  AGENT_NAME,
-  BROKERAGE,
-  LICENSE_LABEL,
-  PHONE_DISPLAY,
-} from "@/lib/business";
+} from 'lucide-react';
+import NeighborhoodAreaCards from '@/components/sections/NeighborhoodAreaCards';
+import PageHero from '@/components/sections/PageHero';
+import { FAQSection } from '@/components/seo';
+import CalendlyBooking from '@/components/shared/CalendlyBooking';
+import { AGENT_NAME, BROKERAGE, LICENSE_LABEL, PHONE_DISPLAY } from '@/lib/business';
 
 const seattleFAQs = [
   {
-    question: "Who should I call when moving from Seattle to Las Vegas?",
+    question: 'Who should I call when moving from Seattle to Las Vegas?',
     answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} who manages the entire Seattle-to-Las-Vegas move: neighborhood research, home search, purchase, and settling-in support after you arrive.`,
   },
   {
-    question: "How do housing costs compare between Seattle and Las Vegas?",
+    question: 'How do housing costs compare between Seattle and Las Vegas?',
     answer:
-      "Median home prices in the Las Vegas Valley are in the mid-$400Ks, roughly half of Seattle-area medians that run well above $800K. Buyers relocating from Seattle typically move up in square footage and lot size while cutting their mortgage payment substantially.",
+      'Median home prices in the Las Vegas Valley are in the mid-$400Ks, roughly half of Seattle-area medians that run well above $800K. Buyers relocating from Seattle typically move up in square footage and lot size while cutting their mortgage payment substantially.',
   },
   {
-    question:
-      "Washington has no income tax either — what changes financially in Nevada?",
+    question: 'Washington has no income tax either — what changes financially in Nevada?',
     answer:
-      "The main savings come from housing: a comparable home costs roughly half as much in Las Vegas, and Clark County property tax rates are approximately 0.84%. Washington residents also leave behind the state capital gains tax on large investment sales and some of the highest gas prices in the country.",
+      'The main savings come from housing: a comparable home costs roughly half as much in Las Vegas, and Clark County property tax rates are approximately 0.84%. Washington residents also leave behind the state capital gains tax on large investment sales and some of the highest gas prices in the country.',
   },
   {
-    question: "How does the weather compare between Seattle and Las Vegas?",
+    question: 'How does the weather compare between Seattle and Las Vegas?',
     answer:
-      "Las Vegas gets 300+ days of sunshine and about 4 inches of rain per year, versus roughly 150 rainy days and long overcast winters in Seattle. Summers are hot and dry (July highs around 104°F); winters are mild with January highs around 58°F.",
+      'Las Vegas gets 300+ days of sunshine and about 4 inches of rain per year, versus roughly 150 rainy days and long overcast winters in Seattle. Summers are hot and dry (July highs around 104°F); winters are mild with January highs around 58°F.',
   },
   {
-    question: "How long does it take to get from Seattle to Las Vegas?",
+    question: 'How long does it take to get from Seattle to Las Vegas?',
     answer:
-      "Nonstop flights from Sea-Tac to Harry Reid International Airport take about 2.5 hours. Driving the roughly 1,100 miles down I-5 and I-15 takes 17-19 hours over 2 days, so the drive is practical for households bringing a second car.",
+      'Nonstop flights from Sea-Tac to Harry Reid International Airport take about 2.5 hours. Driving the roughly 1,100 miles down I-5 and I-15 takes 17-19 hours over 2 days, so the drive is practical for households bringing a second car.',
   },
 ];
 
@@ -67,12 +60,18 @@ export default function SeattleToLasVegasPage() {
               Moving from Seattle to Las Vegas?
             </h1>
             <p className="text-xl md:text-2xl sky-100 mb-8 max-w-3xl mx-auto">
-              Let Dr. Jan Duffy and the Berkshire Hathaway team make your
-              transition seamless. We understand the Seattle lifestyle and will
-              help you find your perfect Las Vegas home.
+              Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. We
+              understand the Seattle lifestyle and will help you find your perfect Las Vegas home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer" className="bg-white text-sky-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">Book a Showing</a>
+              <a
+                href="https://calendly.com/drjanduffy/showing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-sky-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              >
+                Book a Showing
+              </a>
               <button
                 type="button"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-sky-600 transition-colors"
@@ -105,9 +104,8 @@ export default function SeattleToLasVegasPage() {
                 Lower Cost of Living
               </h3>
               <p className="text-gray-600 text-center">
-                Housing costs are significantly lower, and no state income tax
-                means more money in your pocket compared to Seattle's expensive
-                real estate market.
+                Housing costs are significantly lower, and no state income tax means more money in
+                your pocket compared to Seattle's expensive real estate market.
               </p>
             </div>
 
@@ -115,13 +113,10 @@ export default function SeattleToLasVegasPage() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <Home className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
-                More Space
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">More Space</h3>
               <p className="text-gray-600 text-center">
-                Get more square footage for your money. Las Vegas offers
-                spacious homes and yards compared to Seattle's high-density
-                housing and small lots.
+                Get more square footage for your money. Las Vegas offers spacious homes and yards
+                compared to Seattle's high-density housing and small lots.
               </p>
             </div>
 
@@ -133,9 +128,8 @@ export default function SeattleToLasVegasPage() {
                 Better Weather
               </h3>
               <p className="text-gray-600 text-center">
-                Enjoy 300+ days of sunshine annually. Say goodbye to Seattle's
-                rain and gray skies and hello to year-round outdoor activities
-                in dry, pleasant weather.
+                Enjoy 300+ days of sunshine annually. Say goodbye to Seattle's rain and gray skies
+                and hello to year-round outdoor activities in dry, pleasant weather.
               </p>
             </div>
 
@@ -143,13 +137,10 @@ export default function SeattleToLasVegasPage() {
               <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <Plane className="w-8 h-8 text-yellow-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
-                Easy Travel
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Easy Travel</h3>
               <p className="text-gray-600 text-center">
-                McCarran International Airport offers direct flights to Seattle
-                and major cities worldwide. Plus, no more dealing with Seattle's
-                traffic congestion.
+                McCarran International Airport offers direct flights to Seattle and major cities
+                worldwide. Plus, no more dealing with Seattle's traffic congestion.
               </p>
             </div>
 
@@ -161,9 +152,8 @@ export default function SeattleToLasVegasPage() {
                 Business Friendly
               </h3>
               <p className="text-gray-600 text-center">
-                Nevada's business-friendly environment with no corporate income
-                tax and lower operating costs compared to Washington's business
-                regulations.
+                Nevada's business-friendly environment with no corporate income tax and lower
+                operating costs compared to Washington's business regulations.
               </p>
             </div>
 
@@ -175,9 +165,8 @@ export default function SeattleToLasVegasPage() {
                 Growing Community
               </h3>
               <p className="text-gray-600 text-center">
-                Join a rapidly growing, diverse community with excellent
-                amenities and entertainment options, without Seattle's
-                overcrowding issues.
+                Join a rapidly growing, diverse community with excellent amenities and entertainment
+                options, without Seattle's overcrowding issues.
               </p>
             </div>
           </div>
@@ -201,12 +190,9 @@ export default function SeattleToLasVegasPage() {
               <div className="w-20 h-20 bg-sky-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Initial Consultation
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Initial Consultation</h3>
               <p className="text-gray-600">
-                We discuss your needs, timeline, and preferences for your new
-                Las Vegas home.
+                We discuss your needs, timeline, and preferences for your new Las Vegas home.
               </p>
             </div>
 
@@ -214,12 +200,9 @@ export default function SeattleToLasVegasPage() {
               <div className="w-20 h-20 bg-sky-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Area Research
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Area Research</h3>
               <p className="text-gray-600">
-                We research neighborhoods, schools, and amenities that match
-                your lifestyle.
+                We research neighborhoods, commute times, and amenities that match your lifestyle.
               </p>
             </div>
 
@@ -227,12 +210,9 @@ export default function SeattleToLasVegasPage() {
               <div className="w-20 h-20 bg-sky-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Property Search
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Property Search</h3>
               <p className="text-gray-600">
-                We find and show you properties that meet your criteria and
-                budget.
+                We find and show you properties that meet your criteria and budget.
               </p>
             </div>
 
@@ -240,136 +220,17 @@ export default function SeattleToLasVegasPage() {
               <div className="w-20 h-20 bg-sky-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">4</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Settlement Support
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Settlement Support</h3>
               <p className="text-gray-600">
-                We help you settle in with local connections and ongoing
-                support.
+                We help you settle in with local connections and ongoing support.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-
-      {/* Popular Las Vegas Areas Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Popular Las Vegas Areas
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the best neighborhoods for your lifestyle and budget
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-sky-400 to-sky-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Summerlin
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Upscale master-planned community with excellent schools,
-                  parks, and shopping.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Family-friendly, great schools</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-green-400 to-green-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Henderson
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Safe, family-oriented city with top-rated schools and
-                  beautiful parks.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Safe, excellent schools</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-purple-400 to-purple-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Green Valley
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Established neighborhood with mature trees and convenient
-                  amenities.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Mature, established area</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-red-400 to-red-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Centennial Hills
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Growing area with new homes, mountain views, and outdoor
-                  recreation.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>New homes, mountain views</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Anthem
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master-planned community with golf courses and resort-style
-                  amenities.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Golf, resort amenities</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Inspirada
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Modern community with contemporary homes and active lifestyle
-                  amenities.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Modern, active lifestyle</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Popular Las Vegas Areas */}
+      <NeighborhoodAreaCards />
 
       {/* FAQ content (no FAQPage JSON-LD — Google removed FAQ rich results May 2026) */}
       <FAQSection
@@ -386,8 +247,7 @@ export default function SeattleToLasVegasPage() {
               Ready to Start Your Seattle to Vegas Journey?
             </h2>
             <p className="text-xl sky-100 max-w-3xl mx-auto">
-              Contact Dr. Jan Duffy today for a personalized consultation about
-              your relocation
+              Contact Dr. Jan Duffy today for a personalized consultation about your relocation
             </p>
           </div>
 
@@ -410,9 +270,7 @@ export default function SeattleToLasVegasPage() {
               </div>
 
               <div className="mt-8">
-                <h4 className="text-lg font-semibold mb-4">
-                  Why Choose Dr. Jan Duffy?
-                </h4>
+                <h4 className="text-lg font-semibold mb-4">Why Choose Dr. Jan Duffy?</h4>
                 <ul className="space-y-2 text-sky-100">
                   <li>• 15+ years of Las Vegas real estate experience</li>
                   <li>• Berkshire Hathaway expertise and resources</li>
@@ -423,7 +281,10 @@ export default function SeattleToLasVegasPage() {
               </div>
             </div>
 
-            <CalendlyBooking title="Book a Showing" description="Schedule a free consultation or showing with Dr. Jan Duffy." />
+            <CalendlyBooking
+              title="Book a Showing"
+              description="Schedule a free consultation or showing with Dr. Jan Duffy."
+            />
           </div>
         </div>
       </section>

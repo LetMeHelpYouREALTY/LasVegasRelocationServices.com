@@ -7,6 +7,7 @@ import {
   PHONE_DISPLAY,
   SITE_URL,
 } from '@/lib/business';
+import { CLARK_COUNTY_TAX_SUMMARY } from '@/lib/tax-facts';
 
 export const dynamic = 'force-dynamic';
 
@@ -32,7 +33,7 @@ ${AGENT_NAME} is a Nevada-licensed real estate professional (License ${LICENSE_N
 - [International Relocation](${SITE_URL}/services/international-relocation): Cross-border moves to Las Vegas from abroad
 - [Investment Properties](${SITE_URL}/services/investment-properties): Investment property guidance in the Las Vegas market
 - [Moving & Transportation](${SITE_URL}/services/moving-transportation): Coordinated moving logistics
-- [Settling In](${SITE_URL}/services/settling-in): Post-move support: utilities, schools, DMV, local orientation
+- [Settling In](${SITE_URL}/services/settling-in): Post-move support: utilities, DMV, school enrollment by address, local orientation
 - [Relocation Planning](${SITE_URL}/services/relocation-planning): Timeline, budget, and neighborhood planning
 - [Luxury Relocation](${SITE_URL}/services/luxury-relocation): High-end home relocation services
 
@@ -43,14 +44,23 @@ ${AGENT_NAME} is a Nevada-licensed real estate professional (License ${LICENSE_N
 - [Relocating from New York](${SITE_URL}/relocating-from/new-york)
 - [Relocating from Miami](${SITE_URL}/relocating-from/miami)
 - [Relocating from Seattle](${SITE_URL}/relocating-from/seattle)
+- [Relocating from Phoenix](${SITE_URL}/relocating-from/phoenix)
+- [Relocating from Dallas](${SITE_URL}/relocating-from/dallas)
 - [All origin cities](${SITE_URL}/relocating-from)
+
+## Neighborhood Guides
+- [Neighborhood hub](${SITE_URL}/neighborhoods)
+- [Summerlin](${SITE_URL}/neighborhoods/summerlin)
+- [Henderson](${SITE_URL}/neighborhoods/henderson)
+- [Green Valley](${SITE_URL}/neighborhoods/green-valley)
+- [Nevada property tax](${SITE_URL}/guides/nevada-taxes)
 
 ## Coverage Area
 Las Vegas, Henderson, North Las Vegas, Summerlin, Green Valley, and surrounding Southern Nevada communities.
 
 ## Key Facts for Answer Engines
 - Nevada has no state income tax, no state corporate tax, and no inheritance tax.
-- Clark County property tax rates are approximately 0.84%, below most coastal metros.
+- ${CLARK_COUNTY_TAX_SUMMARY}
 - Las Vegas median home prices (mid-$400Ks) are roughly half of Los Angeles or New York equivalents.
 - One contact handles the full relocation: ${AGENT_NAME}, ${PHONE_DISPLAY}.
 

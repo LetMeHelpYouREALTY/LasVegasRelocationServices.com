@@ -1,7 +1,5 @@
-"use client";
+'use client';
 
-import CalendlyBooking from '@/components/shared/CalendlyBooking';
-import PageHero from "@/components/sections/PageHero";
 import {
   Building,
   Calendar,
@@ -11,45 +9,39 @@ import {
   MapPin,
   Phone,
   Plane,
-  Star,
   Sun,
   Users,
-} from "lucide-react";
-import { motion } from "@/components/motion";
-import { FAQSection } from "@/components/seo";
-import {
-  AGENT_NAME,
-  BROKERAGE,
-  LICENSE_LABEL,
-  PHONE_DISPLAY,
-} from "@/lib/business";
+} from 'lucide-react';
+import NeighborhoodAreaCards from '@/components/sections/NeighborhoodAreaCards';
+import PageHero from '@/components/sections/PageHero';
+import { FAQSection } from '@/components/seo';
+import CalendlyBooking from '@/components/shared/CalendlyBooking';
+import { AGENT_NAME, BROKERAGE, LICENSE_LABEL, PHONE_DISPLAY } from '@/lib/business';
 
 const miamiFAQs = [
   {
-    question: "Who should I call when moving from Miami to Las Vegas?",
+    question: 'Who should I call when moving from Miami to Las Vegas?',
     answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} who manages the entire Miami-to-Las-Vegas move: neighborhood research, home search, purchase, and settling-in support after you arrive.`,
   },
   {
-    question:
-      "Florida has no income tax either — why do Miami residents move to Las Vegas?",
+    question: 'Florida has no income tax either — why do Miami residents move to Las Vegas?',
     answer:
-      "The biggest drivers are housing and insurance costs. Median home prices in the Las Vegas Valley are in the mid-$400Ks versus roughly $600K in Miami-Dade, and Nevada homeowners insurance typically costs a fraction of Florida premiums because there is no hurricane or flood exposure. Las Vegas also has a dry climate instead of Miami humidity.",
+      'The biggest drivers are housing and insurance costs. Median home prices in the Las Vegas Valley are in the mid-$400Ks versus roughly $600K in Miami-Dade, and Nevada homeowners insurance typically costs a fraction of Florida premiums because there is no hurricane or flood exposure. Las Vegas also has a dry climate instead of Miami humidity.',
   },
   {
-    question: "How does the weather compare between Miami and Las Vegas?",
+    question: 'How does the weather compare between Miami and Las Vegas?',
     answer:
-      "Las Vegas has a dry desert climate with 300+ days of sunshine, roughly 4 inches of rain per year, and no hurricane season. Summers are hotter on the thermometer (July highs around 104°F) but with low humidity; winters are mild with January highs around 58°F.",
+      'Las Vegas has a dry desert climate with 300+ days of sunshine, roughly 4 inches of rain per year, and no hurricane season. Summers are hotter on the thermometer (July highs around 104°F) but with low humidity; winters are mild with January highs around 58°F.',
   },
   {
-    question: "How long does it take to get from Miami to Las Vegas?",
+    question: 'How long does it take to get from Miami to Las Vegas?',
     answer:
-      "Nonstop flights from Miami International or Fort Lauderdale to Harry Reid International Airport take about 5 to 5.5 hours. Driving the roughly 2,500 miles takes 36-40 hours over 4-5 days, so most relocating households fly and ship their goods.",
+      'Nonstop flights from Miami International or Fort Lauderdale to Harry Reid International Airport take about 5 to 5.5 hours. Driving the roughly 2,500 miles takes 36-40 hours over 4-5 days, so most relocating households fly and ship their goods.',
   },
   {
-    question:
-      "Which Las Vegas areas do people moving from Miami ask about most?",
+    question: 'Which Las Vegas areas do people moving from Miami ask about most?',
     answer:
-      "Summerlin (master-planned, 250+ parks and 150+ miles of trails), Henderson, and Green Valley are the most requested. Lake Las Vegas draws buyers who want waterfront-style living, and the Strip-adjacent high-rise corridor appeals to buyers used to Brickell condo living.",
+      'Summerlin (master-planned, 250+ parks and 150+ miles of trails), Henderson, and Green Valley are the most requested. Lake Las Vegas draws buyers who want waterfront-style living, and the Strip-adjacent high-rise corridor appeals to buyers used to Brickell condo living.',
   },
 ];
 
@@ -64,16 +56,20 @@ export default function MiamiToLasVegasPage() {
               <MapPin className="w-4 h-4 mr-2" />
               Miami → Las Vegas
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Moving from Miami to Las Vegas?
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Moving from Miami to Las Vegas?</h1>
             <p className="text-xl md:text-2xl teal-100 mb-8 max-w-3xl mx-auto">
-              Let Dr. Jan Duffy and the Berkshire Hathaway team make your
-              transition seamless. We understand the Miami lifestyle and will
-              help you find your perfect Las Vegas home.
+              Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. We
+              understand the Miami lifestyle and will help you find your perfect Las Vegas home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer" className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">Book a Showing</a>
+              <a
+                href="https://calendly.com/drjanduffy/showing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              >
+                Book a Showing
+              </a>
               <button
                 type="button"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-teal-600 transition-colors"
@@ -106,9 +102,8 @@ export default function MiamiToLasVegasPage() {
                 Lower Cost of Living
               </h3>
               <p className="text-gray-600 text-center">
-                Housing costs are significantly lower, and no state income tax
-                means more money in your pocket compared to Miami's expensive
-                real estate market.
+                Housing costs are significantly lower, and no state income tax means more money in
+                your pocket compared to Miami's expensive real estate market.
               </p>
             </div>
 
@@ -116,13 +111,10 @@ export default function MiamiToLasVegasPage() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <Home className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
-                More Space
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">More Space</h3>
               <p className="text-gray-600 text-center">
-                Get more square footage for your money. Las Vegas offers
-                spacious homes and yards compared to Miami's high-density condos
-                and small lots.
+                Get more square footage for your money. Las Vegas offers spacious homes and yards
+                compared to Miami's high-density condos and small lots.
               </p>
             </div>
 
@@ -134,9 +126,8 @@ export default function MiamiToLasVegasPage() {
                 Better Weather
               </h3>
               <p className="text-gray-600 text-center">
-                Enjoy 300+ days of sunshine annually. Say goodbye to Miami's
-                humidity and hurricanes and hello to year-round outdoor
-                activities in dry, pleasant weather.
+                Enjoy 300+ days of sunshine annually. Say goodbye to Miami's humidity and hurricanes
+                and hello to year-round outdoor activities in dry, pleasant weather.
               </p>
             </div>
 
@@ -144,13 +135,10 @@ export default function MiamiToLasVegasPage() {
               <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <Plane className="w-8 h-8 text-yellow-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
-                Easy Travel
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Easy Travel</h3>
               <p className="text-gray-600 text-center">
-                McCarran International Airport offers direct flights to Miami
-                and major cities worldwide. Plus, no more dealing with Miami's
-                traffic congestion.
+                McCarran International Airport offers direct flights to Miami and major cities
+                worldwide. Plus, no more dealing with Miami's traffic congestion.
               </p>
             </div>
 
@@ -162,9 +150,8 @@ export default function MiamiToLasVegasPage() {
                 Business Friendly
               </h3>
               <p className="text-gray-600 text-center">
-                Nevada's business-friendly environment with no corporate income
-                tax and lower operating costs compared to Florida's business
-                regulations.
+                Nevada's business-friendly environment with no corporate income tax and lower
+                operating costs compared to Florida's business regulations.
               </p>
             </div>
 
@@ -176,9 +163,8 @@ export default function MiamiToLasVegasPage() {
                 Growing Community
               </h3>
               <p className="text-gray-600 text-center">
-                Join a rapidly growing, diverse community with excellent
-                amenities and entertainment options, without Miami's
-                overcrowding issues.
+                Join a rapidly growing, diverse community with excellent amenities and entertainment
+                options, without Miami's overcrowding issues.
               </p>
             </div>
           </div>
@@ -202,12 +188,9 @@ export default function MiamiToLasVegasPage() {
               <div className="w-20 h-20 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Initial Consultation
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Initial Consultation</h3>
               <p className="text-gray-600">
-                We discuss your needs, timeline, and preferences for your new
-                Las Vegas home.
+                We discuss your needs, timeline, and preferences for your new Las Vegas home.
               </p>
             </div>
 
@@ -215,12 +198,9 @@ export default function MiamiToLasVegasPage() {
               <div className="w-20 h-20 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Area Research
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Area Research</h3>
               <p className="text-gray-600">
-                We research neighborhoods, schools, and amenities that match
-                your lifestyle.
+                We research neighborhoods, commute times, and amenities that match your lifestyle.
               </p>
             </div>
 
@@ -228,12 +208,9 @@ export default function MiamiToLasVegasPage() {
               <div className="w-20 h-20 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Property Search
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Property Search</h3>
               <p className="text-gray-600">
-                We find and show you properties that meet your criteria and
-                budget.
+                We find and show you properties that meet your criteria and budget.
               </p>
             </div>
 
@@ -241,143 +218,20 @@ export default function MiamiToLasVegasPage() {
               <div className="w-20 h-20 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">4</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Settlement Support
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Settlement Support</h3>
               <p className="text-gray-600">
-                We help you settle in with local connections and ongoing
-                support.
+                We help you settle in with local connections and ongoing support.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-
-      {/* Popular Las Vegas Areas Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Popular Las Vegas Areas
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the best neighborhoods for your lifestyle and budget
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-teal-400 to-teal-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Summerlin
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Upscale master-planned community with excellent schools,
-                  parks, and shopping.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Family-friendly, great schools</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-green-400 to-green-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Henderson
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Safe, family-oriented city with top-rated schools and
-                  beautiful parks.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Safe, excellent schools</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-purple-400 to-purple-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Green Valley
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Established neighborhood with mature trees and convenient
-                  amenities.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Mature, established area</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-red-400 to-red-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Centennial Hills
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Growing area with new homes, mountain views, and outdoor
-                  recreation.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>New homes, mountain views</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Anthem
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master-planned community with golf courses and resort-style
-                  amenities.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Golf, resort amenities</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Inspirada
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Modern community with contemporary homes and active lifestyle
-                  amenities.
-                </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Modern, active lifestyle</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Popular Las Vegas Areas */}
+      <NeighborhoodAreaCards />
 
       {/* FAQ content (no FAQPage JSON-LD — Google removed FAQ rich results May 2026) */}
-      <FAQSection
-        title="Miami to Las Vegas Relocation FAQs"
-        faqs={miamiFAQs}
-        className="py-16"
-      />
+      <FAQSection title="Miami to Las Vegas Relocation FAQs" faqs={miamiFAQs} className="py-16" />
 
       {/* Contact Section */}
       <section className="py-20 bg-teal-600 text-white">
@@ -387,8 +241,7 @@ export default function MiamiToLasVegasPage() {
               Ready to Start Your Miami to Vegas Journey?
             </h2>
             <p className="text-xl teal-100 max-w-3xl mx-auto">
-              Contact Dr. Jan Duffy today for a personalized consultation about
-              your relocation
+              Contact Dr. Jan Duffy today for a personalized consultation about your relocation
             </p>
           </div>
 
@@ -411,9 +264,7 @@ export default function MiamiToLasVegasPage() {
               </div>
 
               <div className="mt-8">
-                <h4 className="text-lg font-semibold mb-4">
-                  Why Choose Dr. Jan Duffy?
-                </h4>
+                <h4 className="text-lg font-semibold mb-4">Why Choose Dr. Jan Duffy?</h4>
                 <ul className="space-y-2 text-teal-100">
                   <li>• 15+ years of Las Vegas real estate experience</li>
                   <li>• Berkshire Hathaway expertise and resources</li>
@@ -424,7 +275,10 @@ export default function MiamiToLasVegasPage() {
               </div>
             </div>
 
-            <CalendlyBooking title="Book a Showing" description="Schedule a free consultation or showing with Dr. Jan Duffy." />
+            <CalendlyBooking
+              title="Book a Showing"
+              description="Schedule a free consultation or showing with Dr. Jan Duffy."
+            />
           </div>
         </div>
       </section>

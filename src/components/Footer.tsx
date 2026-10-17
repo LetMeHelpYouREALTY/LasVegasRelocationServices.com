@@ -1,6 +1,5 @@
-"use client";
+'use client';
 
-import Image from "next/image";
 import {
   ArrowRight,
   Building,
@@ -16,10 +15,11 @@ import {
   Phone as PhoneIcon,
   Twitter,
   Users,
-} from "lucide-react";
-import { motion } from "@/components/motion";
-import CalendlyBooking from "@/components/shared/CalendlyBooking";
-import GbpActionBar from "@/components/shared/GbpActionBar";
+} from 'lucide-react';
+import Image from 'next/image';
+import { motion } from '@/components/motion';
+import CalendlyBooking from '@/components/shared/CalendlyBooking';
+import GbpActionBar from '@/components/shared/GbpActionBar';
 import {
   BUSINESS_NAME,
   EMAIL,
@@ -27,53 +27,66 @@ import {
   GOOGLE_WRITE_REVIEW_URL,
   PHONE_DISPLAY,
   PHONE_TEL,
-} from "@/lib/business";
+} from '@/lib/business';
 
 const footerSections = [
   {
-    title: "Services",
+    title: 'Services',
     icon: Building,
     links: [
-      { name: "Residential Relocation", href: "/services/residential-moving" },
-      { name: "Corporate Relocation", href: "/services/corporate-relocation" },
+      { name: 'Residential Relocation', href: '/services/residential-moving' },
+      { name: 'Corporate Relocation', href: '/services/corporate-relocation' },
       {
-        name: "International Relocation",
-        href: "/services/international-relocation",
+        name: 'International Relocation',
+        href: '/services/international-relocation',
       },
       {
-        name: "Moving & Transportation",
-        href: "/services/moving-transportation",
+        name: 'Moving & Transportation',
+        href: '/services/moving-transportation',
       },
-      { name: "Settling-In Services", href: "/services/settling-in" },
-      { name: "Relocation Planning", href: "/services/relocation-planning" },
-      { name: "Luxury Relocation", href: "/services/luxury-relocation" },
+      { name: 'Settling-In Services', href: '/services/settling-in' },
+      { name: 'Relocation Planning', href: '/services/relocation-planning' },
+      { name: 'Luxury Relocation', href: '/services/luxury-relocation' },
       {
-        name: "Investment Properties",
-        href: "/services/investment-properties",
+        name: 'Investment Properties',
+        href: '/services/investment-properties',
       },
     ],
   },
   {
-    title: "Relocating From",
+    title: 'Relocating From',
     icon: MapPinIcon,
     links: [
-      { name: "Los Angeles", href: "/relocating-from/los-angeles" },
-      { name: "San Diego", href: "/relocating-from/san-diego" },
-      { name: "New York", href: "/relocating-from/new-york" },
-      { name: "Chicago", href: "/relocating-from/chicago" },
-      { name: "Miami", href: "/relocating-from/miami" },
-      { name: "Seattle", href: "/relocating-from/seattle" },
+      { name: 'Los Angeles', href: '/relocating-from/los-angeles' },
+      { name: 'San Diego', href: '/relocating-from/san-diego' },
+      { name: 'New York', href: '/relocating-from/new-york' },
+      { name: 'Chicago', href: '/relocating-from/chicago' },
+      { name: 'Miami', href: '/relocating-from/miami' },
+      { name: 'Seattle', href: '/relocating-from/seattle' },
+      { name: 'Phoenix', href: '/relocating-from/phoenix' },
+      { name: 'Dallas', href: '/relocating-from/dallas' },
     ],
   },
   {
-    title: "Company",
+    title: 'Neighborhoods',
+    icon: MapPinIcon,
+    links: [
+      { name: 'All neighborhoods', href: '/neighborhoods' },
+      { name: 'Summerlin', href: '/neighborhoods/summerlin' },
+      { name: 'Henderson', href: '/neighborhoods/henderson' },
+      { name: 'Green Valley', href: '/neighborhoods/green-valley' },
+      { name: 'Nevada property tax', href: '/guides/nevada-taxes' },
+    ],
+  },
+  {
+    title: 'Company',
     icon: Users,
     links: [
-      { name: "About Us", href: "/about" },
-      { name: "Resources", href: "/resources" },
-      { name: "Contact", href: "/contact" },
-      { name: "Write a Google Review", href: GOOGLE_WRITE_REVIEW_URL },
-      { name: "Sitemap", href: "/sitemap.xml" },
+      { name: 'About Us', href: '/about' },
+      { name: 'Resources', href: '/resources' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Write a Google Review', href: GOOGLE_WRITE_REVIEW_URL },
+      { name: 'Sitemap', href: '/sitemap.xml' },
     ],
   },
 ];
@@ -91,48 +104,48 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    text: "100 N Green Valley Pkwy #330, Henderson, NV 89074",
+    text: '100 N Green Valley Pkwy #330, Henderson, NV 89074',
     href: GOOGLE_DIRECTIONS_URL,
   },
   {
     icon: Clock,
-    text: "Mon–Fri 8am–6pm, Sat 9am–3pm",
-    href: "/contact",
+    text: 'Mon–Fri 8am–6pm, Sat 9am–3pm',
+    href: '/contact',
   },
 ];
 
 const socialLinks = [
   {
-    name: "Facebook",
+    name: 'Facebook',
     icon: Facebook,
-    href: "http://drjanduffy.realscout.com/onboarding",
-    color: "hover:text-blue-600",
+    href: 'http://drjanduffy.realscout.com/onboarding',
+    color: 'hover:text-blue-600',
   },
   {
-    name: "Twitter",
+    name: 'Twitter',
     icon: Twitter,
-    href: "http://drjanduffy.realscout.com/onboarding",
-    color: "hover:text-blue-400",
+    href: 'http://drjanduffy.realscout.com/onboarding',
+    color: 'hover:text-blue-400',
   },
   {
-    name: "Instagram",
+    name: 'Instagram',
     icon: Instagram,
-    href: "http://drjanduffy.realscout.com/onboarding",
-    color: "hover:text-pink-500",
+    href: 'http://drjanduffy.realscout.com/onboarding',
+    color: 'hover:text-pink-500',
   },
   {
-    name: "LinkedIn",
+    name: 'LinkedIn',
     icon: Linkedin,
-    href: "http://drjanduffy.realscout.com/onboarding",
-    color: "hover:text-blue-700",
+    href: 'http://drjanduffy.realscout.com/onboarding',
+    color: 'hover:text-blue-700',
   },
 ];
 
 const quickStats = [
-  { number: "500+", label: "Happy Clients" },
-  { number: "15+", label: "Years Experience" },
-  { number: "100%", label: "Satisfaction Rate" },
-  { number: "24/7", label: "Support Available" },
+  { number: '500+', label: 'Happy Clients' },
+  { number: '15+', label: 'Years Experience' },
+  { number: '100%', label: 'Satisfaction Rate' },
+  { number: '24/7', label: 'Support Available' },
 ];
 
 export default function Footer() {
@@ -140,7 +153,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
@@ -153,9 +166,7 @@ export default function Footer() {
                 className="h-12 w-12 rounded-lg object-cover shadow-md"
               />
               <div>
-                <h3 className="text-xl font-bold">
-                  {BUSINESS_NAME}
-                </h3>
+                <h3 className="text-xl font-bold">{BUSINESS_NAME}</h3>
                 <p className="text-gray-400 text-sm">
                   Your trusted partner for seamless relocation
                 </p>
@@ -163,10 +174,9 @@ export default function Footer() {
             </div>
 
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Dr. Jan Duffy and the Berkshire Hathaway team provide
-              comprehensive relocation services to help you make Las Vegas your
-              new home. From residential moves to corporate relocations, we
-              handle every detail with expertise and care.
+              Dr. Jan Duffy and the Berkshire Hathaway team provide comprehensive relocation
+              services to help you make Las Vegas your new home. From residential moves to corporate
+              relocations, we handle every detail with expertise and care.
             </p>
 
             {/* Quick Stats */}
@@ -180,9 +190,7 @@ export default function Footer() {
                   viewport={{ once: true }}
                   className="text-center p-3 bg-gray-800 rounded-lg"
                 >
-                  <div className="text-2xl font-bold text-blue-400">
-                    {stat.number}
-                  </div>
+                  <div className="text-2xl font-bold text-blue-400">{stat.number}</div>
                   <div className="text-xs text-gray-400">{stat.label}</div>
                 </motion.div>
               ))}
@@ -258,8 +266,8 @@ export default function Footer() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className="flex items-center text-gray-300 hover:text-white transition-colors group"
-                    {...(contact.href.startsWith("http")
-                      ? { target: "_blank", rel: "noopener noreferrer" }
+                    {...(contact.href.startsWith('http')
+                      ? { target: '_blank', rel: 'noopener noreferrer' }
                       : {})}
                   >
                     <contact.icon className="w-5 h-5 text-blue-400 mr-3 group-hover:scale-110 transition-transform" />

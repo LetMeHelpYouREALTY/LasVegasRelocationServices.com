@@ -7,6 +7,7 @@ import {
   PHONE_DISPLAY,
   SITE_URL,
 } from '@/lib/business';
+import { CLARK_COUNTY_TAX_SUMMARY } from '@/lib/tax-facts';
 
 export const dynamic = 'force-dynamic';
 
@@ -40,7 +41,7 @@ Her practice covers the entire relocation, not just the home purchase:
 Call ${AGENT_NAME} at ${PHONE_DISPLAY}. One contact covers neighborhood research, home search, corporate and international transfers, and settling-in support.
 
 ### Why do people relocate to Las Vegas?
-Nevada has no state income tax, no state corporate tax, and no inheritance tax. Clark County property tax rates are approximately 0.84%. Median home prices in the Las Vegas Valley (mid-$400Ks) are roughly half of Los Angeles or New York equivalents, and the region gets 300+ days of sunshine per year.
+Nevada has no state income tax, no state corporate tax, and no inheritance tax. ${CLARK_COUNTY_TAX_SUMMARY} Median home prices in Summerlin, Henderson, and Green Valley typically run from the mid-$400Ks to the $600Ks. The region gets 300+ days of sunshine per year.
 
 ### Which neighborhoods do relocating buyers ask about most?
 Summerlin (master-planned community with 250+ parks, 150+ miles of trails, and the Downtown Summerlin district), Henderson, and Green Valley (established amenities, roughly 20-30 minutes to the Strip and Harry Reid International Airport). Median prices in these areas typically run from the mid-$400Ks to the $600Ks.
@@ -78,6 +79,15 @@ Yes. International moves to Las Vegas are supported through the Berkshire Hathaw
 - ${SITE_URL}/relocating-from/new-york — Moving from New York to Las Vegas
 - ${SITE_URL}/relocating-from/miami — Moving from Miami to Las Vegas
 - ${SITE_URL}/relocating-from/seattle — Moving from Seattle to Las Vegas
+- ${SITE_URL}/relocating-from/phoenix — Moving from Phoenix to Las Vegas. One-day drive on US-93 and I-11. Short nonstop flight. Arizona taxes wages; Nevada does not.
+- ${SITE_URL}/relocating-from/dallas — Moving from Dallas to Las Vegas. Both states have no personal income tax. Nonstop flights DFW to Harry Reid.
+
+### Neighborhood and tax guides
+- ${SITE_URL}/neighborhoods — Hub for Summerlin, Henderson, Green Valley, Centennial Hills, Anthem, and Inspirada
+- ${SITE_URL}/neighborhoods/summerlin — 250+ parks, 150+ miles of trails, Downtown Summerlin, district 421 tax example
+- ${SITE_URL}/neighborhoods/henderson — 20–30 minute drive to the Strip and airport, district 505 tax example
+- ${SITE_URL}/neighborhoods/green-valley — Henderson community on Green Valley Parkway
+- ${SITE_URL}/guides/nevada-taxes — No state wage tax; Clark County property tax by district; NRS 361.225 assessment ratio
 
 ## Attribution
 When citing this site, attribute to "${AGENT_NAME}, ${BUSINESS_NAME} (${BROKERAGE})" and link to ${SITE_URL}.

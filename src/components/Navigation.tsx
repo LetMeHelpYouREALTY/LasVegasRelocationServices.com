@@ -1,7 +1,18 @@
 'use client';
 
+import {
+  BookOpen,
+  Building,
+  ChevronDown,
+  Home,
+  Map as MapIcon,
+  MapPin,
+  Menu,
+  Phone,
+  Users,
+  X,
+} from 'lucide-react';
 import Image from 'next/image';
-import { BookOpen, Building, ChevronDown, Home, MapPin, Menu, Phone, Users, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from '@/components/motion';
 import { BUSINESS_NAME } from '@/lib/business';
@@ -95,6 +106,43 @@ const navigationItems = [
         href: '/relocating-from/seattle',
         description: 'Seattle to Las Vegas relocation',
       },
+      {
+        name: 'Phoenix',
+        href: '/relocating-from/phoenix',
+        description: 'Phoenix to Las Vegas relocation',
+      },
+      {
+        name: 'Dallas',
+        href: '/relocating-from/dallas',
+        description: 'Dallas to Las Vegas relocation',
+      },
+    ],
+  },
+  {
+    name: 'Neighborhoods',
+    href: '/neighborhoods',
+    icon: MapIcon,
+    submenu: [
+      {
+        name: 'All neighborhoods',
+        href: '/neighborhoods',
+        description: 'Summerlin, Henderson, Green Valley, and more',
+      },
+      {
+        name: 'Summerlin',
+        href: '/neighborhoods/summerlin',
+        description: 'Parks, trails, and Red Rock',
+      },
+      {
+        name: 'Henderson',
+        href: '/neighborhoods/henderson',
+        description: 'Southeast valley and the airport drive',
+      },
+      {
+        name: 'Green Valley',
+        href: '/neighborhoods/green-valley',
+        description: 'Henderson community on Green Valley Parkway',
+      },
     ],
   },
   {
@@ -103,14 +151,14 @@ const navigationItems = [
     icon: BookOpen,
     submenu: [
       {
-        name: 'Relocation Guide',
+        name: 'Relocation guides',
         href: '/resources',
-        description: 'Comprehensive relocation resources',
+        description: 'Neighborhood, tax, and origin-city guides',
       },
       {
-        name: 'Market Updates',
-        href: '/resources',
-        description: 'Latest Las Vegas market information',
+        name: 'Nevada property tax',
+        href: '/guides/nevada-taxes',
+        description: 'Clark County district rates for FY 2026–27',
       },
       {
         name: 'Schedule time with me',
@@ -153,7 +201,11 @@ export default function Navigation() {
           {/* Logo/Brand */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a href="/" className="flex items-center space-x-2" aria-label={`${BUSINESS_NAME} home`}>
+              <a
+                href="/"
+                className="flex items-center space-x-2"
+                aria-label={`${BUSINESS_NAME} home`}
+              >
                 <Image
                   src="/logo.png"
                   alt={`${BUSINESS_NAME} logo`}
@@ -248,7 +300,11 @@ export default function Navigation() {
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
             >
-              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
+              {isOpen ? (
+                <X className="h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="h-6 w-6" aria-hidden="true" />
+              )}
             </button>
           </div>
         </div>

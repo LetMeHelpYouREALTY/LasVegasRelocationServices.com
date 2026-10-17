@@ -1,121 +1,131 @@
-"use client";
+'use client';
 
-import PageHero from "@/components/sections/PageHero";
-import {
-  BookOpen,
-  Calculator,
-  Calendar,
-  CheckCircle,
-  FileText,
-  Home,
-  Phone,
-  TrendingUp,
-  Users,
-} from "lucide-react";
-import { motion } from "@/components/motion";
+import { BookOpen, Calculator, CheckCircle, FileText, Home, MapPin, Phone } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from '@/components/motion';
+import PageHero from '@/components/sections/PageHero';
+import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/business';
 
 const resourceCategories = [
   {
     icon: BookOpen,
-    title: "Relocation Guides",
-    description: "Comprehensive guides for moving to Las Vegas",
+    title: 'Neighborhood guides',
+    description: 'Places relocating buyers ask about',
     resources: [
-      "Las Vegas Neighborhood Guide",
-      "Moving Checklist",
-      "School District Information",
-      "Cost of Living Calculator",
+      { label: 'All neighborhoods', href: '/neighborhoods' },
+      { label: 'Summerlin', href: '/neighborhoods/summerlin' },
+      { label: 'Henderson', href: '/neighborhoods/henderson' },
+      { label: 'Green Valley', href: '/neighborhoods/green-valley' },
     ],
   },
   {
     icon: Calculator,
-    title: "Financial Tools",
-    description: "Tools to help you plan your relocation budget",
+    title: 'Money',
+    description: 'Taxes you can verify before you write an offer',
     resources: [
-      "Mortgage Calculator",
-      "Property Tax Estimator",
-      "Moving Cost Calculator",
-      "ROI Investment Calculator",
+      { label: 'Nevada property tax guide', href: '/guides/nevada-taxes' },
+      { label: 'Moving from Phoenix', href: '/relocating-from/phoenix' },
+      { label: 'Moving from Dallas', href: '/relocating-from/dallas' },
+      { label: 'Investment properties', href: '/services/investment-properties' },
     ],
   },
   {
     icon: FileText,
-    title: "Legal Resources",
-    description: "Important legal information for your move",
+    title: 'Official lookups',
+    description: 'County and state pages, not ratings',
     resources: [
-      "Nevada State Laws",
-      "Real Estate Regulations",
-      "Tax Information",
-      "Business Registration Guide",
+      {
+        label: 'Clark County Treasurer',
+        href: 'https://www.clarkcountynv.gov/government/elected_officials/county_treasurer/',
+      },
+      {
+        label: 'NRS 361.225 assessment ratio',
+        href: 'https://www.leg.state.nv.us/nrs/NRS-361.html#NRS361Sec225',
+      },
+      {
+        label: 'Clark County School District address lookup',
+        href: 'https://www.ccsd.net/',
+      },
+      { label: 'Settling-in services', href: '/services/settling-in' },
     ],
   },
   {
     icon: Home,
-    title: "Property Resources",
-    description: "Everything you need to know about Las Vegas real estate",
+    title: 'The move itself',
+    description: 'Services that cover the search and the truck',
     resources: [
-      "Market Trends Report",
-      "Property Search Tips",
-      "Home Inspection Guide",
-      "Closing Process Overview",
+      { label: 'Residential moving', href: '/services/residential-moving' },
+      { label: 'Corporate relocation', href: '/services/corporate-relocation' },
+      { label: 'Relocation planning', href: '/services/relocation-planning' },
+      { label: 'All origin cities', href: '/relocating-from' },
     ],
   },
 ];
 
 const featuredArticles = [
   {
-    title: "Top 10 Reasons to Move to Las Vegas in 2024",
+    title: 'Summerlin relocation guide',
     excerpt:
-      "Discover why Las Vegas is becoming the top destination for relocation in the United States.",
-    readTime: "5 min read",
-    category: "Relocation Tips",
+      '250+ parks, 150+ miles of trails, Downtown Summerlin, and the fiscal year 2026–27 Summerlin Town tax district.',
+    category: 'Neighborhood',
+    href: '/neighborhoods/summerlin',
+    image: '/heroes/summerlin.webp',
+    alt: 'Summerlin homes below Red Rock cliffs with a desert trail in the foreground',
   },
   {
-    title: "Complete Guide to Las Vegas Neighborhoods",
+    title: 'Henderson and Green Valley',
     excerpt:
-      "Find the perfect neighborhood that matches your lifestyle and budget in Las Vegas.",
-    readTime: "8 min read",
-    category: "Neighborhood Guide",
+      'A 20–30 minute drive to the Strip and Harry Reid International Airport, plus how to read a Henderson tax district.',
+    category: 'Neighborhood',
+    href: '/neighborhoods/henderson',
+    image: '/heroes/henderson.webp',
+    alt: 'Henderson, Nevada homes with desert landscaping and mountains beyond',
   },
   {
-    title: "Investment Opportunities in Las Vegas Real Estate",
+    title: 'Nevada property tax, by district',
     excerpt:
-      "Learn about the best investment opportunities and market trends in Las Vegas.",
-    readTime: "6 min read",
-    category: "Investment",
+      'No state tax on wages. Clark County bills the house by district. Summerlin Town and Henderson Artesian Basin examples for fiscal year 2026–27.',
+    category: 'Taxes',
+    href: '/guides/nevada-taxes',
+    image: '/heroes/nevada-taxes.webp',
+    alt: 'Single-story desert home in the Las Vegas valley under a clear sky',
   },
   {
-    title: "Moving from California to Nevada: What You Need to Know",
+    title: 'Moving from Phoenix or Dallas',
     excerpt:
-      "Essential information for Californians considering a move to Las Vegas.",
-    readTime: "7 min read",
-    category: "Relocation Tips",
+      'Phoenix is a one-day drive on US-93 and I-11. Dallas already has no state income tax. Nonstop flights land at Harry Reid.',
+    category: 'Origin city',
+    href: '/relocating-from/phoenix',
+    image: '/heroes/from-phoenix.webp',
+    alt: 'Moving truck on a desert interstate between Arizona and Las Vegas',
   },
 ];
 
 const tools = [
   {
     icon: Calculator,
-    title: "Cost of Living Calculator",
-    description: "Compare your current city's cost of living with Las Vegas",
-    href: "#calculator",
+    title: 'Nevada property tax',
+    description: 'District rates for fiscal year 2026–27, and how assessed value works',
+    href: '/guides/nevada-taxes',
   },
   {
     icon: Home,
-    title: "Property Search Tool",
-    description: "Find your perfect home in Las Vegas with our advanced search",
-    href: "#search",
+    title: 'Home search',
+    description: 'Residential moving page, with current office listings under the hero',
+    href: '/services/residential-moving',
   },
   {
-    icon: TrendingUp,
-    title: "Market Analysis",
-    description: "Get detailed market insights and trends for Las Vegas",
-    href: "#market",
+    icon: MapPin,
+    title: 'Neighborhood guides',
+    description: 'Summerlin, Henderson, Green Valley, Centennial Hills, Anthem, and Inspirada',
+    href: '/neighborhoods',
   },
   {
-    icon: Users,
-    title: "Community Finder",
-    description: "Discover the best communities for your lifestyle",
-    href: "#community",
+    icon: BookOpen,
+    title: 'Origin-city guides',
+    description: 'Los Angeles, Phoenix, Dallas, and the other city pages',
+    href: '/relocating-from',
   },
 ];
 
@@ -137,19 +147,22 @@ export default function ResourcesPage() {
               </span>
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Everything you need to know about relocating to Las Vegas. From
-              guides and tools to market insights and neighborhood information.
+              Everything you need to know about relocating to Las Vegas. From guides and tools to
+              market insights and neighborhood information.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                type="button"
+              <a
+                href={`tel:${PHONE_TEL}`}
                 className="bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2"
               >
                 <Phone className="w-5 h-5" />
-                Call (702) 707-7273
-              </button>
-              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
+                Call {PHONE_DISPLAY}
+              </a>
+              <a
+                href="https://calendly.com/drjanduffy/showing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-900 transition-colors flex items-center gap-2"
               >
                 Book a Showing
@@ -173,8 +186,8 @@ export default function ResourcesPage() {
               Resource Categories
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive resources organized by category to help you with
-              every aspect of your relocation
+              Comprehensive resources organized by category to help you with every aspect of your
+              relocation
             </p>
           </motion.div>
 
@@ -194,19 +207,37 @@ export default function ResourcesPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                   {category.title}
                 </h3>
-                <p className="text-gray-600 mb-4 text-center">
-                  {category.description}
-                </p>
+                <p className="text-gray-600 mb-4 text-center">{category.description}</p>
                 <ul className="space-y-2">
-                  {category.resources.map((resource) => (
-                    <li
-                      key={resource}
-                      className="flex items-center gap-2 text-sm text-gray-700"
-                    >
-                      <CheckCircle className="w-4 h-4 text-blue-500" />
-                      {resource}
-                    </li>
-                  ))}
+                  {category.resources.map((resource) => {
+                    const external = resource.href.startsWith('http');
+                    const className =
+                      'flex items-center gap-2 text-sm text-gray-700 hover:text-blue-700';
+                    const inner = (
+                      <>
+                        <CheckCircle className="w-4 h-4 text-blue-500 shrink-0" />
+                        {resource.label}
+                      </>
+                    );
+                    return (
+                      <li key={resource.href}>
+                        {external ? (
+                          <a
+                            href={resource.href}
+                            className={className}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {inner}
+                          </a>
+                        ) : (
+                          <Link href={resource.href} className={className}>
+                            {inner}
+                          </Link>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </motion.div>
             ))}
@@ -224,40 +255,41 @@ export default function ResourcesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Featured Articles
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Featured Articles</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expert insights and tips to help you make informed decisions about
-              your Las Vegas relocation
+              Guides with a real address, a tax district, or a drive — not placeholder articles
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {featuredArticles.map((article, index) => (
               <motion.div
-                key={article.title}
+                key={article.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
-                    {article.category}
-                  </span>
-                  <span className="text-gray-500 text-sm">
-                    {article.readTime}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {article.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                <button className="text-blue-600 hover:text-blue-700 font-semibold transition-colors">
-                  Read More →
-                </button>
+                <Link href={article.href} className="block">
+                  <div className="relative h-52">
+                    <Image
+                      src={article.image}
+                      alt={article.alt}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                      {article.category}
+                    </span>
+                    <h3 className="text-xl font-bold text-gray-900 mt-4 mb-3">{article.title}</h3>
+                    <p className="text-gray-600 mb-4">{article.excerpt}</p>
+                    <span className="text-blue-600 font-semibold">Read the guide</span>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -274,11 +306,9 @@ export default function ResourcesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Interactive Tools
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Start here</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Use our tools to plan your relocation and make informed decisions
+              Each card opens a guide on this site.
             </p>
           </motion.div>
 
@@ -295,21 +325,19 @@ export default function ResourcesPage() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tool.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                  {tool.title}
-                </h3>
-                <p className="text-gray-600 mb-4 text-center">
-                  {tool.description}
-                </p>
-                <button className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                  Launch Tool
-                </button>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">{tool.title}</h3>
+                <p className="text-gray-600 mb-4 text-center">{tool.description}</p>
+                <Link
+                  href={tool.href}
+                  className="block w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+                >
+                  Open
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
@@ -324,19 +352,21 @@ export default function ResourcesPage() {
               Ready to Start Your Las Vegas Journey?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Get personalized assistance with your relocation from our expert
-              team
+              Get personalized assistance with your relocation from our expert team
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                type="button"
+              <a
+                href={`tel:${PHONE_TEL}`}
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2"
               >
                 <Phone className="w-5 h-5" />
-                Call (702) 707-7273
-              </button>
-              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
+                Call {PHONE_DISPLAY}
+              </a>
+              <a
+                href="https://calendly.com/drjanduffy/showing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center gap-2"
               >
                 Book a Showing

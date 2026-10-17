@@ -25,8 +25,11 @@ import {
   AGENT_NAME,
   AREA_SERVED,
   BROKERAGE,
+  type BreadcrumbInput,
   BUSINESS_ID,
   BUSINESS_NAME,
+  breadcrumbListSchema,
+  businessSchema,
   EMAIL,
   GOOGLE_DIRECTIONS_URL,
   GOOGLE_PLACE_ID,
@@ -37,12 +40,9 @@ import {
   PERSON_ID,
   PHONE_DISPLAY,
   PHONE_TEL,
+  personSchema,
   SITE_URL,
   WEBSITE_ID,
-  type BreadcrumbInput,
-  breadcrumbListSchema,
-  businessSchema,
-  personSchema,
   webSiteSchema,
 } from '@/lib/business';
 import { HERO_IMAGES, type HeroImageKey } from '@/lib/hero-images';
@@ -165,8 +165,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   investmentProperties: {
     path: '/services/investment-properties',
     name: 'Las Vegas Investment Properties',
-    description:
-      'Investment property guidance in Las Vegas and Henderson with Dr. Jan Duffy.',
+    description: 'Investment property guidance in Las Vegas and Henderson with Dr. Jan Duffy.',
     kind: 'Service',
     serviceName: 'Investment Property Advising',
     breadcrumbs: [
@@ -180,8 +179,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   movingTransportation: {
     path: '/services/moving-transportation',
     name: 'Moving & Transportation to Las Vegas',
-    description:
-      'Moving and transportation coordination for Las Vegas relocations.',
+    description: 'Moving and transportation coordination for Las Vegas relocations.',
     kind: 'Service',
     serviceName: 'Moving & Transportation Coordination',
     breadcrumbs: [
@@ -207,8 +205,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   relocationPlanning: {
     path: '/services/relocation-planning',
     name: 'Las Vegas Relocation Planning',
-    description:
-      'Relocation planning timelines and checklists for moves to Las Vegas.',
+    description: 'Relocation planning timelines and checklists for moves to Las Vegas.',
     kind: 'Service',
     serviceName: 'Relocation Planning',
     breadcrumbs: [
@@ -219,8 +216,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   luxuryRelocation: {
     path: '/services/luxury-relocation',
     name: 'Luxury Relocation to Las Vegas',
-    description:
-      'Luxury home relocation services in Las Vegas, Summerlin, and Henderson.',
+    description: 'Luxury home relocation services in Las Vegas, Summerlin, and Henderson.',
     kind: 'Service',
     serviceName: 'Luxury Relocation',
     breadcrumbs: [
@@ -231,8 +227,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   relocatingFrom: {
     path: '/relocating-from',
     name: 'Relocating to Las Vegas from Major Cities',
-    description:
-      'City-to-city relocation guides for moving to Las Vegas from across the U.S.',
+    description: 'City-to-city relocation guides for moving to Las Vegas from across the U.S.',
     kind: 'CollectionPage',
     breadcrumbs: [{ label: 'Relocating From', href: '/relocating-from' }],
   },
@@ -250,8 +245,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   fromSanDiego: {
     path: '/relocating-from/san-diego',
     name: 'Moving from San Diego to Las Vegas',
-    description:
-      'Relocation guide for households moving from San Diego to Las Vegas.',
+    description: 'Relocation guide for households moving from San Diego to Las Vegas.',
     kind: 'WebPage',
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
@@ -261,8 +255,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   fromChicago: {
     path: '/relocating-from/chicago',
     name: 'Moving from Chicago to Las Vegas',
-    description:
-      'Relocation guide for households moving from Chicago to Las Vegas.',
+    description: 'Relocation guide for households moving from Chicago to Las Vegas.',
     kind: 'WebPage',
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
@@ -272,8 +265,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   fromNewYork: {
     path: '/relocating-from/new-york',
     name: 'Moving from New York to Las Vegas',
-    description:
-      'Relocation guide for households moving from New York to Las Vegas.',
+    description: 'Relocation guide for households moving from New York to Las Vegas.',
     kind: 'WebPage',
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
@@ -283,8 +275,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   fromMiami: {
     path: '/relocating-from/miami',
     name: 'Moving from Miami to Las Vegas',
-    description:
-      'Relocation guide for households moving from Miami to Las Vegas.',
+    description: 'Relocation guide for households moving from Miami to Las Vegas.',
     kind: 'WebPage',
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
@@ -294,8 +285,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   fromSeattle: {
     path: '/relocating-from/seattle',
     name: 'Moving from Seattle to Las Vegas',
-    description:
-      'Relocation guide for households moving from Seattle to Las Vegas.',
+    description: 'Relocation guide for households moving from Seattle to Las Vegas.',
     kind: 'WebPage',
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
@@ -320,10 +310,81 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   resources: {
     path: '/resources',
     name: 'Las Vegas Relocation Resources',
-    description:
-      'Guides, tools, and neighborhood resources for relocating to Las Vegas.',
+    description: 'Guides, tools, and neighborhood resources for relocating to Las Vegas.',
     kind: 'CollectionPage',
     breadcrumbs: [{ label: 'Resources', href: '/resources' }],
+  },
+  neighborhoods: {
+    path: '/neighborhoods',
+    name: 'Las Vegas Neighborhood Guides',
+    description:
+      'Summerlin, Henderson, Green Valley, and other Las Vegas-area communities people ask about when they relocate.',
+    kind: 'CollectionPage',
+    breadcrumbs: [{ label: 'Neighborhoods', href: '/neighborhoods' }],
+  },
+  summerlin: {
+    path: '/neighborhoods/summerlin',
+    name: 'Moving to Summerlin',
+    description:
+      'Summerlin relocation guide: parks, trails, Downtown Summerlin, and a fiscal year 2026–27 property tax example.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Neighborhoods', href: '/neighborhoods' },
+      { label: 'Summerlin', href: '/neighborhoods/summerlin' },
+    ],
+  },
+  henderson: {
+    path: '/neighborhoods/henderson',
+    name: 'Moving to Henderson',
+    description:
+      'Henderson relocation guide, including commute time to the Strip and Harry Reid International Airport.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Neighborhoods', href: '/neighborhoods' },
+      { label: 'Henderson', href: '/neighborhoods/henderson' },
+    ],
+  },
+  greenValley: {
+    path: '/neighborhoods/green-valley',
+    name: 'Moving to Green Valley',
+    description:
+      'Green Valley relocation guide for the Henderson community along Green Valley Parkway.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Neighborhoods', href: '/neighborhoods' },
+      { label: 'Green Valley', href: '/neighborhoods/green-valley' },
+    ],
+  },
+  fromPhoenix: {
+    path: '/relocating-from/phoenix',
+    name: 'Moving from Phoenix to Las Vegas',
+    description: 'Relocation guide for households moving from the Phoenix area to Las Vegas.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Relocating From', href: '/relocating-from' },
+      { label: 'Phoenix', href: '/relocating-from/phoenix' },
+    ],
+  },
+  fromDallas: {
+    path: '/relocating-from/dallas',
+    name: 'Moving from Dallas to Las Vegas',
+    description: 'Relocation guide for households moving from Dallas–Fort Worth to Las Vegas.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Relocating From', href: '/relocating-from' },
+      { label: 'Dallas', href: '/relocating-from/dallas' },
+    ],
+  },
+  nevadaTaxes: {
+    path: '/guides/nevada-taxes',
+    name: 'Nevada Property Tax Guide for Relocating Buyers',
+    description:
+      'How Clark County property tax is billed, with fiscal year 2026–27 district examples for Summerlin and Henderson.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Resources', href: '/resources' },
+      { label: 'Nevada Taxes', href: '/guides/nevada-taxes' },
+    ],
   },
 };
 
@@ -459,11 +520,7 @@ export function enhancedBusinessSchema() {
   return {
     ...businessSchema(),
     '@type': ['RealEstateAgent', 'LocalBusiness'],
-    image: [
-      agentPortraitImageSchema(),
-      `${SITE_URL}/logo.png`,
-      OG_IMAGE_URL,
-    ],
+    image: [agentPortraitImageSchema(), `${SITE_URL}/logo.png`, OG_IMAGE_URL],
     logo: `${SITE_URL}/logo.png`,
     openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
     hasMap: GOOGLE_DIRECTIONS_URL,
@@ -637,10 +694,7 @@ export function pageSchemaGraph(heroKey: HeroImageKey) {
  * Merge Next.js Metadata with per-page hero + agent image SEO
  * (Open Graph / Twitter images with descriptive alt text).
  */
-export function withPageImageSeo(
-  heroKey: HeroImageKey,
-  metadata: Metadata = {},
-): Metadata {
+export function withPageImageSeo(heroKey: HeroImageKey, metadata: Metadata = {}): Metadata {
   const hero = HERO_IMAGES[heroKey];
   const seo = HERO_PAGE_SEO[heroKey];
   const pageUrl = absoluteUrl(seo.path);
@@ -660,13 +714,9 @@ export function withPageImageSeo(
   ];
 
   const existingOg =
-    metadata.openGraph && typeof metadata.openGraph === 'object'
-      ? metadata.openGraph
-      : {};
+    metadata.openGraph && typeof metadata.openGraph === 'object' ? metadata.openGraph : {};
   const existingTwitter =
-    metadata.twitter && typeof metadata.twitter === 'object'
-      ? metadata.twitter
-      : {};
+    metadata.twitter && typeof metadata.twitter === 'object' ? metadata.twitter : {};
 
   return {
     ...metadata,
@@ -679,27 +729,18 @@ export function withPageImageSeo(
       locale: 'en_US',
       url: pageUrl,
       siteName: BUSINESS_NAME,
-      title:
-        (typeof metadata.title === 'string' ? metadata.title : undefined) ||
-        seo.name,
+      title: (typeof metadata.title === 'string' ? metadata.title : undefined) || seo.name,
       description: metadata.description || seo.description,
       ...existingOg,
-      images:
-        'images' in existingOg && existingOg.images
-          ? existingOg.images
-          : images,
+      images: 'images' in existingOg && existingOg.images ? existingOg.images : images,
     },
     twitter: {
       card: 'summary_large_image',
-      title:
-        (typeof metadata.title === 'string' ? metadata.title : undefined) ||
-        seo.name,
+      title: (typeof metadata.title === 'string' ? metadata.title : undefined) || seo.name,
       description: metadata.description || seo.description,
       ...existingTwitter,
       images:
-        'images' in existingTwitter && existingTwitter.images
-          ? existingTwitter.images
-          : [hero.src],
+        'images' in existingTwitter && existingTwitter.images ? existingTwitter.images : [hero.src],
     },
   };
 }

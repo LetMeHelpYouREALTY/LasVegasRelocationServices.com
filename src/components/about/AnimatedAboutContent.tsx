@@ -67,7 +67,7 @@ const values = [
     icon: Building,
     title: "Local Expertise",
     description:
-      "Deep knowledge of Las Vegas neighborhoods, schools, and real estate markets.",
+      "Deep knowledge of Las Vegas neighborhoods, commute times, and real estate markets.",
   },
   {
     icon: Star,
