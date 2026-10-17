@@ -98,7 +98,7 @@ src/
    
    Edit `.env.local` with your configuration:
    ```env
-   NEXT_PUBLIC_SITE_URL=https://lasvegasrelocationservices.com
+   NEXT_PUBLIC_SITE_URL=https://www.lasvegasrelocationservices.com
    NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=GA_MEASUREMENT_ID
    NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID=GTM_ID
    NEXT_PUBLIC_FACEBOOK_PIXEL_ID=PIXEL_ID
@@ -267,7 +267,7 @@ This project is proprietary and confidential. All rights reserved by Dr. Jan Duf
 - **Berkshire Hathaway Services Relocation Services Team**
 - **Email**: dr.jan.duffy@berkshirehathaway.com
 - **Phone**: +1-702-XXX-XXXX
-- **Website**: [LasVegasRelocationServices.com](https://lasvegasrelocationservices.com)
+- **Website**: [LasVegasRelocationServices.com](https://www.lasvegasrelocationservices.com)
 
 ## 🙏 Acknowledgments
 

@@ -1,11 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { SITE_URL } from '@/lib/business';
-import {
-  probeApexRedirect,
-  probePriorityPages,
-  probeRobots,
-  probeSitemap,
-} from '@/lib/gsc-checks';
+import { probeApexRedirect, probePriorityPages, probeRobots, probeSitemap } from '@/lib/gsc-checks';
 import { SITE_PAGES } from '@/lib/site-pages';
 
 export const dynamic = 'force-dynamic';
@@ -39,9 +34,14 @@ export async function GET(request: NextRequest) {
   ]);
 
   const pagesOk = pages.every((p) => p.ok && p.status === 200);
+  const apexNote = apex.ok
+    ? 'Permanent redirect OK for GSC host consolidation'
+    : apex.status === 307 || apex.status === 302
+      ? 'Temporary redirect — GSC “Page with redirect” on http and https apex. Set Vercel domain redirectStatusCode to 301 so Google consolidates to www.'
+      : 'Unexpected apex response';
 
   const report = {
-    ok: sitemap.ok && robots.ok && pagesOk,
+    ok: sitemap.ok && robots.ok && pagesOk && apex.ok,
     ranAt: new Date().toISOString(),
     schedule,
     userAgent,
@@ -54,11 +54,7 @@ export async function GET(request: NextRequest) {
       apexRedirect: {
         ...apex,
         preferredStatus: 301,
-        note: apex.ok
-          ? 'Permanent redirect OK for GSC host consolidation'
-          : apex.status === 307 || apex.status === 302
-            ? 'Temporary redirect — prefer 301/308 so Google consolidates to www'
-            : 'Unexpected apex response',
+        note: apexNote,
       },
     },
   };
