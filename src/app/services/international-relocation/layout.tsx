@@ -1,14 +1,10 @@
 import type { Metadata } from 'next';
-import {
-  AGENT_NAME,
-  BUSINESS_NAME,
-  PHONE_DISPLAY,
-} from '@/lib/business';
+import { AGENT_NAME, BUSINESS_NAME, PHONE_DISPLAY } from '@/lib/business';
 import { withPageImageSeo } from '@/lib/schema';
 
 export const metadata: Metadata = withPageImageSeo('internationalRelocation', {
-  title: 'International Relocation to Las Vegas | Visa, Housing & Settling In',
-  description: `Moving to Las Vegas from abroad? ${AGENT_NAME} with ${BUSINESS_NAME} coordinates visa guidance referrals, temporary and long-term housing, school enrollment by district, and settling-in support. Call ${PHONE_DISPLAY}.`,
+  title: { absolute: 'International Relocation to Las Vegas | Dr. Jan Duffy' },
+  description: `Moving to Las Vegas from abroad? ${AGENT_NAME} with ${BUSINESS_NAME} searches the home. Visa filings stay with an immigration attorney. Call ${PHONE_DISPLAY}.`,
   keywords: [
     'international relocation Las Vegas',
     'move to Las Vegas from abroad',
@@ -22,11 +18,7 @@ export const metadata: Metadata = withPageImageSeo('internationalRelocation', {
   },
 });
 
-export default function InternationalRelocationLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function InternationalRelocationLayout({ children }: { children: React.ReactNode }) {
   // Service + ImageObject JSON-LD emitted by PageHero
   return children;
 }

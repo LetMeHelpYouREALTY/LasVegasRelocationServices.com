@@ -37,7 +37,17 @@ const navigationItems = [
       {
         name: 'Corporate Relocation',
         href: '/services/corporate-relocation',
-        description: 'Business relocation and employee assistance',
+        description: 'Company and executive relocation realtor',
+      },
+      {
+        name: 'Employee Relocation',
+        href: '/services/employee-relocation',
+        description: 'Home search for a transferring employee',
+      },
+      {
+        name: 'Relocation Specialist',
+        href: '/relocation-specialist',
+        description: 'Luxury relocation realtor in Las Vegas',
       },
       {
         name: 'International Relocation',
@@ -116,6 +126,11 @@ const navigationItems = [
         href: '/relocating-from/dallas',
         description: 'Dallas to Las Vegas relocation',
       },
+      {
+        name: 'Leaving Las Vegas',
+        href: '/moving-from-las-vegas',
+        description: 'List the Nevada home if you are moving away',
+      },
     ],
   },
   {
@@ -142,6 +157,31 @@ const navigationItems = [
         name: 'Green Valley',
         href: '/neighborhoods/green-valley',
         description: 'Henderson community on Green Valley Parkway',
+      },
+      {
+        name: 'Paradise',
+        href: '/neighborhoods/paradise',
+        description: 'Unincorporated town around the Strip',
+      },
+      {
+        name: 'Southern Highlands',
+        href: '/neighborhoods/southern-highlands',
+        description: 'Southwest valley, unincorporated Clark County',
+      },
+      {
+        name: 'Anthem',
+        href: '/neighborhoods/anthem',
+        description: 'Henderson community, 89044 and 89052',
+      },
+      {
+        name: 'Inspirada',
+        href: '/neighborhoods/inspirada',
+        description: 'Henderson master plan, 89044',
+      },
+      {
+        name: 'Seven Hills',
+        href: '/neighborhoods/seven-hills',
+        description: 'Henderson hillside community',
       },
     ],
   },

@@ -57,7 +57,7 @@ export default function ChicagoToLasVegasPage() {
               Chicago → Las Vegas
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Moving from Chicago to Las Vegas?
+              Moving from Chicago to Las Vegas
             </h1>
             <p className="text-xl md:text-2xl text-red-100 mb-8 max-w-3xl mx-auto">
               Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. We

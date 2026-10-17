@@ -112,6 +112,38 @@ export const HERO_IMAGES = {
     src: '/heroes/nevada-taxes.webp',
     alt: 'Single-story desert home in the Las Vegas valley under a clear sky',
   },
+  relocationSpecialist: {
+    src: '/heroes/relocation-specialist.webp',
+    alt: 'Luxury desert estate at dusk with a pool and Red Rock cliffs',
+  },
+  employeeRelocation: {
+    src: '/heroes/employee-relocation.webp',
+    alt: 'Glass residential towers in Las Vegas at blue hour with palm trees',
+  },
+  leavingLasVegas: {
+    src: '/heroes/leaving-las-vegas.webp',
+    alt: 'Luxury Las Vegas home at twilight with the lights on and an empty driveway',
+  },
+  paradise: {
+    src: '/heroes/paradise.webp',
+    alt: 'Las Vegas Strip skyline at sunset beyond a palm-lined road in Paradise',
+  },
+  southernHighlands: {
+    src: '/heroes/southern-highlands.webp',
+    alt: 'Luxury homes and a golf fairway in Southern Highlands, southwest Las Vegas valley',
+  },
+  anthem: {
+    src: '/heroes/anthem.webp',
+    alt: 'Hillside homes beside a golf fairway in Anthem, Henderson',
+  },
+  inspirada: {
+    src: '/heroes/inspirada.webp',
+    alt: 'Contemporary Henderson homes along a linear park in Inspirada',
+  },
+  sevenHills: {
+    src: '/heroes/seven-hills.webp',
+    alt: 'Hillside homes at dusk in Seven Hills, Henderson',
+  },
 } as const;
 
 export type HeroImageKey = keyof typeof HERO_IMAGES;

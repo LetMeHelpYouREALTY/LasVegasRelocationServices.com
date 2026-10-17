@@ -3,16 +3,16 @@ import { withPageImageSeo } from '@/lib/schema';
 import LosAngelesPageClient from './LosAngelesPageClient';
 
 export const metadata: Metadata = withPageImageSeo('fromLosAngeles', {
-  title: 'Los Angeles to Las Vegas Relocation Services | Dr. Jan Duffy',
+  title: { absolute: 'Moving from Los Angeles to Las Vegas | Dr. Jan Duffy' },
   description:
-    'Professional relocation services from Los Angeles to Las Vegas. Expert assistance with housing, the move, and settling into your new Las Vegas home.',
+    'Luxury relocation realtor for buyers moving from Los Angeles to Las Vegas, including Playa Vista. Call (702) 707-7273.',
   keywords:
     'Los Angeles to Las Vegas relocation, LA to Vegas move, California to Nevada relocation, Dr. Jan Duffy, Berkshire Hathaway',
   alternates: {
     canonical: '/relocating-from/los-angeles',
   },
   openGraph: {
-    title: 'Los Angeles to Las Vegas Relocation Services',
+    title: 'Moving from Los Angeles to Las Vegas | Dr. Jan Duffy',
     description:
       'Professional relocation services from Los Angeles to Las Vegas with Dr. Jan Duffy and Berkshire Hathaway.',
   },

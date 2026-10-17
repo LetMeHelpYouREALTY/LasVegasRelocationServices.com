@@ -1,116 +1,90 @@
-import PageHero from "@/components/sections/PageHero";
-import {
-  Building,
-  Home,
-  MapPin,
-  Plane,
-  Shield,
-  Target,
-  Truck,
-  Users,
-} from "lucide-react";
-import type { Metadata } from "next";
+import { Building, Home, MapPin, Plane, Shield, Target, Truck, Users } from 'lucide-react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import PageHero from '@/components/sections/PageHero';
 import { withPageImageSeo } from '@/lib/schema';
-import Link from "next/link";
 
 export const metadata: Metadata = withPageImageSeo('services', {
-  title:
-    "Las Vegas Relocation Services | Residential, Corporate & International",
+  title: { absolute: 'Relocation Services in Las Vegas | Dr. Jan Duffy' },
   description:
-    "Full-service Las Vegas relocation: residential moving, corporate relocation, international moves, investment properties, and settling-in support from Dr. Jan Duffy.",
+    'Luxury relocation realtor in Las Vegas: residential, corporate, employee, and investment searches with Dr. Jan Duffy. Call (702) 707-7273.',
   alternates: {
-    canonical: "/services",
+    canonical: '/services',
   },
 });
 
 const services = [
   {
-    title: "Residential Moving",
-    description:
-      "Complete residential relocation services with personalized attention to every detail.",
+    title: 'Residential Relocation',
+    description: 'The Las Vegas or Henderson home you buy or lease, including a smaller house.',
     icon: Home,
-    href: "/services/residential-moving",
-    features: [
-      "Home search assistance",
-      "Packing & moving coordination",
-      "Settlement support",
-    ],
+    href: '/services/residential-moving',
+    features: ['Purchase or lease', 'Retirement and downsizing', 'Mover stays separate'],
   },
   {
-    title: "Corporate Relocation",
+    title: 'Corporate Relocation',
     description:
-      "Comprehensive corporate relocation solutions for businesses and their employees.",
+      'Realtor for the company, the office lease or purchase, and transferring executives.',
     icon: Building,
-    href: "/services/corporate-relocation",
-    features: [
-      "Employee relocation packages",
-      "Business setup assistance",
-      "Corporate housing solutions",
-    ],
+    href: '/services/corporate-relocation',
+    features: ['Executive home search', 'Office real estate', 'Employee housing'],
   },
   {
-    title: "International Relocation",
-    description:
-      "Expert international relocation services for clients moving to Las Vegas from abroad.",
-    icon: Plane,
-    href: "/services/international-relocation",
-    features: [
-      "Visa & documentation support",
-      "Cultural transition assistance",
-      "International moving coordination",
-    ],
-  },
-  {
-    title: "Moving & Transportation",
-    description:
-      "Professional moving and transportation services for seamless relocations.",
-    icon: Truck,
-    href: "/services/moving-transportation",
-    features: [
-      "Professional movers",
-      "Transportation coordination",
-      "Storage solutions",
-    ],
-  },
-  {
-    title: "Settling-In Services",
-    description:
-      "Comprehensive support to help you settle into your new Las Vegas home.",
-    icon: Shield,
-    href: "/services/settling-in",
-    features: [
-      "Utility setup assistance",
-      "Local service connections",
-      "Community integration",
-    ],
-  },
-  {
-    title: "Relocation Planning",
-    description:
-      "Strategic planning and coordination for successful relocations.",
-    icon: Target,
-    href: "/services/relocation-planning",
-    features: ["Timeline planning", "Budget management", "Risk assessment"],
-  },
-  {
-    title: "Luxury Relocation",
-    description:
-      "Premium relocation services for high-end properties and discerning clients.",
+    title: 'Employee Relocation',
+    description: 'The Las Vegas home for an employee transferring in.',
     icon: Users,
-    href: "/services/luxury-relocation",
-    features: [
-      "White-glove service",
-      "Luxury property expertise",
-      "VIP treatment",
-    ],
+    href: '/services/employee-relocation',
+    features: ['Purchase or lease', 'Start-date timing', 'Henderson or Las Vegas'],
   },
   {
-    title: "Investment Properties",
+    title: 'Relocation Specialist',
+    description: 'Dr. Jan Duffy for an out-of-state move to Las Vegas.',
+    icon: Target,
+    href: '/relocation-specialist',
+    features: ['One realtor', 'Luxury home search', 'Not a moving company'],
+  },
+  {
+    title: 'International Relocation',
     description:
-      "Specialized services for real estate investors and property management.",
+      'The Las Vegas home for a buyer arriving from another country. Not a visa service.',
+    icon: Plane,
+    href: '/services/international-relocation',
+    features: ['Purchase or lease', 'Attorney referral for visas', 'Not a mover'],
+  },
+  {
+    title: 'Moving and the truck',
+    description: 'She is the realtor. A licensed mover prices the truck.',
+    icon: Truck,
+    href: '/services/moving-transportation',
+    features: ['Home search', 'No published mover rate', 'Nevada listing'],
+  },
+  {
+    title: 'Settling-In Services',
+    description: 'Comprehensive support to help you settle into your new Las Vegas home.',
+    icon: Shield,
+    href: '/services/settling-in',
+    features: ['Utility setup assistance', 'Local service connections', 'Community integration'],
+  },
+  {
+    title: 'Relocation Planning',
+    description: 'Strategic planning and coordination for successful relocations.',
+    icon: Target,
+    href: '/services/relocation-planning',
+    features: ['Timeline planning', 'Budget management', 'Risk assessment'],
+  },
+  {
+    title: 'Luxury Relocation',
+    description: 'High-net-worth home search in Las Vegas and Henderson. She shows the house.',
+    icon: Users,
+    href: '/services/luxury-relocation',
+    features: ['Private showings', 'Purchase or lease', 'Nevada listing'],
+  },
+  {
+    title: 'Investment Properties',
+    description: 'Paradise and zip 89109 searches. She does not quote a return.',
     icon: MapPin,
-    href: "/services/investment-properties",
-    features: ["Market analysis", "Investment strategy", "Property management"],
+    href: '/services/investment-properties',
+    features: ['Buyer representation', 'Parcel confirmation', 'No published yield'],
   },
 ];
 
@@ -121,13 +95,10 @@ export default function ServicesPage() {
       <PageHero image="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Relocation Services
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Relocation Services</h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Comprehensive relocation solutions tailored to your needs. From
-              residential moves to corporate relocations, we handle every detail
-              with expertise and care.
+              Dr. Jan Duffy is a luxury relocation realtor with Berkshire Hathaway HomeServices
+              Nevada Properties. She shows the home. A licensed mover handles the truck.
             </p>
           </div>
         </div>
@@ -141,8 +112,8 @@ export default function ServicesPage() {
               Complete Relocation Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our comprehensive range of relocation services
-              designed to make your move seamless and successful.
+              Choose from our comprehensive range of relocation services designed to make your move
+              seamless and successful.
             </p>
           </div>
 
@@ -159,15 +130,10 @@ export default function ServicesPage() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
+                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-center text-sm text-gray-500"
-                    >
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-500">
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                       {feature}
                     </li>
@@ -189,8 +155,8 @@ export default function ServicesPage() {
             Ready to Start Your Relocation?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Contact Dr. Jan Duffy for a free consultation and discover how we
-            can make your relocation seamless and successful.
+            Contact Dr. Jan Duffy for a free consultation and discover how we can make your
+            relocation seamless and successful.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -137,9 +137,9 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
   },
   corporateRelocation: {
     path: '/services/corporate-relocation',
-    name: 'Corporate Relocation to Las Vegas',
+    name: 'Corporate Relocation Las Vegas',
     description:
-      'Corporate relocation coordination for businesses and transferring employees moving to Las Vegas.',
+      'Luxury relocation realtor for companies and transferring executives moving to Las Vegas.',
     kind: 'Service',
     serviceName: 'Corporate Relocation',
     breadcrumbs: [
@@ -373,6 +373,89 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
     breadcrumbs: [
       { label: 'Relocating From', href: '/relocating-from' },
       { label: 'Dallas', href: '/relocating-from/dallas' },
+    ],
+  },
+  relocationSpecialist: {
+    path: '/relocation-specialist',
+    name: 'Las Vegas Relocation Specialist',
+    description:
+      'Dr. Jan Duffy is a luxury relocation realtor for households and executives moving to Las Vegas.',
+    kind: 'ProfilePage',
+    breadcrumbs: [{ label: 'Relocation Specialist', href: '/relocation-specialist' }],
+  },
+  employeeRelocation: {
+    path: '/services/employee-relocation',
+    name: 'Employee Relocation Las Vegas',
+    description:
+      'Home search for employees and executives transferring to Las Vegas and Henderson.',
+    kind: 'Service',
+    serviceName: 'Employee Relocation',
+    breadcrumbs: [
+      { label: 'Services', href: '/services' },
+      { label: 'Employee Relocation', href: '/services/employee-relocation' },
+    ],
+  },
+  leavingLasVegas: {
+    path: '/moving-from-las-vegas',
+    name: 'Moving from Las Vegas',
+    description:
+      'Dr. Jan Duffy lists Las Vegas homes for clients who are leaving Nevada. She is not a California or New York agent.',
+    kind: 'WebPage',
+    breadcrumbs: [{ label: 'Moving from Las Vegas', href: '/moving-from-las-vegas' }],
+  },
+  paradise: {
+    path: '/neighborhoods/paradise',
+    name: 'Moving to Paradise, Nevada',
+    description:
+      'Paradise is the unincorporated Clark County town around the Strip. Includes notes for zip 89109.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Neighborhoods', href: '/neighborhoods' },
+      { label: 'Paradise', href: '/neighborhoods/paradise' },
+    ],
+  },
+  southernHighlands: {
+    path: '/neighborhoods/southern-highlands',
+    name: 'Southern Highlands Las Vegas',
+    description:
+      'Southern Highlands is an unincorporated Clark County community in the southwest valley. Luxury relocation searches with Dr. Jan Duffy.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Neighborhoods', href: '/neighborhoods' },
+      { label: 'Southern Highlands', href: '/neighborhoods/southern-highlands' },
+    ],
+  },
+  anthem: {
+    path: '/neighborhoods/anthem',
+    name: 'Moving to Anthem, Henderson',
+    description:
+      'Anthem is a Henderson community. Addresses commonly use 89044 and 89052. Call Dr. Jan Duffy.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Neighborhoods', href: '/neighborhoods' },
+      { label: 'Anthem', href: '/neighborhoods/anthem' },
+    ],
+  },
+  inspirada: {
+    path: '/neighborhoods/inspirada',
+    name: 'Moving to Inspirada, Henderson',
+    description:
+      'Inspirada is a Henderson master-planned community. The community site lists Henderson, NV 89044.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Neighborhoods', href: '/neighborhoods' },
+      { label: 'Inspirada', href: '/neighborhoods/inspirada' },
+    ],
+  },
+  sevenHills: {
+    path: '/neighborhoods/seven-hills',
+    name: 'Seven Hills Henderson',
+    description:
+      'Seven Hills is a Henderson community. Wikipedia lists ZIP 89052. Sampled assessor plats use tax district 505.',
+    kind: 'WebPage',
+    breadcrumbs: [
+      { label: 'Neighborhoods', href: '/neighborhoods' },
+      { label: 'Seven Hills', href: '/neighborhoods/seven-hills' },
     ],
   },
   nevadaTaxes: {
@@ -690,6 +773,16 @@ export function pageSchemaGraph(heroKey: HeroImageKey) {
   };
 }
 
+function metadataTitleText(title: Metadata['title'], fallback: string): string {
+  if (typeof title === 'string' && title.length > 0) {
+    return title;
+  }
+  if (title && typeof title === 'object' && 'absolute' in title && title.absolute) {
+    return title.absolute;
+  }
+  return fallback;
+}
+
 /**
  * Merge Next.js Metadata with per-page hero + agent image SEO
  * (Open Graph / Twitter images with descriptive alt text).
@@ -717,6 +810,7 @@ export function withPageImageSeo(heroKey: HeroImageKey, metadata: Metadata = {})
     metadata.openGraph && typeof metadata.openGraph === 'object' ? metadata.openGraph : {};
   const existingTwitter =
     metadata.twitter && typeof metadata.twitter === 'object' ? metadata.twitter : {};
+  const titleText = metadataTitleText(metadata.title, seo.name);
 
   return {
     ...metadata,
@@ -729,14 +823,14 @@ export function withPageImageSeo(heroKey: HeroImageKey, metadata: Metadata = {})
       locale: 'en_US',
       url: pageUrl,
       siteName: BUSINESS_NAME,
-      title: (typeof metadata.title === 'string' ? metadata.title : undefined) || seo.name,
+      title: titleText,
       description: metadata.description || seo.description,
       ...existingOg,
       images: 'images' in existingOg && existingOg.images ? existingOg.images : images,
     },
     twitter: {
       card: 'summary_large_image',
-      title: (typeof metadata.title === 'string' ? metadata.title : undefined) || seo.name,
+      title: titleText,
       description: metadata.description || seo.description,
       ...existingTwitter,
       images:

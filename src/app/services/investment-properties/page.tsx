@@ -1,133 +1,71 @@
-"use client";
+'use client';
 
-import PageHero from "@/components/sections/PageHero";
 import {
   Building,
-  Calculator,
   Calendar,
   CheckCircle,
-  DollarSign,
   Home,
+  MapPin,
   Phone,
   Shield,
-  Target,
   TrendingUp,
-} from "lucide-react";
-import { motion } from "@/components/motion";
+} from 'lucide-react';
+import Link from 'next/link';
+import { motion } from '@/components/motion';
+import PageHero from '@/components/sections/PageHero';
 
 const investmentServices = [
   {
-    icon: TrendingUp,
-    title: "Market Analysis",
-    description: "Comprehensive Las Vegas real estate market research",
+    icon: MapPin,
+    title: 'Unincorporated town',
+    description: 'Paradise is a Clark County town around the Strip, not the City of Las Vegas.',
     benefits: [
-      "ROI projections",
-      "Market trends",
-      "Growth potential",
-      "Risk assessment",
+      'County jurisdiction',
+      'Parcel record controls',
+      'Mailing city can still say Las Vegas',
     ],
   },
   {
     icon: Home,
-    title: "Property Sourcing",
-    description: "Exclusive access to off-market investment opportunities",
-    benefits: [
-      "Pre-foreclosure deals",
-      "Wholesale properties",
-      "New construction",
-      "Fixer-uppers",
-    ],
-  },
-  {
-    icon: Calculator,
-    title: "Investment Analysis",
-    description: "Detailed financial modeling and cash flow analysis",
-    benefits: [
-      "Cash flow projections",
-      "Cap rate analysis",
-      "ROI calculations",
-      "Tax implications",
-    ],
+    title: 'Zip 89109',
+    description: '89109 sits on the Clark County zip map in the central valley, near 89119.',
+    benefits: ['Confirm the parcel', 'Not the airport address', 'Ask before you write'],
   },
   {
     icon: Building,
-    title: "Portfolio Management",
-    description: "Ongoing management and optimization of investment properties",
-    benefits: [
-      "Tenant screening",
-      "Property management",
-      "Maintenance coordination",
-      "Performance tracking",
-    ],
-  },
-];
-
-const investmentPackages = [
-  {
-    name: "Starter Investor",
-    price: "Starting at $5,000",
-    description: "Perfect for first-time real estate investors",
-    features: [
-      "Market analysis report",
-      "Property search assistance",
-      "Basic financial modeling",
-      "Closing support",
-      "30-day follow-up",
-    ],
-    bestFor: "First-time investors",
-    cta: "Get Started",
+    title: 'Purchase or lease',
+    description: 'She searches the property and represents you on the contract.',
+    benefits: ['Buyer representation', 'Showings', 'One realtor'],
   },
   {
-    name: "Active Investor",
-    price: "Starting at $15,000",
-    description: "Comprehensive service for experienced investors",
-    features: [
-      "All Starter features",
-      "Portfolio optimization",
-      "Advanced analytics",
-      "Property management setup",
-      "Ongoing support",
-    ],
-    bestFor: "Experienced investors",
-    cta: "Get Started",
-  },
-  {
-    name: "Portfolio Builder",
-    price: "Starting at $25,000",
-    description: "Full-service investment portfolio development",
-    features: [
-      "All Active features",
-      "Multi-property acquisition",
-      "Tax strategy planning",
-      "Exit strategy planning",
-      "Dedicated manager",
-    ],
-    bestFor: "Portfolio builders",
-    cta: "Contact Sales",
+    icon: Shield,
+    title: 'No return quoted',
+    description: 'She does not project a yield, a cap rate, or a rent roll.',
+    benefits: ['You bring the numbers', 'The tax bill is the parcel', 'No published return'],
   },
 ];
 
 const investmentBenefits = [
   {
-    icon: DollarSign,
-    title: "High ROI Potential",
-    description:
-      "Las Vegas offers some of the best investment returns in the nation",
+    icon: Home,
+    title: 'Buyer representation',
+    description: 'She writes the offer. She does not manage the building after closing.',
   },
   {
-    icon: TrendingUp,
-    title: "Market Growth",
-    description: "Consistent appreciation and rental income growth",
+    icon: MapPin,
+    title: 'Paradise guide',
+    description: 'The Paradise page covers the town boundary and zip 89109.',
   },
   {
     icon: Shield,
-    title: "Tax Advantages",
-    description: "Nevada's business-friendly tax environment",
+    title: 'No state income tax',
+    description:
+      'Nevada does not levy a state personal income tax. The parcel tax bill is separate.',
   },
   {
-    icon: Target,
-    title: "Diversification",
-    description: "Add real estate to your investment portfolio",
+    icon: TrendingUp,
+    title: 'The parcel',
+    description: 'District, rent, and expenses come from the property, not from a valley average.',
   },
 ];
 
@@ -154,13 +92,13 @@ export default function InvestmentPropertiesPage() {
                 </span>
               </h1>
               <p className="text-xl text-emerald-100 mb-8 leading-relaxed">
-                Build wealth through Las Vegas real estate investments. Our
-                expert team helps you identify high-ROI opportunities and manage
-                your portfolio for maximum returns.
+                Dr. Jan Duffy searches investment property in Las Vegas, including Paradise and zip
+                89109. She does not quote a return. Call (702) 707-7273.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+17027077273"
+                <a
+                  href="tel:+17027077273"
                   className="bg-white text-emerald-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
@@ -177,7 +115,6 @@ export default function InvestmentPropertiesPage() {
                 </a>
               </div>
             </motion.div>
-
           </div>
         </div>
       </PageHero>
@@ -193,11 +130,19 @@ export default function InvestmentPropertiesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Investment Property Services
+              Paradise and zip 89109
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive services designed to maximize your real estate
-              investment returns
+              Paradise is the unincorporated Clark County town around the Strip. Zip 89109 sits in
+              that central valley on the Clark County zip map. Confirm the parcel before you write.
+              The{' '}
+              <Link
+                className="text-emerald-700 font-semibold hover:underline"
+                href="/neighborhoods/paradise"
+              >
+                Paradise guide
+              </Link>{' '}
+              has the details.
             </p>
           </motion.div>
 
@@ -214,16 +159,11 @@ export default function InvestmentPropertiesPage() {
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-emerald-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.benefits.map((benefit) => (
-                    <li
-                      key={benefit}
-                      className="flex items-center gap-2 text-sm text-gray-700"
-                    >
+                    <li key={benefit} className="flex items-center gap-2 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-emerald-500" />
                       {benefit}
                     </li>
@@ -235,65 +175,16 @@ export default function InvestmentPropertiesPage() {
         </div>
       </section>
 
-      {/* Investment Packages */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Choose Your Investment Package
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select the perfect investment service level for your goals and
-              experience
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {investmentPackages.map((pkg, index) => (
-              <motion.div
-                key={pkg.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-lg border-2 border-emerald-100 hover:border-emerald-300 transition-colors"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {pkg.name}
-                </h3>
-                <div className="text-3xl font-bold text-emerald-600 mb-4">
-                  {pkg.price}
-                </div>
-                <p className="text-gray-600 mb-6">{pkg.description}</p>
-
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="text-sm text-gray-500 mb-6">
-                  <strong>Best for:</strong> {pkg.bestFor}
-                </div>
-
-                <button
-                  type="button"
-                  className="w-full bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
-                >
-                  {pkg.cta}
-                </button>
-              </motion.div>
-            ))}
-          </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            What she will and will not quote
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            She searches the property and represents you on the purchase or the lease. She does not
+            publish a return, a cap rate, or a package price. Bring the rent roll if you have one.
+            Call (702) 707-7273.
+          </p>
         </div>
       </section>
 
@@ -311,8 +202,7 @@ export default function InvestmentPropertiesPage() {
               Why Invest in Las Vegas Real Estate?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the advantages that make Las Vegas a top investment
-              destination
+              Discover the advantages that make Las Vegas a top investment destination
             </p>
           </motion.div>
 
@@ -329,16 +219,13 @@ export default function InvestmentPropertiesPage() {
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-emerald-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {benefit.title}
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white">
@@ -353,8 +240,8 @@ export default function InvestmentPropertiesPage() {
               Ready to Build Your Investment Portfolio?
             </h2>
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-              Start building wealth through Las Vegas real estate investments
-              today
+              Call to search Paradise, 89109, and other Las Vegas investment property. She does not
+              quote a return.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

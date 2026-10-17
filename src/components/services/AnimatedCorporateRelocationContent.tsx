@@ -1,129 +1,65 @@
-"use client";
+'use client';
 
-import PageHero from "@/components/sections/PageHero";
 import {
   Building,
   Calendar,
   CheckCircle,
-  DollarSign,
   Globe,
   Phone,
   Shield,
   TrendingUp,
   Users,
-} from "lucide-react";
-import { motion } from "@/components/motion";
+} from 'lucide-react';
+import { motion } from '@/components/motion';
+import PageHero from '@/components/sections/PageHero';
 
 const serviceFeatures = [
   {
     icon: Building,
-    title: "Business Relocation Planning",
-    description:
-      "Comprehensive strategy development for your entire business move",
-    benefits: ["Minimize downtime", "Reduce costs", "Maintain productivity"],
+    title: 'Business Relocation Planning',
+    description: 'Comprehensive strategy development for your entire business move',
+    benefits: ['Minimize downtime', 'Reduce costs', 'Maintain productivity'],
   },
   {
     icon: Users,
-    title: "Employee Relocation Support",
-    description:
-      "Full-service support for relocating employees and their families",
-    benefits: [
-      "Housing assistance",
-      "School district guidance",
-      "Community integration",
-    ],
+    title: 'Employee Relocation Support',
+    description: 'Home search for employees and executives transferring to Las Vegas',
+    benefits: ['Purchase or lease', 'Showings on their schedule', 'One realtor'],
   },
   {
     icon: Globe,
-    title: "Vendor & Service Coordination",
-    description:
-      "Coordinate all moving services and local vendor relationships",
-    benefits: [
-      "Single point of contact",
-      "Quality assurance",
-      "Cost optimization",
-    ],
+    title: 'Vendor & Service Coordination',
+    description: 'Introduces a licensed mover for furniture, fixtures, and equipment',
+    benefits: ['Single point of contact', 'Quality assurance', 'Cost optimization'],
   },
   {
     icon: Shield,
-    title: "Risk Management",
-    description:
-      "Comprehensive insurance and liability protection for your move",
-    benefits: ["Full coverage", "Compliance assurance", "Peace of mind"],
-  },
-];
-
-const corporatePackages = [
-  {
-    name: "Essential Corporate",
-    price: "Starting at $2,500",
-    description: "Basic corporate relocation support for small businesses",
-    features: [
-      "Relocation planning consultation",
-      "Vendor recommendations",
-      "Basic employee support",
-      "Move coordination",
-      "Post-move follow-up",
-    ],
-    bestFor: "Small businesses (1-10 employees)",
-    cta: "Get Quote",
-  },
-  {
-    name: "Professional Corporate",
-    price: "Starting at $5,000",
-    description: "Comprehensive relocation services for growing companies",
-    features: [
-      "Full relocation management",
-      "Employee relocation packages",
-      "Housing assistance",
-      "School district analysis",
-      "Community integration support",
-      "Ongoing support",
-    ],
-    bestFor: "Medium businesses (10-50 employees)",
-    cta: "Get Quote",
-  },
-  {
-    name: "Enterprise Corporate",
-    price: "Custom Pricing",
-    description: "Full-service enterprise relocation with dedicated support",
-    features: [
-      "Dedicated relocation manager",
-      "Custom employee packages",
-      "Luxury housing options",
-      "Executive relocation services",
-      "Cultural integration programs",
-      "24/7 support hotline",
-    ],
-    bestFor: "Large corporations (50+ employees)",
-    cta: "Contact Sales",
+    title: 'Office real estate',
+    description: 'Lease or purchase of the Las Vegas office, separate from the truck',
+    benefits: ['Office search', 'Employee housing', 'One point of contact'],
   },
 ];
 
 const benefits = [
   {
     icon: TrendingUp,
-    title: "Increased Productivity",
-    description:
-      "Minimize downtime and maintain business operations during relocation",
-  },
-  {
-    icon: DollarSign,
-    title: "Cost Optimization",
-    description:
-      "Reduce relocation costs through expert planning and vendor management",
+    title: 'Increased Productivity',
+    description: 'Minimize downtime and maintain business operations during relocation',
   },
   {
     icon: Users,
-    title: "Employee Retention",
-    description:
-      "Improve employee satisfaction and retention through smooth transitions",
+    title: 'Employee housing',
+    description: 'A separate search for each transferring employee or executive',
+  },
+  {
+    icon: Building,
+    title: 'Office lease or purchase',
+    description: 'The Las Vegas workplace, handled as real estate',
   },
   {
     icon: Shield,
-    title: "Risk Mitigation",
-    description:
-      "Comprehensive insurance and compliance management for your move",
+    title: 'Mover stays separate',
+    description: 'Furniture, fixtures, equipment, and IT ship with a licensed mover',
   },
 ];
 
@@ -140,19 +76,17 @@ export default function AnimatedCorporateRelocationContent() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Corporate
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
-                  Relocation Services
-                </span>
+                Corporate Relocation Las Vegas
               </h1>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Professional corporate relocation services designed for
-                businesses. We help you minimize downtime, reduce costs, and
-                ensure a smooth transition for your entire organization.
+                Dr. Jan Duffy is the relocation realtor for the company and its transferring
+                executives. She handles the home search and the purchase or lease. A licensed mover
+                handles the furniture.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.a href="tel:+17027077273"
+                <motion.a
+                  href="tel:+17027077273"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -161,11 +95,13 @@ export default function AnimatedCorporateRelocationContent() {
                   <Phone className="w-5 h-5" />
                   Call (702) 707-7273
                 </motion.a>
-                <motion.a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
+                <motion.a
+                  href="https://calendly.com/drjanduffy/showing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  
                   className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-900 transition-colors flex items-center gap-2"
                 >
                   <Calendar className="w-5 h-5" />
@@ -173,7 +109,6 @@ export default function AnimatedCorporateRelocationContent() {
                 </motion.a>
               </div>
             </motion.div>
-
           </div>
         </div>
       </PageHero>
@@ -192,9 +127,8 @@ export default function AnimatedCorporateRelocationContent() {
               Complete Corporate Relocation Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From initial planning to post-move support, we provide
-              comprehensive corporate relocation services that minimize
-              disruption to your business.
+              From initial planning to post-move support, we provide comprehensive corporate
+              relocation services that minimize disruption to your business.
             </p>
           </motion.div>
 
@@ -211,16 +145,11 @@ export default function AnimatedCorporateRelocationContent() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit) => (
-                    <li
-                      key={benefit}
-                      className="flex items-center gap-2 text-sm text-gray-600"
-                    >
+                    <li key={benefit} className="flex items-center gap-2 text-sm text-gray-600">
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span>{benefit}</span>
                     </li>
@@ -232,66 +161,23 @@ export default function AnimatedCorporateRelocationContent() {
         </div>
       </section>
 
-      {/* Corporate Packages */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Corporate Relocation Packages
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the package that best fits your business size and
-              relocation needs. All packages include our expert guidance and
-              support.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {corporatePackages.map((pkg, index) => (
-              <motion.div
-                key={pkg.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {pkg.name}
-                </h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">
-                  {pkg.price}
-                </div>
-                <p className="text-gray-600 mb-6">{pkg.description}</p>
-
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="text-sm text-gray-500 mb-6">
-                  <strong>Best for:</strong> {pkg.bestFor}
-                </div>
-
-                <button
-                  type="button"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  {pkg.cta}
-                </button>
-              </motion.div>
-            ))}
-          </div>
+      <section className="py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Office, FF&amp;E, IT, and warehouse moves
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            Dr. Jan Duffy coordinates the office lease or purchase and the employees’ homes. A
+            licensed mover handles furniture, fixtures, equipment, the server room, and warehouse
+            goods.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            Illinois companies sending an office to Nevada use the same split. She is the Las Vegas
+            realtor. She does not invoice a moving package and she does not publish a mover’s rate.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Employee home searches have their own page. Call (702) 707-7273 to start the housing.
+          </p>
         </div>
       </section>
 
@@ -309,9 +195,8 @@ export default function AnimatedCorporateRelocationContent() {
               Why Choose Our Corporate Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the benefits of professional corporate relocation
-              expertise that keeps your business running smoothly during
-              transitions.
+              Experience the benefits of professional corporate relocation expertise that keeps your
+              business running smoothly during transitions.
             </p>
           </motion.div>
 
@@ -328,16 +213,13 @@ export default function AnimatedCorporateRelocationContent() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {benefit.title}
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
@@ -352,12 +234,13 @@ export default function AnimatedCorporateRelocationContent() {
               Ready to Plan Your Corporate Relocation?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Let's discuss your business relocation needs and create a
-              customized plan that minimizes disruption and maximizes success.
+              Let's discuss your business relocation needs and create a customized plan that
+              minimizes disruption and maximizes success.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a href="tel:+17027077273"
+              <motion.a
+                href="tel:+17027077273"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -367,12 +250,14 @@ export default function AnimatedCorporateRelocationContent() {
                 <Phone className="w-5 h-5" />
                 Call (702) 707-7273
               </motion.a>
-              <motion.a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
+              <motion.a
+                href="https://calendly.com/drjanduffy/showing"
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg transition-colors flex items-center gap-2 justify-center"
               >
                 <Calendar className="w-5 h-5" />

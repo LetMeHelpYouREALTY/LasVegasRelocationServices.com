@@ -1,136 +1,56 @@
-"use client";
+'use client';
 
-import PageHero from "@/components/sections/PageHero";
-import {
-  Award,
-  Calendar,
-  CheckCircle,
-  Crown,
-  Home,
-  Phone,
-  Plane,
-  Shield,
-  Star,
-} from "lucide-react";
-import { motion } from "@/components/motion";
+import { Award, Calendar, CheckCircle, Crown, Home, Phone, Shield } from 'lucide-react';
+import { motion } from '@/components/motion';
+import PageHero from '@/components/sections/PageHero';
 
 const luxuryServices = [
   {
-    icon: Crown,
-    title: "Concierge Relocation",
-    description: "White-glove service with personal relocation managers",
-    benefits: [
-      "Dedicated relocation specialist",
-      "Priority scheduling",
-      "VIP treatment",
-      "24/7 support",
-    ],
-  },
-  {
     icon: Home,
-    title: "Luxury Property Search",
-    description: "Exclusive access to premium Las Vegas properties",
-    benefits: [
-      "Off-market listings",
-      "Custom property tours",
-      "Luxury neighborhood access",
-      "Investment analysis",
-    ],
+    title: 'Luxury home search',
+    description: 'Houses and high-rises in Las Vegas and Henderson.',
+    benefits: ['Purchase or lease', 'Private showings', 'The areas you name'],
   },
   {
-    icon: Plane,
-    title: "Private Travel Coordination",
-    description: "First-class travel arrangements and logistics",
-    benefits: [
-      "Private jet options",
-      "Luxury car service",
-      "Hotel concierge",
-      "Travel insurance",
-    ],
+    icon: Crown,
+    title: 'Buyer representation',
+    description: 'She writes the offer on the home you choose.',
+    benefits: ['One realtor', 'Berkshire Hathaway HomeServices', 'Nevada license'],
   },
   {
     icon: Shield,
-    title: "Security & Privacy",
-    description: "Complete confidentiality and security measures",
-    benefits: [
-      "NDA agreements",
-      "Secure communications",
-      "Private viewings",
-      "Discrete handling",
-    ],
-  },
-];
-
-const luxuryPackages = [
-  {
-    name: "Elite Package",
-    price: "Starting at $25,000",
-    description: "Premium relocation service for discerning clients",
-    features: [
-      "Personal relocation manager",
-      "Luxury property search",
-      "Private travel coordination",
-      "Settling-in services",
-      "Ongoing support",
-    ],
-    bestFor: "High-net-worth individuals",
-    cta: "Contact Sales",
+    title: 'A quiet search',
+    description: 'Showings stay between you and the listing.',
+    benefits: ['Private appointments', 'No published search', 'Direct line'],
   },
   {
-    name: "Royal Package",
-    price: "Starting at $50,000",
-    description: "Ultimate luxury relocation experience",
-    features: [
-      "All Elite features",
-      "Private jet coordination",
-      "Luxury car collection",
-      "Fine art handling",
-      "Celebrity-level privacy",
-      "24/7 concierge",
-    ],
-    bestFor: "Celebrities and executives",
-    cta: "Contact Sales",
-  },
-  {
-    name: "Corporate Elite",
-    price: "Starting at $100,000",
-    description: "Executive relocation for C-suite professionals",
-    features: [
-      "All Royal features",
-      "Corporate housing",
-      "Team relocation",
-      "Business setup",
-      "Networking events",
-      "Ongoing support",
-    ],
-    bestFor: "Corporate executives",
-    cta: "Contact Sales",
+    icon: Award,
+    title: 'Nevada listing',
+    description: 'If the home you are leaving is in Nevada, she can list it.',
+    benefits: ['Seller representation', 'Nevada only', 'Call to start'],
   },
 ];
 
 const luxuryBenefits = [
   {
-    icon: Crown,
-    title: "Exclusive Access",
-    description:
-      "Access to properties and services not available to the general public",
+    icon: Home,
+    title: 'The house',
+    description: 'She shows the home. She does not book travel or drive the truck.',
   },
   {
-    icon: Star,
-    title: "Celebrity Treatment",
-    description:
-      "VIP service level with priority scheduling and personal attention",
+    icon: Crown,
+    title: 'The contract',
+    description: 'Purchase, lease, or a Nevada listing. One brokerage.',
   },
   {
     icon: Shield,
-    title: "Complete Privacy",
-    description:
-      "Absolute confidentiality and discretion throughout the process",
+    title: 'Private showings',
+    description: 'Appointments are scheduled with you. The search is not a public post.',
   },
   {
     icon: Award,
-    title: "Premium Quality",
-    description: "Highest standards of service and attention to detail",
+    title: 'The areas',
+    description: 'Summerlin, Henderson, Anthem, Seven Hills, and Southern Highlands.',
   },
 ];
 
@@ -151,20 +71,16 @@ export default function LuxuryRelocationPage() {
                 Luxury Relocation Services
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Luxury Relocation
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-indigo-200">
-                  Services
-                </span>
+                Luxury Relocation in Las Vegas
               </h1>
               <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-                Experience the epitome of luxury relocation with our exclusive
-                services designed for discerning clients. From private jet
-                coordination to VIP property access, we deliver excellence at
-                every step.
+                Dr. Jan Duffy is the realtor for high-net-worth buyers moving to Las Vegas and
+                Henderson. She shows the house. She does not book the jet or drive the truck.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+17027077273"
+                <a
+                  href="tel:+17027077273"
                   className="bg-white text-purple-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
@@ -181,7 +97,6 @@ export default function LuxuryRelocationPage() {
                 </a>
               </div>
             </motion.div>
-
           </div>
         </div>
       </PageHero>
@@ -197,11 +112,11 @@ export default function LuxuryRelocationPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Luxury Relocation Services
+              High-net-worth relocation
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the highest level of service with our exclusive luxury
-              relocation packages
+              She shows the house and represents you on the purchase, the lease, or the Nevada
+              listing. She does not sell a moving package.
             </p>
           </motion.div>
 
@@ -218,16 +133,11 @@ export default function LuxuryRelocationPage() {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.benefits.map((benefit) => (
-                    <li
-                      key={benefit}
-                      className="flex items-center gap-2 text-sm text-gray-700"
-                    >
+                    <li key={benefit} className="flex items-center gap-2 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-purple-500" />
                       {benefit}
                     </li>
@@ -239,64 +149,16 @@ export default function LuxuryRelocationPage() {
         </div>
       </section>
 
-      {/* Luxury Packages */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Choose Your Luxury Package
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select the perfect luxury relocation experience for your needs
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {luxuryPackages.map((pkg, index) => (
-              <motion.div
-                key={pkg.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-lg border-2 border-purple-100 hover:border-purple-300 transition-colors"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {pkg.name}
-                </h3>
-                <div className="text-3xl font-bold text-purple-600 mb-4">
-                  {pkg.price}
-                </div>
-                <p className="text-gray-600 mb-6">{pkg.description}</p>
-
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="text-sm text-gray-500 mb-6">
-                  <strong>Best for:</strong> {pkg.bestFor}
-                </div>
-
-                <button
-                  type="button"
-                  className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-                >
-                  {pkg.cta}
-                </button>
-              </motion.div>
-            ))}
-          </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            What a luxury relocation includes
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Dr. Jan Duffy shows the house. Berkshire Hathaway HomeServices Nevada Properties is the
+            brokerage. She does not book travel, handle fine art, or invoice a moving package. Call
+            (702) 707-7273.
+          </p>
         </div>
       </section>
 
@@ -331,16 +193,13 @@ export default function LuxuryRelocationPage() {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {benefit.title}
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
@@ -351,12 +210,10 @@ export default function LuxuryRelocationPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready for Luxury Relocation?
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready for Luxury Relocation?</h2>
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Experience the ultimate in relocation services with our exclusive
-              luxury packages
+              Call to tour a Las Vegas or Henderson home. She is the realtor for the purchase, the
+              lease, or the Nevada listing.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

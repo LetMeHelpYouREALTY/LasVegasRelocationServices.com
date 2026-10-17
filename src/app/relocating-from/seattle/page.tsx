@@ -57,9 +57,9 @@ export default function SeattleToLasVegasPage() {
               Seattle → Las Vegas
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Moving from Seattle to Las Vegas?
+              Moving from Seattle to Las Vegas
             </h1>
-            <p className="text-xl md:text-2xl sky-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-sky-100 mb-8 max-w-3xl mx-auto">
               Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. We
               understand the Seattle lifestyle and will help you find your perfect Las Vegas home.
             </p>

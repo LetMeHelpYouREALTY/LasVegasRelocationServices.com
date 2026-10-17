@@ -32,6 +32,16 @@ const AREAS: AreaCard[] = [
     detail: 'Parks, recreation programs, and a short airport drive',
   },
   {
+    id: 'paradise',
+    name: 'Paradise',
+    href: '/neighborhoods/paradise',
+    src: '/heroes/paradise.webp',
+    alt: 'Las Vegas Strip skyline at sunset beyond a palm-lined road in Paradise',
+    summary:
+      'Unincorporated Clark County town around the Strip. High-rise and investment searches, including zip 89109.',
+    detail: 'Not the City of Las Vegas. The parcel record controls.',
+  },
+  {
     id: 'green-valley',
     name: 'Green Valley',
     href: '/neighborhoods/green-valley',
@@ -51,18 +61,37 @@ const AREAS: AreaCard[] = [
     detail: 'New homes and mountain views',
   },
   {
+    id: 'southern-highlands',
+    name: 'Southern Highlands',
+    href: '/neighborhoods/southern-highlands',
+    src: '/heroes/southern-highlands.webp',
+    alt: 'Luxury homes and a golf fairway in Southern Highlands, southwest Las Vegas valley',
+    summary:
+      'Unincorporated Clark County in the southwest valley. The 1998 development agreement caps the plan at 8,500 homes and one private golf course.',
+    detail: 'Not Henderson. Confirm the parcel zip.',
+  },
+  {
     id: 'anthem',
     name: 'Anthem',
-    href: '/neighborhoods#anthem',
+    href: '/neighborhoods/anthem',
     src: '/sections/anthem.webp',
     alt: 'Anthem homes in Henderson beside a golf fairway and desert mountain ridge',
     summary: 'Henderson community with golf fairways and resort-style landscaping.',
     detail: 'Golf fairways and mountain views',
   },
   {
+    id: 'seven-hills',
+    name: 'Seven Hills',
+    href: '/neighborhoods/seven-hills',
+    src: '/heroes/seven-hills.webp',
+    alt: 'Hillside homes at dusk in Seven Hills, Henderson',
+    summary: 'Henderson community near Anthem. The commonly cited zip is 89052.',
+    detail: 'Sampled plats use tax district 505. Your parcel can differ.',
+  },
+  {
     id: 'inspirada',
     name: 'Inspirada',
-    href: '/neighborhoods#inspirada',
+    href: '/neighborhoods/inspirada',
     src: '/sections/inspirada.webp',
     alt: 'Contemporary two-story homes and a linear park in Inspirada, Henderson',
     summary: 'Contemporary Henderson homes along a linear park, with mountains to the east.',
@@ -79,8 +108,8 @@ export default function NeighborhoodAreaCards() {
             Popular Las Vegas Areas
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Summerlin, Henderson, and Green Valley are the areas relocating buyers ask about most.
-            Median prices in these three typically run from the mid-$400Ks to the $600Ks.
+            Summerlin, Henderson, Southern Highlands, Anthem, and Inspirada are the areas relocating
+            buyers ask about. The parcel record controls price and tax.
           </p>
         </div>
 

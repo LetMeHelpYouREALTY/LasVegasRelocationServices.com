@@ -69,7 +69,10 @@ Yes. International moves to Las Vegas are supported through the Berkshire Hathaw
 - ${SITE_URL}/services/moving-transportation — Moving and transportation logistics
 - ${SITE_URL}/services/settling-in — Post-move settling-in support
 - ${SITE_URL}/services/relocation-planning — Relocation planning and timelines
-- ${SITE_URL}/services/luxury-relocation — Luxury home relocation
+- ${SITE_URL}/services/luxury-relocation — High-net-worth and luxury relocation realtor
+- ${SITE_URL}/services/employee-relocation — Employee and executive home search
+- ${SITE_URL}/relocation-specialist — Las Vegas relocation specialist, Dr. Jan Duffy
+- ${SITE_URL}/moving-from-las-vegas — Lists the Nevada home for clients leaving for San Diego or New York. Not a California or New York agent. Not a mover.
 
 ### City Relocation Guides (origin city → Las Vegas)
 - ${SITE_URL}/relocating-from — Hub for all origin cities
@@ -83,10 +86,15 @@ Yes. International moves to Las Vegas are supported through the Berkshire Hathaw
 - ${SITE_URL}/relocating-from/dallas — Moving from Dallas to Las Vegas. Both states have no personal income tax. Nonstop flights DFW to Harry Reid.
 
 ### Neighborhood and tax guides
-- ${SITE_URL}/neighborhoods — Hub for Summerlin, Henderson, Green Valley, Centennial Hills, Anthem, and Inspirada
+- ${SITE_URL}/neighborhoods — Hub for Summerlin, Henderson, Green Valley, Southern Highlands, Anthem, Inspirada, and Seven Hills
 - ${SITE_URL}/neighborhoods/summerlin — 250+ parks, 150+ miles of trails, Downtown Summerlin, district 421 tax example
 - ${SITE_URL}/neighborhoods/henderson — 20–30 minute drive to the Strip and airport, district 505 tax example
 - ${SITE_URL}/neighborhoods/green-valley — Henderson community on Green Valley Parkway
+- ${SITE_URL}/neighborhoods/paradise — Unincorporated Clark County town around the Strip. Zip 89109 notes. Not a mover.
+- ${SITE_URL}/neighborhoods/southern-highlands — Unincorporated Clark County. Planning library: about 2,299 acres, 1998 development agreement, one private golf course and 8,500 homes maximum.
+- ${SITE_URL}/neighborhoods/anthem — Henderson. Addresses commonly use 89044 and 89052. Sun City Anthem is age-restricted.
+- ${SITE_URL}/neighborhoods/inspirada — Henderson master plan. Community site lists Henderson, NV 89044.
+- ${SITE_URL}/neighborhoods/seven-hills — Henderson. Commonly zip 89052. Sampled assessor plats use tax district 505.
 - ${SITE_URL}/guides/nevada-taxes — No state wage tax; Clark County property tax by district; NRS 361.225 assessment ratio
 
 ## Attribution

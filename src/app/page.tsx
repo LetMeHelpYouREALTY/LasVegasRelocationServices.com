@@ -32,7 +32,7 @@ export default function HomePage() {
     {
       question: 'How much does it cost to move from major US cities to Las Vegas?',
       answer:
-        'Moving costs vary by distance and household size. From Los Angeles: $2,000-$5,000. From Chicago: $3,000-$7,000. From New York: $4,000-$8,000. From Miami: $3,500-$7,500. These estimates include professional movers, packing services, and transportation. Las Vegas offers significant long-term savings with no state income tax and lower housing costs.',
+        'Dr. Jan Duffy does not quote a moving-company rate. A licensed mover prices the truck. Her work is the Las Vegas or Henderson home. Nevada does not levy a state personal income tax. The parcel tax bill is separate.',
     },
     {
       question: "What's the job market like in Las Vegas compared to other major cities?",
@@ -129,10 +129,12 @@ export default function HomePage() {
           <p className="mb-4 text-sm font-semibold tracking-wide text-white/90 md:text-base">
             {AGENT_NAME} · {BROKERAGE}
           </p>
-          <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">Moving to Las Vegas?</h1>
+          <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+            Las Vegas Relocation Services
+          </h1>
           <p className="mx-auto mb-8 max-w-2xl text-xl text-white md:text-2xl lg:mx-0">
-            Call {PHONE_DISPLAY} — expert relocation guidance for households and businesses moving
-            to Las Vegas and Henderson.
+            Dr. Jan Duffy is a luxury relocation realtor for households and executives moving to Las
+            Vegas and Henderson. Call {PHONE_DISPLAY}.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
             <a
@@ -244,6 +246,23 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+          <ul className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4 text-left">
+            {[
+              { href: '/relocation-specialist', label: 'Las Vegas relocation specialist' },
+              { href: '/services/corporate-relocation', label: 'Corporate relocation Las Vegas' },
+              { href: '/services/employee-relocation', label: 'Employee relocation' },
+              { href: '/moving-from-las-vegas', label: 'Moving from Las Vegas' },
+            ].map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="block rounded-xl border border-gray-200 px-5 py-4 font-semibold text-[#0A2540] hover:border-blue-400"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

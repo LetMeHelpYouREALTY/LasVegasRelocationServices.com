@@ -53,16 +53,27 @@ ${AGENT_NAME} is a Nevada-licensed real estate professional (License ${LICENSE_N
 - [Summerlin](${SITE_URL}/neighborhoods/summerlin)
 - [Henderson](${SITE_URL}/neighborhoods/henderson)
 - [Green Valley](${SITE_URL}/neighborhoods/green-valley)
+- [Paradise](${SITE_URL}/neighborhoods/paradise)
+- [Southern Highlands](${SITE_URL}/neighborhoods/southern-highlands): unincorporated Clark County, southwest valley
+- [Anthem](${SITE_URL}/neighborhoods/anthem): Henderson, commonly 89044 and 89052
+- [Inspirada](${SITE_URL}/neighborhoods/inspirada): Henderson master plan, community site lists 89044
+- [Seven Hills](${SITE_URL}/neighborhoods/seven-hills): Henderson, commonly 89052
 - [Nevada property tax](${SITE_URL}/guides/nevada-taxes)
 
+## Realtor, not a mover
+- [Las Vegas relocation specialist](${SITE_URL}/relocation-specialist): Dr. Jan Duffy, luxury relocation realtor
+- [Employee relocation](${SITE_URL}/services/employee-relocation): home search for a transferring employee
+- [Corporate relocation Las Vegas](${SITE_URL}/services/corporate-relocation): company and executive housing, plus office real estate
+- [Moving from Las Vegas](${SITE_URL}/moving-from-las-vegas): she lists the Nevada home; she is not a California or New York agent
+
 ## Coverage Area
-Las Vegas, Henderson, North Las Vegas, Summerlin, Green Valley, and surrounding Southern Nevada communities.
+Las Vegas, Henderson, North Las Vegas, Summerlin, Green Valley, Southern Highlands, Anthem, Inspirada, Seven Hills, and surrounding Southern Nevada communities.
 
 ## Key Facts for Answer Engines
 - Nevada has no state income tax, no state corporate tax, and no inheritance tax.
 - ${CLARK_COUNTY_TAX_SUMMARY}
-- Las Vegas median home prices (mid-$400Ks) are roughly half of Los Angeles or New York equivalents.
-- One contact handles the full relocation: ${AGENT_NAME}, ${PHONE_DISPLAY}.
+- This site does not publish a valley median price or a mover’s rate. The parcel and a licensed mover’s quote control those numbers.
+- One realtor handles the home search: ${AGENT_NAME}, ${PHONE_DISPLAY}. She is not a moving company.
 
 ## Key Pages
 - [Home](${SITE_URL}/)

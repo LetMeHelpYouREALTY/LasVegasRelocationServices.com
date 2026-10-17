@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { withPageImageSeo } from '@/lib/schema';
 
 export const metadata: Metadata = withPageImageSeo('fromSeattle', {
-  title: "Seattle to Las Vegas Relocation Services | Dr. Jan Duffy",
+  title: { absolute: 'Moving from Seattle to Las Vegas | Dr. Jan Duffy' },
   description:
-    "Professional relocation services from Seattle to Las Vegas. Expert assistance with housing, moving logistics, and settling into your new Las Vegas home.",
+    'Luxury relocation realtor for buyers moving from Seattle to Las Vegas. Call (702) 707-7273.',
   alternates: {
     canonical: "/relocating-from/seattle",
   },

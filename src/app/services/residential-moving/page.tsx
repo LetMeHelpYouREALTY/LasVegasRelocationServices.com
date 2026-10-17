@@ -1,126 +1,56 @@
-"use client";
+'use client';
 
-import PageHero from "@/components/sections/PageHero";
-import {
-  Calendar,
-  CheckCircle,
-  Heart,
-  Home,
-  MapPin,
-  Phone,
-  School,
-  Shield,
-  Truck,
-  Users,
-} from "lucide-react";
-import { motion } from "@/components/motion";
+import { CheckCircle, Home, MapPin, Phone, Shield } from 'lucide-react';
+import { motion } from '@/components/motion';
+import PageHero from '@/components/sections/PageHero';
 
 const serviceFeatures = [
   {
     icon: Home,
-    title: "Home Finding Services",
-    description: "Expert assistance finding your perfect Las Vegas home",
-    benefits: [
-      "Neighborhood matching",
-      "School district analysis",
-      "Market insights",
-    ],
-  },
-  {
-    icon: School,
-    title: "School District Guidance",
-    description: "Comprehensive school information and enrollment support",
-    benefits: ["District ratings", "Enrollment assistance", "School tours"],
-  },
-  {
-    icon: Heart,
-    title: "Community Integration",
-    description: "Help your family feel at home in Las Vegas",
-    benefits: [
-      "Local connections",
-      "Activity recommendations",
-      "Cultural integration",
-    ],
-  },
-  {
-    icon: Truck,
-    title: "Moving Coordination",
-    description: "Full-service moving day coordination and support",
-    benefits: [
-      "Professional movers",
-      "Packing services",
-      "Unpacking assistance",
-    ],
-  },
-];
-
-const residentialPackages = [
-  {
-    name: "Essential Family",
-    price: "Starting at $1,500",
-    description: "Basic residential relocation support for families",
-    features: [
-      "Home finding consultation",
-      "School district information",
-      "Moving day coordination",
-      "Basic settling-in support",
-    ],
-    bestFor: "Small families (1-2 children)",
-    cta: "Get Quote",
-  },
-  {
-    name: "Complete Family",
-    price: "Starting at $3,000",
-    description: "Comprehensive family relocation services",
-    features: [
-      "Full home finding service",
-      "School enrollment assistance",
-      "Community integration support",
-      "Moving coordination",
-      "Settling-in assistance",
-      "Ongoing support",
-    ],
-    bestFor: "Growing families (2+ children)",
-    cta: "Get Quote",
-  },
-  {
-    name: "Premium Family",
-    price: "Starting at $5,000",
-    description: "Luxury family relocation with concierge service",
-    features: [
-      "Dedicated relocation manager",
-      "Luxury home options",
-      "Private school assistance",
-      "Concierge services",
-      "Cultural integration programs",
-      "24/7 family support",
-    ],
-    bestFor: "Families seeking premium service",
-    cta: "Contact Sales",
-  },
-];
-
-const familyBenefits = [
-  {
-    icon: Users,
-    title: "Family-Focused Approach",
-    description: "Every decision made with your family's needs in mind",
-  },
-  {
-    icon: School,
-    title: "Education Excellence",
-    description:
-      "Access to top-rated school districts and educational opportunities",
+    title: 'Purchase or lease',
+    description: 'She represents you on the Las Vegas or Henderson home.',
+    benefits: ['Buyer representation', 'Lease search', 'Showings you schedule'],
   },
   {
     icon: MapPin,
-    title: "Perfect Neighborhoods",
-    description: "Find communities that match your lifestyle and preferences",
+    title: 'The area you name',
+    description: 'Summerlin, Henderson, Southern Highlands, Anthem, or Inspirada.',
+    benefits: ['Neighborhood guides', 'Parcel confirmation', 'One realtor'],
+  },
+  {
+    icon: Home,
+    title: 'Retirement and downsizing',
+    description: 'A smaller house, with less to maintain, bought or leased.',
+    benefits: ['Size you set', 'One story or two', 'Timing you choose'],
   },
   {
     icon: Shield,
-    title: "Stress-Free Moving",
-    description: "Let us handle the details while you focus on your family",
+    title: 'Mover stays separate',
+    description: 'A licensed mover packs and drives. She does not quote a truck.',
+    benefits: ['No moving package', 'No published mover rate', 'Realtor for the home'],
+  },
+];
+
+const representationPoints = [
+  {
+    icon: Home,
+    title: 'The contract',
+    description: 'She writes the offer or the lease on the home you choose.',
+  },
+  {
+    icon: MapPin,
+    title: 'Nevada listing',
+    description: 'If the home you are leaving is in Nevada, she can list it.',
+  },
+  {
+    icon: Shield,
+    title: 'One brokerage',
+    description: 'Berkshire Hathaway HomeServices Nevada Properties.',
+  },
+  {
+    icon: Phone,
+    title: 'One number',
+    description: 'Call (702) 707-7273 to start the search.',
   },
 ];
 
@@ -137,15 +67,11 @@ export default function ResidentialMovingPage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Family Moving
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-blue-200">
-                  Made Simple
-                </span>
+                Residential Relocation in Las Vegas
               </h1>
               <p className="text-xl text-green-100 mb-8 leading-relaxed">
-                Professional residential moving services designed for families.
-                We help you find the perfect home, navigate school districts,
-                and integrate into your new Las Vegas community.
+                Dr. Jan Duffy is the realtor for the home you buy or lease in Las Vegas, including a
+                retirement move or a smaller house. A licensed mover handles the truck.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -156,14 +82,16 @@ export default function ResidentialMovingPage() {
                   <Phone className="w-5 h-5" />
                   Call (702) 707-7273
                 </button>
-                <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
+                <a
+                  href="https://calendly.com/drjanduffy/showing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-green-900 transition-colors flex items-center gap-2"
                 >
-                Book a Showing
-              </a>
+                  Book a Showing
+                </a>
               </div>
             </motion.div>
-
           </div>
         </div>
       </PageHero>
@@ -179,12 +107,11 @@ export default function ResidentialMovingPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Complete Family Relocation Services
+              Retirement and downsizing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From finding your dream home to settling into your new community,
-              we provide comprehensive support for every step of your family's
-              relocation journey.
+              Some clients are leaving a larger house for a Las Vegas home with less to maintain.
+              Tell her the size you want and whether you are buying or leasing. Call (702) 707-7273.
             </p>
           </motion.div>
 
@@ -201,16 +128,11 @@ export default function ResidentialMovingPage() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit) => (
-                    <li
-                      key={benefit}
-                      className="flex items-center gap-2 text-sm text-gray-700"
-                    >
+                    <li key={benefit} className="flex items-center gap-2 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       {benefit}
                     </li>
@@ -222,65 +144,16 @@ export default function ResidentialMovingPage() {
         </div>
       </section>
 
-      {/* Residential Packages */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Choose Your Family Package
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Flexible residential moving packages designed to meet your
-              family's needs and budget.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {residentialPackages.map((pkg, index) => (
-              <motion.div
-                key={pkg.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {pkg.name}
-                </h3>
-                <div className="text-3xl font-bold text-green-600 mb-4">
-                  {pkg.price}
-                </div>
-                <p className="text-gray-600 mb-6">{pkg.description}</p>
-
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="text-sm text-gray-500 mb-6">
-                  <strong>Best for:</strong> {pkg.bestFor}
-                </div>
-
-                <button
-                  type="button"
-                  className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-                >
-                  {pkg.cta}
-                </button>
-              </motion.div>
-            ))}
-          </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            How a residential search works
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Tell her whether you are buying or leasing, and the size of the house. She shows homes
+            in Las Vegas and Henderson. If the home you are leaving is in Nevada, she can list it. A
+            licensed mover prices the truck. Call (702) 707-7273.
+          </p>
         </div>
       </section>
 
@@ -294,17 +167,14 @@ export default function ResidentialMovingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Families Choose Our Services
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What she handles</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the difference that family-focused relocation expertise
-              makes for your move to Las Vegas.
+              The home, the contract, and the Nevada listing. The truck is a licensed mover.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {familyBenefits.map((benefit, index) => (
+            {representationPoints.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -316,16 +186,13 @@ export default function ResidentialMovingPage() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {benefit.title}
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-green-700 text-white">
@@ -340,9 +207,8 @@ export default function ResidentialMovingPage() {
               Ready to Find Your Las Vegas Home?
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Let's start your family's journey to Las Vegas. Schedule your free
-              consultation and discover how we can make your move stress-free
-              and successful.
+              Call to tour Las Vegas and Henderson homes. She is the realtor. A licensed mover
+              handles the truck.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -353,7 +219,10 @@ export default function ResidentialMovingPage() {
                 <Phone className="w-5 h-5" />
                 Call (702) 707-7273
               </button>
-              <a href="https://calendly.com/drjanduffy/showing" target="_blank" rel="noopener noreferrer"
+              <a
+                href="https://calendly.com/drjanduffy/showing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors flex items-center gap-2"
               >
                 Book a Showing

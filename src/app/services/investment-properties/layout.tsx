@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { withPageImageSeo } from '@/lib/schema';
 
 export const metadata: Metadata = withPageImageSeo('investmentProperties', {
-  title: 'Las Vegas Investment Properties | Real Estate Investment Services',
+  title: { absolute: 'Las Vegas Investment Properties | Dr. Jan Duffy' },
   description:
-    'Las Vegas investment property services: market analysis, ROI evaluation, property acquisition, and portfolio guidance from Dr. Jan Duffy and Berkshire Hathaway.',
+    'Investment property search in Las Vegas, Paradise, and zip 89109 with relocation realtor Dr. Jan Duffy. Call (702) 707-7273.',
   alternates: {
     canonical: '/services/investment-properties',
   },

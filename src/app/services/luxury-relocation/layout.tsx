@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { withPageImageSeo } from '@/lib/schema';
 
 export const metadata: Metadata = withPageImageSeo('luxuryRelocation', {
-  title: 'Luxury Relocation Services | Las Vegas High-End Moves',
+  title: { absolute: 'Luxury Relocation Las Vegas | Dr. Jan Duffy' },
   description:
-    'White-glove luxury relocation services in Las Vegas: high-end home search, concierge move management, and discreet, personalized service from Dr. Jan Duffy.',
+    'High-net-worth relocation realtor for Las Vegas and Henderson. Home search with Dr. Jan Duffy. Call (702) 707-7273.',
   alternates: {
     canonical: '/services/luxury-relocation',
   },

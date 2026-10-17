@@ -36,6 +36,8 @@ const footerSections = [
     links: [
       { name: 'Residential Relocation', href: '/services/residential-moving' },
       { name: 'Corporate Relocation', href: '/services/corporate-relocation' },
+      { name: 'Employee Relocation', href: '/services/employee-relocation' },
+      { name: 'Relocation Specialist', href: '/relocation-specialist' },
       {
         name: 'International Relocation',
         href: '/services/international-relocation',
@@ -65,6 +67,7 @@ const footerSections = [
       { name: 'Seattle', href: '/relocating-from/seattle' },
       { name: 'Phoenix', href: '/relocating-from/phoenix' },
       { name: 'Dallas', href: '/relocating-from/dallas' },
+      { name: 'Leaving Las Vegas', href: '/moving-from-las-vegas' },
     ],
   },
   {
@@ -75,6 +78,11 @@ const footerSections = [
       { name: 'Summerlin', href: '/neighborhoods/summerlin' },
       { name: 'Henderson', href: '/neighborhoods/henderson' },
       { name: 'Green Valley', href: '/neighborhoods/green-valley' },
+      { name: 'Paradise', href: '/neighborhoods/paradise' },
+      { name: 'Southern Highlands', href: '/neighborhoods/southern-highlands' },
+      { name: 'Anthem', href: '/neighborhoods/anthem' },
+      { name: 'Inspirada', href: '/neighborhoods/inspirada' },
+      { name: 'Seven Hills', href: '/neighborhoods/seven-hills' },
       { name: 'Nevada property tax', href: '/guides/nevada-taxes' },
     ],
   },

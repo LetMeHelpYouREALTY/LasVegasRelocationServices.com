@@ -56,7 +56,7 @@ export default function NewYorkToLasVegasPage() {
               <MapPin className="w-4 h-4 mr-2" />
               New York → Las Vegas
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Moving from NYC to Las Vegas?</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Moving from New York to Las Vegas</h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. We
               understand the New York lifestyle and will help you find your perfect Las Vegas home.

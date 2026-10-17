@@ -7,9 +7,9 @@ import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/business';
 import { withPageImageSeo } from '@/lib/schema';
 
 export const metadata: Metadata = withPageImageSeo('neighborhoods', {
-  title: 'Las Vegas Neighborhood Guides | Summerlin, Henderson, Green Valley',
+  title: { absolute: 'Las Vegas Neighborhood Guides | Dr. Jan Duffy' },
   description:
-    'Guides to Summerlin, Henderson, and Green Valley for people relocating to Las Vegas. Parks, drive times, and property-tax districts. Call (702) 707-7273.',
+    'Guides to Summerlin, Henderson, Southern Highlands, Anthem, Inspirada, and Seven Hills. Property-tax districts and parcel checks. Call (702) 707-7273.',
   alternates: { canonical: '/neighborhoods' },
 });
 
@@ -17,7 +17,7 @@ const faqs = [
   {
     question: 'Which Las Vegas neighborhoods do relocating buyers ask about most?',
     answer:
-      'Summerlin, Henderson, and Green Valley. Summerlin has 250+ parks and 150+ miles of trails. Henderson and Green Valley are often a 20–30 minute drive to the Strip and Harry Reid International Airport. Median prices in these areas typically run from the mid-$400Ks to the $600Ks.',
+      'Summerlin, Henderson, Green Valley, Southern Highlands, Anthem, Inspirada, and Seven Hills. Summerlin has 250+ parks and 150+ miles of trails. Henderson and Green Valley are often a 20–30 minute drive to the Strip and Harry Reid International Airport. This site does not publish a median price.',
   },
   {
     question: 'How do I find the school assigned to a house?',
@@ -42,8 +42,8 @@ export default function NeighborhoodsPage() {
             Neighborhood guides for a Las Vegas move
           </h1>
           <p className="text-xl text-blue-100 mb-8">
-            Start with Summerlin, Henderson, or Green Valley. Each guide lists what is on the ground
-            and how property tax is billed. Call {PHONE_DISPLAY}.
+            Start with Summerlin, Henderson, Southern Highlands, Anthem, or Inspirada. Each guide
+            lists what is on the ground and how property tax is billed. Call {PHONE_DISPLAY}.
           </p>
           <a
             href={`tel:${PHONE_TEL}`}
@@ -83,6 +83,63 @@ export default function NeighborhoodsPage() {
                 {' '}
                 — airport drive time and a Henderson tax-district example.
               </span>
+            </li>
+            <li>
+              <Link
+                className="text-blue-700 font-semibold hover:underline"
+                href="/neighborhoods/paradise"
+              >
+                Paradise
+              </Link>
+              <span className="text-gray-700">
+                {' '}
+                — the Clark County town around the Strip, with notes on zip 89109.
+              </span>
+            </li>
+            <li>
+              <Link
+                className="text-blue-700 font-semibold hover:underline"
+                href="/neighborhoods/southern-highlands"
+              >
+                Southern Highlands
+              </Link>
+              <span className="text-gray-700">
+                {' '}
+                — unincorporated Clark County in the southwest valley.
+              </span>
+            </li>
+            <li>
+              <Link
+                className="text-blue-700 font-semibold hover:underline"
+                href="/neighborhoods/anthem"
+              >
+                Anthem
+              </Link>
+              <span className="text-gray-700">
+                {' '}
+                — Henderson. Addresses commonly use 89044 and 89052.
+              </span>
+            </li>
+            <li>
+              <Link
+                className="text-blue-700 font-semibold hover:underline"
+                href="/neighborhoods/inspirada"
+              >
+                Inspirada
+              </Link>
+              <span className="text-gray-700">
+                {' '}
+                — Henderson master plan. The community site lists 89044.
+              </span>
+            </li>
+            <li>
+              <Link
+                className="text-blue-700 font-semibold hover:underline"
+                href="/neighborhoods/seven-hills"
+              >
+                Seven Hills
+              </Link>
+              <span className="text-gray-700"> — Henderson, commonly zip 89052.</span>
             </li>
             <li>
               <Link

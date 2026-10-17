@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { withPageImageSeo } from '@/lib/schema';
 
 export const metadata: Metadata = withPageImageSeo('residentialMoving', {
-  title: 'Residential Moving Services | Las Vegas Home Relocation',
+  title: { absolute: 'Residential Relocation Las Vegas | Dr. Jan Duffy' },
   description:
-    'Complete residential moving services in Las Vegas: home search assistance, packing and moving coordination, and settlement support from Dr. Jan Duffy.',
+    'Luxury relocation realtor for the Las Vegas home, including retirement moves and downsizing. Call (702) 707-7273.',
   alternates: {
     canonical: '/services/residential-moving',
   },

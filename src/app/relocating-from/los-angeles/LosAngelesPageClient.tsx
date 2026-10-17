@@ -13,6 +13,7 @@ import {
   Users,
 } from 'lucide-react';
 import NeighborhoodAreaCards from '@/components/sections/NeighborhoodAreaCards';
+import OriginNeighborhoodNotes from '@/components/sections/OriginNeighborhoodNotes';
 import PageHero from '@/components/sections/PageHero';
 import {
   Breadcrumbs,
@@ -156,7 +157,9 @@ export default function LosAngelesPageClient() {
               <MapPin className="w-4 h-4 mr-2" />
               Los Angeles → Las Vegas
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Moving from LA to Las Vegas?</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Moving from Los Angeles to Las Vegas
+            </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. We
               know both cities intimately and will guide you every step of the way.
@@ -334,6 +337,7 @@ export default function LosAngelesPageClient() {
       </section>
 
       {/* Popular Las Vegas Areas */}
+      <OriginNeighborhoodNotes city="los-angeles" />
       <NeighborhoodAreaCards />
 
       {/* FAQ Section */}

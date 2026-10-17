@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { withPageImageSeo } from '@/lib/schema';
 
 export const metadata: Metadata = withPageImageSeo('relocationPlanning', {
-  title: 'Relocation Planning Services | Las Vegas Move Planning',
+  title: { absolute: 'Las Vegas Relocation Planning | Dr. Jan Duffy' },
   description:
-    'Personalized Las Vegas relocation planning: timelines, budgets, checklists, and step-by-step move coordination from Dr. Jan Duffy and Berkshire Hathaway.',
+    'Plan the Las Vegas home search with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. She does not publish a planning package price. Call (702) 707-7273.',
   alternates: {
     canonical: '/services/relocation-planning',
   },

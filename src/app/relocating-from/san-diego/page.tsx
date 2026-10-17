@@ -3,16 +3,16 @@ import { withPageImageSeo } from '@/lib/schema';
 import SanDiegoPageClient from './SanDiegoPageClient';
 
 export const metadata: Metadata = withPageImageSeo('fromSanDiego', {
-  title: 'San Diego to Las Vegas Relocation Services | Dr. Jan Duffy',
+  title: { absolute: 'Moving from San Diego to Las Vegas | Dr. Jan Duffy' },
   description:
-    'Professional relocation services from San Diego to Las Vegas. Expert assistance with housing, the move, and settling into your new Las Vegas home.',
+    'Luxury relocation realtor for buyers moving from San Diego to Las Vegas, including La Jolla, Coronado, and Scripps Ranch. Call (702) 707-7273.',
   keywords:
     'San Diego to Las Vegas relocation, SD to Vegas move, California to Nevada relocation, Dr. Jan Duffy, Berkshire Hathaway',
   alternates: {
     canonical: '/relocating-from/san-diego',
   },
   openGraph: {
-    title: 'San Diego to Las Vegas Relocation Services',
+    title: 'Moving from San Diego to Las Vegas | Dr. Jan Duffy',
     description:
       'Professional relocation services from San Diego to Las Vegas with Dr. Jan Duffy and Berkshire Hathaway.',
   },

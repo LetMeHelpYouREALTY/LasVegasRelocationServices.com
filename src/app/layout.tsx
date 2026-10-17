@@ -23,12 +23,11 @@ const googleVerification = getGoogleSiteVerification();
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      "Las Vegas Relocation Services | Dr. Jan Duffy | Berkshire Hathaway",
+    default: 'Las Vegas Relocation Services | Dr. Jan Duffy',
     template: "%s | Las Vegas Relocation Services",
   },
   description:
-    "Professional relocation services in Las Vegas with Dr. Jan Duffy and the Berkshire Hathaway Services Relocation Services Team. Expert assistance for your move to Las Vegas.",
+    'Dr. Jan Duffy is a luxury relocation realtor with Berkshire Hathaway HomeServices Nevada Properties. Call (702) 707-7273.',
   keywords: [
     "Las Vegas relocation",
     "Dr. Jan Duffy",

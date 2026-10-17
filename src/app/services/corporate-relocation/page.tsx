@@ -5,20 +5,18 @@ import AnimatedCorporateRelocationContent from "@/components/services/AnimatedCo
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = withPageImageSeo('corporateRelocation', {
-  title: "Corporate Relocation Services | Las Vegas Business Moving Experts",
+  title: { absolute: 'Corporate Relocation Las Vegas | Dr. Jan Duffy' },
   description:
-    "Professional corporate relocation services in Las Vegas. Expert business moving, employee relocation, and corporate transition support. Get your free consultation today.",
-  keywords:
-    "corporate relocation, business moving, employee relocation, Las Vegas corporate services, business transition",
+    'Corporate relocation realtor for companies and transferring executives in Las Vegas. Home search and office real estate. Call (702) 707-7273.',
   alternates: {
-    canonical: "/services/corporate-relocation",
+    canonical: '/services/corporate-relocation',
   },
   openGraph: {
-    title: "Corporate Relocation Services | Las Vegas Business Moving Experts",
+    title: 'Corporate Relocation Las Vegas | Dr. Jan Duffy',
     description:
-      "Professional corporate relocation services in Las Vegas. Expert business moving, employee relocation, and corporate transition support.",
-    type: "website",
-    locale: "en_US",
+      'Dr. Jan Duffy is the relocation realtor for companies and executives moving to Las Vegas.',
+    type: 'website',
+    locale: 'en_US',
   },
 });
 
