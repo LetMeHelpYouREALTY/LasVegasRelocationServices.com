@@ -3,6 +3,7 @@ export {};
 declare global {
   interface Window {
     Calendly?: {
+      destroyBadgeWidget?: () => void;
       initBadgeWidget: (options: {
         url: string;
         text?: string;

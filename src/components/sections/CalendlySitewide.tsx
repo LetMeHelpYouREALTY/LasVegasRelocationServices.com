@@ -2,7 +2,12 @@
 
 import { usePathname } from "next/navigation";
 import CalendlyBooking from "@/components/shared/CalendlyBooking";
-import { CALENDLY_SHOWING_URL, PHONE_DISPLAY, PHONE_TEL } from "@/lib/business";
+import {
+  calendlyEventForPath,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  withCalendlyParams,
+} from "@/lib/business";
 
 /** Routes that already mount a full CalendlyBooking panel */
 const PAGES_WITH_INLINE_EMBED = new Set([
@@ -52,7 +57,7 @@ export default function CalendlySitewide() {
         {hasPageEmbed ? (
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href={CALENDLY_SHOWING_URL}
+              href={withCalendlyParams(calendlyEventForPath(pathname), "band", pathname)}
               className="inline-flex items-center justify-center gap-2 bg-white text-[#0A2540] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Schedule time with me
