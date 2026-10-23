@@ -15,6 +15,36 @@ export const PHONE_TEL = "+17027077273";
 export const EMAIL = "DrJan@LasVegasRelocationServices.com";
 /** Primary booking CTA — replaces on-site lead forms. */
 export const CALENDLY_SHOWING_URL = "https://calendly.com/drjanduffy/showing";
+/** Seller intent (leaving Las Vegas) — 30-min listing consultation. */
+export const CALENDLY_SELLER_URL =
+  "https://calendly.com/drjanduffy/listing-consultation";
+
+/** Seller-intent routes; every other page books the showing event. */
+const CALENDLY_SELLER_PATHS = ["/moving-from-las-vegas"];
+
+/** Calendly event that matches the page's intent. */
+export function calendlyEventForPath(pathname: string): string {
+  return CALENDLY_SELLER_PATHS.some((p) => pathname.startsWith(p))
+    ? CALENDLY_SELLER_URL
+    : CALENDLY_SHOWING_URL;
+}
+
+/**
+ * Adds embed options and UTM tags to a Calendly URL. utm_source is the bare
+ * domain so the Calendly → FUB Worker can map the booking to this site.
+ */
+export function withCalendlyParams(
+  url: string,
+  medium: string,
+  pathname = "/",
+): string {
+  const u = new URL(url);
+  u.searchParams.set("hide_gdpr_banner", "1");
+  u.searchParams.set("utm_source", "lasvegasrelocationservices.com");
+  u.searchParams.set("utm_medium", medium);
+  u.searchParams.set("utm_campaign", pathname === "/" ? "home" : pathname.slice(1));
+  return u.toString();
+}
 export const LICENSE_NUMBER = "S.0197614";
 export const LICENSE_LABEL = `Nevada Real Estate License ${LICENSE_NUMBER}`;
 export const BROKERAGE = "Berkshire Hathaway HomeServices Nevada Properties";

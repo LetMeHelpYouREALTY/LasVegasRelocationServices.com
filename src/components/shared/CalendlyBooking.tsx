@@ -1,8 +1,9 @@
 "use client";
 
 import { Calendar } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef } from "react";
-import { CALENDLY_SHOWING_URL } from "@/lib/business";
+import { calendlyEventForPath, withCalendlyParams } from "@/lib/business";
 
 type CalendlyBookingProps = {
   title?: string;
@@ -20,13 +21,16 @@ function openCalendlyPopup(event: React.MouseEvent<HTMLAnchorElement>) {
   if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   if (!window.Calendly?.initPopupWidget) return;
   event.preventDefault();
-  window.Calendly.initPopupWidget({ url: CALENDLY_SHOWING_URL });
+  window.Calendly.initPopupWidget({ url: event.currentTarget.href });
 }
 
-function useCalendlyInline(parentRef: React.RefObject<HTMLDivElement | null>) {
+function useCalendlyInline(
+  parentRef: React.RefObject<HTMLDivElement | null>,
+  url: string,
+) {
   useEffect(() => {
     const parent = parentRef.current;
-    if (!parent) return;
+    if (!parent || !url) return;
 
     let cancelled = false;
     let tries = 0;
@@ -36,7 +40,7 @@ function useCalendlyInline(parentRef: React.RefObject<HTMLDivElement | null>) {
         return false;
       parent.innerHTML = "";
       window.Calendly.initInlineWidget({
-        url: `${CALENDLY_SHOWING_URL}?hide_gdpr_banner=1`,
+        url,
         parentElement: parent,
       });
       return true;
@@ -56,7 +60,7 @@ function useCalendlyInline(parentRef: React.RefObject<HTMLDivElement | null>) {
       cancelled = true;
       window.clearInterval(timer);
     };
-  }, [parentRef]);
+  }, [parentRef, url]);
 }
 
 /**
@@ -72,12 +76,16 @@ export default function CalendlyBooking({
 }: CalendlyBookingProps) {
   const inlineRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
-  useCalendlyInline(inlineRef);
+  const pathname = usePathname() || "/";
+  const event = calendlyEventForPath(pathname);
+  const popupUrl = withCalendlyParams(event, variant === "panel" ? "link" : variant, pathname);
+  const inlineUrl = withCalendlyParams(event, "inline", pathname);
+  useCalendlyInline(inlineRef, variant === "panel" ? inlineUrl : "");
 
   if (variant === "button") {
     return (
       <a
-        href={CALENDLY_SHOWING_URL}
+        href={popupUrl}
         onClick={openCalendlyPopup}
         className={`${buttonClassName} ${className}`.trim()}
       >
@@ -96,7 +104,7 @@ export default function CalendlyBooking({
           relocation.
         </p>
         <a
-          href={CALENDLY_SHOWING_URL}
+          href={popupUrl}
           onClick={openCalendlyPopup}
           className="inline-flex w-full items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition-all duration-200"
         >
@@ -118,7 +126,7 @@ export default function CalendlyBooking({
       </h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <a
-        href={CALENDLY_SHOWING_URL}
+        href={popupUrl}
         onClick={openCalendlyPopup}
         className="mb-4 inline-flex items-center gap-2 text-blue-700 font-semibold hover:underline"
       >
@@ -129,7 +137,7 @@ export default function CalendlyBooking({
       <div
         ref={inlineRef}
         className="calendly-inline-widget w-full overflow-hidden rounded-lg border border-gray-200 bg-white"
-        data-url={CALENDLY_SHOWING_URL}
+        data-url={inlineUrl}
         style={{ minWidth: 320, height: 700 }}
       />
     </div>
