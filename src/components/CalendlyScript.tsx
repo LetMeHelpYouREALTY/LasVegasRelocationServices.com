@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { useEffect } from "react";
 import { calendlyEventForPath, withCalendlyParams } from "@/lib/business";
@@ -7,11 +8,13 @@ import { calendlyEventForPath, withCalendlyParams } from "@/lib/business";
 const WIDGET_SRC = "https://assets.calendly.com/assets/external/widget.js";
 
 function initBadge() {
-  const pathname = window.location.pathname;
   if (typeof window === "undefined" || !window.Calendly?.initBadgeWidget)
     return;
-  // Avoid duplicate badges on Fast Refresh / remount
-  if (document.querySelector(".calendly-badge-widget")) return;
+  const pathname = window.location.pathname;
+  // Replace any existing badge so client-side navigation picks up the new
+  // page's event and utm_campaign (also avoids duplicates on remount).
+  if (window.Calendly.destroyBadgeWidget) window.Calendly.destroyBadgeWidget();
+  else document.querySelector(".calendly-badge-widget")?.remove();
   window.Calendly.initBadgeWidget({
     url: withCalendlyParams(calendlyEventForPath(pathname), "badge", pathname),
     text: "Schedule time with me",
@@ -26,6 +29,13 @@ function initBadge() {
  * every page, and upgrades all Calendly links to the popup widget.
  */
 export default function CalendlyScript() {
+  const pathname = usePathname();
+
+  // Re-create the badge on every route change.
+  useEffect(() => {
+    if (pathname && window.Calendly) initBadge();
+  }, [pathname]);
+
   useEffect(() => {
     function onClick(event: MouseEvent) {
       const target = event.target as Element | null;
@@ -65,8 +75,6 @@ export default function CalendlyScript() {
 
     document.addEventListener("click", onClick);
     window.addEventListener("message", onMessage);
-    // Script may already be cached from a prior navigation
-    if (window.Calendly) initBadge();
     return () => {
       document.removeEventListener("click", onClick);
       window.removeEventListener("message", onMessage);
