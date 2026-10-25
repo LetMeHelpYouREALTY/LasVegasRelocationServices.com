@@ -1,4 +1,7 @@
-declare namespace JSX {
+import 'react';
+
+declare module 'react' {
+  namespace JSX {
   interface IntrinsicElements {
     'realscout-office-listings': {
       'agent-encoded-id'?: string;
@@ -25,4 +28,5 @@ declare namespace JSX {
       children?: React.ReactNode;
     };
   }
+}
 }
