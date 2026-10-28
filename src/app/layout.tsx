@@ -12,6 +12,7 @@ import { SITE_URL } from "@/lib/business";
 import { getGoogleSiteVerification } from "@/lib/google-verification";
 import { sitewideSchemaGraph } from "@/lib/schema";
 
+import Script from "next/script";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -177,7 +178,18 @@ export default function RootLayout({
           projectId={process.env.NEXT_PUBLIC_CLARITY_ID || ""}
           enabled={!!process.env.NEXT_PUBLIC_CLARITY_ID}
         />
-      </body>
+      
+        {/* Follow Up Boss pixel (Widget Tracker) */}
+        <Script id="fub-widget-tracker" strategy="afterInteractive">{`
+(function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function()
+{(w[g].q=w[g].q||[]).push(arguments);}),(w[g].ds=1*new Date());(e="script"),
+(t=d.createElement(e)),(e=d.getElementsByTagName(e)[0]);t.async=1;t.src=i;
+e.parentNode.insertBefore(t,e);})
+(window,"https://widgetbe.com/agent",document,"widgetTracker");
+window.widgetTracker("create", "WT-XQHVYQWW");
+window.widgetTracker("send", "pageview");
+        `}</Script>
+</body>
     </html>
   );
 }
