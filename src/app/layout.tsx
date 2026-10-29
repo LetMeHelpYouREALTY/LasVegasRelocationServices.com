@@ -11,7 +11,6 @@ import CalendlySitewide from "@/components/sections/CalendlySitewide";
 import { SITE_URL } from "@/lib/business";
 import { getGoogleSiteVerification } from "@/lib/google-verification";
 import { sitewideSchemaGraph } from "@/lib/schema";
-import WidgetTracker from './widget-tracker'
 
 const inter = Inter({
   subsets: ["latin"],
@@ -178,7 +177,6 @@ export default function RootLayout({
           projectId={process.env.NEXT_PUBLIC_CLARITY_ID || ""}
           enabled={!!process.env.NEXT_PUBLIC_CLARITY_ID}
         />
-        <WidgetTracker />
       </body>
     </html>
   );
