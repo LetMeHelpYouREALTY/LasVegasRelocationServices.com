@@ -54,7 +54,7 @@ export const OPENING_HOURS = "Mo-Fr 08:00-18:00, Sa 09:00-15:00";
 export const GOOGLE_PLACE_ID = "ChIJrxbP-IWTyIAR7xJ9RFwdCNk";
 /** Direct “Write a review” short link (GBP). */
 export const GOOGLE_WRITE_REVIEW_URL =
-  "https://g.page/r/Ce8SfURcHQjZEAI/review";
+  "https://search.google.com/local/writereview?placeid=ChIJ7XLw8ta5yIARjTZPjgHJWVQ";
 /** View reviews / GBP listing on Google Maps. */
 export const GOOGLE_REVIEWS_URL = `https://www.google.com/maps/place/?q=place_id:${GOOGLE_PLACE_ID}`;
 /** Directions to the office pin. */

@@ -209,11 +209,11 @@ export default function CityNameToLasVegasPage() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Summerlin</h3>
                 <p className="text-gray-600 mb-4">
-                  Upscale master-planned community with excellent schools, parks, and shopping.
+                  Upscale master-planned community with nearby public schools, parks, and shopping.
                 </p>
                 <div className="flex items-center text-sm text-gray-500">
                   <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Family-friendly, great schools</span>
+                  <span>Nearby public schools</span>
                 </div>
               </div>
             </div>
@@ -223,11 +223,11 @@ export default function CityNameToLasVegasPage() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Henderson</h3>
                 <p className="text-gray-600 mb-4">
-                  Safe, family-oriented city with top-rated schools and beautiful parks.
+                  City with nearby public schools and beautiful parks.
                 </p>
                 <div className="flex items-center text-sm text-gray-500">
                   <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>Safe, excellent schools</span>
+                  <span>Safe, nearby public schools</span>
                 </div>
               </div>
             </div>
@@ -237,7 +237,7 @@ export default function CityNameToLasVegasPage() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Green Valley</h3>
                 <p className="text-gray-600 mb-4">
-                  Established neighborhood with mature trees and convenient amenities.
+                  Older neighborhood with mature trees and convenient amenities.
                 </p>
                 <div className="flex items-center text-sm text-gray-500">
                   <Star className="w-4 h-4 text-yellow-400 mr-1" />
