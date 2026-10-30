@@ -154,7 +154,7 @@ export default function LosAngelesPageClient() {
               Moving from Los Angeles to Las Vegas
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. We
+              Let Dr. Jan Duffy make your transition seamless. We
               know both cities intimately and will guide you every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -375,9 +375,8 @@ export default function LosAngelesPageClient() {
               <div className="mt-8">
                 <h4 className="text-lg font-semibold mb-4">Why Choose Dr. Jan Duffy?</h4>
                 <ul className="space-y-2 text-blue-100">
-                  <li>• 15+ years of Las Vegas real estate experience</li>
-                  <li>• Berkshire Hathaway expertise and resources</li>
-                  <li>• Personal attention to every client</li>
+                  <li>• Licensed since 2008 · 35 years in Las Vegas</li>
+                                    <li>• Personal attention to every client</li>
                   <li>• Deep knowledge of LA to Vegas relocation</li>
                   <li>• Ongoing support after your move</li>
                 </ul>

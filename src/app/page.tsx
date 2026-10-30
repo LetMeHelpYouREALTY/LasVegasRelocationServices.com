@@ -10,9 +10,7 @@ import CalendlyBooking from '@/components/shared/CalendlyBooking';
 import GbpActionBar from '@/components/shared/GbpActionBar';
 import {
   AGENT_NAME,
-  BROKERAGE,
   CALENDLY_SHOWING_URL,
-  LICENSE_LABEL,
   PHONE_DISPLAY,
   PHONE_TEL,
 } from '@/lib/business';
@@ -22,7 +20,7 @@ export default function HomePage() {
   const homePageFAQs = [
     {
       question: "Who should I call when I'm relocating to Las Vegas?",
-      answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} and leads Las Vegas Relocation Services, handling residential, corporate, and international moves to Las Vegas, Henderson, and Southern Nevada. One call covers area research, home search, and settling-in support after your move.`,
+      answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® and leads Las Vegas Relocation Services, handling residential, corporate, and international moves to Las Vegas, Henderson, and Southern Nevada. One call covers area research, home search, and settling-in support after your move.`,
     },
     {
       question:
@@ -121,7 +119,7 @@ export default function HomePage() {
       <PageHero image="home">
         <div className="text-center lg:text-left">
           <p className="mb-4 text-sm font-semibold tracking-wide text-white/90 md:text-base">
-            {AGENT_NAME} · {BROKERAGE}
+            {AGENT_NAME} · Licensed since 2008 · 35 years in Las Vegas
           </p>
           <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
             Las Vegas Relocation Services
@@ -188,7 +186,7 @@ export default function HomePage() {
           </h2>
           <p className="text-xl text-gray-700 leading-relaxed mb-8">
             <strong>{AGENT_NAME}</strong> is the person to call when you're relocating to Las Vegas.
-            A Nevada-licensed REALTOR® ({LICENSE_LABEL}) with {BROKERAGE}, Dr. Duffy manages the
+            A Nevada-licensed REALTOR®, Dr. Duffy manages the
             entire move — neighborhood research, home search, corporate and international transfers,
             and settling-in support — for households and businesses moving to Las Vegas, Henderson,
             and Southern Nevada.
@@ -337,9 +335,8 @@ export default function HomePage() {
               <div className="mt-8">
                 <h4 className="text-lg font-semibold mb-4">Why Choose Dr. Jan Duffy?</h4>
                 <ul className="space-y-2 text-white mb-6">
-                  <li>• 15+ years of Las Vegas real estate experience</li>
-                  <li>• Berkshire Hathaway expertise and resources</li>
-                  <li>• Personal attention to every client</li>
+                  <li>• Licensed since 2008 · 35 years in Las Vegas</li>
+                                    <li>• Personal attention to every client</li>
                   <li>• Deep knowledge of relocation challenges</li>
                   <li>• Ongoing support after your move</li>
                 </ul>

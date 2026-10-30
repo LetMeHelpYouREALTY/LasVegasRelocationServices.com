@@ -46,8 +46,8 @@ const representationPoints = [
   },
   {
     icon: Shield,
-    title: 'One brokerage',
-    description: 'Berkshire Hathaway HomeServices Nevada Properties.',
+    title: 'One realtor',
+    description: 'Licensed since 2008 · 35 years in Las Vegas.',
   },
   {
     icon: Phone,

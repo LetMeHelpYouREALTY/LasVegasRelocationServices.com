@@ -16,12 +16,12 @@ import NeighborhoodAreaCards from '@/components/sections/NeighborhoodAreaCards';
 import PageHero from '@/components/sections/PageHero';
 import { FAQSection } from '@/components/seo';
 import CalendlyBooking from '@/components/shared/CalendlyBooking';
-import { AGENT_NAME, BROKERAGE, LICENSE_LABEL, PHONE_DISPLAY } from '@/lib/business';
+import { AGENT_NAME, PHONE_DISPLAY } from '@/lib/business';
 
 const miamiFAQs = [
   {
     question: 'Who should I call when moving from Miami to Las Vegas?',
-    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} who manages the entire Miami-to-Las-Vegas move: neighborhood research, home search, purchase, and settling-in support after you arrive.`,
+    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® who manages the entire Miami-to-Las-Vegas move: neighborhood research, home search, purchase, and settling-in support after you arrive.`,
   },
   {
     question: 'Florida has no income tax either — why do Miami residents move to Las Vegas?',
@@ -58,7 +58,7 @@ export default function MiamiToLasVegasPage() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Moving from Miami to Las Vegas?</h1>
             <p className="text-xl md:text-2xl teal-100 mb-8 max-w-3xl mx-auto">
-              Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. We
+              Let Dr. Jan Duffy make your transition seamless. We
               understand the Miami lifestyle and will help you find your perfect Las Vegas home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -266,9 +266,8 @@ export default function MiamiToLasVegasPage() {
               <div className="mt-8">
                 <h4 className="text-lg font-semibold mb-4">Why Choose Dr. Jan Duffy?</h4>
                 <ul className="space-y-2 text-teal-100">
-                  <li>• 15+ years of Las Vegas real estate experience</li>
-                  <li>• Berkshire Hathaway expertise and resources</li>
-                  <li>• Personal attention to every client</li>
+                  <li>• Licensed since 2008 · 35 years in Las Vegas</li>
+                                    <li>• Personal attention to every client</li>
                   <li>• Deep knowledge of Miami to Vegas relocation</li>
                   <li>• Ongoing support after your move</li>
                 </ul>

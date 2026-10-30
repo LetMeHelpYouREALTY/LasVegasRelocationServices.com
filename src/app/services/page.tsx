@@ -98,8 +98,7 @@ export default function ServicesPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Relocation Services</h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Dr. Jan Duffy is a luxury relocation realtor with Berkshire Hathaway HomeServices
-              Nevada Properties. She shows the home. A licensed mover handles the truck.
+              Dr. Jan Duffy is a luxury relocation realtor in Las Vegas. She shows the home. A licensed mover handles the truck.
             </p>
           </div>
         </div>

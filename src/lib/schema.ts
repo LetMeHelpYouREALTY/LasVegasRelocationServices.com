@@ -111,7 +111,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
     path: '/',
     name: 'Las Vegas Relocation Services | Dr. Jan Duffy',
     description:
-      'Professional relocation services to Las Vegas with Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties.',
+      'Professional relocation services to Las Vegas with Dr. Jan Duffy, REALTOR® licensed since 2008.',
     kind: 'WebPage',
     breadcrumbs: [],
   },
@@ -296,7 +296,7 @@ export const HERO_PAGE_SEO: Record<HeroImageKey, HeroPageSeo> = {
     path: '/about',
     name: 'About Dr. Jan Duffy',
     description:
-      'Meet Dr. Jan Duffy, Nevada-licensed REALTOR® and Las Vegas relocation specialist with Berkshire Hathaway HomeServices Nevada Properties.',
+      'Meet Dr. Jan Duffy, Nevada-licensed REALTOR® and Las Vegas relocation specialist, licensed since 2008 · 35 years in Las Vegas.',
     kind: 'ProfilePage',
     breadcrumbs: [{ label: 'About', href: '/about' }],
   },
@@ -528,7 +528,7 @@ export function agentPortraitImageSchema() {
       id: `${SITE_URL}/dr-jan-duffy.webp#image`,
       contentUrl: AGENT_IMAGE_URL,
       name: `${AGENT_NAME} headshot`,
-      description: `${AGENT_NAME}, Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE}, holding a phone — Las Vegas relocation specialist.`,
+      description: `${AGENT_NAME}, Nevada-licensed REALTOR®, holding a phone — Las Vegas relocation specialist.`,
       width: 180,
       height: 180,
     }),

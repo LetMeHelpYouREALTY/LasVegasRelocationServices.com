@@ -14,7 +14,7 @@ export const metadata: Metadata = withPageImageSeo('fromSanDiego', {
   openGraph: {
     title: 'Moving from San Diego to Las Vegas | Dr. Jan Duffy',
     description:
-      'Professional relocation services from San Diego to Las Vegas with Dr. Jan Duffy and Berkshire Hathaway.',
+      'Professional relocation services from San Diego to Las Vegas with Dr. Jan Duffy.',
   },
 });
 

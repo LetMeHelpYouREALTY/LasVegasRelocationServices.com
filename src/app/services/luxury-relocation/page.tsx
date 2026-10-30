@@ -17,7 +17,7 @@ const luxuryServices = [
     icon: Crown,
     title: 'Buyer representation',
     description: 'She writes the offer on the home you choose.',
-    benefits: ['One realtor', 'Berkshire Hathaway HomeServices', 'Nevada license'],
+    benefits: ['One realtor', 'Licensed since 2008', 'Nevada license'],
   },
   {
     icon: Shield,
@@ -157,8 +157,7 @@ export default function LuxuryRelocationPage() {
             What a luxury relocation includes
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Dr. Jan Duffy shows the house. Berkshire Hathaway HomeServices Nevada Properties is the
-            brokerage. She does not book travel, handle fine art, or invoice a moving package. Call
+            Dr. Jan Duffy shows the house. She does not book travel, handle fine art, or invoice a moving package. Call
             (702) 707-7273.
           </p>
         </div>

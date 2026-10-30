@@ -115,7 +115,7 @@ export function personSchema() {
     name: AGENT_NAME,
     jobTitle: AGENT_JOB_TITLE,
     description:
-      "Dr. Jan Duffy is a Nevada-licensed REALTOR® with Berkshire Hathaway HomeServices Nevada Properties who specializes in helping households and businesses relocate to Las Vegas, Henderson, and Southern Nevada.",
+      "Dr. Jan Duffy is a Nevada-licensed REALTOR® who specializes in helping households and businesses relocate to Las Vegas, Henderson, and Southern Nevada.",
     url: `${SITE_URL}/about`,
     image: {
       "@type": "ImageObject",
@@ -161,7 +161,7 @@ export function businessSchema() {
     "@id": BUSINESS_ID,
     name: BUSINESS_NAME,
     description:
-      "Professional relocation services in Las Vegas led by Dr. Jan Duffy with the Berkshire Hathaway HomeServices Nevada Properties relocation team.",
+      "Professional relocation services in Las Vegas led by Dr. Jan Duffy, REALTOR® licensed since 2008.",
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     image: [

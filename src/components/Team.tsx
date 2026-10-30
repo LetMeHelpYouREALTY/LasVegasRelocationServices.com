@@ -14,9 +14,7 @@ import {
 import { motion } from '@/components/motion';
 import {
   AGENT_NAME,
-  BROKERAGE,
   EMAIL,
-  LICENSE_LABEL,
   PHONE_DISPLAY,
   PHONE_TEL,
 } from '@/lib/business';
@@ -24,8 +22,8 @@ import {
 const featured = {
   name: AGENT_NAME,
   role: 'Founder & Lead Relocation Specialist',
-  credentials: `${BROKERAGE} · Relocation Services Team`,
-  experience: '15+ Years',
+  credentials: 'Licensed since 2008 · 35 years in Las Vegas',
+  experience: 'Licensed since 2008',
   expertise: [
     'Corporate Relocation',
     'Luxury Moving',
@@ -33,10 +31,9 @@ const featured = {
     'Local Market Expert',
   ],
   image: '/dr-jan-duffy.webp',
-  bio: `${AGENT_NAME} leads Las Vegas Relocation Services with focused local expertise. As a Nevada-licensed REALTOR® with ${BROKERAGE}, she helps households and businesses relocate to Las Vegas, Henderson, and Southern Nevada.`,
+  bio: `${AGENT_NAME} leads Las Vegas Relocation Services with focused local expertise. As a Nevada-licensed REALTOR®, she helps households and businesses relocate to Las Vegas, Henderson, and Southern Nevada.`,
   certifications: [
-    LICENSE_LABEL,
-    'Berkshire Hathaway Services Relocation Team',
+    'Nevada-licensed REALTOR®',
     'Las Vegas Relocation Specialist',
   ],
   contact: {
@@ -47,7 +44,7 @@ const featured = {
   stats: {
     families: '500+',
     satisfaction: '98%',
-    years: '15+',
+    years: '35',
     neighborhoods: '50+',
   },
 };
@@ -55,8 +52,8 @@ const featured = {
 const achievements = [
   {
     icon: Award,
-    title: 'Berkshire Hathaway Services',
-    description: 'Prestigious relocation team member',
+    title: '35 Years in Las Vegas',
+    description: 'Licensed since 2008',
   },
   {
     icon: Star,
@@ -66,7 +63,7 @@ const achievements = [
   {
     icon: Shield,
     title: 'Licensed REALTOR®',
-    description: LICENSE_LABEL,
+    description: 'Licensed since 2008 · 35 years in Las Vegas',
   },
   {
     icon: Users,

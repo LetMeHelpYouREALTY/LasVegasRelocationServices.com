@@ -19,20 +19,20 @@ import { motion } from "@/components/motion";
 const credentials = [
   {
     icon: Award,
-    title: "Berkshire Hathaway Services",
-    description: "Relocation Services Team Member",
-    details: "Prestigious team with proven track record",
+    title: "Licensed Since 2008",
+    description: "35 years in Las Vegas",
+    details: "Relocation guidance from a local REALTOR®",
   },
   {
     icon: Shield,
     title: "Nevada-Licensed REALTOR®",
-    description: "Nevada Real Estate License S.0197614",
-    details: "Berkshire Hathaway HomeServices Nevada Properties",
+    description: "Licensed since 2008",
+    details: "Nevada Real Estate Division",
   },
   {
     icon: Building,
     title: "Las Vegas Market Expert",
-    description: "15+ years local experience",
+    description: "35 years in Las Vegas",
     details: "Deep knowledge of neighborhoods and markets",
   },
   {
@@ -46,7 +46,7 @@ const credentials = [
 const teamStats = [
   { number: "500+", label: "Families Relocated", icon: Users },
   { number: "98%", label: "Client Satisfaction", icon: Star },
-  { number: "15+", label: "Years Experience", icon: Clock },
+  { number: "35", label: "Years in Las Vegas", icon: Clock },
   { number: "50+", label: "Neighborhoods Served", icon: MapPin },
 ];
 
@@ -61,7 +61,7 @@ const values = [
     icon: Shield,
     title: "Trust & Reliability",
     description:
-      "Built on 15+ years of trust, transparency, and consistent delivery of promises.",
+      "Built on trust, transparency, and consistent delivery of promises.",
   },
   {
     icon: Building,
@@ -113,8 +113,7 @@ export default function AnimatedAboutContent() {
             Meet Dr. Jan Duffy
           </h1>
           <p className="mt-5 text-lg md:text-xl text-blue-50 leading-relaxed max-w-xl">
-            Nevada-licensed REALTOR® with Berkshire Hathaway HomeServices
-            Nevada Properties — 15+ years helping households and businesses
+            REALTOR® licensed since 2008 · 35 years in Las Vegas, helping households and businesses
             relocate to Las Vegas and Henderson.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -151,8 +150,7 @@ export default function AnimatedAboutContent() {
               </h2>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
                 Dr. Jan Duffy leads Las Vegas Relocation Services with focused
-                local expertise. As a member of the Berkshire Hathaway Services
-                Relocation Team, she coordinates home search, move logistics,
+                local expertise. As a Nevada-licensed REALTOR®, she coordinates home search, move logistics,
                 and settling-in support for people moving to Southern Nevada.
               </p>
               <p className="text-lg text-slate-700 leading-relaxed">
@@ -170,9 +168,8 @@ export default function AnimatedAboutContent() {
               className="space-y-3"
             >
               {[
-                "15+ years of Las Vegas real estate expertise",
-                "Berkshire Hathaway Services Relocation Team member",
-                "Nevada Real Estate License S.0197614",
+                "Licensed since 2008 · 35 years in Las Vegas",
+                "Nevada-licensed REALTOR®",
                 "Personalized approach for every relocation",
                 "Local market knowledge and community connections",
                 "Ongoing support throughout your move",

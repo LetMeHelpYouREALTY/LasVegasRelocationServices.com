@@ -51,8 +51,7 @@ export function RealScoutBelowHero() {
             Homes for Sale in Las Vegas
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Browse current listings with Dr. Jan Duffy — Berkshire Hathaway HomeServices Nevada
-            Properties.
+            Browse current listings with Dr. Jan Duffy.
           </p>
         </div>
         <RealScoutOfficeListings />
