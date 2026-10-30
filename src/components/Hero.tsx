@@ -79,11 +79,11 @@ export default function Hero() {
           </div>
           <div className="flex items-center gap-2">
             <Award className="w-5 h-5 text-yellow-400" />
-            <span className="text-sm">Berkshire Hathaway Services</span>
+            <span className="text-sm">Licensed since 2008</span>
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="w-5 h-5 text-blue-400" />
-            <span className="text-sm">1,300+ Local Las Vegas Experts</span>
+            <span className="text-sm">35 Years in Las Vegas</span>
           </div>
         </motion.div>
 

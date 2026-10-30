@@ -29,7 +29,7 @@ export default function CityNameToLasVegasPage() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Moving from [City Name] to Las Vegas?</h1>
             <p className="text-xl md:text-2xl [PRIMARY_COLOR]-100 mb-8 max-w-3xl mx-auto">
-              Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. We
+              Let Dr. Jan Duffy make your transition seamless. We
               understand the [City Name] lifestyle and will help you find your perfect Las Vegas home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -324,9 +324,8 @@ export default function CityNameToLasVegasPage() {
               <div className="mt-8">
                 <h4 className="text-lg font-semibold mb-4">Why Choose Dr. Jan Duffy?</h4>
                 <ul className="space-y-2 text-[PRIMARY_COLOR]-100">
-                  <li>• 15+ years of Las Vegas real estate experience</li>
-                  <li>• Berkshire Hathaway expertise and resources</li>
-                  <li>• Personal attention to every client</li>
+                  <li>• Licensed since 2008 · 35 years in Las Vegas</li>
+                                    <li>• Personal attention to every client</li>
                   <li>• Deep knowledge of [City Name] to Vegas relocation</li>
                   <li>• Ongoing support after your move</li>
                 </ul>

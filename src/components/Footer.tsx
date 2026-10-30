@@ -151,7 +151,7 @@ const socialLinks = [
 
 const quickStats = [
   { number: '500+', label: 'Happy Clients' },
-  { number: '15+', label: 'Years Experience' },
+  { number: '35', label: 'Years in Las Vegas' },
   { number: '100%', label: 'Satisfaction Rate' },
   { number: '24/7', label: 'Support Available' },
 ];
@@ -182,7 +182,7 @@ export default function Footer() {
             </div>
 
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Dr. Jan Duffy and the Berkshire Hathaway team provide comprehensive relocation
+              Dr. Jan Duffy and her team provide comprehensive relocation
               services to help you make Las Vegas your new home. From residential moves to corporate
               relocations, we handle every detail with expertise and care.
             </p>
@@ -298,7 +298,7 @@ export default function Footer() {
             <div className="flex items-center space-x-2 text-gray-400">
               <CheckCircle className="w-4 h-4 text-blue-400" />
               <span className="text-sm">
-                Comprehensive Real Estate Services by Dr. Jan Duffy S.0197614
+                Comprehensive Real Estate Services by Dr. Jan Duffy
               </span>
             </div>
 
@@ -307,7 +307,7 @@ export default function Footer() {
               <span>•</span>
               <span>All rights reserved</span>
               <span>•</span>
-              <span>Berkshire Hathaway Affiliate</span>
+              <span>Berkshire Hathaway HomeServices Nevada Properties since September 2008 · License S.0197614.LLC</span>
             </div>
           </div>
         </div>

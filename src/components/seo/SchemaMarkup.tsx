@@ -111,7 +111,7 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
           },
           hasCredential: [
             LICENSE_LABEL,
-            '15+ Years Experience',
+            'Licensed since 2008',
             'Relocation Specialist',
           ],
           ...data,

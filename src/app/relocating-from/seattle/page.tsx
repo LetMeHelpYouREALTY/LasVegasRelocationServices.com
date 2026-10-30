@@ -16,12 +16,12 @@ import NeighborhoodAreaCards from '@/components/sections/NeighborhoodAreaCards';
 import PageHero from '@/components/sections/PageHero';
 import { FAQSection } from '@/components/seo';
 import CalendlyBooking from '@/components/shared/CalendlyBooking';
-import { AGENT_NAME, BROKERAGE, LICENSE_LABEL, PHONE_DISPLAY } from '@/lib/business';
+import { AGENT_NAME, PHONE_DISPLAY } from '@/lib/business';
 
 const seattleFAQs = [
   {
     question: 'Who should I call when moving from Seattle to Las Vegas?',
-    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} who manages the entire Seattle-to-Las-Vegas move: neighborhood research, home search, purchase, and settling-in support after you arrive.`,
+    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® who manages the entire Seattle-to-Las-Vegas move: neighborhood research, home search, purchase, and settling-in support after you arrive.`,
   },
   {
     question: 'How do housing costs compare between Seattle and Las Vegas?',
@@ -60,7 +60,7 @@ export default function SeattleToLasVegasPage() {
               Moving from Seattle to Las Vegas
             </h1>
             <p className="text-xl md:text-2xl text-sky-100 mb-8 max-w-3xl mx-auto">
-              Let Dr. Jan Duffy and the Berkshire Hathaway team make your transition seamless. We
+              Let Dr. Jan Duffy make your transition seamless. We
               understand the Seattle lifestyle and will help you find your perfect Las Vegas home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -272,9 +272,8 @@ export default function SeattleToLasVegasPage() {
               <div className="mt-8">
                 <h4 className="text-lg font-semibold mb-4">Why Choose Dr. Jan Duffy?</h4>
                 <ul className="space-y-2 text-sky-100">
-                  <li>• 15+ years of Las Vegas real estate experience</li>
-                  <li>• Berkshire Hathaway expertise and resources</li>
-                  <li>• Personal attention to every client</li>
+                  <li>• Licensed since 2008 · 35 years in Las Vegas</li>
+                                    <li>• Personal attention to every client</li>
                   <li>• Deep knowledge of Seattle to Vegas relocation</li>
                   <li>• Ongoing support after your move</li>
                 </ul>

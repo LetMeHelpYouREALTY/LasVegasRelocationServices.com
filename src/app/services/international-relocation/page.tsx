@@ -17,9 +17,7 @@ import PageHero from '@/components/sections/PageHero';
 import { FAQSection } from '@/components/seo';
 import {
   AGENT_NAME,
-  BROKERAGE,
   CALENDLY_SHOWING_URL,
-  LICENSE_LABEL,
   PHONE_DISPLAY,
   PHONE_TEL,
 } from '@/lib/business';
@@ -27,7 +25,7 @@ import {
 const internationalFAQs = [
   {
     question: 'Who should I call for international relocation to Las Vegas?',
-    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® (${LICENSE_LABEL}) with ${BROKERAGE} and coordinates housing search, temporary lodging, school enrollment by district and school name, utility setup, and settling-in support for households and businesses moving to Las Vegas from abroad.`,
+    answer: `Call ${AGENT_NAME} at ${PHONE_DISPLAY}. Dr. Duffy is a Nevada-licensed REALTOR® and coordinates housing search, temporary lodging, school enrollment by district and school name, utility setup, and settling-in support for households and businesses moving to Las Vegas from abroad.`,
   },
   {
     question: 'Does Dr. Jan Duffy handle visas and immigration paperwork?',
@@ -106,8 +104,8 @@ const internationalBenefits = [
   },
   {
     icon: Globe,
-    title: 'One brokerage',
-    description: 'Berkshire Hathaway HomeServices Nevada Properties.',
+    title: 'One realtor',
+    description: 'Licensed since 2008 · 35 years in Las Vegas.',
   },
   {
     icon: MapPin,
@@ -165,8 +163,7 @@ export default function InternationalRelocationPage() {
             Who Handles International Relocation to Las Vegas?
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            <strong>{AGENT_NAME}</strong> at Las Vegas Relocation Services ({BROKERAGE},{' '}
-            {LICENSE_LABEL}) is the person to call when you are relocating to Las Vegas from another
+            <strong>{AGENT_NAME}</strong> at Las Vegas Relocation Services is the person to call when you are relocating to Las Vegas from another
             country. One contact covers temporary and long-term housing search, move logistics
             coordination, school enrollment by district and school name, utility setup, and the
             first 30–90 days of settling-in support after arrival.

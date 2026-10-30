@@ -119,7 +119,7 @@ export default function Testimonials() {
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                <span className="font-medium">15+ Years Experience</span>
+                <span className="font-medium">35 Years in Las Vegas</span>
               </div>
             </div>
           </div>

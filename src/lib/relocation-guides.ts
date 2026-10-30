@@ -384,7 +384,7 @@ export const relocationSpecialistGuide: TopicGuideProps = {
       id: 'who-to-call',
       heading: 'One realtor for the relocation',
       paragraphs: [
-        'She is a Nevada-licensed REALTOR® with [Berkshire Hathaway HomeServices Nevada Properties](https://www.berkshirehathawayhomeservices.com).',
+        'She is a REALTOR® licensed since 2008 · 35 years in Las Vegas.',
         'The work is the home: the search, the showings, the purchase or the lease, and the sale if you already own in Nevada.',
         'She is not a moving company. A licensed mover hauls the furniture. She introduces one if you need a name.',
       ],
@@ -406,7 +406,7 @@ export const relocationSpecialistGuide: TopicGuideProps = {
   faqs: [
     {
       question: 'Who is the Las Vegas relocation specialist?',
-      answer: `Dr. Jan Duffy, ${PHONE_DISPLAY}. She is a luxury relocation realtor with Berkshire Hathaway HomeServices Nevada Properties, ${LICENSE_LABEL}.`,
+      answer: `Dr. Jan Duffy, ${PHONE_DISPLAY}. She is a luxury relocation realtor, licensed since 2008 · 35 years in Las Vegas.`,
     },
     {
       question: 'Can you recommend a relocation realtor in Las Vegas?',
@@ -604,7 +604,7 @@ export const southernHighlandsGuide: TopicGuideProps = {
       id: 'search',
       heading: 'The realtor search',
       paragraphs: [
-        'Dr. Jan Duffy shows houses here for a purchase or a lease. She is a luxury relocation realtor with Berkshire Hathaway HomeServices Nevada Properties.',
+        'Dr. Jan Duffy shows houses here for a purchase or a lease. She is a luxury relocation realtor, licensed since 2008.',
         'She does not quote a median price for the community and she does not invoice a moving package. A licensed mover prices the truck.',
         `Property tax follows the parcel’s Clark County district, not the community name. The Nevada tax guide explains the bill. Call ${PHONE_DISPLAY}.`,
       ],

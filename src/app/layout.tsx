@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Las Vegas Relocation Services",
   },
   description:
-    'Dr. Jan Duffy is a luxury relocation realtor with Berkshire Hathaway HomeServices Nevada Properties. Call (702) 707-7273.',
+    'Dr. Jan Duffy is a luxury Las Vegas relocation realtor, licensed since 2008 · 35 years in Las Vegas. Call (702) 707-7273.',
   keywords: [
     "Las Vegas relocation",
     "Dr. Jan Duffy",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     // Do NOT hardcode og:url to the homepage — Next derives per-route URLs
     // from metadataBase. A fixed homepage og:url on every page confuses GSC.
     siteName: "Las Vegas Relocation Services",
-    title: "Dr. Jan Duffy - Las Vegas Relocation Services | Berkshire Hathaway",
+    title: "Dr. Jan Duffy - Las Vegas Relocation Services",
     description:
       "Expert relocation services to Las Vegas from major US cities. Dr. Jan Duffy provides personalized assistance for seamless relocations.",
     // Preferred image sources for Search/Discover (Mar 2026): og:image + ImageObject
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Jan Duffy - Las Vegas Relocation Services | Berkshire Hathaway",
+    title: "Dr. Jan Duffy - Las Vegas Relocation Services",
     description:
       "Expert relocation services to Las Vegas from major US cities. Dr. Jan Duffy provides personalized assistance for seamless relocations.",
     images: ["/heroes/home-las-vegas.webp"],

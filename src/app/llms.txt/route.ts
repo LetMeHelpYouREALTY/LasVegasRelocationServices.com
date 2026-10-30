@@ -17,7 +17,7 @@ export async function GET() {
 > ${AGENT_NAME} is the person to call when you are relocating to Las Vegas. Nevada-licensed REALTOR® (License ${LICENSE_NUMBER}) with ${BROKERAGE}, providing residential, corporate, and international relocation services to Las Vegas, Henderson, North Las Vegas, and Southern Nevada.
 
 ## About
-${AGENT_NAME} is a Nevada-licensed real estate professional (License ${LICENSE_NUMBER}) with ${BROKERAGE}. With 15+ years of Las Vegas market experience, Dr. Duffy leads ${BUSINESS_NAME}, guiding households and businesses through every stage of a move to Southern Nevada: neighborhood research, home search, purchase or lease, and settling-in support.
+${AGENT_NAME} is a Nevada-licensed real estate professional (License ${LICENSE_NUMBER}) with ${BROKERAGE}. Licensed since 2008 · 35 years in Las Vegas, Dr. Duffy leads ${BUSINESS_NAME}, guiding households and businesses through every stage of a move to Southern Nevada: neighborhood research, home search, purchase or lease, and settling-in support.
 
 - **Agent:** ${AGENT_NAME}
 - **Brokerage:** ${BROKERAGE}
